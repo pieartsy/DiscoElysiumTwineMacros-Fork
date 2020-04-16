@@ -312,7 +312,7 @@ $(document).on("keyup", function (e) {
 /* for each text (key) and passage (value) in $optionmap, capture those things.*/ 
 &lt;&lt;for _optiontext, _optionpassage range $optionmap&gt;&gt;
   &lt;&lt;capture _optionpassage, _optiontext&gt;&gt;
-  /* if _optionpassage[0] (the true/false for whether the option is a check) is true, put the check styling to a link. when clicked, the link runs the SkillCheck widget.
+  /* if _optionpassage[0] (the true/false for whether the option is a check) is true, put the .check styling to a link with _optiontext as its text. when clicked, the link runs the SkillCheck widget.
 
   Corresponding to the arguments in SkillCheck:
   _optionpassage[1] = success passage
@@ -325,6 +325,7 @@ $(document).on("keyup", function (e) {
       @@.check;&lt;li&gt;-
         &lt;&lt;link _optiontext&gt;&gt;&lt;&lt;SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3] _optionpassage[4] _optionpassage[5]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;
       &lt;/li&gt;@@
+      /* otherwise, put the .option style on a link */
     &lt;&lt;else&gt;&gt;
       &lt;li&gt;-
         @@.option;&lt;&lt;link _optiontext _optionpassage[1]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;@@
@@ -333,7 +334,8 @@ $(document).on("keyup", function (e) {
   &lt;&lt;/capture&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;/ol&gt;
-&lt;&lt;set $optionmap to new Map()&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="FAIL" tags="" position="225,100">&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Failure&quot;&gt;&gt;
+&lt;&lt;set $optionmap to new Map()&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="FAIL" tags="" position="225,100">&lt;&lt;SkillFailure&gt;&gt;
+&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Failure&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;YOU FAILED!!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="PassageFooter" tags="" position="350,100">&lt;&lt;DisplayParagraphs&gt;&gt;\</tw-passagedata><tw-passagedata pid="4" name="PassageHeader" tags="" position="475,100">&lt;&lt;set $paragraphs to []&gt;&gt;
 &lt;&lt;if $lastoption&gt;&gt;
 @@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
@@ -351,7 +353,8 @@ $(document).on("keyup", function (e) {
 &lt;&lt;set $paraAppendMode to false&gt;&gt;
 
 &lt;&lt;set $xp to 0&gt;&gt;
-&lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SUCCEED" tags="" position="850,100">&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
+&lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SUCCEED" tags="" position="850,100">&lt;&lt;SkillSuccess&gt;&gt;
+&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AddOption" tags="widget nobr" position="975,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
     &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6], $args[7]])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
@@ -518,15 +521,11 @@ if _roll is more than or equal to the difficulty, show the success animation and
     &lt;&lt;set _mods to $args[4]&gt;&gt;
     &lt;&lt;set _roll to random(1, 6) + _stat + _mods&gt;&gt;
     &lt;&lt;if _roll &gt;= _difficultynum&gt;&gt;
-        &lt;&lt;SkillSuccess&gt;&gt;
-        &lt;&lt;timed 3s&gt;&gt;
             &lt;&lt;goto $args[0]&gt;&gt;
-        &lt;&lt;/timed&gt;&gt;
+        
     &lt;&lt;else&gt;&gt;
-        &lt;&lt;SkillFailure&gt;&gt;
-        &lt;&lt;timed 3s&gt;&gt;
+
             &lt;&lt;goto $args[1]&gt;&gt;
-        &lt;&lt;/timed&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 /*</tw-passagedata><tw-passagedata pid="16" name="Speaker" tags="widget" position="725,225">&lt;&lt;nobr&gt;&gt;

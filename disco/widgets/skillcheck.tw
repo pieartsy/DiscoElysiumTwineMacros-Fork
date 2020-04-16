@@ -16,15 +16,11 @@ if _roll is more than or equal to the difficulty, show the success animation and
     <<set _mods to $args[4]>>
     <<set _roll to random(1, 6) + _stat + _mods>>
     <<if _roll >= _difficultynum>>
-        <<SkillSuccess>>
-        <<timed 3s>>
             <<goto $args[0]>>
-        <</timed>>
+        
     <<else>>
-        <<SkillFailure>>
-        <<timed 3s>>
+
             <<goto $args[1]>>
-        <</timed>>
     <</if>>
 <</widget>>
 /* 
