@@ -1,6 +1,6 @@
 ::SUCCEED
 <<SkillSuccess>>
-<<PassiveSkill "Logic">>
+<<PassiveSkill "Logic" "Easy" "Success">>
 <<AddParagraph "YOU SUCCEEDED!" "fys">>
 <<PassiveSkill "electrochemistry">>
 <<AddParagraph "Very sexy of you." "none">>

@@ -20,13 +20,14 @@ ex: <<PassiveSkill "Logic">>
     <<elseif $psyche.includes(_skillname)>>
         <<set $currentspeaker to ("@@.psyche.speaker;" + _skillname + "@@")>>
     <</if>>
-    /* if there's a second argument present, run the SkillCheck macro as per usual. Skillcheck's 6th argument checking whether it's a passive check is set to true.
+    /* if there's a fourth argument present (indicating a failure state), run the SkillCheck macro as per usual. Skillcheck's 6th argument checking whether it's a passive check is set to true.
     
     if SkillCheck passes/$success is true, set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
     if it fails, set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
     
-    add the skill result to the current speaker: Logic [Easy: Success]*/
-    <<if $args[1]>>
+    add the skill result to the current speaker: Logic [Easy: Success]
+    then add a dash. */
+    <<if $args[3]>>
         <<SkillCheck $args[2] $args[3] $args[4] $args[5] $args[6] true>>
         <<if $success is true>>
             <<set _skillresult to (" [" + $args[1] + ": " + "Success" + "]")>>
@@ -39,7 +40,15 @@ ex: <<PassiveSkill "Logic">>
             <<set $currentspeaker += " - ">>
             <<AddParagraph $args[3]>>
         <</if>>
+    /* otherwise,
+        if there's a second argument (indicating that there's a skill rating), set the skill rating to the 2nd argument + 3rd argument (skill result) [Easy: Success]
+        
+    regardless, add a dash. */
     <<else>>
+        <<if $args[1]>>
+            <<set _skillresult to (" [" + $args[1] + ": " + $args[2] + "]")>>
+            <<set $currentspeaker += _skillresult>>
+        <</if>>
         <<set $currentspeaker += " - ">>
     <</if>>
     /* Add a dash. */

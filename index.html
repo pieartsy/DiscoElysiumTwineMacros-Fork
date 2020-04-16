@@ -383,7 +383,7 @@ $(document).on("keyup", function (e) {
 
 &lt;&lt;set $xp to 0&gt;&gt;
 &lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SUCCEED" tags="" position="850,100">&lt;&lt;SkillSuccess&gt;&gt;
-&lt;&lt;PassiveSkill &quot;Logic&quot;&gt;&gt;
+&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot; &quot;fys&quot;&gt;&gt;
 &lt;&lt;PassiveSkill &quot;electrochemistry&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Very sexy of you.&quot; &quot;none&quot;&gt;&gt;
@@ -541,13 +541,14 @@ ex: &lt;&lt;PassiveSkill &quot;Logic&quot;&gt;&gt;
     &lt;&lt;elseif $psyche.includes(_skillname)&gt;&gt;
         &lt;&lt;set $currentspeaker to (&quot;@@.psyche.speaker;&quot; + _skillname + &quot;@@&quot;)&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-    /* if there&#39;s a second argument present, run the SkillCheck macro as per usual. Skillcheck&#39;s 6th argument checking whether it&#39;s a passive check is set to true.
+    /* if there&#39;s a fourth argument present (indicating a failure state), run the SkillCheck macro as per usual. Skillcheck&#39;s 6th argument checking whether it&#39;s a passive check is set to true.
     
     if SkillCheck passes/$success is true, set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
     if it fails, set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
     
-    add the skill result to the current speaker: Logic [Easy: Success]*/
-    &lt;&lt;if $args[1]&gt;&gt;
+    add the skill result to the current speaker: Logic [Easy: Success]
+    then add a dash. */
+    &lt;&lt;if $args[3]&gt;&gt;
         &lt;&lt;SkillCheck $args[2] $args[3] $args[4] $args[5] $args[6] true&gt;&gt;
         &lt;&lt;if $success is true&gt;&gt;
             &lt;&lt;set _skillresult to (&quot; [&quot; + $args[1] + &quot;: &quot; + &quot;Success&quot; + &quot;]&quot;)&gt;&gt;
@@ -560,7 +561,15 @@ ex: &lt;&lt;PassiveSkill &quot;Logic&quot;&gt;&gt;
             &lt;&lt;set $currentspeaker += &quot; - &quot;&gt;&gt;
             &lt;&lt;AddParagraph $args[3]&gt;&gt;
         &lt;&lt;/if&gt;&gt;
+    /* otherwise,
+        if there&#39;s a second argument (indicating that there&#39;s a skill rating), set the skill rating to the 2nd argument + 3rd argument (skill result) [Easy: Success]
+        
+    regardless, add a dash. */
     &lt;&lt;else&gt;&gt;
+        &lt;&lt;if $args[1]&gt;&gt;
+            &lt;&lt;set _skillresult to (&quot; [&quot; + $args[1] + &quot;: &quot; + $args[2] + &quot;]&quot;)&gt;&gt;
+            &lt;&lt;set $currentspeaker += _skillresult&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
         &lt;&lt;set $currentspeaker += &quot; - &quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
     /* Add a dash. */
