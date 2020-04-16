@@ -4,6 +4,15 @@
 /* for each text (key) and passage (value) in $optionmap, capture those things.*/ 
 <<for _optiontext, _optionpassage range $optionmap>>
   <<capture _optionpassage, _optiontext>>
+  /* if _optionpassage[0] (the true/false for whether the option is a check) is true, put the check styling to a link. when clicked, the link runs the SkillCheck widget.
+
+  Corresponding to the arguments in SkillCheck:
+  _optionpassage[1] = success passage
+  2 = failure passage
+  3 = difficulty
+  4 = stat
+  5 = mod 
+   */
     <<if _optionpassage[0] is true>>
       @@.check;<li>-
         <<link _optiontext>><<SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3] _optionpassage[4] _optionpassage[5]>><<set $lastoption to _optiontext>><</link>>

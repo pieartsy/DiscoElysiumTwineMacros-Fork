@@ -312,6 +312,15 @@ $(document).on("keyup", function (e) {
 /* for each text (key) and passage (value) in $optionmap, capture those things.*/ 
 &lt;&lt;for _optiontext, _optionpassage range $optionmap&gt;&gt;
   &lt;&lt;capture _optionpassage, _optiontext&gt;&gt;
+  /* if _optionpassage[0] (the true/false for whether the option is a check) is true, put the check styling to a link. when clicked, the link runs the SkillCheck widget.
+
+  Corresponding to the arguments in SkillCheck:
+  _optionpassage[1] = success passage
+  2 = failure passage
+  3 = difficulty
+  4 = stat
+  5 = mod 
+   */
     &lt;&lt;if _optionpassage[0] is true&gt;&gt;
       @@.check;&lt;li&gt;-
         &lt;&lt;link _optiontext&gt;&gt;&lt;&lt;SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3] _optionpassage[4] _optionpassage[5]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -330,7 +339,6 @@ $(document).on("keyup", function (e) {
 @@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="nobr" position="600,100">&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Hi!&quot;&gt;&gt;
-&lt;&lt;SkillCheck &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
 &lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
 &lt;&lt;set $ischeck to []&gt;&gt;
@@ -357,7 +365,7 @@ args[0] = text for the option.
 6 = skillcheck mod
 
 i&#39;m sorry this is obscene
-ex: &lt;&lt;AddOption &quot;here&#39;s a check&quot; &quot;CheckingPassage&quot; &quot;true&quot; 10 $skill.int 1 &quot;WinPassage&quot; &quot;FailPassage&quot;&gt;&gt;
+ex: &lt;&lt;AddOption &quot;here&#39;s a check&quot; &quot;true&quot; &quot;Succeed&quot; &quot;Fail&quot; 10 $skill.int 1&gt;&gt;
 &lt;&lt;AddOption &quot;here&#39;s a normal option&quot; &quot;passage&quot;&gt;&gt;
 */</tw-passagedata><tw-passagedata pid="9" name="AddParagraph" tags="widget nobr" position="1100,100">/* widget used to add paragraphs/dialogue and who it belongs to
 
@@ -495,7 +503,15 @@ ex: &lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&
 ex: &lt;&lt;SetSpeaker &quot;Kim Kitsuragi&gt;&gt;*/
 &lt;&lt;widget &quot;SetSpeaker&quot;&gt;&gt;&lt;&lt;set $currentspeaker to (&quot;@@.speaker;&quot; + $args[0] + &quot;@@ - &quot;)&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="SkillCheck" tags="widget nobr" position="600,225">/* rolls a skill check on 1d6.
 
-ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
+ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt;
+
+_difficultynum ($args[2]) is the difficulty you&#39;re trying to beat (if the difficulty is a 7, you want a 7 or higher)
+_stat (3) is the stat you&#39;re using with a number associated with it.
+_mods (4) is any stat number modifiers you might have due to previous actions, like drinking alcohol giving you a -1 or taking meds giving you a +1.
+_roll is a random roll on 1d6, + _stat + _mods
+
+if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it&#39;s a fail, show the fail animation and forward to the fail passage (1).
+*/
 &lt;&lt;widget &quot;SkillCheck&quot;&gt;&gt;
     &lt;&lt;set _difficultynum to $args[2]&gt;&gt;
     &lt;&lt;set _stat to $args[3]&gt;&gt;
@@ -512,7 +528,8 @@ ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
             &lt;&lt;goto $args[1]&gt;&gt;
         &lt;&lt;/timed&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Speaker" tags="widget" position="725,225">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/widget&gt;&gt;
+/*</tw-passagedata><tw-passagedata pid="16" name="Speaker" tags="widget" position="725,225">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;widget &quot;speaker&quot;&gt;&gt;
 @@.speaker;
 $args[0] -

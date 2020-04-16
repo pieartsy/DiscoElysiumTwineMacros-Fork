@@ -1,6 +1,5 @@
 ::Start [nobr]
 <<SetSpeaker "Aster">>
 <<AddParagraph "Hi!">>
-<<SkillCheck "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
