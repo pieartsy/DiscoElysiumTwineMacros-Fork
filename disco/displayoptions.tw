@@ -1,14 +1,16 @@
 :: DisplayOptions [nobr]
+/* ordered list of options */
 <ol id="OptionList">
+/* for each text (key) and passage (value) in $optionmap, capture those things.*/ 
 <<for _optiontext, _optionpassage range $optionmap>>
   <<capture _optionpassage, _optiontext>>
-    <<if _optionpassage[1] is true>>
+    <<if _optionpassage[0] is true>>
       @@.check;<li>-
-        <<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>
+        <<link _optiontext>><<SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3] _optionpassage[4] _optionpassage[5]>><<set $lastoption to _optiontext>><</link>>
       </li>@@
     <<else>>
       <li>-
-        @@.option;<<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>@@
+        @@.option;<<link _optiontext _optionpassage[1]>><<set $lastoption to _optiontext>><</link>>@@
       </li>
     <</if>>
   <</capture>>

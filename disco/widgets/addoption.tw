@@ -1,12 +1,18 @@
 :: AddOption [widget nobr]
 <<widget "AddOption">>
-    <<run $optionmap.set($args[0], [$args[1], $args[2]])>>
+    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6], $args[7]])>>
 <</widget>>
 /*
-the first argument is the text for the option.
-second is for the passage that the option sends you to.
-third is whether it's a check or not.
+args[0] = text for the option.
+1 = whether it's a check or not.
+2 = the passage that the option sends you to (for success if a check)
+3 = passage for failure
+4 = skillcheck difficulty number
+5 = skillcheck stat
+6 = skillcheck mod
+7 = passage for success
 
-ex: <<AddOption "here's a check" "CheckingPassage" "true">>
+i'm sorry this is obscene
+ex: <<AddOption "here's a check" "CheckingPassage" "true" 10 $skill.int 1 "WinPassage" "FailPassage">>
 <<AddOption "here's a normal option" "passage">>
 */
