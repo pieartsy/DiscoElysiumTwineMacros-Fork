@@ -94,14 +94,37 @@ span.continueblock {
 a.macro-linkreplace {
   background-color: #90280f;
   color: white;
-  padding: 15px;
-  padding-bottom: 5px;
-  padding-top: 10px;
   font-family: 'PT Sans Narrow', sans-serif;
   margin-left: -1.5em;
   display: block;
 }
 
+a.macro-linkreplace .padding {
+  padding: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: block;
+}
+
+a.macro-linkreplace .intoverlay  {
+  background-image: url(intoverlay.png);
+  background-size: cover;
+}
+
+a.macro-linkreplace .psyoverlay  {
+  background-image: url(psyoverlay.png);
+  background-size: cover;
+}
+
+a.macro-linkreplace .fysoverlay  {
+  background-image: url(fysoverlay.png);
+  background-size: cover;
+}
+
+a.macro-linkreplace .motoverlay  {
+  background-image: url(motoverlay.png);
+  background-size: cover;
+}
 
 .green {
   color: #98b48b; 
@@ -172,7 +195,7 @@ a.macro-linkreplace {
   background-color: #d2d3cd;
   color: black;
   padding: 3px;
-  border-radius: 5px;
+  display: inline-block;
 }
 
 .check a:hover {

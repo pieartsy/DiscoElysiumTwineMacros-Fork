@@ -9,6 +9,7 @@ _mods (4) is any stat number modifiers you might have due to previous actions, l
 _roll is a random roll on 1d6, + _stat + _mods
 
 if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
+(animations not currently working)
 */
 <<widget "SkillCheck">>
     <<set _difficultynum to $args[2]>>

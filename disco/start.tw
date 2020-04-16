@@ -1,5 +1,7 @@
 ::Start [nobr]
 <<SetSpeaker "Aster">>
 <<AddParagraph "Hi!">>
+
+<<linkreplace "@@#ContinueBtn;.psyoverlay.padding;CONTINUE ➤@@" t8n>>test<</linkreplace>>
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
