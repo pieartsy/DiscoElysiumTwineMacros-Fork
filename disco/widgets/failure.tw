@@ -1,5 +1,9 @@
 :: SkillFailure [widget nobr]
-/* displays the failure animation. */
+/* displays the failure animation. 
+
+<<SkillFailure>>
+
+*/
 <<widget "SkillFailure">>
 <div id="FailureImg" class="CheckOverlay"></div>
 <div id="CheckFailure" class="CheckText">CHECK FAILURE</div>

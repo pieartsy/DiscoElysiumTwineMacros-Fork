@@ -330,8 +330,9 @@ $(document).on("keyup", function (e) {
 @@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="nobr" position="600,100">&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Hi!&quot;&gt;&gt;
+&lt;&lt;SkillCheck &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
-&lt;&lt;AddOption &quot;testoption&quot; &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
+&lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
 &lt;&lt;set $ischeck to []&gt;&gt;
 
 &lt;&lt;set $motorics to [&quot;composure&quot;, &quot;hand-eye coordination&quot;, &quot;interfacing&quot;, &quot;perception&quot;, &quot;reaction speed&quot;, &quot;savoir faire&quot;, &quot;perception (sight)&quot;, &quot;perception (taste)&quot;, &quot;perception (touch)&quot;]&gt;&gt;
@@ -354,7 +355,6 @@ args[0] = text for the option.
 4 = skillcheck difficulty number
 5 = skillcheck stat
 6 = skillcheck mod
-7 = passage for success
 
 i&#39;m sorry this is obscene
 ex: &lt;&lt;AddOption &quot;here&#39;s a check&quot; &quot;CheckingPassage&quot; &quot;true&quot; 10 $skill.int 1 &quot;WinPassage&quot; &quot;FailPassage&quot;&gt;&gt;
@@ -395,7 +395,11 @@ if (paragraphs.length &gt; 1) {
 	paragraphs[paragraphs.length-2].classList.add(&quot;dim&quot;);
 }
 &lt;&lt;/script&gt;&gt;&lt;&lt;/timed&gt;&gt;\
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SkillFailure" tags="widget nobr" position="100,225">/* displays the failure animation. */
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SkillFailure" tags="widget nobr" position="100,225">/* displays the failure animation. 
+
+&lt;&lt;SkillFailure&gt;&gt;
+
+*/
 &lt;&lt;widget &quot;SkillFailure&quot;&gt;&gt;
 &lt;div id=&quot;FailureImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckFailure&quot; class=&quot;CheckText&quot;&gt;CHECK FAILURE&lt;/div&gt;
@@ -497,13 +501,16 @@ ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
     &lt;&lt;set _stat to $args[3]&gt;&gt;
     &lt;&lt;set _mods to $args[4]&gt;&gt;
     &lt;&lt;set _roll to random(1, 6) + _stat + _mods&gt;&gt;
-    &lt;&lt;print _roll&gt;&gt;
     &lt;&lt;if _roll &gt;= _difficultynum&gt;&gt;
         &lt;&lt;SkillSuccess&gt;&gt;
-        &lt;&lt;goto $args[0]&gt;&gt;
+        &lt;&lt;timed 3s&gt;&gt;
+            &lt;&lt;goto $args[0]&gt;&gt;
+        &lt;&lt;/timed&gt;&gt;
     &lt;&lt;else&gt;&gt;
         &lt;&lt;SkillFailure&gt;&gt;
-        &lt;&lt;goto $args[1]&gt;&gt;
+        &lt;&lt;timed 3s&gt;&gt;
+            &lt;&lt;goto $args[1]&gt;&gt;
+        &lt;&lt;/timed&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Speaker" tags="widget" position="725,225">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;widget &quot;speaker&quot;&gt;&gt;

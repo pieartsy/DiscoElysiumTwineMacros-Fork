@@ -7,13 +7,15 @@ ex: <<SkillCheck 10 stats.int 1>> */
     <<set _stat to $args[3]>>
     <<set _mods to $args[4]>>
     <<set _roll to random(1, 6) + _stat + _mods>>
-    <<print _roll>>
     <<if _roll >= _difficultynum>>
         <<SkillSuccess>>
-        <<goto $args[0]>>
+        <<timed 3s>>
+            <<goto $args[0]>>
+        <</timed>>
     <<else>>
         <<SkillFailure>>
-        <<goto $args[1]>>
+        <<timed 3s>>
+            <<goto $args[1]>>
+        <</timed>>
     <</if>>
 <</widget>>
-
