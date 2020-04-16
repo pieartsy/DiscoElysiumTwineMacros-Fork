@@ -1,10 +1,10 @@
 ::Start [nobr]
 <<SetSpeaker "Aster">>
 <<AddParagraph "Hi!" "int">>
-<<PassiveSkill "Rhetoric" "Easy" "Success">>
-<<AddParagraph "Se seems nice.">>
+<<PassiveSkill "Logic" "Hard" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
+<<PassiveSkill "electrochemistry" "Trivial" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
 <<SetSpeaker "Aster">>
 <<AddParagraph "I hope you're doing fine!" "none">>
 
-<<AddOption "testcheck" true "SUCCEED" "FAIL" 3 $stats.int 2>>
+<<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $stats.int 2>>
 <<AddOption "testoption" false "Start">>

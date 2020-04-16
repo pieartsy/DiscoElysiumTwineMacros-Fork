@@ -1,7 +1,7 @@
 :: AddParagraph [widget nobr]
 /* widget used to add paragraphs/dialogue and who it belongs to
 
-ex: <<AddParagraph "I really like talking">>
+ex: <<AddParagraph "I really like talking" "int">>
 */
 <<widget "AddParagraph">>
 /* sets a temporary variable, _para */

@@ -1,0 +1,46 @@
+:: PassiveSkill [widget nobr]
+/* represents the dialogue of passive skills, a unique set speaker.
+
+ex: <<PassiveSkill "Logic">>
+
+<<PassiveSkill "Logic" "Easy" "This is so easy." "Wow guess it wasn't that easy...!" 3 $stats.int 0>>
+
+*/
+<<widget "PassiveSkill">>
+    /* sets _skillname to the first argument, the skill, in lowercase. sets _skillresult as empty */
+    <<set _skillname to ($args[0].toLowerCase())>>
+    <<set _skillresult to "">>
+    /*If the skill name is in the $motorics array, set $currentspeaker to the skill, styling it with the .motorics and .speaker classes. same with the others. */
+    <<if $motorics.includes(_skillname)>>
+        <<set $currentspeaker to ("@@.motorics.speaker;" + _skillname + "@@")>>
+    <<elseif $intellect.includes(_skillname)>>
+        <<set $currentspeaker to ("@@.intellect.speaker;" + _skillname + "@@")>>
+    <<elseif $fysique.includes(_skillname)>>
+        <<set $currentspeaker to ("@@.fysique.speaker;" + _skillname + "@@")>>
+    <<elseif $psyche.includes(_skillname)>>
+        <<set $currentspeaker to ("@@.psyche.speaker;" + _skillname + "@@")>>
+    <</if>>
+    /* if there's a second argument present, run the SkillCheck macro as per usual. Skillcheck's 6th argument checking whether it's a passive check is set to true.
+    
+    if SkillCheck passes/$success is true, set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
+    if it fails, set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
+    
+    add the skill result to the current speaker: Logic [Easy: Success]*/
+    <<if $args[1]>>
+        <<SkillCheck $args[2] $args[3] $args[4] $args[5] $args[6] true>>
+        <<if $success is true>>
+            <<set _skillresult to (" [" + $args[1] + ": " + "Success" + "]")>>
+            <<set $currentspeaker += _skillresult>>
+            <<set $currentspeaker += " - ">>
+            <<AddParagraph $args[2]>>
+        <<else>>
+            <<set _skillresult to (" [" + $args[1] + ": " + "Failure" + "]")>>
+            <<set $currentspeaker += _skillresult>>
+            <<set $currentspeaker += " - ">>
+            <<AddParagraph $args[3]>>
+        <</if>>
+    <<else>>
+        <<set $currentspeaker += " - ">>
+    <</if>>
+    /* Add a dash. */
+<</widget>>

@@ -1,9 +1,8 @@
-:: SkillSuccess [widget]
-<<nobr>>
+:: SkillSuccess [widget nobr]
 <<widget "SkillSuccess">>
 <div id="SuccessImg" class="CheckOverlay"></div>
 <div id="CheckSuccess" class="CheckText">CHECK SUCCESS</div>
 <<SetSpeaker "">>
 <<AddParagraph "//Green flashes at the edges of your vision - a success.//">>
+
 <</widget>>
-<</nobr>>
