@@ -11,12 +11,18 @@
   2 = failure passage
   3 = difficulty
   4 = stat
-  5 = mod 
+  5 = mod
+  6 = skill
    */
     <<if _optionpassage[0] is true>>
-      @@.check;<li>-
+      <<Difficulties _optionpassage[3]>>
+      <<set _optiontext to " [" + _optionpassage[6] + "- " + _label + " " + _optionpassage[3] + "] - " + _optiontext>>
+      @@.check.odds;<li>-
         <<link _optiontext>><<SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3] _optionpassage[4] _optionpassage[5]>><<set $lastoption to _optiontext>><</link>>
       </li>@@
+      <div id="oddsinfo" style="display: none;">
+        
+      </div>
       /* otherwise, put the .option style on a link */
     <<else>>
       <li>-

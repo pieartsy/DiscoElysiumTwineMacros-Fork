@@ -4,3 +4,15 @@
 <<if $lastoption>>
 @@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
 <</if>>
+<<silently>>
+<script>
+    if (document.getElementById('oddsinfo')) {
+        var oddsinfo = document.getElementById('oddsinfo');
+
+        tippy('.odds', {
+        content: oddsinfo.innerHTML,
+        allowHTML: true,
+        });
+    }
+</script>
+<</silently>>

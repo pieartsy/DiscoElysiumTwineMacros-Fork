@@ -69,7 +69,6 @@ a:active {
   margin-left: -1.5em;
 }
 
-
 .dim {
   transition: opacity 0.5s;
   opacity: 0.5;
@@ -201,4 +200,5 @@ a.macro-linkreplace .motoverlay  {
 .check a:hover {
   background-color: #82837f;
   color: white;
+
 }
