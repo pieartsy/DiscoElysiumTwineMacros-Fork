@@ -1,0 +1,6 @@
+::Start [nobr]
+<<SetSpeaker "Aster">>
+<<AddParagraph "Hi!">>
+<<SkillCheck 1 stats.int 2>>
+<<AddOption "testcheck" "Start" true>>
+<<AddOption "testoption" "Start">>

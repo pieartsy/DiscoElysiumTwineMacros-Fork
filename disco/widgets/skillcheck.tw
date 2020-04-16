@@ -1,0 +1,16 @@
+::SkillCheck [widget]
+/* rolls a skill check on 1d6.
+
+ex: <<SkillCheck 10 stats.int 1>> */
+<<widget "SkillCheck">>
+    <<set _checknumber to $args[0]>>
+    <<set _stat to $args[1]>>
+    <<set _mods to $args[2]>>
+    <<set _roll to random(1, 6) + _stat + _mods>>
+    <<print _roll>>
+    <<if _roll >= _checknumber>>
+        <<SKillSuccess>>
+    <<else>>
+        <<SkillFailure>>
+    <</if>>
+<</widget>>

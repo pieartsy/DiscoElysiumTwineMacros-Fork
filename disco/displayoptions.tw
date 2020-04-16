@@ -1,0 +1,17 @@
+:: DisplayOptions [nobr]
+<ol id="OptionList">
+<<for _optiontext, _optionpassage range $optionmap>>
+  <<capture _optionpassage, _optiontext>>
+    <<if _optionpassage[1] is true>>
+      @@.check;<li>-
+        <<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>
+      </li>@@
+    <<else>>
+      <li>-
+        @@.option;<<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>@@
+      </li>
+    <</if>>
+  <</capture>>
+<</for>>
+</ol>
+<<set $optionmap to new Map()>>

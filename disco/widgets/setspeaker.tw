@@ -1,0 +1,5 @@
+:: SetSpeaker [widget]
+/*sets $current speaker to the first argument, styled with the .speaker class
+
+ex: <<SetSpeaker "Kim Kitsuragi>>*/
+<<widget "SetSpeaker">><<set $currentspeaker to ("@@.speaker;" + $args[0] + "@@ - ")>><</widget>>

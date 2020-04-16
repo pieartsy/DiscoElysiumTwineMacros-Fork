@@ -1,0 +1,12 @@
+:: AddOption [widget nobr]
+<<widget "AddOption">>
+    <<run $optionmap.set($args[0], [$args[1], $args[2]])>>
+<</widget>>
+/*
+the first argument is the text for the option.
+second is for the passage that the option sends you to.
+third is whether it's a check or not.
+
+ex: <<AddOption "here's a check" "CheckingPassage" "true">>
+<<AddOption "here's a normal option" "passage">>
+*/

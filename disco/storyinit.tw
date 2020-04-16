@@ -1,0 +1,13 @@
+:: StoryInit
+<<set $optionmap to new Map()>>
+<<set $ischeck to []>>
+
+<<set $motorics to ["composure", "hand-eye coordination", "interfacing", "perception", "reaction speed", "savoir faire", "perception (sight)", "perception (taste)", "perception (touch)"]>>
+<<set $intellect to ["conceptualization", "drama", "encyclopedia", "logic", "rhetoric", "visual Calculus"]>>
+<<set $fysique to ["electrochemistry", "endurance", "half light", "pain threshold", "physical instrument", "shivers"]>>
+<<set $psyche to ["authority", "empathy", "esprit de corps", "inland empire", "suggestion", "volition"]>>
+<<set $greentext to []>>
+<<set $paraAppendMode to false>>
+
+<<set $xp to 0>>
+<<set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }>>
