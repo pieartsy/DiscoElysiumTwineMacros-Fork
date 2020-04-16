@@ -360,13 +360,17 @@ $(document).on("keyup", function (e) {
 &lt;&lt;set $optionmap to new Map()&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="FAIL" tags="" position="225,100">&lt;&lt;SkillFailure&gt;&gt;
 &lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Failure&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;YOU FAILED!!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="PassageFooter" tags="" position="350,100">&lt;&lt;DisplayParagraphs&gt;&gt;\</tw-passagedata><tw-passagedata pid="4" name="PassageHeader" tags="" position="475,100">&lt;&lt;set $paragraphs to []&gt;&gt;
+&lt;&lt;set $overlays to []&gt;&gt;
 &lt;&lt;if $lastoption&gt;&gt;
 @@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="nobr" position="600,100">&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Hi!&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Hi!&quot; &quot;int&quot;&gt;&gt;
+&lt;&lt;PassiveSkill &quot;Rhetoric&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Se seems nice.&quot;&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I hope you&#39;re doing fine!&quot; &quot;none&quot;&gt;&gt;
 
-&lt;&lt;linkreplace &quot;@@#ContinueBtn;.psyoverlay.padding;CONTINUE ➤@@&quot; t8n&gt;&gt;test&lt;&lt;/linkreplace&gt;&gt;
-&lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
+&lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 3 $stats.int 2&gt;&gt;
 &lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
 &lt;&lt;set $ischeck to []&gt;&gt;
 
@@ -380,7 +384,10 @@ $(document).on("keyup", function (e) {
 &lt;&lt;set $xp to 0&gt;&gt;
 &lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SUCCEED" tags="" position="850,100">&lt;&lt;SkillSuccess&gt;&gt;
 &lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AddOption" tags="widget nobr" position="975,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot; &quot;fys&quot;&gt;&gt;
+&lt;&lt;PassiveSkill &quot;electrochemistry&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Very sexy of you.&quot; &quot;none&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;;)&quot; &quot;none&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AddOption" tags="widget nobr" position="975,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
     &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6], $args[7]])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 /*
@@ -412,18 +419,32 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
     /* otherwise, set _para to $currentspeaker + paragraph, and push to $paragraphs*/
     &lt;&lt;set _para to (_para + $currentspeaker + $args[0])&gt;&gt;
+    &lt;&lt;set _overlay to $args[1]&gt;&gt;
     &lt;&lt;run $paragraphs.push(_para)&gt;&gt;
+    &lt;&lt;set $overlays.push(_overlay)&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="DisplayParagraphs" tags="widget" position="1225,100">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
-&lt;&lt;widget &quot;DisplayParagraphs&quot;&gt;&gt;&lt;&lt;set _paragraph to $paragraphs[0]&gt;&gt;\
-&lt;&lt;run $paragraphs.deleteAt(0)&gt;&gt;\
+&lt;&lt;widget &quot;DisplayParagraphs&quot;&gt;&gt;&lt;&lt;set _paragraph to $paragraphs[0]&gt;&gt;&lt;&lt;set _overlay to $overlays[0]&gt;&gt;\
+&lt;&lt;run $paragraphs.deleteAt(0)&gt;&gt;&lt;&lt;run $overlays.deleteAt(0)&gt;&gt;\
 @@.paragraph;&lt;&lt;print _paragraph&gt;&gt;@@
 /*if the length of $paragraphs continues to be more than zero, keep displaying a clickable CONTINUE button (that runs through the widget)*/
+&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $paragraphs.length &gt; 0&gt;&gt;
-&lt;&lt;linkreplace &quot;@@#ContinueBtn;CONTINUE ➤@@&quot; t8n&gt;&gt;&lt;&lt;DisplayParagraphs&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;\
-&lt;&lt;else&gt;&gt;\
-/*otherwise, display options.*/
-&lt;&lt;include DisplayOptions&gt;&gt;
+	&lt;&lt;if _overlay is &quot;int&quot;&gt;&gt;
+		&lt;&lt;linkreplace &quot;@@#ContinueBtn;.padding.intoverlay;CONTINUE ➤@@&quot; t8n&gt;&gt;&lt;&lt;DisplayParagraphs&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
+	&lt;&lt;elseif _overlay is &quot;psy&quot;&gt;&gt;
+		&lt;&lt;linkreplace &quot;@@#ContinueBtn;.padding.psyoverlay;CONTINUE ➤@@&quot; t8n&gt;&gt;&lt;&lt;DisplayParagraphs&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
+	&lt;&lt;elseif _overlay is &quot;fys&quot;&gt;&gt;
+		&lt;&lt;linkreplace &quot;@@#ContinueBtn;.padding.fysoverlay;CONTINUE ➤@@&quot; t8n&gt;&gt;&lt;&lt;DisplayParagraphs&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
+	&lt;&lt;elseif _overlay is &quot;mot&quot;&gt;&gt;
+		&lt;&lt;linkreplace &quot;@@#ContinueBtn;.padding.motoverlay;CONTINUE ➤@@&quot; t8n&gt;&gt;&lt;&lt;DisplayParagraphs&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;&lt;linkreplace &quot;@@#ContinueBtn;.padding;CONTINUE ➤@@&quot; t8n&gt;&gt;&lt;&lt;DisplayParagraphs&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+	/*otherwise, display options.*/
+	&lt;&lt;include DisplayOptions&gt;&gt;
 &lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 /* the script dims the paragraphs after they&#39;ve been clicked. */
 &lt;&lt;timed 0.5s&gt;&gt;&lt;&lt;script&gt;&gt;
 var paragraphs = document.getElementsByClassName(&#39;paragraph&#39;);
@@ -548,9 +569,7 @@ if _roll is more than or equal to the difficulty, show the success animation and
     &lt;&lt;set _roll to random(1, 6) + _stat + _mods&gt;&gt;
     &lt;&lt;if _roll &gt;= _difficultynum&gt;&gt;
             &lt;&lt;goto $args[0]&gt;&gt;
-        
     &lt;&lt;else&gt;&gt;
-
             &lt;&lt;goto $args[1]&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;

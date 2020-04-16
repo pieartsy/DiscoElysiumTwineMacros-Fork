@@ -16,5 +16,7 @@ ex: <<AddParagraph "I really like talking">>
     <</if>>
     /* otherwise, set _para to $currentspeaker + paragraph, and push to $paragraphs*/
     <<set _para to (_para + $currentspeaker + $args[0])>>
+    <<set _overlay to $args[1]>>
     <<run $paragraphs.push(_para)>>
+    <<set $overlays.push(_overlay)>>
 <</widget>>
