@@ -2,7 +2,7 @@ DONE - make "passive skills" actually do a skill check
 - make the two variables $overlays and $paragraphs actually a key/value map rather than two arrays
 - add roll results to checksuccess and checkfailure somehow? 
 - add roll results to passive checks?
-- make overlays happen AFTER or DURING passive skills being set, rather than before
+- make overlays happen BEFORE passive skills are displayed, rather than after
 - tippy...
 - why is it tiny???? why is the text tiny????
 

@@ -2,7 +2,6 @@
 
 html {
   height: 100%;
-  zoom: 2;
 }
 
 body, tw-story
@@ -29,6 +28,7 @@ tw-hook
   line-height: 1.25;
   font-size: large;
   margin-left: 1.5em;
+  font-size: 1.5rem;
 }
 
 a {
@@ -150,11 +150,13 @@ a.macro-linkreplace .motoverlay  {
 }
 
 #SuccessImg {
-  background: url(SuccessOverlay.png) no-repeat center;
+  background: url(SuccessOverlay.png) no-repeat right;
+  background-size: contain;
 }
 
 #FailureImg {
-  background: url(FailureOverlay.png) no-repeat center;
+  background: url(FailureOverlay.png) no-repeat right;
+  background-size: contain;
 }
 
 @keyframes Flash {

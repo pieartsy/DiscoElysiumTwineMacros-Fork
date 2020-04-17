@@ -41,9 +41,8 @@ if after a passive check:
     
     if SkillCheck passes/$success is true,
         set the skill rating to the _label determined by the <<Difficulties>> widget
-    
-    
-    set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
+        set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
+        also make the continue button have an overlay
     if it fails, set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
     
     add the skill result to the current speaker: Logic [Easy: Success]
