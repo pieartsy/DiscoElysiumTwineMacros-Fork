@@ -1,7 +1,7 @@
 ::SkillCheck [widget nobr]
 /* rolls a skill check on 1d6.
 
-ex: <<SkillCheck 10 stats.int 1>>
+ex: <<SkillCheck "SUCCESS" "FAILURE" 10 $int 1>>
 
 _difficultynum ($args[2]) is the difficulty you're trying to beat (if the difficulty is a 7, you want a 7 or higher)
 _stat (3) is the stat you're using with a number associated with it.

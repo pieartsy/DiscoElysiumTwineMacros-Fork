@@ -1,0 +1,25 @@
+::StatChange [widget nobr]
+/*<<StatChange "⯅" $int "int" "#intlvl" true>>*/
+<<widget "StatChange">>
+    <<set _text to $args[0]>>
+    <<set _increase to $args[4]>>
+    <<link _text>>
+        <<if $args[4] is true>>
+            <<set $args[1] += 1>>
+        <<else>>
+            <<set $args[1] -= 1>>
+        <</if>>
+        <<replace $args[3]>>
+            $args[1]
+        <</replace>>
+        <<if $args[2] is "int">>
+            <<set $int to $args[1]>>
+        <<elseif $args[2] is "psy">>
+            <<set $psy to $args[1]>>
+        <<elseif $args[2] is "fys">>
+            <<set $fys to $args[1]>>
+        <<elseif $args[2] is "mot">>
+            <<set $mot to $args[1]>>
+        <</if>>
+    <</link>>
+<</widget>>

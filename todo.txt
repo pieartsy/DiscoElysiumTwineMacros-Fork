@@ -12,4 +12,5 @@ DONE - make "passive skills" actually do a skill check
 - stat setting
 - level ups upping stats
 - inventory/items
+    -  bind close to esc key
 - thoughts?? (probably not)

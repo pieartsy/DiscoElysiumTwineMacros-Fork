@@ -223,6 +223,10 @@ a.macro-linkreplace .motoverlay  {
   font-size: 4rem;
 }
 
+.stats td {
+  font-size: 2rem;
+}
+
 .stats td:nth-child(even) {
   background-color: #d2d3cd;
   color: black;

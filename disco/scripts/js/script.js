@@ -27,9 +27,10 @@ $(document).on("keyup", function (e) {
     var menu = document.getElementById("menu-story");
     menu.children[0].getElementsByClassName("link-internal")[0].click();
   }
-
-  if ((e.keyCode == 27) && (document.getElementById("#ui-overlay"))) {
-    var dia = document.getElementById("#ui-overlay");
+  
+  if ((e.keyCode == 27) && (document.getElementById("ui-dialog"))) {
+    var dia = document.getElementById('ui-dialog');
     console.log(dia)
+    //dia.close();
   }
 });

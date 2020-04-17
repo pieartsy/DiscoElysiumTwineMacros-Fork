@@ -1,15 +1,27 @@
 ::Overview
 <table class="stats">
     <tr>
-        <th>$stats.int</th>
-        <th>$stats.psy</th>
-        <th>$stats.fys</th>
-        <th>$stats.mot</th>
+        <td><<StatChange "⯅" $int "int" "#intlvl" true>></td>
+        <td><<StatChange "⯅" $psy "psy" "#psylvl" true>></td>
+        <td><<StatChange "⯅" $fys "fys" "#fyslvl" true>></td>
+        <td><<StatChange "⯅" $mot "mot" "#motlvl" true>></td>
+    </tr>
+    <tr>
+        <th id="intlvl">$int</th>
+        <th id="psylvl">$psy</th>
+        <th id="fyslvl">$fys</th>
+        <th id="motlvl">$mot</th>
     </tr>
     <tr>
         <td>INT</td>
         <td>PSY</td>
         <td>FYS</td>
         <td>MOT</td>
+    </tr>
+    <tr>
+        <td><<StatChange "⯆" $int "int" "#intlvl">></td>
+        <td><<StatChange "⯆" $psy "psy" "#psylvl">></td>
+        <td><<StatChange "⯆" $fys "fys" "#fyslvl">></td>
+        <td><<StatChange "⯆" $mot "mot" "#motlvl">></td>
     </tr>
 </table>
