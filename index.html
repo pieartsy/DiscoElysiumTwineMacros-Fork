@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Disco Tests" startnode="5" creator="Tweego" creator-version="1.3.0" ifid="5BD21ED8-62C2-4C12-9F44-05FA8FE75082" zoom="1" format="SugarCube" format-version="2.30.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "style.css" */
+	<tw-storydata name="Disco Tests" startnode="6" creator="Tweego" creator-version="1.3.0" ifid="5BD21ED8-62C2-4C12-9F44-05FA8FE75082" zoom="1" format="SugarCube" format-version="2.30.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "style.css" */
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=PT+Sans+Narrow&display=swap');
 
 html {
@@ -147,10 +147,16 @@ a:active {
   color: white;
 }
 
+/* for option list */
 .passage ol {
   margin-left: -1em;
 }
 
+.option {
+  font-weight: bold;
+}
+
+/* skill voice colors */
 .psyche {
   color: #705cbb;
 }
@@ -172,6 +178,7 @@ a:active {
   margin-left: -1.5em;
 }
 
+/* for inserted paragraphs and past paragraphs */
 .dim {
   transition: opacity 0.5s;
   opacity: 0.5;
@@ -185,10 +192,7 @@ a:active {
   color: #737c87;
 }
 
-.option {
-  font-weight: bold;
-}
-
+/* continue macros and overlays */
 span.continueblock {
   display: none;
 }
@@ -228,11 +232,13 @@ a.macro-linkreplace .motoverlay  {
   background-size: cover;
 }
 
+/* greentext */
 .green {
   color: #98b48b; 
   margin-left: -1.5em;
 }
 
+/* check overlay animations */
 .CheckOverlay {
   width: 100%;
   height: 100%;
@@ -292,6 +298,8 @@ a.macro-linkreplace .motoverlay  {
   60% {opacity: 1; left: 50%}
   100% {opacity: 0; left: 80%}
 }
+
+/* styling for white check */
 .check a {
   font-weight: bold;
   background-color: #d2d3cd;
@@ -303,7 +311,29 @@ a.macro-linkreplace .motoverlay  {
 .check a:hover {
   background-color: #82837f;
   color: white;
+}
 
+/* tables */
+.stats table, th, td {
+  vertical-align: center;
+  text-align: center;
+  padding: 0px 10px 10px 10px;
+  font-weight: bold;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.stats th {
+  font-size: 4rem;
+}
+
+.stats td:nth-child(even) {
+  background-color: #d2d3cd;
+  color: black;
+}
+
+.stats th:nth-child(even) {
+  background-color: #d2d3cd;
+  color: black;
 }
 /* twine-user-stylesheet #2: "tippy.css" */
 .tippy-box[data-animation=fade][data-state=hidden] {
@@ -397,7 +427,97 @@ a.macro-linkreplace .motoverlay  {
     position: relative;
     padding: 5px 9px;
     z-index: 1
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "popper.js" */
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "dialogue.js" */
+// dialog API macro set, by chapel; for sugarcube 2
+// version 1.3.0
+// see the documentation: https://github.com/ChapelR/custom-macros-for-sugarcube-2#dialog-api-macros
+
+// <<dialog>> macro
+Macro.add('dialog', {
+    tags : ['onopen', 'onclose'],
+ handler : function () {
+     
+     // handle args (if any)
+     var errors = [];
+     var content = '', onOpen = null, onClose = null;
+     var title = (this.args.length > 0) ? this.args[0] : '';
+     var classes = (this.args.length > 1) ? this.args.slice(1).flatten() : [];
+
+     this.payload.forEach( function (pl, idx) {
+         if (idx === 0) {
+             content = pl.contents;
+         } else {
+             if (pl.name === 'onopen') {
+                 onOpen = onOpen ? onOpen + pl.contents : pl.contents;
+             } else {
+                 onClose = onClose ? onClose + pl.contents : pl.contents;
+             }
+         }
+     });
+     
+     // add the macro- class
+     classes.push('macro-' + this.name);
+     
+     // dialog box
+     Dialog.setup(title, classes.join(' '));
+     Dialog.wiki(content);
+
+     // should these be shadowWrapper-aware?
+     if (onOpen && typeof onOpen === 'string' && onOpen.trim()) {
+         $(document).one(':dialogopened', function () {
+             $.wiki(onOpen);
+         });
+     }
+
+     if (onClose && typeof onClose === 'string' && onClose.trim()) {
+         $(document).one(':dialogclosed', function () {
+             $.wiki(onClose);
+         });
+     }
+
+     Dialog.open();
+     
+ }
+
+});
+
+// <<popup>> macro
+Macro.add('popup', {
+ handler : function () {
+     
+     // errors
+     if (this.args.length < 1) {
+         return this.error('need at least one argument; the passage to display');
+     }
+     if (!Story.has(this.args[0])) {
+         return this.error('the passage ' + this.args[0] + 'does not exist');
+     }
+     
+     // passage name and title
+     var psg   = this.args[0];
+     var title = (this.args.length > 1) ? this.args[1] : '';
+     var classes = (this.args.length > 2) ? this.args.slice(2).flatten() : [];
+     
+     // add the macro- class
+     classes.push('macro-' + this.name);
+     
+     // dialog box
+     Dialog.setup(title, classes.join(' '));
+     Dialog.wiki(Story.get(psg).processText());
+     Dialog.open();
+     
+ }
+
+});
+
+// <<dialogclose>> macro
+Macro.add('dialogclose', { 
+ skipArgs : true, 
+ handler : function () {
+     Dialog.close()
+ } 
+});
+/* twine-user-script #2: "popper.js" */
 /**
  * @popperjs/core v2.3.3 - MIT License
  */
@@ -2180,7 +2300,7 @@ a.macro-linkreplace .motoverlay  {
   })));
   //# sourceMappingURL=popper.js.map
   
-/* twine-user-script #2: "script.js" */
+/* twine-user-script #3: "script.js" */
 $(document).click(function(e) {
 	if($("span.continueblock").length) {
 		$("span.continueblock").first().removeClass('continueblock');
@@ -2205,8 +2325,18 @@ $(document).on("keyup", function (e) {
       list.children[childIndex].getElementsByClassName("link-internal")[0].click();
     }
   }
+
+  if ((e.keyCode == 27) && (document.getElementById("menu-story"))) {
+    var menu = document.getElementById("menu-story");
+    menu.children[0].getElementsByClassName("link-internal")[0].click();
+  }
+
+  if ((e.keyCode == 27) && (document.getElementById("#ui-overlay"))) {
+    var dia = document.getElementById("#ui-overlay");
+    console.log(dia)
+  }
 });
-/* twine-user-script #3: "tippy.js" */
+/* twine-user-script #4: "tippy.js" */
 (function (define) {
 
 	/**!
@@ -4428,14 +4558,28 @@ $(document).on("keyup", function (e) {
         });
     }
 &lt;/script&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="nobr" position="600,100">&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Overview" tags="" position="600,100">&lt;table class=&quot;stats&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;$stats.int&lt;/th&gt;
+        &lt;th&gt;$stats.psy&lt;/th&gt;
+        &lt;th&gt;$stats.fys&lt;/th&gt;
+        &lt;th&gt;$stats.mot&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;INT&lt;/td&gt;
+        &lt;td&gt;PSY&lt;/td&gt;
+        &lt;td&gt;FYS&lt;/td&gt;
+        &lt;td&gt;MOT&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</tw-passagedata><tw-passagedata pid="6" name="Start" tags="nobr" position="725,100">&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Hi!&quot; &quot;int&quot;&gt;&gt;
 &lt;&lt;PassiveSkill &quot;logic&quot; &quot;This is so easy.&quot; &quot;Wow guess it wasn&#39;t that easy...!&quot; 6 $stats.int 0&gt;&gt;
 &lt;&lt;PassiveSkill &quot;electrochemistry&quot; &quot;Succeeding is sexy as hell.&quot; &quot;Unsexy! Failing is unsexy!&quot; 2 $stats.int 0&gt;&gt;
+&lt;&lt;TaskComplete &quot;Sexiness&quot; 5&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;I hope you&#39;re doing fine!&quot; &quot;none&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 5 $stats.int 2 &quot;Logic&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
+&lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="StoryInit" tags="" position="850,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
 &lt;&lt;set $success to &quot;&quot;&gt;&gt;
 
 &lt;&lt;set $motorics to [&quot;composure&quot;, &quot;hand-eye coordination&quot;, &quot;interfacing&quot;, &quot;perception&quot;, &quot;reaction speed&quot;, &quot;savoir faire&quot;, &quot;perception (sight)&quot;, &quot;perception (taste)&quot;, &quot;perception (touch)&quot;]&gt;&gt;
@@ -4445,13 +4589,18 @@ $(document).on("keyup", function (e) {
 &lt;&lt;set $greentext to []&gt;&gt;
 &lt;&lt;set $paraAppendMode to false&gt;&gt;
 
+&lt;&lt;set $items to []&gt;&gt;
 &lt;&lt;set $xp to 0&gt;&gt;
-&lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SUCCEED" tags="" position="850,100">&lt;&lt;SkillSuccess&gt;&gt;
+&lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryMenu" tags="" position="975,100">&lt;&lt;link &#39;Character Overview&#39;&gt;&gt;
+	&lt;&lt;dialog &#39;Overview&#39; &#39;overview&#39;&gt;&gt;\
+    &lt;&lt;include &quot;Overview&quot;&gt;&gt;
+	&lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="SUCCEED" tags="" position="1100,100">&lt;&lt;SkillSuccess&gt;&gt;
 &lt;&lt;PassiveSkill &quot;Logic&quot; 5 &quot;Success&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot; &quot;fys&quot;&gt;&gt;
 &lt;&lt;PassiveSkill &quot;electrochemistry&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Very sexy of you.&quot; &quot;none&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;;)&quot; &quot;none&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AddOption" tags="widget nobr" position="975,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;;)&quot; &quot;none&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="AddOption" tags="widget nobr" position="1225,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
     &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6], $args[7]])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 /*
@@ -4466,7 +4615,7 @@ args[0] = text for the option.
 i&#39;m sorry this is obscene
 ex: &lt;&lt;AddOption &quot;here&#39;s a check&quot; &quot;true&quot; &quot;Succeed&quot; &quot;Fail&quot; 10 $skill.int 1&gt;&gt;
 &lt;&lt;AddOption &quot;here&#39;s a normal option&quot; &quot;passage&quot;&gt;&gt;
-*/</tw-passagedata><tw-passagedata pid="9" name="AddParagraph" tags="widget nobr" position="1100,100">/* widget used to add paragraphs/dialogue and who it belongs to
+*/</tw-passagedata><tw-passagedata pid="11" name="AddParagraph" tags="widget nobr" position="100,225">/* widget used to add paragraphs/dialogue and who it belongs to
 
 ex: &lt;&lt;AddParagraph &quot;I really like talking&quot; &quot;int&quot;&gt;&gt;
 */
@@ -4486,7 +4635,7 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot; &quot;int&quot;&gt;&g
     &lt;&lt;set _overlay to $args[1]&gt;&gt;
     &lt;&lt;run $paragraphs.push(_para)&gt;&gt;
     &lt;&lt;set $overlays.push(_overlay)&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Difficulties" tags="widget nobr" position="1225,100">/* sets labels based on the difficulty rating */
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Difficulties" tags="widget nobr" position="225,225">/* sets labels based on the difficulty rating */
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;widget &quot;Difficulties&quot;&gt;&gt;
     &lt;&lt;if $args[0] is 1&gt;&gt;
@@ -4509,7 +4658,7 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot; &quot;int&quot;&gt;&g
         &lt;&lt;set _label to &quot;Impossible&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DisplayParagraphs" tags="widget" position="100,225">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="DisplayParagraphs" tags="widget" position="350,225">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
 &lt;&lt;widget &quot;DisplayParagraphs&quot;&gt;&gt;&lt;&lt;set _paragraph to $paragraphs[0]&gt;&gt;&lt;&lt;set _overlay to $overlays[0]&gt;&gt;\
 &lt;&lt;run $paragraphs.deleteAt(0)&gt;&gt;&lt;&lt;run $overlays.deleteAt(0)&gt;&gt;\
 @@.paragraph;&lt;&lt;print _paragraph&gt;&gt;@@
@@ -4539,7 +4688,7 @@ if (paragraphs.length &gt; 1) {
 	paragraphs[paragraphs.length-2].classList.add(&quot;dim&quot;);
 }
 &lt;&lt;/script&gt;&gt;&lt;&lt;/timed&gt;&gt;\
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="SkillFailure" tags="widget nobr" position="225,225">/* displays the failure animation.
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="SkillFailure" tags="widget nobr" position="475,225">/* displays the failure animation.
 
 &lt;&lt;SkillFailure&gt;&gt;
 
@@ -4548,16 +4697,16 @@ if (paragraphs.length &gt; 1) {
 &lt;div id=&quot;FailureImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckFailure&quot; class=&quot;CheckText&quot;&gt;CHECK FAILURE&lt;/div&gt;
 &lt;&lt;SetSpeaker &quot;&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;//Red flashes at the edges of your vision - a failure.&quot; + $roll + &quot;//&quot;&gt;&gt;
-&lt;&lt;set $roll to 0&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="GreenTextWidgets" tags="widget nobr" position="350,225">/* various widgets for &quot;green text&quot; popups. have a generic text that can be customized with arguments */
+&lt;&lt;AddParagraph &quot;//Red flashes at the edges of your vision - a failure.//&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="GreenTextWidgets" tags="widget nobr" position="600,225">/* various widgets for &quot;green text&quot; popups. have a generic text that can be customized with arguments */
 &lt;&lt;widget &quot;TaskComplete&quot;&gt;&gt;
 /*The first argument is the task, the second is the experience gained (if any).
 
 &lt;&lt;TaskComplete &quot;Get Kim to drink&quot; 10&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Task complete: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;if $args[1]&gt;&gt;
-&lt;&lt;run $greentext.push(&quot;@@.green;Gained experience: +&quot; + $args[1] + &quot;@@&quot;)&gt;&gt;
+    &lt;&lt;run $greentext.push(&quot;@@.green;Gained experience: +&quot; + $args[1] + &quot;@@&quot;)&gt;&gt;
+    &lt;&lt;set $xp += $args[1]&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
@@ -4568,7 +4717,8 @@ if (paragraphs.length &gt; 1) {
 &lt;&lt;SecretTaskComplete &quot;Dance sexily&quot; 25&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Secret task complete: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;if $args[1]&gt;&gt;
-&lt;&lt;run $greentext.push(&quot;@@.green;+&quot; + $args[1] + &quot; XP: gained experience@@&quot;)&gt;&gt;
+    &lt;&lt;run $greentext.push(&quot;@@.green;+&quot; + $args[1] + &quot; XP: gained experience@@&quot;)&gt;&gt;
+    &lt;&lt;set $xp += $args[1]&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
@@ -4585,6 +4735,7 @@ if (paragraphs.length &gt; 1) {
 &lt;&lt;ItemGained &quot;Cheese&quot;&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Item gained: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
+&lt;&lt;set $items.push($args[0])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &quot;ItemLost&quot;&gt;&gt;
@@ -4593,6 +4744,7 @@ if (paragraphs.length &gt; 1) {
 &lt;&lt;ItemLost &quot;Cheese&quot;&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Item lost: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
+&lt;&lt;set $items.delete($args[0])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &quot;ThoughtGained&quot;&gt;&gt;
@@ -4607,7 +4759,7 @@ if (paragraphs.length &gt; 1) {
 /* &lt;&lt;LevelUp&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Level up!@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="PassiveSkill" tags="widget nobr" position="475,225">/* represents the dialogue of passive skills, a unique set speaker.
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="PassiveSkill" tags="widget nobr" position="725,225">/* represents the dialogue of passive skills, a unique set speaker.
 
 ex:
 normal skill speaking
@@ -4683,10 +4835,10 @@ if after a passive check:
         &lt;&lt;set $currentspeaker += &quot; - &quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
     /* Add a dash. */
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="SetSpeaker" tags="widget" position="600,225">/*sets $current speaker to the first argument, styled with the .speaker class
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="SetSpeaker" tags="widget" position="850,225">/*sets $current speaker to the first argument, styled with the .speaker class
 
 ex: &lt;&lt;SetSpeaker &quot;Kim Kitsuragi&gt;&gt;*/
-&lt;&lt;widget &quot;SetSpeaker&quot;&gt;&gt;&lt;&lt;set $currentspeaker to (&quot;@@.speaker;&quot; + $args[0] + &quot;@@ - &quot;)&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="SkillCheck" tags="widget nobr" position="725,225">/* rolls a skill check on 1d6.
+&lt;&lt;widget &quot;SetSpeaker&quot;&gt;&gt;&lt;&lt;set $currentspeaker to (&quot;@@.speaker;&quot; + $args[0] + &quot;@@ - &quot;)&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="SkillCheck" tags="widget nobr" position="975,225">/* rolls a skill check on 1d6.
 
 ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt;
 
@@ -4723,7 +4875,7 @@ if _passive is false/not present:
         &lt;&lt;/if&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
-/*</tw-passagedata><tw-passagedata pid="17" name="SkillSuccess" tags="widget nobr" position="850,225">&lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
+/*</tw-passagedata><tw-passagedata pid="19" name="SkillSuccess" tags="widget nobr" position="1100,225">&lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
 &lt;div id=&quot;SuccessImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckSuccess&quot; class=&quot;CheckText&quot;&gt;CHECK SUCCESS&lt;/div&gt;
 &lt;&lt;SetSpeaker &quot;&quot;&gt;&gt;

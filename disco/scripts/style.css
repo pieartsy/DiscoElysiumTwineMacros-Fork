@@ -44,10 +44,16 @@ a:active {
   color: white;
 }
 
+/* for option list */
 .passage ol {
   margin-left: -1em;
 }
 
+.option {
+  font-weight: bold;
+}
+
+/* skill voice colors */
 .psyche {
   color: #705cbb;
 }
@@ -69,6 +75,7 @@ a:active {
   margin-left: -1.5em;
 }
 
+/* for inserted paragraphs and past paragraphs */
 .dim {
   transition: opacity 0.5s;
   opacity: 0.5;
@@ -82,10 +89,7 @@ a:active {
   color: #737c87;
 }
 
-.option {
-  font-weight: bold;
-}
-
+/* continue macros and overlays */
 span.continueblock {
   display: none;
 }
@@ -125,11 +129,13 @@ a.macro-linkreplace .motoverlay  {
   background-size: cover;
 }
 
+/* greentext */
 .green {
   color: #98b48b; 
   margin-left: -1.5em;
 }
 
+/* check overlay animations */
 .CheckOverlay {
   width: 100%;
   height: 100%;
@@ -189,6 +195,8 @@ a.macro-linkreplace .motoverlay  {
   60% {opacity: 1; left: 50%}
   100% {opacity: 0; left: 80%}
 }
+
+/* styling for white check */
 .check a {
   font-weight: bold;
   background-color: #d2d3cd;
@@ -200,5 +208,27 @@ a.macro-linkreplace .motoverlay  {
 .check a:hover {
   background-color: #82837f;
   color: white;
+}
 
+/* tables */
+.stats table, th, td {
+  vertical-align: center;
+  text-align: center;
+  padding: 0px 10px 10px 10px;
+  font-weight: bold;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.stats th {
+  font-size: 4rem;
+}
+
+.stats td:nth-child(even) {
+  background-color: #d2d3cd;
+  color: black;
+}
+
+.stats th:nth-child(even) {
+  background-color: #d2d3cd;
+  color: black;
 }

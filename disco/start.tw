@@ -3,6 +3,7 @@
 <<AddParagraph "Hi!" "int">>
 <<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
 <<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
+<<TaskComplete "Sexiness" 5>>
 <<SetSpeaker "Aster">>
 <<AddParagraph "I hope you're doing fine!" "none">>
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $stats.int 2 "Logic">>

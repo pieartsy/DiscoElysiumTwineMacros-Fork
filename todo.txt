@@ -3,3 +3,13 @@ DONE - make "passive skills" actually do a skill check
 - add roll results to checksuccess and checkfailure somehow? 
 - add roll results to passive checks?
 - make overlays happen AFTER or DURING passive skills being set, rather than before
+- tippy...
+- why is it tiny???? why is the text tiny????
+
+
+- modifiers (and listing them in a tippy)?
+- xp
+- stat setting
+- level ups upping stats
+- inventory/items
+- thoughts?? (probably not)

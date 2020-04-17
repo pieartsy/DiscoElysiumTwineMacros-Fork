@@ -1,0 +1,15 @@
+::Overview
+<table class="stats">
+    <tr>
+        <th>$stats.int</th>
+        <th>$stats.psy</th>
+        <th>$stats.fys</th>
+        <th>$stats.mot</th>
+    </tr>
+    <tr>
+        <td>INT</td>
+        <td>PSY</td>
+        <td>FYS</td>
+        <td>MOT</td>
+    </tr>
+</table>

@@ -22,4 +22,14 @@ $(document).on("keyup", function (e) {
       list.children[childIndex].getElementsByClassName("link-internal")[0].click();
     }
   }
+
+  if ((e.keyCode == 27) && (document.getElementById("menu-story"))) {
+    var menu = document.getElementById("menu-story");
+    menu.children[0].getElementsByClassName("link-internal")[0].click();
+  }
+
+  if ((e.keyCode == 27) && (document.getElementById("#ui-overlay"))) {
+    var dia = document.getElementById("#ui-overlay");
+    console.log(dia)
+  }
 });
