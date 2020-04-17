@@ -11,7 +11,7 @@
 
 <<set $items to []>>
 <<set $xp to 0>>
-<<set $int to 5>>
+<<set $int to 1>>
 <<set $psy to 0>>
 <<set $fys to 0>>
 <<set $mot to 0>>

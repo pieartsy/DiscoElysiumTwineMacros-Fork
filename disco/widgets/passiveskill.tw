@@ -15,9 +15,10 @@ args[0] = name of skill
 if running a passive check:
     1 = success state
     2 = fail state
-    3 = difficulty
-    4 = stat
-    5 = mod
+    3 = overlay
+    4 = difficulty
+    5 = stat
+    6 = mod
 if after a passive check: 
     1 = difficulty
     2 = success or fail
@@ -48,14 +49,14 @@ if after a passive check:
     add the skill result to the current speaker: Logic [Easy: Success]
     then add a dash. */
     <<if $args[3]>>
-        <<SkillCheck $args[1] $args[2] $args[3] $args[4] $args[5] true>>
-        <<Difficulties $args[3]>>
+        <<SkillCheck $args[1] $args[2] $args[4] $args[5] $args[6] true>>
+        <<Difficulties $args[4]>>
         <<set _skillresult to (" [" + _label + ": ")>>
         <<if $success is true>>
             <<set _skillresult += ("Success" + "]")>>
             <<set $currentspeaker += _skillresult>>
             <<set $currentspeaker += " - ">>
-            <<AddParagraph $args[1]>>
+            <<AddParagraph $args[1] $args[3]>>
         <<else>>
             <<set _skillresult += ("Failure" + "]")>>
             <<set $currentspeaker += _skillresult>>

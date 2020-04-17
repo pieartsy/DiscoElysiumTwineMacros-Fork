@@ -1,11 +1,11 @@
 ::Start [nobr]
-$int $$int
 <<SetSpeaker "Aster">>
 <<AddParagraph "Hi!" "int">>
-<<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $int 0>>
-<<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $int 0>>
+<<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" "int" 9 $int 0>>
+<<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" "fys" 1 $int 0>>
+
 <<TaskComplete "Sexiness" 5>>
 <<SetSpeaker "Aster">>
 <<AddParagraph "I hope you're doing fine!" "none">>
-<<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $int 2 "Logic">>
+<<AddOption "testcheck" true "SUCCEED" "FAIL" 9 $int 2 "Logic">>
 <<AddOption "testoption" false "Start">>

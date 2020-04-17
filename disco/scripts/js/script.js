@@ -23,14 +23,15 @@ $(document).on("keyup", function (e) {
     }
   }
 
-  if ((e.keyCode == 27) && (document.getElementById("menu-story"))) {
-    var menu = document.getElementById("menu-story");
-    menu.children[0].getElementsByClassName("link-internal")[0].click();
-  }
-  
-  if ((e.keyCode == 27) && (document.getElementById("ui-dialog"))) {
+  if (e.keyCode == 27) {
     var dia = document.getElementById('ui-dialog');
-    console.log(dia)
-    //dia.close();
+    if (dia && (dia.className == "open")) {
+      document.getElementById('ui-dialog-close').click();
+    } else {
+      var menu = document.getElementById("menu-story");
+      if (menu) {
+        menu.children[0].getElementsByClassName("link-internal")[0].click();
+      }
+    }
   }
 });

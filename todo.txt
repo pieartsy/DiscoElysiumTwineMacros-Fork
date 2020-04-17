@@ -9,8 +9,9 @@ DONE - make "passive skills" actually do a skill check
 
 - modifiers (and listing them in a tippy)?
 - xp
-- stat setting
+DONE - stat setting
 - level ups upping stats
 - inventory/items
     -  bind close to esc key
 - thoughts?? (probably not)
+- stats don't actually change checks within same passage
