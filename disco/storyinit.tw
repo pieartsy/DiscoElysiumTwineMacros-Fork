@@ -2,10 +2,10 @@
 <<set $optionmap to new Map()>>
 <<set $success to "">>
 
-<<set $motorics to ["composure", "hand-eye coordination", "interfacing", "perception", "reaction speed", "savoir faire", "perception (sight)", "perception (taste)", "perception (touch)"]>>
-<<set $intellect to ["conceptualization", "drama", "encyclopedia", "logic", "rhetoric", "visual Calculus"]>>
-<<set $fysique to ["electrochemistry", "endurance", "half light", "pain threshold", "physical instrument", "shivers"]>>
-<<set $psyche to ["authority", "empathy", "esprit de corps", "inland empire", "suggestion", "volition"]>>
+<<set $motorics to ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)"]>>
+<<set $intellect to ["CONCEPTUALIZATION", "DRAMA", "ENCYCLOPEDIA", "LOGIC", "RHETORIC", "VISUAL CALCULUS"]>>
+<<set $fysique to ["ELECTROCHEMISTRY", "ENDURANCE", "HALF LIGHT", "PAIN THRESHOLD", "PHYSICAL INSTRUMENT", "SHIVERS"]>>
+<<set $psyche to ["AUTHORITY", "EMPATHY", "ESPRIT DE CORPS", "INLAND EMPIRE", "SUGGESTION", "VOLITION"]>>
 <<set $greentext to []>>
 <<set $paraAppendMode to false>>
 

@@ -2,6 +2,12 @@
 /* widget used to add paragraphs/dialogue and who it belongs to
 
 ex: <<AddParagraph "I really like talking" "int">>
+
+WEIRD: if an overlay exists, it applies to the NEXT paragraph because i haven't figured out how to reverse the order of the continue button :')
+
+$args[0] = the text of the paragraph
+2 = the overlay (mostly applies to passive skill checks)
+
 */
 <<widget "AddParagraph">>
 /* sets a temporary variable, _para */
@@ -14,7 +20,10 @@ ex: <<AddParagraph "I really like talking" "int">>
         <<set $greentext to []>>
         <<set $paraAppendMode to false>>
     <</if>>
-    /* otherwise, set _para to $currentspeaker + paragraph, and push to $paragraphs*/
+    /* otherwise, set _para to $currentspeaker + paragraph, and push to $paragraphs
+    also add the 2nd argument to $overlays
+    
+    both are used in the DisplayPara widget*/
     <<set _para to (_para + $currentspeaker + $args[0])>>
     <<set _overlay to $args[1]>>
     <<run $paragraphs.push(_para)>>

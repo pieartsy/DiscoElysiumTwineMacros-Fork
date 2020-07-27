@@ -131,7 +131,7 @@ postdisplay['paragraph'] = function (taskName) {
 };
 
 
-:: StoryInit
+:: StoryInit [nobr]
 <<set $triedfancy to false>>
 <<set $optionmap to new Map()>>
 <<set $motorics to ["composure", "hand-eye coordination", "interfacing", "perception", "reaction speed", "savoir faire", "perception (sight)", "perception (taste)", "perception (touch)"]>>
@@ -140,6 +140,7 @@ postdisplay['paragraph'] = function (taskName) {
 <<set $psyche to ["authority", "empathy", "esprit de corps", "inland empire", "suggestion", "volition"]>>
 <<set $greentext to []>>
 <<set $paraAppendMode to false>>
+<<set $varMap to {"var1": "", "var2": ""}>>
 
 
 :: PassageHeader
@@ -246,26 +247,18 @@ if (paragraphs.length > 1) {
 <</widget>>
 <</nobr>>
 
+:: AddOptionWithVariable [widget nobr]
+<<widget "AddOptionWithVariable">>
+  <<run $optionmap.set($args[0], $args[1])>>
+  <<set $varMap[$args[2]] to $args[3]>>
+<</widget>>
+
 
 :: Start [nobr]
 <<SetSpeaker "Jean Vicquemare">>
 <<AddParagraph "Jean pulls himself upright from the low booth the three of you have been sharing in this bar. Most of the 41st plus Kim had been scattered across this back room, but everyone else had been filtering out over the course of the evening. \"Congrats on finally joining us, Kitsuragi, and welcome to the 41st,\" Jean says with a lazy grin. \"I'll see you at the office on Monday. Make sure Harry gets home in one piece,\" and with that, he leaves.">>
 
-<<SecretTaskComplete "Get Kim alone" 25>>
-
-<<PassiveSkill "Electrochemistry">>
-<<AddParagraph "Fuckin' //finally//. I love Vic - I love watching that ass leave as much as you do - but let's be real, he was cramping your style.">>
-
-<<PassiveSkill "Perception (Sight)">>
-<<AddParagraph "Kim is nearly done with his third drink of the evening. He is sitting across from you, with a mirror behind him; there is a low table between you two, covered in cheap alcohol bottles and ashtrays full of stubs. In the corner of the mirror, a square is etched into the glass; the square is painted purple, with a black spiral shape on it.">>
-
-<<PassiveSkill "Encyclopedia" "Medium" "Success">>
-<<AddParagraph "The Purple Curve, a symbol of the homo-sexual underground. This is one of the only bars in Jamrock that won't flinch at affection regardless of gender.">>
-
-<<PassiveSkill "Esprit de Corps">>
-<<AddParagraph "There was to be a round for the new colleague, before Captain Pryce's toast. And when Kim tried to demur, tried to just get seltzer, you of course-">>
-
-<<AddOption "Pulled rank on him." "PickDrink">>[[|PickDrink]]
+<<AddOptionWithVariable "Pulled rank on him." "PickDrink" "var1" "testtesttest">>
 
 
 :: StoryAuthor
@@ -286,7 +279,7 @@ A Disco Elysium Fanwork
 <<NewTask "Get Kim to drink">>
 
 <<SetSpeaker "You">>
-<<AddParagraph "\"*Lieutenant* Kitsuragi, you know I do not pull rank often. But *this* is of the utmost importance - a celebration of you joining our team. We cannot leave you out of this toast, and to do so without *some* alcohol - without some fire in your gut - is almost an insult to the tradition!\"">>
+<<AddParagraph "$varMap['var1']">>
 
 <<SetSpeaker "Kim Kitsuragi">>
 <<AddParagraph "Something in his lip twitched at that - some color entered the tips of his ears - and then a lazy smile. \"Well if you'll buy me *any*thing…\"">>

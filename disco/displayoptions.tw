@@ -1,10 +1,41 @@
 :: DisplayOptions [nobr]
-/* ordered list of options */
+/* ordered list of options, included in the DisplayParagraph widget in the PassageFooter. you don't need to do anything else with this passage!
+
+
+first line creates an ordered list
+*/
 <ol id="OptionList">
 /* for each text (key) and passage (value) in $optionmap, capture those things.*/ 
 <<for _optiontext, _optionpassage range $optionmap>>
   <<capture _optionpassage, _optiontext>>
-  /* if _optionpassage[0] (the true/false for whether the option is a check) is true,
+  /*
+  if _optionpassage[2] (the skill indicating that the option is a check) exists, 
+    rewrite _optiontext as [skill + difficulty label]
+      ex: [Visual Calculus - Heroic]
+    + _optiontext
+    put the .check styling to a link with _optiontext as its text.
+    sets the $lastoption variable, used in the PassageHeader passage, to _optiontext*/
+
+  <<if _optionpassage[0] is true>>
+      <<set _optiontext to " [" + _optionpassage[2] + "- "  + _optionpassage[3] + "] - " + _optiontext>>
+      @@.check.odds;<li>-
+        <<link _optiontext>><<SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3]>><<set $lastoption to _optiontext>><</link>>
+      </li>@@
+
+  /*    otherwise, put the .option style on a link */
+  <<else>>
+      <li>-
+        @@.option;<<link _optiontext _optionpassage[1]>><<set $lastoption to _optiontext>><</link>>@@
+      </li>
+    <</if>>
+  <</capture>>
+<</for>>
+/* closing off ordered list and resetting $optionmap*/
+</ol>
+<<set $optionmap to new Map()>>
+
+  /*---------IGNORE---------
+  if _optionpassage[0] (the true/false for whether the option is a check) is true,
     pass the difficulty into the <<Difficulties macro and set the _label accordingly
     rewrite _optiontext as [skill + label + difficulty] - ([Visual Calculus - Heroic 10] - ) + _optiontext
     put the .check styling to a link with _optiontext as its text. when clicked, the link runs the SkillCheck widget.
@@ -15,7 +46,7 @@
   4 = stat
   5 = mod
   6 = skill
-   */
+   
     <<if _optionpassage[0] is true>>
       <<Difficulties _optionpassage[3]>>
       <<set _optiontext to " [" + _optionpassage[6] + "- " + _label + " " + _optionpassage[3] + "] - " + _optiontext>>
@@ -25,13 +56,4 @@
       <div id="oddsinfo" style="display: none;">
         blah
       </div>
-      /* otherwise, put the .option style on a link */
-    <<else>>
-      <li>-
-        @@.option;<<link _optiontext _optionpassage[1]>><<set $lastoption to _optiontext>><</link>>@@
-      </li>
-    <</if>>
-  <</capture>>
-<</for>>
-</ol>
-<<set $optionmap to new Map()>>
+      ---------/END IGNORE---------

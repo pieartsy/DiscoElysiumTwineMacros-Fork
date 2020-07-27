@@ -1,6 +1,6 @@
 ::FAIL
 <<SkillFailure>>
 <<PassiveSkill "logic" "success" "fail" 9 $int 0>>
-<<PassiveSkill "logic" "success" "fail" 9 $int 0>>
-<<PassiveSkill "Logic" 5 "Failure">>
+<<PassiveSkill "logic">>
+<<PassiveSkill "Logic" "Failure" "Heroic">>
 <<AddParagraph "YOU FAILED!!">>
