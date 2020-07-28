@@ -1,8 +1,0 @@
-::SUCCEED
-<<SkillSuccess>>
-<<PassiveSkill "Logic" 5 "Success">>
-<<PassiveSkill "logic" "success" "fail" 9 $int 0>>
-<<AddParagraph "YOU SUCCEEDED!" "fys">>
-<<PassiveSkill "electrochemistry">>
-<<AddParagraph "Very sexy of you." "none">>
-<<AddParagraph ";)" "none">>

@@ -336,99 +336,6 @@ a.macro-linkreplace .motoverlay  {
 .stats th:nth-child(even) {
   background-color: #d2d3cd;
   color: black;
-}
-/* twine-user-stylesheet #2: "tippy.css" */
-.tippy-box[data-animation=fade][data-state=hidden] {
-    opacity: 0
-}
-
-.tippy-iOS {
-    cursor: pointer!important;
-    -webkit-tap-highlight-color: transparent
-}
-
-[data-tippy-root] {
-    max-width: calc(100vw - 10px)
-}
-
-.tippy-box {
-    position: relative;
-    background-color: #333;
-    color: #fff;
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 1.4;
-    outline: 0;
-    transition-property: transform, visibility, opacity
-}
-
-.tippy-box[data-placement^=top]>.tippy-arrow {
-    bottom: 0
-}
-
-.tippy-box[data-placement^=top]>.tippy-arrow:before {
-    bottom: -7px;
-    left: 0;
-    border-width: 8px 8px 0;
-    border-top-color: initial;
-    transform-origin: center top
-}
-
-.tippy-box[data-placement^=bottom]>.tippy-arrow {
-    top: 0
-}
-
-.tippy-box[data-placement^=bottom]>.tippy-arrow:before {
-    top: -7px;
-    left: 0;
-    border-width: 0 8px 8px;
-    border-bottom-color: initial;
-    transform-origin: center bottom
-}
-
-.tippy-box[data-placement^=left]>.tippy-arrow {
-    right: 0
-}
-
-.tippy-box[data-placement^=left]>.tippy-arrow:before {
-    border-width: 8px 0 8px 8px;
-    border-left-color: initial;
-    right: -7px;
-    transform-origin: center left
-}
-
-.tippy-box[data-placement^=right]>.tippy-arrow {
-    left: 0
-}
-
-.tippy-box[data-placement^=right]>.tippy-arrow:before {
-    left: -7px;
-    border-width: 8px 8px 8px 0;
-    border-right-color: initial;
-    transform-origin: center right
-}
-
-.tippy-box[data-inertia][data-state=visible] {
-    transition-timing-function: cubic-bezier(.54, 1.5, .38, 1.11)
-}
-
-.tippy-arrow {
-    width: 16px;
-    height: 16px;
-    color: #333
-}
-
-.tippy-arrow:before {
-    content: "";
-    position: absolute;
-    border-color: transparent;
-    border-style: solid
-}
-
-.tippy-content {
-    position: relative;
-    padding: 5px 9px;
-    z-index: 1
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "script.js" */
 $(document).click(function(e) {
 	if($("span.continueblock").length) {
@@ -592,13 +499,7 @@ first line creates an ordered list
 &lt;&lt;set $greentext to []&gt;&gt;
 &lt;&lt;set $paraAppendMode to false&gt;&gt;
 
-&lt;&lt;set $items to []&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="SUCCEED" tags="" position="350,225">&lt;&lt;SkillSuccess&gt;&gt;
-&lt;&lt;PassiveSkill &quot;Logic&quot; 5 &quot;Success&quot;&gt;&gt;
-&lt;&lt;PassiveSkill &quot;logic&quot; &quot;success&quot; &quot;fail&quot; 9 $int 0&gt;&gt;
-&lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot; &quot;fys&quot;&gt;&gt;
-&lt;&lt;PassiveSkill &quot;electrochemistry&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Very sexy of you.&quot; &quot;none&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;;)&quot; &quot;none&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="AddOption" tags="widget nobr" position="475,225">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
+&lt;&lt;set $items to []&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="AddOption" tags="widget nobr" position="350,225">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
 /* adds a key, $args[0], and value, an array containing $args 1, 2, and 3, to $optionmap
     these become _optiontext and _optionpassage in the DisplayOptions passage
 
@@ -615,7 +516,7 @@ first line creates an ordered list
 */
     &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
-/*</tw-passagedata><tw-passagedata pid="15" name="AddParagraph" tags="widget nobr" position="600,225">/* widget used to add paragraphs/dialogue and who it belongs to
+/*</tw-passagedata><tw-passagedata pid="14" name="AddParagraph" tags="widget nobr" position="475,225">/* widget used to add paragraphs/dialogue and who it belongs to
 
 ex: &lt;&lt;AddParagraph &quot;I really like talking&quot; &quot;int&quot;&gt;&gt;
 
@@ -644,7 +545,7 @@ $args[0] = the text of the paragraph
     &lt;&lt;set _overlay to $args[1]&gt;&gt;
     &lt;&lt;run $paragraphs.push(_para)&gt;&gt;
     &lt;&lt;set $overlays.push(_overlay)&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="BlankSpeaker" tags="widget nobr" position="725,225">&lt;&lt;widget &quot;BlankSpeaker&quot;&gt;&gt;&lt;&lt;set $currentspeaker to &quot;&quot;&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="DisplayParagraphs" tags="widget" position="850,225">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="BlankSpeaker" tags="widget nobr" position="600,225">&lt;&lt;widget &quot;BlankSpeaker&quot;&gt;&gt;&lt;&lt;set $currentspeaker to &quot;&quot;&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="DisplayParagraphs" tags="widget" position="725,225">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.
 
 this shows up only at PassageFooter; you don&#39;t need to call it otherwise
 */
@@ -686,7 +587,7 @@ if (paragraphs.length &gt; 1) {
 	paragraphs[paragraphs.length-2].classList.add(&quot;dim&quot;);
 }
 &lt;&lt;/script&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/nobr&gt;&gt;\
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="SkillFailure" tags="widget nobr" position="975,225">/* displays the failure animation.
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="SkillFailure" tags="widget nobr" position="850,225">/* displays the failure animation.
 
 &lt;&lt;SkillFailure&gt;&gt;
 
@@ -696,7 +597,7 @@ if (paragraphs.length &gt; 1) {
 &lt;div id=&quot;CheckFailure&quot; class=&quot;CheckText&quot;&gt;CHECK FAILURE&lt;/div&gt;
 &lt;&lt;SetSpeaker &quot;&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Red flashes at the edges of your vision - a failure.//&quot;&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="GreenTextWidgets" tags="widget nobr" position="1100,225">/* various widgets for &quot;green text&quot; popups. have a generic text that can be customized with arguments */
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="GreenTextWidgets" tags="widget nobr" position="975,225">/* various widgets for &quot;green text&quot; popups. have a generic text that can be customized with arguments */
 &lt;&lt;widget &quot;TaskComplete&quot;&gt;&gt;
 /*The first argument is the task, the second is the experience gained (if any).
 
@@ -757,7 +658,7 @@ if (paragraphs.length &gt; 1) {
 /* &lt;&lt;LevelUp&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Level up!@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="PassiveSkill" tags="widget nobr" position="1225,225">/* represents the dialogue of passive skills, a unique set speaker.
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="PassiveSkill" tags="widget nobr" position="1100,225">/* represents the dialogue of passive skills, a unique set speaker.
 
 ex:
 normal skill speaking
@@ -807,10 +708,10 @@ if it&#39;s a passive check:
     
     &lt;&lt;set $currentspeaker += &quot; - &quot;&gt;&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="SetSpeaker" tags="widget nobr" position="100,350">/*sets $current speaker to the first argument, styled with the .speaker class
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="SetSpeaker" tags="widget nobr" position="1225,225">/*sets $current speaker to the first argument, styled with the .speaker class
 
 ex: &lt;&lt;SetSpeaker &quot;Kim Kitsuragi&gt;&gt;*/
-&lt;&lt;widget &quot;SetSpeaker&quot;&gt;&gt;&lt;&lt;set $currentspeaker to (&quot;@@.speaker;&quot; + $args[0] + &quot;@@ - &quot;)&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="SkillSuccess" tags="widget nobr" position="225,350">&lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
+&lt;&lt;widget &quot;SetSpeaker&quot;&gt;&gt;&lt;&lt;set $currentspeaker to (&quot;@@.speaker;&quot; + $args[0] + &quot;@@ - &quot;)&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="SkillSuccess" tags="widget nobr" position="100,350">&lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
 &lt;div id=&quot;SuccessImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckSuccess&quot; class=&quot;CheckText&quot;&gt;CHECK SUCCESS&lt;/div&gt;
 &lt;&lt;SetSpeaker &quot;&quot;&gt;&gt;
