@@ -3,10 +3,3 @@ Disco Tests
 
 :: StorySettings
 ifid:5bd21ed8-62c2-4c12-9f44-05fa8fe75082
-
-::StoryMenu
-<<link 'Character Overview'>>
-	<<dialog 'Overview' 'overview'>>\
-    <<include "Overview">>
-	<</dialog>>
-<</link>>

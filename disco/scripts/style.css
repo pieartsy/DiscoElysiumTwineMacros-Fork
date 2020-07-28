@@ -110,22 +110,22 @@ a.macro-linkreplace .padding {
 }
 
 a.macro-linkreplace .intoverlay  {
-  background-image: url(intoverlay.png);
+  background-image: [img[intoverlay]];
   background-size: cover;
 }
 
 a.macro-linkreplace .psyoverlay  {
-  background-image: url(psyoverlay.png);
+  background-image: [img[psyoverlay]];
   background-size: cover;
 }
 
 a.macro-linkreplace .fysoverlay  {
-  background-image: url(fysoverlay.png);
+  background-image: [img[fysoverlay]];
   background-size: cover;
 }
 
 a.macro-linkreplace .motoverlay  {
-  background-image: url(motoverlay.png);
+  background-image: [img[motoverlay]];
   background-size: cover;
 }
 
@@ -150,12 +150,12 @@ a.macro-linkreplace .motoverlay  {
 }
 
 #SuccessImg {
-  background: url(SuccessOverlay.png) no-repeat right;
+  background: [img[SuccessOverlay]] no-repeat right;
   background-size: contain;
 }
 
 #FailureImg {
-  background: url(FailureOverlay.png) no-repeat right;
+  background: [img[FailureOverlay]] no-repeat right;
   background-size: contain;
 }
 

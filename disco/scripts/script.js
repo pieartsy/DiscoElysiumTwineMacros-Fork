@@ -35,3 +35,5 @@ $(document).on("keyup", function (e) {
     }
   }
 });
+
+UIBar.destroy()

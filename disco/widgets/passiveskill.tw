@@ -16,19 +16,8 @@ follow either of these up with <<AddParagraph>>!
 
 args[0] = name of skill
 if it's a passive check:
-    1 = success or fail
-    2 = difficulty
-
-
----------IGNORE---------
-setting a passive check
-<<PassiveSkill "Logic" "This is so easy." "Wow guess it wasn't that easy...!" 3 $int 0>>
-    2 = fail state
-    3 = overlay
-    4 = difficulty
-    5 = stat
-    6 = mod
----------END IGNORE---------
+    1 = difficulty
+    2 = success or fail
 
 */
 <<widget "PassiveSkill">>
@@ -38,16 +27,12 @@ setting a passive check
     /*If the skill name is in the $motorics array, set $currentspeaker to the skill, styling it with the .motorics and .speaker classes. same with the others. */
     <<if $motorics.includes(_skillname)>>
         <<set $currentspeaker to ("@@.motorics.speaker;" + _skillname + "@@")>>
-        <<set _overlay to "mot">>
     <<elseif $intellect.includes(_skillname)>>
         <<set $currentspeaker to ("@@.intellect.speaker;" + _skillname + "@@")>>
-        <<set _overlay to "int">>
     <<elseif $fysique.includes(_skillname)>>
         <<set $currentspeaker to ("@@.fysique.speaker;" + _skillname + "@@")>>
-        <<set _overlay to "fys">>
     <<elseif $psyche.includes(_skillname)>>
         <<set $currentspeaker to ("@@.psyche.speaker;" + _skillname + "@@")>>
-        <<set _overlay to "psy">>
     <</if>>
     
      /* if there's a second argument (indicating that there's a skill rating / the passive skill is simulating a check)
@@ -57,54 +42,11 @@ setting a passive check
    /*set the skill rating to the 3rd argument, $args[2] + the second argument, $args[1]
      
     ex result: [Easy: Success] */
-       <<set _skillresult to (" [" + $args[2] + ": " + $args[1] + "]")>>
-        <<set $currentspeaker += _skillresult>>        <<AddParagraph $args[1] _overlay>>
+       <<set _skillresult to (" [" + $args[1] + ": " + $args[2] + "]")>>
+        <<set $currentspeaker += _skillresult>>
     <</if>>
     /*regardless, add a dash.*/
-        <<set $currentspeaker += " - ">>
-
-
-    /*
     
-    ---------IGNORE---------
-    if there's a fourth argument present (indicating a difficulty check), run the SkillCheck macro as per usual. Skillcheck's 6th argument checking whether it's a passive check is set to true.
-    
-    if SkillCheck passes/$success is true,
-        set the skill rating to the _label determined by the <<Difficulties>> widget
-        set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
-        also make the continue button have an overlay
-    if it fails, set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
-    
-    add the skill result to the current speaker: Logic [Easy: Success]
-    then add a dash. 
-    <<if $args[3]>>
-        <<SkillCheck $args[1] $args[2] $args[4] $args[5] $args[6] true>>
-        <<Difficulties $args[4]>>
-        <<set _skillresult to (" [" + _label + ": ")>>
-        <<if $success is true>>
-            <<set _skillresult += ("Success" + "]")>>
-            <<set $currentspeaker += _skillresult>>
-            <<set $currentspeaker += " - ">>
-            <<AddParagraph $args[1] $args[3]>>
-        <<else>>
-            <<set _skillresult += ("Failure" + "]")>>
-            <<set $currentspeaker += _skillresult>>
-            <<set $currentspeaker += " - ">>
-            <<AddParagraph $args[2]>>
-        <</if>>
+    <<set $currentspeaker += " - ">>
 
-
-    /* if there's a second argument (indicating that there's a skill rating), set the skill rating to the 2nd argument + 3rd argument (skill result) [Easy: Success]
-        
-    regardless, add a dash.
-    <<else>>
-        <<if $args[1]>>
-            <<Difficulties $args[1]>>
-            <<set _skillresult to (" [" + _label + ": " + $args[2] + "]")>>
-            <<set $currentspeaker += _skillresult>>
-        <</if>>
-        <<set $currentspeaker += " - ">>
-    <</if>>
-    /* Add a dash. 
-    ---------/IGNORE---------*/
 <</widget>>

@@ -14,12 +14,21 @@ first line creates an ordered list
       ex: [Visual Calculus - Heroic]
     + _optiontext
     put the .check styling to a link with _optiontext as its text.
-    sets the $lastoption variable, used in the PassageHeader passage, to _optiontext*/
+    sets the $lastoption variable, used in the PassageHeader passage, to _optiontext
+    
+    args[0] = text for the option.
+    _optionspassage[0] = the passage that the option sends you to
 
-  <<if _optionpassage[0] is true>>
-      <<set _optiontext to " [" + _optionpassage[2] + "- "  + _optionpassage[3] + "] - " + _optiontext>>
+    if it's a check:
+    1 - skill being used
+    2 = difficulty label
+    
+    */
+
+  <<if _optionpassage[1]>>
+      <<set _optiontext to " [" + _optionpassage[1] + "- "  + _optionpassage[2] + "] - " + _optiontext>>
       @@.check.odds;<li>-
-        <<link _optiontext>><<SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3]>><<set $lastoption to _optiontext>><</link>>
+        <<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>
       </li>@@
 
   /*    otherwise, put the .option style on a link */
@@ -33,27 +42,3 @@ first line creates an ordered list
 /* closing off ordered list and resetting $optionmap*/
 </ol>
 <<set $optionmap to new Map()>>
-
-  /*---------IGNORE---------
-  if _optionpassage[0] (the true/false for whether the option is a check) is true,
-    pass the difficulty into the <<Difficulties macro and set the _label accordingly
-    rewrite _optiontext as [skill + label + difficulty] - ([Visual Calculus - Heroic 10] - ) + _optiontext
-    put the .check styling to a link with _optiontext as its text. when clicked, the link runs the SkillCheck widget.
-  Corresponding to the arguments in SkillCheck:
-  _optionpassage[1] = success passage
-  2 = failure passage
-  3 = difficulty
-  4 = stat
-  5 = mod
-  6 = skill
-   
-    <<if _optionpassage[0] is true>>
-      <<Difficulties _optionpassage[3]>>
-      <<set _optiontext to " [" + _optionpassage[6] + "- " + _label + " " + _optionpassage[3] + "] - " + _optiontext>>
-      @@.check.odds;<li>-
-        <<link _optiontext>><<SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3] _optionpassage[4] _optionpassage[5]>><<set $lastoption to _optiontext>><</link>>
-      </li>@@
-      <div id="oddsinfo" style="display: none;">
-        blah
-      </div>
-      ---------/END IGNORE---------
