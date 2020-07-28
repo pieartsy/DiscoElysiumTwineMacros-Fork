@@ -8,7 +8,6 @@
     <<AddParagraph "“I’m sure you’re wondering why I invited you out here.”">>
 <</if>>
 
-<<NoOverlay>>
 <<AddSkillParagraph "Kim’s never been one to indulge in leisurely activities like this, so he’s probably invited you out here for a reason. Something important." "Logic">>
 
 <<if $flagsMap["sit"] is true>>
@@ -27,11 +26,11 @@
 <<AddSkillParagraph "Aw yeah, he’s gonna kiss you isn’t he? Lean in, lean in!" "electrochemistry" "medium" "failure">>
 
 <<NoOverlay>>
-<<AddSkillParagraph "No, he’s going to say something. Be still and pay attention." "volition">>
+<<AddSkillParagraph "No, he’s going to say something. Shut up and pay attention." "volition">>
 
 <<NoOverlay>>
 <<AddParagraph "“There’s something I’ve wanted to tell you for a while, now that we’ve gotten to know each other better.”" "Kim Kitsuragi">>
 
-<<AddOption "“You’re in love with me?”" "Yammering" "notcheck" "love" true>>
-<<AddOption "“You’re part of the homo-sexual underground?”" "Yammering" "notcheck" "gay" true>>
-<<AddOption "Be still and pay attention." "Yammering">>
+<<AddOption "“You’re in love with me?”" "Yammering" "love" true>>
+<<AddOption "“You’re part of the homo-sexual underground?”" "Yammering" "gay" true>>
+<<AddOption "Shut up and pay attention." "Yammering">>

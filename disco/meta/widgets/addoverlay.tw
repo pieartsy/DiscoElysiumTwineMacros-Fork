@@ -6,6 +6,7 @@ ex:
 <<AddOverlay "int">>
 
 $args[0] = overlay*/
+
 <<widget "AddOverlay">>
     <<set _overlay to $args[0]>>
     <<set $overlays.push(_overlay)>>

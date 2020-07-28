@@ -13,5 +13,5 @@
 <<NoOverlay>>
 <<AddParagraph "Kim seems to think it’s safe too, and sits down without much hesitation. He doesn’t quite gesture at you to join him, only quirks his eyebrow at you as he situates himself." "kim kitsuragi">>
 
-<<AddOptionWithVariable "Sit down next to him." "Bring me here" "notCheck" "sit" true>>
+<<AddOption "Sit down next to him." "Bring me here" "sit" true>>
 <<AddOption "“What did you bring me out here for, again?”" "Bring me here">>
