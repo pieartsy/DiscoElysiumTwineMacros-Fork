@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Disco Tests" startnode="10" creator="Tweego" creator-version="1.3.0" ifid="5BD21ED8-62C2-4C12-9F44-05FA8FE75082" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "style.css" */
+	<tw-storydata name="Disco Tests" startnode="10" creator="Tweego" creator-version="1.3.0" ifid="5BD21ED8-62C2-4C12-9F44-05FA8FE75082" zoom="1" format="SugarCube" format-version="2.30.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "style.css" */
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=PT+Sans+Narrow&display=swap');
 
 html {
@@ -415,6 +415,7 @@ lastoption is used with the DisplayOptions passage. */
 &lt;&lt;AddOverlay &quot;int&quot;&gt;&gt;
 &lt;&lt;AddSkillParagraph &quot;You&#39;re in Kim&#39;s bed.&quot; &quot;logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
 
+&lt;&lt;AddOverlay&gt;&gt;
 &lt;&lt;AddSkillParagraph &quot;The hairs stand up on the back of your neck and your pulse quickens. You fucked Kim? Fuck yeah! Who even knew that was an option!? Good work, man. You should find him and do it again.&quot; &quot;electrochemistry&quot; &quot;Easy&quot; &quot;Failure&quot;&gt;&gt;
 
 &lt;&lt;AddOverlay &quot;psy&quot;&gt;&gt;
@@ -423,12 +424,16 @@ lastoption is used with the DisplayOptions passage. */
 &lt;&lt;AddOverlay &quot;psy&quot;&gt;&gt;
 &lt;&lt;AddSkillParagraph &quot;It’s after midnight, and you all stand around the precinct looking at each other like every other member of the squad has the secret envelope with the instructions for what comes next. Jean groans when you ask, as politely as you can, where you live.&quot; &quot;esprit de corps&quot; &quot;Medium&quot; &quot;Success&quot;&gt;&gt;
 
+&lt;&lt;AddOverlay&gt;&gt;
 &lt;&lt;AddParagraph &quot;He knows where you live. You dig through your desk and belongings. You have no keys. Dear god, you’re Idiot Doom Spiral. You thought his story was totally implausible but now you’re going to be homeless because you lost your keys.&quot;&gt;&gt;
 
+&lt;&lt;AddOverlay&gt;&gt;
 &lt;&lt;AddParagraph &quot;Kim— who hasn’t gone back to his own station yet— gently suggests that your keys are very likely in the ignition of the dearly departed police carriage back under the sea ice.&quot;&gt;&gt;
 
+&lt;&lt;AddOverlay&gt;&gt;
 &lt;&lt;AddParagraph &quot;Jean stares at you for what feels like forever, and then swings open the door to the holding cell. He points to the slab mattress like death pointing to an open grave.&quot;&gt;&gt;
 
+&lt;&lt;AddOverlay&gt;&gt;
 &lt;&lt;AddParagraph &quot;“Sleep there, then. It’s where we keep the drunk fucks anyway.”&quot; &quot;Jean&quot;&gt;&gt;
 
 &lt;&lt;AddOverlay &quot;psy&quot;&gt;&gt;
@@ -440,6 +445,7 @@ lastoption is used with the DisplayOptions passage. */
 &lt;&lt;AddOverlay &quot;psy&quot;&gt;&gt;
 &lt;&lt;AddSkillParagraph &quot;Kim put his hand on the back of your arm. He looks at you from the corner of his eye, behind his glasses. He’s thinking about Doom Spiral, too.&quot; &quot;empathy&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
 
+&lt;&lt;AddOverlay&gt;&gt;
 &lt;&lt;AddParagraph &quot;“You can stay at my place, Harry. We can break into your apartment tomorrow.”&quot; &quot;Kim&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="StoryInit" tags="" position="225,225">&lt;&lt;set $optionmap to new Map()&gt;&gt;
 
 &lt;&lt;set $motorics to [&quot;COMPOSURE&quot;, &quot;HAND-EYE COORDINATION&quot;, &quot;INTERFACING&quot;, &quot;PERCEPTION&quot;, &quot;REACTION SPEED&quot;, &quot;SAVOIR FAIRE&quot;, &quot;PERCEPTION (SIGHT)&quot;, &quot;PERCEPTION (TASTE)&quot;, &quot;PERCEPTION (TOUCH)&quot;, &quot;PERCEPTION (SMELL)&quot;, &quot;PERCEPTION (HEARING)&quot;]&gt;&gt;
@@ -472,9 +478,17 @@ lastoption is used with the DisplayOptions passage. */
 ex:
 &lt;&lt;AddOverlay &quot;int&quot;&gt;&gt;
 
+if there&#39;s no overlay, you must call it without any arguments!
+
+&lt;&lt;AddOverlay&gt;&gt;
+
 $args[0] = overlay*/
 &lt;&lt;widget &quot;AddOverlay&quot;&gt;&gt;
-    &lt;&lt;set _overlay to $args[0]&gt;&gt;
+    &lt;&lt;if $args[0]&gt;&gt;
+        &lt;&lt;set _overlay to $args[0]&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;set _overlay to false&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
     &lt;&lt;set $overlays.push(_overlay)&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="AddParagraph" tags="widget nobr" position="600,225">/* widget used to add paragraphs/dialogue. by default, it&#39;s no speaker at all. the 2nd argument, $args[1], determines the speaker, if any. the 3rd argument determines a passive overlay.
 
@@ -514,6 +528,7 @@ if there&#39;s a current speaker:
         &lt;&lt;set _para to (_para + $args[0])&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 
+    /*adds _para to $paragraphs */
     &lt;&lt;run $paragraphs.push(_para)&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="AddSkillParagraph" tags="widget nobr" position="725,225">/* similar to the AddParagraph widget, but with the speaker being a skill, that can optionally simulate a passive check.
@@ -696,57 +711,7 @@ if (paragraphs.length &gt; 1) {
 /* &lt;&lt;LevelUp&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Level up!@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="PassiveSkill" tags="widget nobr" position="1225,225">/* represents the dialogue of passive skills, a unique set speaker.
-
-ex:
-normal skill speaking
-&lt;&lt;PassiveSkill &quot;Logic&quot;&gt;&gt;
-
-if it&#39;s a passive check
-&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Success&quot; &quot;Heroic&quot;&gt;&gt;
-
-follow either of these up with &lt;&lt;AddParagraph&gt;&gt;!
-
-&lt;&lt;PassiveSkill &quot;Logic&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Like this, as a free aside.&quot;&gt;&gt;
-
-
-args[0] = name of skill
-if it&#39;s a passive check:
-    1 = difficulty
-    2 = success or fail
-
-*/
-&lt;&lt;widget &quot;PassiveSkill&quot;&gt;&gt;
-    /* sets _skillname to the first argument, the skill, in uppercase. sets _skillresult as empty */
-    &lt;&lt;set _skillname to ($args[0].toUpperCase())&gt;&gt;
-    &lt;&lt;set _skillresult to &quot;&quot;&gt;&gt;
-    /*If the skill name is in the $motorics array, set $currentspeaker to the skill, styling it with the .motorics and .speaker classes. same with the others. */
-    &lt;&lt;if $motorics.includes(_skillname)&gt;&gt;
-        &lt;&lt;set $currentspeaker to (&quot;@@.motorics.speaker;&quot; + _skillname + &quot;@@&quot;)&gt;&gt;
-    &lt;&lt;elseif $intellect.includes(_skillname)&gt;&gt;
-        &lt;&lt;set $currentspeaker to (&quot;@@.intellect.speaker;&quot; + _skillname + &quot;@@&quot;)&gt;&gt;
-    &lt;&lt;elseif $fysique.includes(_skillname)&gt;&gt;
-        &lt;&lt;set $currentspeaker to (&quot;@@.fysique.speaker;&quot; + _skillname + &quot;@@&quot;)&gt;&gt;
-    &lt;&lt;elseif $psyche.includes(_skillname)&gt;&gt;
-        &lt;&lt;set $currentspeaker to (&quot;@@.psyche.speaker;&quot; + _skillname + &quot;@@&quot;)&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-    
-     /* if there&#39;s a second argument (indicating that there&#39;s a skill rating / the passive skill is simulating a check)
-     */
-
-    &lt;&lt;if $args[1]&gt;&gt;
-   /*set the skill rating to the 3rd argument, $args[2] + the second argument, $args[1]
-     
-    ex result: [Easy: Success] */
-       &lt;&lt;set _skillresult to (&quot; [&quot; + $args[1] + &quot;: &quot; + $args[2] + &quot;]&quot;)&gt;&gt;
-        &lt;&lt;set $currentspeaker += _skillresult&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-    /*regardless, add a dash.*/
-    
-    &lt;&lt;set $currentspeaker += &quot; - &quot;&gt;&gt;
-
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="SkillSuccess" tags="widget nobr" position="100,350">&lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="SkillSuccess" tags="widget nobr" position="1225,225">&lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
 &lt;div id=&quot;SuccessImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckSuccess&quot; class=&quot;CheckText&quot;&gt;CHECK SUCCESS&lt;/div&gt;
 &lt;&lt;AddParagraph &quot;//Green flashes at the edges of your vision - a success.//&quot;&gt;&gt;

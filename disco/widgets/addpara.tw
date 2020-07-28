@@ -37,6 +37,7 @@ if there's a current speaker:
         <<set _para to (_para + $args[0])>>
     <</if>>
 
+    /*adds _para to $paragraphs */
     <<run $paragraphs.push(_para)>>
 <</silently>>
 <</widget>>

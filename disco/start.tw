@@ -28,6 +28,7 @@
 <<AddOverlay "int">>
 <<AddSkillParagraph "You're in Kim's bed." "logic" "Easy" "Success">>
 
+<<AddOverlay>>
 <<AddSkillParagraph "The hairs stand up on the back of your neck and your pulse quickens. You fucked Kim? Fuck yeah! Who even knew that was an option!? Good work, man. You should find him and do it again." "electrochemistry" "Easy" "Failure">>
 
 <<AddOverlay "psy">>
@@ -36,12 +37,16 @@
 <<AddOverlay "psy">>
 <<AddSkillParagraph "It’s after midnight, and you all stand around the precinct looking at each other like every other member of the squad has the secret envelope with the instructions for what comes next. Jean groans when you ask, as politely as you can, where you live." "esprit de corps" "Medium" "Success">>
 
+<<AddOverlay>>
 <<AddParagraph "He knows where you live. You dig through your desk and belongings. You have no keys. Dear god, you’re Idiot Doom Spiral. You thought his story was totally implausible but now you’re going to be homeless because you lost your keys.">>
 
+<<AddOverlay>>
 <<AddParagraph "Kim— who hasn’t gone back to his own station yet— gently suggests that your keys are very likely in the ignition of the dearly departed police carriage back under the sea ice.">>
 
+<<AddOverlay>>
 <<AddParagraph "Jean stares at you for what feels like forever, and then swings open the door to the holding cell. He points to the slab mattress like death pointing to an open grave.">>
 
+<<AddOverlay>>
 <<AddParagraph "“Sleep there, then. It’s where we keep the drunk fucks anyway.”" "Jean">>
 
 <<AddOverlay "psy">>
@@ -53,4 +58,5 @@
 <<AddOverlay "psy">>
 <<AddSkillParagraph "Kim put his hand on the back of your arm. He looks at you from the corner of his eye, behind his glasses. He’s thinking about Doom Spiral, too." "empathy" "Easy" "Success">>
 
+<<AddOverlay>>
 <<AddParagraph "“You can stay at my place, Harry. We can break into your apartment tomorrow.”" "Kim">>

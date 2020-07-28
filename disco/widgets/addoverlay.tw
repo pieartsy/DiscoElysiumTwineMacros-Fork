@@ -5,8 +5,16 @@
 ex:
 <<AddOverlay "int">>
 
+if there's no overlay, you must call it without any arguments!
+
+<<AddOverlay>>
+
 $args[0] = overlay*/
 <<widget "AddOverlay">>
-    <<set _overlay to $args[0]>>
+    <<if $args[0]>>
+        <<set _overlay to $args[0]>>
+    <<else>>
+        <<set _overlay to false>>
+    <</if>>
     <<set $overlays.push(_overlay)>>
 <</widget>>
