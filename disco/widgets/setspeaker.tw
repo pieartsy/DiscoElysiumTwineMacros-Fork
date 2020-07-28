@@ -1,4 +1,4 @@
-:: SetSpeaker [widget]
+:: SetSpeaker [widget nobr]
 /*sets $current speaker to the first argument, styled with the .speaker class
 
 ex: <<SetSpeaker "Kim Kitsuragi>>*/

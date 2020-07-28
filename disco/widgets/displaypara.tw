@@ -3,8 +3,13 @@
 
 this shows up only at PassageFooter; you don't need to call it otherwise
 */
-<<widget "DisplayParagraphs">><<set _paragraph to $paragraphs[0]>><<set _overlay to $overlays[0]>>\
-<<run $paragraphs.deleteAt(0)>><<run $overlays.deleteAt(0)>>\
+<<widget "DisplayParagraphs">>\
+<<silently>>
+	<<set _paragraph to $paragraphs[0]>>
+	<<set _overlay to $overlays[0]>>\
+	<<run $paragraphs.deleteAt(0)>>
+	<<run $overlays.deleteAt(0)>>
+<</silently>>\
 @@.paragraph;<<print _paragraph>>@@
 /*if the length of $paragraphs continues to be more than zero, keep displaying a clickable CONTINUE button (that runs through the widget)
 
@@ -28,12 +33,12 @@ WEIRD: if an overlay exists (determined by the AddParagraph macro), it applies t
 	/*otherwise, display options.*/
 	<<include DisplayOptions>>
 <</if>>
-<</nobr>>
+
 /* the script dims the paragraphs after they've been clicked.*/
 <<timed 0.5s>><<script>>
 var paragraphs = document.getElementsByClassName('paragraph');
 if (paragraphs.length > 1) {
 	paragraphs[paragraphs.length-2].classList.add("dim");
 }
-<</script>><</timed>>\
+<</script>><</timed>><</nobr>>\
 <</widget>>
