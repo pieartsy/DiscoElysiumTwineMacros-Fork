@@ -4,6 +4,8 @@
 ex:
 <<NoOverlay>>
 
+put this at every paragraph OTHER THAN the starting paragraph of a passage.
+
 */
 
 <<widget "NoOverlay">>

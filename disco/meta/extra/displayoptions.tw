@@ -30,24 +30,32 @@ first line creates an ordered list
 
 /* if there's a 3rd variable in the _optionspassage array  (indicating it's a variable setter) and it's in $flagsMap
   set the $flagsMap's variable to the value */
-  <<if Object.keys($flagsMap).includes(_optionpassage[2])>>
-      <<set $flagsMap[_optionpassage[2]] to _optionpassage[3]>>
-      <<script>>
-        console.log("ye")
-      <</script>>
-  <</if>>
 
 /* if there's a 2nd variable in the _optionspassage array (indicating that it's a check) and the check is true,
   format it with the .check styling and make it a link */  
   <<if _optionpassage[1] and _optionpassage[1] == true>>
+  /* if there's a 3rd variable in the _optionspassage array  (indicating it's a variable setter) and it's in $flagsMap
+  set the $flagsMap's variable to the value*/
       @@.check;<li>-
-        <<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>
+        <<link _optiontext _optionpassage[0]>>
+          <<if _optionpassage[2] and Object.keys($flagsMap).includes(_optionpassage[2])>>
+            <<set $flagsMap[_optionpassage[2]] to _optionpassage[3]>>
+          <</if>>
+          <<set $lastoption to _optiontext>>
+        <</link>>
       </li>@@
 /* otherwise, put the .option style on a link and that's it*/
   <<else>>
-      <li>-
-        @@.option;<<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>@@
-      </li>
+  /* if there's a 3rd variable in the _optionspassage array  (indicating it's a variable setter) and it's in $flagsMap
+  set the $flagsMap's variable to the value.*/
+      @@.option;<li>-
+        <<link _optiontext _optionpassage[0]>>
+          <<if _optionpassage[2] and Object.keys($flagsMap).includes(_optionpassage[2])>>
+            <<set $flagsMap[_optionpassage[2]] to _optionpassage[3]>>
+          <</if>>
+          <<set $lastoption to _optiontext>>
+        <</link>>
+      </li>@@
   <</if>>
   <</capture>>
 <</for>>
