@@ -1,5 +1,14 @@
 ::Start [nobr]
 
+<<BlankSpeaker>>
+<<AddParagraph "Sample text from Cleaning Out The Rooms by bitochondria.">>
+
+<<AddOption "Go forward to the sample text." "COTR">>
+<<AddOption "Go forward to the sample text but with a check styling." "COTR" "Encyclopedia" "Easy">>
+
+::COTR [nobr]
+<<SkillSuccess>>
+
 <<PassiveSkill "perception (touch)" "Easy" "Success">>
 <<AddParagraph "You wake up with your face crushed into an unfamiliar pillow." "mot">>
 

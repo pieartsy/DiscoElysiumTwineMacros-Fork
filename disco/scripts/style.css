@@ -2,6 +2,7 @@
 
 html {
   height: 100%;
+  max-width: none;
 }
 
 body, tw-story
@@ -12,10 +13,6 @@ body, tw-story
   height: 100%;
 }
 
-tw-hook
-{
-  margin-left: -25px;
-}
 
 #story {
   height: 100%;

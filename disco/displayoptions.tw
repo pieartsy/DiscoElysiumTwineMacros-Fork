@@ -20,12 +20,13 @@ first line creates an ordered list
     _optionspassage[0] = the passage that the option sends you to
 
     if it's a check:
-    1 - skill being used
-    2 = difficulty label
+    1 = difficulty label
+    2 - skill being used
+  
     
     */
 
-  <<if _optionpassage[1]>>
+  <<if _optionpassage[2]>>
       <<set _optiontext to " [" + _optionpassage[1] + "- "  + _optionpassage[2] + "] - " + _optiontext>>
       @@.check.odds;<li>-
         <<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>
@@ -34,7 +35,7 @@ first line creates an ordered list
   /*    otherwise, put the .option style on a link */
   <<else>>
       <li>-
-        @@.option;<<link _optiontext _optionpassage[1]>><<set $lastoption to _optiontext>><</link>>@@
+        @@.option;<<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>@@
       </li>
     <</if>>
   <</capture>>
