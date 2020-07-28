@@ -1,5 +1,14 @@
 :: StoryInit
+<<silently>>
 <<set $optionmap to new Map()>>
+<<set $flagsMap to {
+                        "sit": false,
+                        "love": false,
+                        "gay": false,
+                        "tapshead": false,
+                        "stalling": false,
+                        "tellme": false
+                    }>>
 
 <<set $motorics to ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)", "PERCEPTION (SMELL)", "PERCEPTION (HEARING)"]>>
 <<set $intellect to ["CONCEPTUALIZATION", "DRAMA", "ENCYCLOPEDIA", "LOGIC", "RHETORIC", "VISUAL CALCULUS"]>>
@@ -10,3 +19,4 @@
 <<set $paraAppendMode to false>>
 
 <<set $items to []>>
+<</silently>>

@@ -1,7 +1,5 @@
 :: AddParagraph [widget nobr]
-/* widget used to add paragraphs/dialogue. by default, it's no speaker at all. the 2nd argument, $args[1], determines the speaker, if any. the 3rd argument determines a passive overlay.
-
-WEIRD: if an overlay exists, it applies to the NEXT paragraph because i haven't figured out how to reverse the order of the continue button :')
+/* widget used to add paragraphs/dialogue. by default, it's no speaker at all. the 2nd argument, $args[1], determines the speaker, if any.
 
 ex: <<AddParagraph "I really like talking" "Aster">>
 

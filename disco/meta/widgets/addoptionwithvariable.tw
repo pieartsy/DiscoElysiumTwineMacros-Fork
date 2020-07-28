@@ -1,0 +1,15 @@
+::AddOptionWithVariable [widget nobr]
+/* adds a key, $args[0], and value, an array containing $args 1, to $optionmap
+    this becomes _optiontext and _optionpassage in the DisplayOptions passage
+
+    args[0] = text for the option.
+    1 = the passage that the option sends you to
+    2 - variable to change
+    3 = variable value
+
+    ex: <<AddOptionWithVariable "heres a check" "Passage" "var" "value">>
+
+*/
+<<widget "AddOptionWithVariable">>
+    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])>>
+<</widget>>

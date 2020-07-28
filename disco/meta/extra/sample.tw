@@ -1,4 +1,4 @@
-::Start [nobr]
+::Sample start [nobr]
 <<AddParagraph "Sample text from Cleaning Out The Rooms by bitochondria.">>
 
 <<AddOption "Go forward to the sample text." "COTRNew">>
