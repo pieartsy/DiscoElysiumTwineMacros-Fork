@@ -1,4 +1,4 @@
-::Knowledge
+::Knowledge [nobr]
 <<AddParagraph "He looks doubtful. “I’ll take your word for it.”" "Kim Kitsuragi">>
 
 <<AddOption "“Come on, Kim, you can tell me.”" "Stalling" "tellme" true>>
