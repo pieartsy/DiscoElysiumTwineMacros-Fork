@@ -1,2 +1,0 @@
-::BlankSpeaker [widget nobr]
-<<widget "BlankSpeaker">><<set $currentspeaker to "">><</widget>>

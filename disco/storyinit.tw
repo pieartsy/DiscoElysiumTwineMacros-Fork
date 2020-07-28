@@ -5,6 +5,7 @@
 <<set $intellect to ["CONCEPTUALIZATION", "DRAMA", "ENCYCLOPEDIA", "LOGIC", "RHETORIC", "VISUAL CALCULUS"]>>
 <<set $fysique to ["ELECTROCHEMISTRY", "ENDURANCE", "HALF LIGHT", "PAIN THRESHOLD", "PHYSICAL INSTRUMENT", "SHIVERS"]>>
 <<set $psyche to ["AUTHORITY", "EMPATHY", "ESPRIT DE CORPS", "INLAND EMPIRE", "SUGGESTION", "VOLITION"]>>
+
 <<set $greentext to []>>
 <<set $paraAppendMode to false>>
 

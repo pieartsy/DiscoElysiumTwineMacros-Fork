@@ -13,8 +13,6 @@ this shows up only at PassageFooter; you don't need to call it otherwise
 @@.paragraph;<<print _paragraph>>@@
 /*if the length of $paragraphs continues to be more than zero, keep displaying a clickable CONTINUE button (that runs through the widget)
 
-WEIRD: if an overlay exists (determined by the AddParagraph macro), it applies to the NEXT paragraph because i haven't figured out how to reverse the order of the continue button :')
-
 */
 <<nobr>>
 <<if $paragraphs.length > 0>>

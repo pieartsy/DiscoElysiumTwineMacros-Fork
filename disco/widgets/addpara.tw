@@ -1,16 +1,19 @@
 :: AddParagraph [widget nobr]
-/* widget used to add paragraphs/dialogue and who it belongs to
-
-ex: <<AddParagraph "I really like talking" "int">>
+/* widget used to add paragraphs/dialogue. by default, it's no speaker at all. the 2nd argument, $args[1], determines the speaker, if any. the 3rd argument determines a passive overlay.
 
 WEIRD: if an overlay exists, it applies to the NEXT paragraph because i haven't figured out how to reverse the order of the continue button :')
 
+ex: <<AddParagraph "I really like talking" "Aster">>
+
 $args[0] = the text of the paragraph
-2 = the overlay (mostly applies to passive skill checks)
+
+if there's a current speaker:
+1 = the speaker of the paragraph (if any)
 
 */
 <<widget "AddParagraph">>
-/* sets a temporary variable, _para */
+<<silently>>
+/* sets a temporary variable, _para, which will be used for the DisplayPara widget */
     <<set _para to "">>
     /*     if $paraAppendMode (used for greentext) is true, add greentext, then clear the greentext and set it back to false. */
     <<if $paraAppendMode is true>>
@@ -20,12 +23,20 @@ $args[0] = the text of the paragraph
         <<set $greentext to []>>
         <<set $paraAppendMode to false>>
     <</if>>
-    /* otherwise, set _para to $currentspeaker + paragraph, and push to $paragraphs
-    also add the 2nd argument to $overlays
-    
-    both are used in the DisplayPara widget*/
-    <<set _para to (_para + $currentspeaker + $args[0])>>
-    <<set _overlay to $args[1]>>
+
+    /*if there's a 2nd argument, set $current speaker to the second argument, styled with the .speaker class
+    set _para to $currentspeaker + paragraph, and push to $paragraphs.
+    then set the current speaker to nothing (so a name doesn't keep appearing over and over)
+    */
+    <<if $args[1]>>
+        <<set $currentspeaker to ("@@.speaker;" + $args[1] + "@@ - ")>>
+        <<set _para to (_para + $currentspeaker + $args[0])>>
+        <<set $currentspeaker to "">>
+    /* otherwise, set _para to a paragraph with no speaker.*/
+    <<else>>
+        <<set _para to (_para + $args[0])>>
+    <</if>>
+
     <<run $paragraphs.push(_para)>>
-    <<set $overlays.push(_overlay)>>
+<</silently>>
 <</widget>>
