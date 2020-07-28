@@ -584,7 +584,6 @@ first line creates an ordered list
 
 &lt;&lt;SetSpeaker &quot;Kim&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;“You can stay at my place, Harry. We can break into your apartment tomorrow.”&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="StoryInit" tags="" position="225,225">&lt;&lt;set $optionmap to new Map()&gt;&gt;
-&lt;&lt;set $success to &quot;&quot;&gt;&gt;
 
 &lt;&lt;set $motorics to [&quot;COMPOSURE&quot;, &quot;HAND-EYE COORDINATION&quot;, &quot;INTERFACING&quot;, &quot;PERCEPTION&quot;, &quot;REACTION SPEED&quot;, &quot;SAVOIR FAIRE&quot;, &quot;PERCEPTION (SIGHT)&quot;, &quot;PERCEPTION (TASTE)&quot;, &quot;PERCEPTION (TOUCH)&quot;, &quot;PERCEPTION (SMELL)&quot;, &quot;PERCEPTION (HEARING)&quot;]&gt;&gt;
 &lt;&lt;set $intellect to [&quot;CONCEPTUALIZATION&quot;, &quot;DRAMA&quot;, &quot;ENCYCLOPEDIA&quot;, &quot;LOGIC&quot;, &quot;RHETORIC&quot;, &quot;VISUAL CALCULUS&quot;]&gt;&gt;
@@ -593,12 +592,7 @@ first line creates an ordered list
 &lt;&lt;set $greentext to []&gt;&gt;
 &lt;&lt;set $paraAppendMode to false&gt;&gt;
 
-&lt;&lt;set $items to []&gt;&gt;
-&lt;&lt;set $xp to 0&gt;&gt;
-&lt;&lt;set $int to 1&gt;&gt;
-&lt;&lt;set $psy to 0&gt;&gt;
-&lt;&lt;set $fys to 0&gt;&gt;
-&lt;&lt;set $mot to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="SUCCEED" tags="" position="350,225">&lt;&lt;SkillSuccess&gt;&gt;
+&lt;&lt;set $items to []&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="SUCCEED" tags="" position="350,225">&lt;&lt;SkillSuccess&gt;&gt;
 &lt;&lt;PassiveSkill &quot;Logic&quot; 5 &quot;Success&quot;&gt;&gt;
 &lt;&lt;PassiveSkill &quot;logic&quot; &quot;success&quot; &quot;fail&quot; 9 $int 0&gt;&gt;
 &lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot; &quot;fys&quot;&gt;&gt;

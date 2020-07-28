@@ -1,6 +1,5 @@
 :: StoryInit
 <<set $optionmap to new Map()>>
-<<set $success to "">>
 
 <<set $motorics to ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)", "PERCEPTION (SMELL)", "PERCEPTION (HEARING)"]>>
 <<set $intellect to ["CONCEPTUALIZATION", "DRAMA", "ENCYCLOPEDIA", "LOGIC", "RHETORIC", "VISUAL CALCULUS"]>>
@@ -10,8 +9,3 @@
 <<set $paraAppendMode to false>>
 
 <<set $items to []>>
-<<set $xp to 0>>
-<<set $int to 1>>
-<<set $psy to 0>>
-<<set $fys to 0>>
-<<set $mot to 0>>
