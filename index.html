@@ -354,32 +354,38 @@ first line creates an ordered list
     sets the $lastoption variable, used in the PassageHeader passage, to _optiontext
     
     args[0] = text for the option.
+    args[1] = _optionspassage (an array)
     _optionspassage[0] = the passage that the option sends you to
 
-    if it&#39;s a check:
-    1 = difficulty label
-    2 - skill being used
+    1 = determines whether it&#39;s a check (must be set to true or false!)
 
     if it&#39;s got a flag attached
-  
+    2 = variable in $flagsMap
+    3 = variable&#39;s value
     
     */
-  &lt;&lt;if _optionpassage[2] and !Object.keys($flagsMap).includes(_optionpassage[1])&gt;&gt;
-         &lt;&lt;set _optiontext to &quot; [&quot; + _optionpassage[1] + &quot;- &quot;  + _optionpassage[2] + &quot;] - &quot; + _optiontext&gt;&gt;
-      @@.check.odds;&lt;li&gt;-
+
+/* if there&#39;s a 3rd variable in the _optionspassage array  (indicating it&#39;s a variable setter) and it&#39;s in $flagsMap
+  set the $flagsMap&#39;s variable to the value */
+  &lt;&lt;if Object.keys($flagsMap).includes(_optionpassage[2])&gt;&gt;
+      &lt;&lt;set $flagsMap[_optionpassage[2]] to _optionpassage[3]&gt;&gt;
+      &lt;&lt;script&gt;&gt;
+        console.log(&quot;ye&quot;)
+      &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+
+/* if there&#39;s a 2nd variable in the _optionspassage array (indicating that it&#39;s a check) and the check is true,
+  format it with the .check styling and make it a link */  
+  &lt;&lt;if _optionpassage[1] and _optionpassage[1] == true&gt;&gt;
+      @@.check;&lt;li&gt;-
         &lt;&lt;link _optiontext _optionpassage[0]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;
       &lt;/li&gt;@@
-   otherwise, put the .option style on a link */
-  &lt;&lt;elseif Object.keys($flagsMap).includes(_optionpassage[1])&gt;&gt;
-      &lt;&lt;set $flagsMap[_optionpassage[1]] to _optionpassage[2]&gt;&gt;
-      &lt;li&gt;-
-        @@.option;&lt;&lt;link _optiontext _optionpassage[0]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;@@
-      &lt;/li&gt;
+/* otherwise, put the .option style on a link and that&#39;s it*/
   &lt;&lt;else&gt;&gt;
       &lt;li&gt;-
         @@.option;&lt;&lt;link _optiontext _optionpassage[0]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;@@
       &lt;/li&gt;
-    &lt;&lt;/if&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
   &lt;&lt;/capture&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 /* closing off ordered list and resetting $optionmap*/
@@ -479,28 +485,27 @@ lastoption is used with the DisplayOptions passage. */
     args[0] = text for the option.
     1 = the passage that the option sends you to
 
-    if it&#39;s a check:
-    2 - skill being used
-    3 = difficulty label
+    2 = gives it the check style (makes it highlighted white)
 
     ex: &lt;&lt;AddOption &quot;heres a check&quot; &quot;Passage&quot; &quot;Logic&quot; &quot;heroic&quot;&gt;&gt;
 
 */
-    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])&gt;&gt;
+    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2]])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 /*</tw-passagedata><tw-passagedata pid="14" name="AddOptionWithVariable" tags="widget nobr" position="475,225">/* adds a key, $args[0], and value, an array containing $args 1, to $optionmap
     this becomes _optiontext and _optionpassage in the DisplayOptions passage
 
     args[0] = text for the option.
     1 = the passage that the option sends you to
-    2 - variable to change
-    3 = variable value
+    2 = whether it&#39;s a check (MUST be filled out with true or false)
+    3 = variable to change
+    4 = variable value
 
     ex: &lt;&lt;AddOptionWithVariable &quot;heres a check&quot; &quot;Passage&quot; &quot;var&quot; &quot;value&quot;&gt;&gt;
 
 */
 &lt;&lt;widget &quot;AddOptionWithVariable&quot;&gt;&gt;
-    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])&gt;&gt;
+    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4]])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="AddOverlay" tags="widget nobr" position="600,225">/* adds an overlay to the following &quot;continue button&quot;.
 
 ex:
@@ -757,7 +762,7 @@ ex:
 &lt;&lt;NoOverlay&gt;&gt;
 &lt;&lt;AddParagraph &quot;Kim seems to think it’s safe too, and sits down without much hesitation. He doesn’t quite gesture at you to join him, only quirks his eyebrow at you as he situates himself.&quot; &quot;kim kitsuragi&quot;&gt;&gt;
 
-&lt;&lt;AddOptionWithVariable &quot;Sit down next to him.&quot; &quot;Bring me here&quot; &quot;sit&quot; true&gt;&gt;
+&lt;&lt;AddOptionWithVariable &quot;Sit down next to him.&quot; &quot;Bring me here&quot; false &quot;sit&quot; true&gt;&gt;
 &lt;&lt;AddOption &quot;“What did you bring me out here for, again?”&quot; &quot;Bring me here&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Bring me here" tags="nobr" position="475,350">&lt;&lt;if $flagsMap[&quot;sit&quot;] is true&gt;&gt;
 
     &lt;&lt;NoOverlay&gt;&gt;

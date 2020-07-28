@@ -7,13 +7,11 @@
     args[0] = text for the option.
     1 = the passage that the option sends you to
 
-    if it's a check:
-    2 - skill being used
-    3 = difficulty label
+    2 = gives it the check style (makes it highlighted white)
 
     ex: <<AddOption "heres a check" "Passage" "Logic" "heroic">>
 
 */
-    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])>>
+    <<run $optionmap.set($args[0], [$args[1], $args[2]])>>
 <</widget>>
 /*
