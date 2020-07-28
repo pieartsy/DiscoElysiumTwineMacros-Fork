@@ -25,5 +25,5 @@
 
 <<AddParagraph "“ - knowledgeable about this sort of thing.”">>
 
-<<AddOption "“What do you mean? This bad boy can fit so much knowledge in it.” [Tap your head]" "tapshead" true>>
-<<AddOption "“You’re stalling.”" "stalling" true>>
+<<AddOption "“What do you mean? This bad boy can fit so much knowledge in it.” [Tap your head]" "Knowledge" "tapshead" true>>
+<<AddOption "“You’re stalling.”" "Stalling" "stalling" true>>

@@ -7,7 +7,11 @@
                         "gay": false,
                         "tapshead": false,
                         "stalling": false,
-                        "tellme": false
+                        "tellme": false,
+                        "computer": false,
+                        "moralist": false,
+                        "bisexual": false,
+                        "ask": false
                     }>>
 
 <<set $motorics to ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)", "PERCEPTION (SMELL)", "PERCEPTION (HEARING)"]>>
