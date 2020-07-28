@@ -22,17 +22,5 @@ $(document).on("keyup", function (e) {
       list.children[childIndex].getElementsByClassName("link-internal")[0].click();
     }
   }
-
-  if (e.keyCode == 27) {
-    var dia = document.getElementById('ui-dialog');
-    if (dia && (dia.className == "open")) {
-      document.getElementById('ui-dialog-close').click();
-    } else {
-      var menu = document.getElementById("menu-story");
-      if (menu) {
-        menu.children[0].getElementsByClassName("link-internal")[0].click();
-      }
-    }
-  }
 });
 

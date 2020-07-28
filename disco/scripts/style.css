@@ -207,30 +207,3 @@ a.macro-linkreplace .motoverlay  {
   background-color: #82837f;
   color: white;
 }
-
-/* tables */
-.stats table, th, td {
-  vertical-align: center;
-  text-align: center;
-  padding: 0px 10px 10px 10px;
-  font-weight: bold;
-  font-family: 'PT Sans Narrow', sans-serif;
-}
-
-.stats th {
-  font-size: 4rem;
-}
-
-.stats td {
-  font-size: 2rem;
-}
-
-.stats td:nth-child(even) {
-  background-color: #d2d3cd;
-  color: black;
-}
-
-.stats th:nth-child(even) {
-  background-color: #d2d3cd;
-  color: black;
-}
