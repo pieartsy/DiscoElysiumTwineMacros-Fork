@@ -1,0 +1,35 @@
+::StoryMenu
+<<link 'Accessibility'>>
+	<<dialog 'Accessibility' 'Accessibility'>>\
+    <<include "Accessibility">>
+	<</dialog>>
+<</link>>
+<<link 'Content notes'>>
+	<<dialog 'Content notes' 'CNs'>>\
+    <<include "CNs">>
+	<</dialog>>
+<</link>>
+<<link 'Credits'>>
+	<<dialog 'Credits' 'Credits'>>\
+    <<include "Credits">>
+	<</dialog>>
+<</link>>
+
+::Accessibility
+!Accessibility
+You can press the numbers on your keyboard to select a numbered option.
+
+You can press the spacebar on your keyboard to press the continue button.
+
+::CNs
+!Content Notes
+Some spoilers for the ending of Disco Elysium. Cissexist remarks depending on what options you pick.
+
+::Credits
+Original Twine macros and Disco Elysium-style framework - apepers on github: [[link| https://github.com/apepers/DiscoElysiumTwineMacros/]] and itch.io: [[link|https://apepers.itch.io/re-hearsed-a-disco-elysium-fanwork]].
+
+Updated Twine macros for apepers' framework - Aster Fialla on github: [[link|https://github.com/pieartsy/Disco-Elysium-Twine-Macros/]] and itch.io: [[link|https://pieartsy.itch.io]].
+
+Writing - Aster Fialla. Website: [[link|https://asterfialla.com]]
+
+Disco Elysium world and inspiration - ZA/UM. Website: [[link|https://internationale.zaumstudio.com/]] and game: [[link|https://www.gog.com/game/disco_elysium]]
