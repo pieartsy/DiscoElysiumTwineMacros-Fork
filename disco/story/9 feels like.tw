@@ -1,3 +1,39 @@
 ::Feels like [nobr question]
 
+<<AddParagraph "“The experience is unique for different people.”" "Kim Kitsuragi">>
+
+<<if visited("What are you")>>
+    <<NoOverlay>>
+    <<AddParagraph "“You’ve already identified some options.”">>
+<</if>>
+
+<<NoOverlay>>
+<<AddSkillParagraph "Yes, but what is the experience for *him*? What is the unique qualia of *Kim’s* nonbinary feelings?" "conceptualization">>
+
+<<NoOverlay>>
+<<AddParagraph " “For me, it’s a vague detachment, or disconnect. When people refer to me as a man, it doesn’t ‘fit’ right for what I understand myself to be. As if I’m being forced into a coat that’s too small.”" "Kim Kitsuragi">>
+
+<<if visited("Man?")>>
+    <<NoOverlay>>
+    <<AddSkillParagraph "Whoops. Really put your foot in your mouth back there, huh?" "suggestion">>
+
+    <<NoOverlay>>
+    <<AddParagraph "“There’s not any specific names for each experience under the nonbinary ‘umbrella’ - not yet, at least.”" "Kim Kitsuragi">>
+<<else>>
+    <<NoOverlay>>
+    <<AddParagraph "“There’s not any specific names for each experience under the nonbinary ‘umbrella’ - not yet, at least.”">>
+<</if>>
+
+<<NoOverlay>>
+<<AddParagraph "“It’s a very new concept, at least in Revachol. There might be developments in understanding on other islands and isolas, but I am not aware of them. So that’s the best that I can describe it for you, unfortunately.”">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "What a shame. Labeling and categorizing things is *very* important for accuracy." "encyclopedia">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "You’ll just have to come up with some labels yourself! How about: ‘unguy’?" "conceptualization" "challenging" "failure">>
+
+<<NoOverlay>>
+<<AddParagraph "Hmm. Needs work.">>
+
 <<include "Questions list">>

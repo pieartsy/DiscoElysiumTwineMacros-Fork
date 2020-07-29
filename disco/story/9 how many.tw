@@ -2,7 +2,7 @@
 
 <<AddParagraph "“In the underground? A few handfuls of us. Occasionally we have small gatherings to discuss these topics.”" "Kim Kitsuragi">>
 
-<<if $flagsMap["underground"] == false>>
+<<if $flagsMap["underground"] is false>>
     <<AddOverlay "int">>
     <<AddSkillParagraph "He’s talking about the homo-sexual underground. Not the actual sewers beneath the city. Just to be clear." "encyclopedia" "easy" "success">>
     <<set $flagsMap["underground"] to true>>
