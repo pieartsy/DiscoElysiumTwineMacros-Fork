@@ -35,7 +35,7 @@ first line creates an ordered list
             @@.check;<li>-
               <<link _optiontext _optionpassage[0]>>
                 <<set $lastoption to _optiontext>>
-                <<set $flagsMap[_optionpassage[1]] to _optionpassage[2]>>
+                <<SetFlag _optionpassage[1] _optionpassage[2]>>
               <</link>>
             </li>@@
       <<else>>
@@ -43,7 +43,7 @@ first line creates an ordered list
           @@.option;<li>-
               <<link _optiontext _optionpassage[0]>>
                 <<set $lastoption to _optiontext>>
-                <<set $flagsMap[_optionpassage[1]] to _optionpassage[2]>>
+                <<SetFlag _optionpassage[1] _optionpassage[2]>>
               <</link>>
             </li>@@
       <</if>>

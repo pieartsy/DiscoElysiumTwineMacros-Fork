@@ -1,0 +1,8 @@
+::Genders [nobr]
+<<if $flagsMap["ask"]>>
+    <<AddParagraph "Kim nods. “Consider me impressed again. Yes, that’s correct, but only one of the options possible.”">>
+<<else>>
+    <<AddParagraph "Kim nods. “Consider me impressed. Yes, that’s correct, but only one of the options possible.”">>
+<</if>>
+
+<<AddParagraph "“As for myself, I don’t find what option I take, or whatever category I happen to be, as all that important. Though, that is the point on some level.”">>

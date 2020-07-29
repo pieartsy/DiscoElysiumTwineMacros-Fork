@@ -53,7 +53,7 @@ if it's a passive check:
     ex result: [Easy: Success] */
         <<set $result to $args[2].charAt(0).toUpperCase() + $args[2].slice(1)>>
         <<set $rating to $args[3].charAt(0).toUpperCase() + $args[3].slice(1)>>
-        <<set _skillresult to (" [" + $result + ": " + $rating + "]")>>
+        <<set _skillresult to ("@@.dim; [" + $result + ": " + $rating + "]@@")>>
         <<set $currentspeaker += _skillresult>>
     <</if>>
     /*regardless, add a dash.*/

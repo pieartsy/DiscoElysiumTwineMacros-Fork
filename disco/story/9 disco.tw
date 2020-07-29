@@ -1,0 +1,4 @@
+::Disco [nobr]
+<<AddParagraph "Kim looks down at the planks of the boardwalk. He says nothing." "Kim Kitsuragi">>
+
+<<AddSkillParagraph "He’s upset. He trusted you with this piece of his identity and you just had to fuck around with it." "Empathy" "easy" "success">>

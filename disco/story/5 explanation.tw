@@ -41,6 +41,6 @@
     <<AddParagraph "As you open your mouth to speak, he adds, “We are still definitely human, though.”">>
 <</if>>
 
-<<AddOption "“But you look and sound like a man.”">>
-<<AddOption "“So what are you, then?”">>
-<<AddOption "“That's really interesting, Kim!”">>
+<<AddOption "“But you look and sound like a man.”" "Man?">>
+<<AddOption "“So what are you, then?”" "What are you">>
+<<AddOption "“That's really interesting, Kim!”" "Interesting">>
