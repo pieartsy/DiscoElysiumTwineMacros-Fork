@@ -1,6 +1,8 @@
 ::What are you [nobr]
 <<if $flagsMap["getsit"] is true>>
     <<AddParagraph "“Really now. You do?”" "Kim Kitsuragi">>
+<<elseif $flagsMap["trustutoo"] is true>>
+    <<AddParagraph "His hands relax, and he smooths out the creases in his trousers. “Really?”" "Kim Kitsuragi">>
 <<else>>
     <<AddParagraph "“As I said, ‘something else’ is the best way to describe it. I’m neither entirely a man nor entirely a woman, but that leaves many other options.”" "Kim Kitsuragi">>
 

@@ -1,0 +1,39 @@
+::Questions list [nobr]
+
+<<if passage() is not "Figure out">>
+    <<if visited("Figure out")>>
+        <<AddOption "@@.dim;How did you figure this out?@@" "Figure out" "questioned" true>>
+    <<else>>
+        <<AddOption "How did you figure this out?" "Figure out" "questioned" true>>
+    <</if>>
+<</if>>
+<<if passage() is not "Feels like">>
+    <<if visited("Feels like")>>
+        <<AddOption "@@.dim;What does it feel like?@@" "Feels like" "questioned" true>>
+    <<else>>
+        <<AddOption "What does it feel like?" "Feels like" "questioned" true>>
+    <</if>>
+<</if>>
+<<if passage() is not "Other people">>
+    <<if visited("Other people")>>
+        <<AddOption "@@.dim;Do other people know this about you?@@" "Other people" "questioned" true>>
+    <<else>>
+        <<AddOption "Do other people know this about you?" "Other people" "questioned" true>>
+    <</if>>
+<</if>>
+<<if passage() is not "How many">>
+    <<if visited("How many")>>
+        <<AddOption "@@.dim;How many nonbinary people are out there?@@" "How many" "questioned" true>>
+    <<else>>
+        <<AddOption "How many nonbinary people are out there?" "How many" "questioned" true>>
+    <</if>>
+<</if>>
+<<if !visited("Junk")>>
+    <<AddOption "What junk are you packing in those pants of yours?" "Junk">>
+<</if>>
+<<if visitedTags("question")>>
+    <<AddOption "I think I'm done with questioning." "Done">>
+<</if>>
+<<if $flagsMap["revelation"] >= 5>>
+    <<AddOption "Realize what you are." "Revelation" "hadrevelation" true "conceptualization" "heroic">>
+<</if>>

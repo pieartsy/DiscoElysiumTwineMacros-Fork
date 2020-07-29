@@ -35,7 +35,7 @@
     <<AddParagraph "Kim sighs. “You have no idea what that means, do you?”" "Kim Kitsuragi">>
 <</if>>
 
-<<AddParagraph "“To be nonbinary is to not feel restricted by the binaries of ‘man’ and ‘woman’. Nonbinary people are not either gender. We are something else.”">>
+<<AddParagraph "“To be nonbinary is to not feel restricted by the binaries of ‘man’ and ‘woman’. Nonbinary people are not entirely of either side. We are something else.”">>
 
 <<if $flagsMap["computer"] is true>>
     <<AddParagraph "As you open your mouth to speak, he adds, “We are still definitely human, though.”">>
