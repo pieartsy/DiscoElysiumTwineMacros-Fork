@@ -1,5 +1,11 @@
 ::Start [nobr]
 <<SetSpeaker "Aster">>
 <<AddParagraph "Hi!">>
+<<<<<<< HEAD
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
+=======
+<<SkillCheck 1 stats.int 2>>
+<<AddOption "testcheck" "Start" true>>
+<<AddOption "testoption" "Start">>
+>>>>>>> parent of d645706... got skill roll working but not overlay

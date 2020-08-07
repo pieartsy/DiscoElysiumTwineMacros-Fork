@@ -100,8 +100,14 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
+<<<<<<< HEAD
 	<tw-storydata name="Disco Tests" startnode="5" creator="Tweego" creator-version="1.3.0" ifid="5BD21ED8-62C2-4C12-9F44-05FA8FE75082" zoom="1" format="SugarCube" format-version="2.30.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "style.css" */
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=PT+Sans+Narrow&display=swap');
+=======
+	<tw-storydata name="Disco Tests" startnode="4" creator="Tweego" creator-version="1.3.0" ifid="5BD21ED8-62C2-4C12-9F44-05FA8FE75082" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "style.css" */
+@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
+>>>>>>> parent of d645706... got skill roll working but not overlay
 
 html {
   height: 100%;
@@ -307,6 +313,7 @@ $(document).on("keyup", function (e) {
       list.children[childIndex].getElementsByClassName("link-internal")[0].click();
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2524,8 +2531,14 @@ $(document).on("keyup", function (e) {
   5 = mod 
    */
     &lt;&lt;if _optionpassage[0] is true&gt;&gt;
+=======
+});</script><tw-passagedata pid="1" name="DisplayOptions" tags="nobr" position="100,100">&lt;ol id=&quot;OptionList&quot;&gt;
+&lt;&lt;for _optiontext, _optionpassage range $optionmap&gt;&gt;
+  &lt;&lt;capture _optionpassage, _optiontext&gt;&gt;
+    &lt;&lt;if _optionpassage[1] is true&gt;&gt;
+>>>>>>> parent of d645706... got skill roll working but not overlay
       @@.check;&lt;li&gt;-
-        &lt;&lt;link _optiontext&gt;&gt;&lt;&lt;SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3] _optionpassage[4] _optionpassage[5]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;
+        &lt;&lt;link _optiontext _optionpassage[0]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;
       &lt;/li&gt;@@
 <<<<<<< HEAD
       &lt;div id=&quot;oddsinfo&quot; style=&quot;display: none;&quot;&gt;
@@ -2536,12 +2549,13 @@ $(document).on("keyup", function (e) {
       /* otherwise, put the .option style on a link */
     &lt;&lt;else&gt;&gt;
       &lt;li&gt;-
-        @@.option;&lt;&lt;link _optiontext _optionpassage[1]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;@@
+        @@.option;&lt;&lt;link _optiontext _optionpassage[0]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;@@
       &lt;/li&gt;
     &lt;&lt;/if&gt;&gt;
   &lt;&lt;/capture&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;/ol&gt;
+<<<<<<< HEAD
 &lt;&lt;set $optionmap to new Map()&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="FAIL" tags="" position="225,100">&lt;&lt;SkillFailure&gt;&gt;
 <<<<<<< HEAD
 &lt;&lt;PassiveSkill &quot;logic&quot; &quot;success&quot; &quot;fail&quot; 9 $int 0&gt;&gt;
@@ -2631,6 +2645,16 @@ $(document).on("keyup", function (e) {
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
 >>>>>>> parent of 9e82f8f... passive check overlays
 &lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
+=======
+&lt;&lt;set $optionmap to new Map()&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="PassageFooter" tags="" position="225,100">&lt;&lt;DisplayParagraphs&gt;&gt;\</tw-passagedata><tw-passagedata pid="3" name="PassageHeader" tags="" position="350,100">&lt;&lt;set $paragraphs to []&gt;&gt;
+&lt;&lt;if $lastoption&gt;&gt;
+@@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Start" tags="nobr" position="475,100">&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Hi!&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;testcheck&quot; &quot;Start&quot; true&gt;&gt;
+&lt;&lt;AddOption &quot;testoption&quot; &quot;Start&quot;&gt;&gt;
+&lt;&lt;SkillFailure&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="StoryInit" tags="" position="600,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
+>>>>>>> parent of d645706... got skill roll working but not overlay
 &lt;&lt;set $ischeck to []&gt;&gt;
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 
@@ -2642,6 +2666,7 @@ $(document).on("keyup", function (e) {
 &lt;&lt;set $paraAppendMode to false&gt;&gt;
 
 &lt;&lt;set $xp to 0&gt;&gt;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 &lt;&lt;set $int to 1&gt;&gt;
@@ -2677,8 +2702,14 @@ $(document).on("keyup", function (e) {
 &lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AddOption" tags="widget nobr" position="975,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
 >>>>>>> parent of 9e82f8f... passive check overlays
     &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6], $args[7]])&gt;&gt;
+=======
+&lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="AddOption" tags="widget nobr" position="725,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
+    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2]])&gt;&gt;
+>>>>>>> parent of d645706... got skill roll working but not overlay
 &lt;&lt;/widget&gt;&gt;
+
 /*
+<<<<<<< HEAD
 args[0] = text for the option.
 1 = whether it&#39;s a check or not.
 2 = the passage that the option sends you to (for success if a check)
@@ -2696,8 +2727,12 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot;&gt;&gt;
 */
 &lt;&lt;widget &quot;AddParagraph&quot;&gt;&gt;
 /* sets a temporary variable, _para */
+=======
+- add the skill to the options list
+- when the skill is clicked, send the person to the skill check passage
+*/</tw-passagedata><tw-passagedata pid="7" name="AddParagraph" tags="widget nobr" position="850,100">&lt;&lt;widget &quot;AddParagraph&quot;&gt;&gt;
+>>>>>>> parent of d645706... got skill roll working but not overlay
     &lt;&lt;set _para to &quot;&quot;&gt;&gt;
-    /*     if $paraAppendMode (used for greentext) is true, add greentext, then clear the greentext and set it back to false. */
     &lt;&lt;if $paraAppendMode is true&gt;&gt;
         &lt;&lt;for _text range $greentext&gt;&gt;
             &lt;&lt;set _para to (_para + _text + &quot;&lt;br /&gt;&lt;br /&gt;&quot;)&gt;&gt;
@@ -2705,9 +2740,9 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot;&gt;&gt;
         &lt;&lt;set $greentext to []&gt;&gt;
         &lt;&lt;set $paraAppendMode to false&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-    /* otherwise, set _para to $currentspeaker + paragraph, and push to $paragraphs*/
     &lt;&lt;set _para to (_para + $currentspeaker + $args[0])&gt;&gt;
     &lt;&lt;run $paragraphs.push(_para)&gt;&gt;
+<<<<<<< HEAD
 <<<<<<< HEAD
     &lt;&lt;set $overlays.push(_overlay)&gt;&gt;
 <<<<<<< HEAD
@@ -2743,38 +2778,49 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot;&gt;&gt;
 =======
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="DisplayParagraphs" tags="widget" position="1225,100">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
 &lt;&lt;widget &quot;DisplayParagraphs&quot;&gt;&gt;&lt;&lt;set _paragraph to $paragraphs[0]&gt;&gt;\
+=======
+&lt;&lt;/widget&gt;&gt;
+/* sets a temporary variable, _para
+    if $paraAppendMode (used for greentext) is true, add greentext, then clear the greentext and set it back to false.
+
+otherwise, set _para to $currentspeaker + paragraph, and push to $paragraphs*/</tw-passagedata><tw-passagedata pid="8" name="DisplayParagraphs" tags="widget" position="975,100">&lt;&lt;widget &quot;DisplayParagraphs&quot;&gt;&gt;&lt;&lt;set _paragraph to $paragraphs[0]&gt;&gt;\
+>>>>>>> parent of d645706... got skill roll working but not overlay
 &lt;&lt;run $paragraphs.deleteAt(0)&gt;&gt;\
 >>>>>>> parent of 9e82f8f... passive check overlays
 @@.paragraph;&lt;&lt;print _paragraph&gt;&gt;@@
-/*if the length of $paragraphs continues to be more than zero, keep displaying a clickable CONTINUE button (that runs through the widget)*/
 &lt;&lt;if $paragraphs.length &gt; 0&gt;&gt;
 &lt;&lt;linkreplace &quot;@@#ContinueBtn;CONTINUE ➤@@&quot; t8n&gt;&gt;&lt;&lt;DisplayParagraphs&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;\
 &lt;&lt;else&gt;&gt;\
-/*otherwise, display options.*/
 &lt;&lt;include DisplayOptions&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-/* the script dims the paragraphs after they&#39;ve been clicked. */
 &lt;&lt;timed 0.5s&gt;&gt;&lt;&lt;script&gt;&gt;
 var paragraphs = document.getElementsByClassName(&#39;paragraph&#39;);
 if (paragraphs.length &gt; 1) {
 	paragraphs[paragraphs.length-2].classList.add(&quot;dim&quot;);
 }
 &lt;&lt;/script&gt;&gt;&lt;&lt;/timed&gt;&gt;\
+<<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SkillFailure" tags="widget nobr" position="100,225">/* displays the failure animation. 
 
 &lt;&lt;SkillFailure&gt;&gt;
 
 */
 &lt;&lt;widget &quot;SkillFailure&quot;&gt;&gt;
+=======
+&lt;&lt;/widget&gt;&gt;
+
+/*
+set _paragraph to the first item in $paragraphs
+*/</tw-passagedata><tw-passagedata pid="9" name="SkillFailure" tags="widget nobr" position="1100,100">&lt;&lt;widget &quot;SkillFailure&quot;&gt;&gt;
+>>>>>>> parent of d645706... got skill roll working but not overlay
 &lt;div id=&quot;FailureImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckFailure&quot; class=&quot;CheckText&quot;&gt;CHECK FAILURE&lt;/div&gt;
 &lt;&lt;SetSpeaker &quot;&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Red flashes at the edges of your vision - a failure.//&quot;&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="GreenTextWidgets" tags="widget nobr" position="225,225">/* various widgets for &quot;green text&quot; popups. have a generic text that can be customized with arguments */
-&lt;&lt;widget &quot;TaskComplete&quot;&gt;&gt;
-/*The first argument is the task, the second is the experience gained (if any).
-
-&lt;&lt;TaskComplete &quot;Get Kim to drink&quot; 10&gt;&gt; */
+&lt;&lt;/widget&gt;&gt;
+/*
+displays the failure animation.
+*/</tw-passagedata><tw-passagedata pid="10" name="GreenTextWidgets" tags="widget nobr" position="1225,100">&lt;&lt;widget &quot;TaskComplete&quot;&gt;&gt;
 &lt;&lt;run $greentext.push(&quot;@@.green;Task complete: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;if $args[1]&gt;&gt;
 &lt;&lt;run $greentext.push(&quot;@@.green;Gained experience: +&quot; + $args[1] + &quot;@@&quot;)&gt;&gt;
@@ -2783,9 +2829,6 @@ if (paragraphs.length &gt; 1) {
 &lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &quot;SecretTaskComplete&quot;&gt;&gt;
-/*The first argument is the task, the second is the experience gained (if any).
-
-&lt;&lt;SecretTaskComplete &quot;Dance sexily&quot; 25&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Secret task complete: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;if $args[1]&gt;&gt;
 &lt;&lt;run $greentext.push(&quot;@@.green;+&quot; + $args[1] + &quot; XP: gained experience@@&quot;)&gt;&gt;
@@ -2794,39 +2837,29 @@ if (paragraphs.length &gt; 1) {
 &lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &quot;NewTask&quot;&gt;&gt;
-/* &lt;&lt;NewTask &quot;Dance&quot;&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;New task: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &quot;ItemGained&quot;&gt;&gt;
-/* the first argument is the item.
-
-&lt;&lt;ItemGained &quot;Cheese&quot;&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Item gained: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &quot;ItemLost&quot;&gt;&gt;
-/* the first argument is the item.
-
-&lt;&lt;ItemLost &quot;Cheese&quot;&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Item lost: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &quot;ThoughtGained&quot;&gt;&gt;
-/* the first argument is the item.
-
-&lt;&lt;ThoughtGained &quot;Cheese is great&quot;&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Thought gained: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &quot;LevelUp&quot;&gt;&gt;
-/* &lt;&lt;LevelUp&gt;&gt; */
 &lt;&lt;run $greentext.push(&quot;@@.green;Level up!@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
+<<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="PassiveSkill" tags="widget nobr" position="350,225">/* represents the dialogue of passive skills, a unique set speaker.
 
 ex: &lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
@@ -2949,12 +2982,54 @@ if _roll is more than or equal to the difficulty, show the success animation and
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 /*</tw-passagedata><tw-passagedata pid="16" name="Speaker" tags="widget" position="725,225">&lt;&lt;nobr&gt;&gt;
+=======
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="PassiveSkill" tags="widget" position="100,225">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;widget &quot;PassiveSkill&quot;&gt;&gt;
+&lt;&lt;set _skillname to ($args[0].toLowerCase())&gt;&gt;
+&lt;&lt;set _skillresult to &quot;&quot;&gt;&gt;
+&lt;&lt;if $args[1]&gt;&gt;
+&lt;&lt;set _skillresult to (&quot;[&quot; + $args[1] + &quot;: &quot; + $args[2] + &quot;]&quot;)&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $motorics.includes(_skillname)&gt;&gt;
+&lt;&lt;set $currentspeaker to (&quot;@@.motorics.speaker;&quot; +
+_skillname +
+&quot;@@&quot;)&gt;&gt;
+&lt;&lt;elseif $intellect.includes(_skillname)&gt;&gt;
+&lt;&lt;set $currentspeaker to (&quot;@@.intellect.speaker;&quot; +
+_skillname +
+&quot;@@&quot;)&gt;&gt;
+&lt;&lt;elseif $fysique.includes(_skillname)&gt;&gt;
+&lt;&lt;set $currentspeaker to (&quot;@@.fysique.speaker;&quot; +
+_skillname +
+&quot;@@&quot;)&gt;&gt;
+&lt;&lt;elseif $psyche.includes(_skillname)&gt;&gt;
+&lt;&lt;set $currentspeaker to (&quot;@@.psyche.speaker;&quot; +
+_skillname +
+&quot;@@&quot;)&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if _skillresult&gt;&gt;
+&lt;&lt;set $currentspeaker += _skillresult&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $currentspeaker += &quot; - &quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="SetSpeaker" tags="widget" position="225,225">&lt;&lt;widget &quot;SetSpeaker&quot;&gt;&gt;&lt;&lt;set $currentspeaker to (&quot;@@.speaker;&quot; + $args[0] + &quot;@@ - &quot;)&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="SkillCheck" tags="widget" position="350,225">&lt;&lt;widget &quot;SkillCheck&quot;&gt;&gt;
+    &lt;&lt;set _checknumber to $args[0]&gt;&gt;
+    &lt;&lt;set _stat to $args[1]&gt;&gt;
+    &lt;&lt;set _mods to $args[2]&gt;&gt;
+    &lt;&lt;set _roll to random(1, 6) + _stat + _mods&gt;&gt;
+    &lt;&lt;if _roll &gt;= _checknumber&gt;&gt;
+        &lt;&lt;SKillSuccess&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;SkillFailure&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Speaker" tags="widget" position="475,225">&lt;&lt;nobr&gt;&gt;
+>>>>>>> parent of d645706... got skill roll working but not overlay
 &lt;&lt;widget &quot;speaker&quot;&gt;&gt;
 @@.speaker;
 $args[0] -
 @@
 &lt;&lt;/widget&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="SkillSuccess" tags="widget" position="850,225">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="SkillSuccess" tags="widget" position="600,225">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
 &lt;div id=&quot;SuccessImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckSuccess&quot; class=&quot;CheckText&quot;&gt;CHECK SUCCESS&lt;/div&gt;

@@ -1,9 +1,8 @@
 :: DisplayOptions [nobr]
-/* ordered list of options */
 <ol id="OptionList">
-/* for each text (key) and passage (value) in $optionmap, capture those things.*/ 
 <<for _optiontext, _optionpassage range $optionmap>>
   <<capture _optionpassage, _optiontext>>
+<<<<<<< HEAD
   /* if _optionpassage[0] (the true/false for whether the option is a check) is true, put the .check styling to a link with _optiontext as its text. when clicked, the link runs the SkillCheck widget.
 
   Corresponding to the arguments in SkillCheck:
@@ -14,13 +13,16 @@
   5 = mod 
    */
     <<if _optionpassage[0] is true>>
+=======
+    <<if _optionpassage[1] is true>>
+>>>>>>> parent of d645706... got skill roll working but not overlay
       @@.check;<li>-
-        <<link _optiontext>><<SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3] _optionpassage[4] _optionpassage[5]>><<set $lastoption to _optiontext>><</link>>
+        <<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>
       </li>@@
       /* otherwise, put the .option style on a link */
     <<else>>
       <li>-
-        @@.option;<<link _optiontext _optionpassage[1]>><<set $lastoption to _optiontext>><</link>>@@
+        @@.option;<<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>@@
       </li>
     <</if>>
   <</capture>>
