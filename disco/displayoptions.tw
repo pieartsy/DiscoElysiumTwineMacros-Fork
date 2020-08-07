@@ -3,6 +3,7 @@
 <<for _optiontext, _optionpassage range $optionmap>>
   <<capture _optionpassage, _optiontext>>
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* if _optionpassage[0] (the true/false for whether the option is a check) is true, put the .check styling to a link with _optiontext as its text. when clicked, the link runs the SkillCheck widget.
 
   Corresponding to the arguments in SkillCheck:
@@ -12,6 +13,8 @@
   4 = stat
   5 = mod 
    */
+=======
+>>>>>>> parent of 3ac7536... some more documentation
     <<if _optionpassage[0] is true>>
 =======
     <<if _optionpassage[1] is true>>

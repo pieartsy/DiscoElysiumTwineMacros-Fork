@@ -14,6 +14,7 @@ args[0] = text for the option.
 7 = passage for success
 
 i'm sorry this is obscene
+<<<<<<< HEAD
 ex: <<AddOption "here's a check" "true" "Succeed" "Fail" 10 $skill.int 1>>
 =======
 the first argument is the text for the option.
@@ -22,5 +23,8 @@ third is whether it's a check or not.
 
 ex: <<AddOption "here's a check" "CheckingPassage" "true">>
 >>>>>>> parent of d645706... got skill roll working but not overlay
+=======
+ex: <<AddOption "here's a check" "CheckingPassage" "true" 10 $skill.int 1 "WinPassage" "FailPassage">>
+>>>>>>> parent of 3ac7536... some more documentation
 <<AddOption "here's a normal option" "passage">>
 */

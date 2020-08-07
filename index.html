@@ -2519,6 +2519,7 @@ $(document).on("keyup", function (e) {
 /* for each text (key) and passage (value) in $optionmap, capture those things.*/ 
 &lt;&lt;for _optiontext, _optionpassage range $optionmap&gt;&gt;
   &lt;&lt;capture _optionpassage, _optiontext&gt;&gt;
+<<<<<<< HEAD
   /* if _optionpassage[0] (the true/false for whether the option is a check) is true,
     pass the difficulty into the &lt;&lt;Difficulties macro and set the _label accordingly
     rewrite _optiontext as [skill + label + difficulty] - ([Visual Calculus - Heroic 10] - ) + _optiontext
@@ -2530,6 +2531,8 @@ $(document).on("keyup", function (e) {
   4 = stat
   5 = mod 
    */
+=======
+>>>>>>> parent of 3ac7536... some more documentation
     &lt;&lt;if _optionpassage[0] is true&gt;&gt;
 =======
 });</script><tw-passagedata pid="1" name="DisplayOptions" tags="nobr" position="100,100">&lt;ol id=&quot;OptionList&quot;&gt;
@@ -2642,6 +2645,7 @@ $(document).on("keyup", function (e) {
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 3 $stats.int 2&gt;&gt;
 =======
 &lt;&lt;AddParagraph &quot;Hi!&quot;&gt;&gt;
+&lt;&lt;SkillCheck &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
 <<<<<<< HEAD
 >>>>>>> parent of 9e82f8f... passive check overlays
@@ -2724,7 +2728,7 @@ args[0] = text for the option.
 7 = passage for success
 
 i&#39;m sorry this is obscene
-ex: &lt;&lt;AddOption &quot;here&#39;s a check&quot; &quot;true&quot; &quot;Succeed&quot; &quot;Fail&quot; 10 $skill.int 1&gt;&gt;
+ex: &lt;&lt;AddOption &quot;here&#39;s a check&quot; &quot;CheckingPassage&quot; &quot;true&quot; 10 $skill.int 1 &quot;WinPassage&quot; &quot;FailPassage&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;here&#39;s a normal option&quot; &quot;passage&quot;&gt;&gt;
 */</tw-passagedata><tw-passagedata pid="9" name="AddParagraph" tags="widget nobr" position="1100,100">/* widget used to add paragraphs/dialogue and who it belongs to
 
@@ -2959,6 +2963,7 @@ if after a passive check:
 ex: &lt;&lt;SetSpeaker &quot;Kim Kitsuragi&gt;&gt;*/
 &lt;&lt;widget &quot;SetSpeaker&quot;&gt;&gt;&lt;&lt;set $currentspeaker to (&quot;@@.speaker;&quot; + $args[0] + &quot;@@ - &quot;)&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="SkillCheck" tags="widget nobr" position="600,225">/* rolls a skill check on 1d6.
 
+<<<<<<< HEAD
 ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt;
 
 _difficultynum ($args[2]) is the difficulty you&#39;re trying to beat (if the difficulty is a 7, you want a 7 or higher)
@@ -2977,6 +2982,9 @@ if _roll is more than or equal to the difficulty, show the success animation and
 =======
 >>>>>>> parent of d2e403e... got passive check overlay working
 */
+=======
+ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
+>>>>>>> parent of 3ac7536... some more documentation
 &lt;&lt;widget &quot;SkillCheck&quot;&gt;&gt;
     &lt;&lt;set _difficultynum to $args[2]&gt;&gt;
     &lt;&lt;set _stat to $args[3]&gt;&gt;
@@ -2998,6 +3006,7 @@ if _roll is more than or equal to the difficulty, show the success animation and
         &lt;&lt;goto $args[1]&gt;&gt;
 >>>>>>> parent of affc0cb... almostish
     &lt;&lt;/if&gt;&gt;
+<<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;
 /*</tw-passagedata><tw-passagedata pid="16" name="Speaker" tags="widget" position="725,225">&lt;&lt;nobr&gt;&gt;
 =======
@@ -3042,6 +3051,9 @@ _skillname +
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Speaker" tags="widget" position="475,225">&lt;&lt;nobr&gt;&gt;
 >>>>>>> parent of d645706... got skill roll working but not overlay
+=======
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Speaker" tags="widget" position="725,225">&lt;&lt;nobr&gt;&gt;
+>>>>>>> parent of 3ac7536... some more documentation
 &lt;&lt;widget &quot;speaker&quot;&gt;&gt;
 @@.speaker;
 $args[0] -

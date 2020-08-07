@@ -3,6 +3,10 @@
 <<AddParagraph "Hi!">>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<SkillCheck "SUCCEED" "FAIL" 6 $stats.int 2>>
+>>>>>>> parent of 3ac7536... some more documentation
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
 =======
