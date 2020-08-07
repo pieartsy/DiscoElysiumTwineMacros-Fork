@@ -5,10 +5,14 @@
 =======
 <<SkillSuccess>>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<PassiveSkill "Logic">>
 =======
 <<PassiveSkill "Logic" "Easy" "Success">>
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
+=======
+<<PassiveSkill "Logic" 5 "Success">>
+>>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill
 <<AddParagraph "YOU SUCCEEDED!" "fys">>
 <<PassiveSkill "electrochemistry" "Easy" "Success">>
 <<AddParagraph "Very sexy of you." "none">>

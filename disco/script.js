@@ -25,6 +25,7 @@ $(document).on("keyup", function (e) {
 <<<<<<< HEAD:disco/meta/scripts/script.js
 });
 
+<<<<<<< HEAD:disco/script.js
 <<<<<<< HEAD:disco/meta/scripts/script.js
 =======
   if ((e.keyCode == 27) && (document.getElementById("menu-story"))) {
@@ -41,3 +42,16 @@ $(document).on("keyup", function (e) {
 =======
 });
 >>>>>>> parent of 2504024... added overview menu button:disco/scripts/script.js
+=======
+  if ((e.keyCode == 27) && (document.getElementById("menu-story"))) {
+    var menu = document.getElementById("menu-story");
+    menu.children[0].getElementsByClassName("link-internal")[0].click();
+  }
+  
+  if ((e.keyCode == 27) && (document.getElementById("ui-dialog"))) {
+    var dia = document.getElementById('ui-dialog');
+    console.log(dia)
+    //dia.close();
+  }
+});
+>>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill:disco/scripts/js/script.js

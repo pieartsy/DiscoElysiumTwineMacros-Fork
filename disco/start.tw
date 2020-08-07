@@ -1,4 +1,5 @@
 ::Start [nobr]
+$int $$int
 <<SetSpeaker "Aster">>
 <<<<<<< HEAD
 <<AddParagraph "Hi!">>
@@ -34,6 +35,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<PassiveSkill "Rhetoric" "Easy" "Success">>
 <<AddParagraph "Se seems nice.">>
 =======
@@ -64,3 +66,12 @@
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $stats.int 2 "Logic">>
 <<AddOption "testoption" false "Start">>
 >>>>>>> parent of 36c563b... got stat changes ui working
+=======
+<<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $int 0>>
+<<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $int 0>>
+<<TaskComplete "Sexiness" 5>>
+<<SetSpeaker "Aster">>
+<<AddParagraph "I hope you're doing fine!" "none">>
+<<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $int 2 "Logic">>
+<<AddOption "testoption" false "Start">>
+>>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill

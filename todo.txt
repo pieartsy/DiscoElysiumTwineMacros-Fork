@@ -11,12 +11,13 @@ DONE - make "passive skills" actually do a skill check
 
 - modifiers (and listing them in a tippy)?
 - xp
-DONE - stat setting
+- stat setting
 - level ups upping stats
 - inventory/items
 <<<<<<< HEAD
 <<<<<<< HEAD
     -  bind close to esc key
+<<<<<<< HEAD
 - thoughts?? (probably not)
 - stats don't actually change checks within same passage
 =======
@@ -31,3 +32,6 @@ DONE - stat setting
 =======
 - thoughts?? (probably not)
 >>>>>>> parent of 36c563b... got stat changes ui working
+=======
+- thoughts?? (probably not)
+>>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill

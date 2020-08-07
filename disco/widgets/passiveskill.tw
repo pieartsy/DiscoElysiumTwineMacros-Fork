@@ -19,10 +19,9 @@ args[0] = name of skill
 if running a passive check:
     1 = success state
     2 = fail state
-    3 = overlay
-    4 = difficulty
-    5 = stat
-    6 = mod
+    3 = difficulty
+    4 = stat
+    5 = mod
 if after a passive check: 
     1 = difficulty
     2 = success or fail
@@ -60,8 +59,13 @@ if after a passive check:
     <<if $args[3]>>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <<SkillCheck $args[1] $args[2] $args[4] $args[5] $args[6] true>>
         <<Difficulties $args[4]>>
+=======
+        <<SkillCheck $args[1] $args[2] $args[3] $args[4] $args[5] true>>
+        <<Difficulties $args[3]>>
+>>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill
         <<set _skillresult to (" [" + _label + ": ")>>
 =======
 =======
@@ -79,6 +83,7 @@ if after a passive check:
             <<set $currentspeaker += " - ">>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <<AddParagraph $args[1] $args[3]>>
 =======
             <<AddParagraph $args[2]>>
@@ -86,6 +91,9 @@ if after a passive check:
 =======
             <<AddParagraph $args[2]>>
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
+=======
+            <<AddParagraph $args[1]>>
+>>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill
         <<else>>
             <<set _skillresult to (" [" + $args[1] + ": " + "Failure" + "]")>>
             <<set $currentspeaker += _skillresult>>
