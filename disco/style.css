@@ -90,18 +90,15 @@ span.continueblock {
 a.macro-linkreplace {
   background-color: #90280f;
   color: white;
+  padding: 15px;
+  padding-bottom: 5px;
+  padding-top: 10px;
   font-family: 'PT Sans Narrow', sans-serif;
   margin-left: -1.5em;
   display: block;
 }
 
-a.macro-linkreplace .padding {
-  padding: 15px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  display: block;
-}
-
+<<<<<<< HEAD
 a.macro-linkreplace .intoverlay  {
   background-image: [img[intoverlay]];
   background-size: cover;
@@ -121,6 +118,8 @@ a.macro-linkreplace .motoverlay  {
   background-image: [img[motoverlay]];
   background-size: cover;
 }
+=======
+>>>>>>> parent of d2e403e... got passive check overlay working
 
 .green {
   color: #98b48b; 
@@ -209,7 +208,7 @@ a.macro-linkreplace .motoverlay  {
   background-color: #d2d3cd;
   color: black;
   padding: 3px;
-  display: inline-block;
+  border-radius: 5px;
 }
 
 .check a:hover {
