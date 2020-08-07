@@ -326,10 +326,6 @@ a.macro-linkreplace .motoverlay  {
   font-size: 4rem;
 }
 
-.stats td {
-  font-size: 2rem;
-}
-
 .stats td:nth-child(even) {
   background-color: #d2d3cd;
   color: black;
@@ -2330,6 +2326,7 @@ $(document).on("keyup", function (e) {
     }
   }
 
+<<<<<<< HEAD
   if (e.keyCode == 27) {
     var dia = document.getElementById('ui-dialog');
     if (dia && (dia.className == "open")) {
@@ -2340,6 +2337,16 @@ $(document).on("keyup", function (e) {
         menu.children[0].getElementsByClassName("link-internal")[0].click();
       }
     }
+=======
+  if ((e.keyCode == 27) && (document.getElementById("menu-story"))) {
+    var menu = document.getElementById("menu-story");
+    menu.children[0].getElementsByClassName("link-internal")[0].click();
+  }
+
+  if ((e.keyCode == 27) && (document.getElementById("#ui-overlay"))) {
+    var dia = document.getElementById("#ui-overlay");
+    console.log(dia)
+>>>>>>> parent of 36c563b... got stat changes ui working
   }
 });
 /* twine-user-script #4: "tippy.js" */
@@ -4568,16 +4575,10 @@ $(document).on("keyup", function (e) {
 &lt;/script&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Overview" tags="" position="600,100">&lt;table class=&quot;stats&quot;&gt;
     &lt;tr&gt;
-        &lt;td&gt;&lt;&lt;StatChange &quot;⯅&quot; $int &quot;int&quot; &quot;#intlvl&quot; true&gt;&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;&lt;StatChange &quot;⯅&quot; $psy &quot;psy&quot; &quot;#psylvl&quot; true&gt;&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;&lt;StatChange &quot;⯅&quot; $fys &quot;fys&quot; &quot;#fyslvl&quot; true&gt;&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;&lt;StatChange &quot;⯅&quot; $mot &quot;mot&quot; &quot;#motlvl&quot; true&gt;&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;th id=&quot;intlvl&quot;&gt;$int&lt;/th&gt;
-        &lt;th id=&quot;psylvl&quot;&gt;$psy&lt;/th&gt;
-        &lt;th id=&quot;fyslvl&quot;&gt;$fys&lt;/th&gt;
-        &lt;th id=&quot;motlvl&quot;&gt;$mot&lt;/th&gt;
+        &lt;th&gt;$stats.int&lt;/th&gt;
+        &lt;th&gt;$stats.psy&lt;/th&gt;
+        &lt;th&gt;$stats.fys&lt;/th&gt;
+        &lt;th&gt;$stats.mot&lt;/th&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;INT&lt;/td&gt;
@@ -4585,6 +4586,7 @@ $(document).on("keyup", function (e) {
         &lt;td&gt;FYS&lt;/td&gt;
         &lt;td&gt;MOT&lt;/td&gt;
     &lt;/tr&gt;
+<<<<<<< HEAD
     &lt;tr&gt;
         &lt;td&gt;&lt;&lt;StatChange &quot;⯆&quot; $int &quot;int&quot; &quot;#intlvl&quot;&gt;&gt;&lt;/td&gt;
         &lt;td&gt;&lt;&lt;StatChange &quot;⯆&quot; $psy &quot;psy&quot; &quot;#psylvl&quot;&gt;&gt;&lt;/td&gt;
@@ -4600,6 +4602,16 @@ $(document).on("keyup", function (e) {
 &lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;I hope you&#39;re doing fine!&quot; &quot;none&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 9 $int 2 &quot;Logic&quot;&gt;&gt;
+=======
+&lt;/table&gt;</tw-passagedata><tw-passagedata pid="6" name="Start" tags="nobr" position="725,100">&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Hi!&quot; &quot;int&quot;&gt;&gt;
+&lt;&lt;PassiveSkill &quot;logic&quot; &quot;This is so easy.&quot; &quot;Wow guess it wasn&#39;t that easy...!&quot; 6 $stats.int 0&gt;&gt;
+&lt;&lt;PassiveSkill &quot;electrochemistry&quot; &quot;Succeeding is sexy as hell.&quot; &quot;Unsexy! Failing is unsexy!&quot; 2 $stats.int 0&gt;&gt;
+&lt;&lt;TaskComplete &quot;Sexiness&quot; 5&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I hope you&#39;re doing fine!&quot; &quot;none&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 5 $stats.int 2 &quot;Logic&quot;&gt;&gt;
+>>>>>>> parent of 36c563b... got stat changes ui working
 &lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="StoryInit" tags="" position="850,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
 &lt;&lt;set $success to &quot;&quot;&gt;&gt;
 
@@ -4612,10 +4624,14 @@ $(document).on("keyup", function (e) {
 
 &lt;&lt;set $items to []&gt;&gt;
 &lt;&lt;set $xp to 0&gt;&gt;
+<<<<<<< HEAD
 &lt;&lt;set $int to 1&gt;&gt;
 &lt;&lt;set $psy to 0&gt;&gt;
 &lt;&lt;set $fys to 0&gt;&gt;
 &lt;&lt;set $mot to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryMenu" tags="" position="975,100">&lt;&lt;link &#39;Character Overview&#39;&gt;&gt;
+=======
+&lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="StoryMenu" tags="" position="975,100">&lt;&lt;link &#39;Character Overview&#39;&gt;&gt;
+>>>>>>> parent of 36c563b... got stat changes ui working
 	&lt;&lt;dialog &#39;Overview&#39; &#39;overview&#39;&gt;&gt;\
     &lt;&lt;include &quot;Overview&quot;&gt;&gt;
 	&lt;&lt;/dialog&gt;&gt;
@@ -4791,7 +4807,7 @@ normal skill speaking
 &lt;&lt;PassiveSkill &quot;Logic&quot;&gt;&gt;
 
 setting a passive check
-&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;This is so easy.&quot; &quot;Wow guess it wasn&#39;t that easy...!&quot; 3 $int 0&gt;&gt;
+&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;This is so easy.&quot; &quot;Wow guess it wasn&#39;t that easy...!&quot; 3 $stats.int 0&gt;&gt;
 
 after a passive check
 &lt;&lt;PassiveSkill &quot;Logic&quot; 5 &gt;&gt;
@@ -4866,7 +4882,7 @@ if after a passive check:
 ex: &lt;&lt;SetSpeaker &quot;Kim Kitsuragi&gt;&gt;*/
 &lt;&lt;widget &quot;SetSpeaker&quot;&gt;&gt;&lt;&lt;set $currentspeaker to (&quot;@@.speaker;&quot; + $args[0] + &quot;@@ - &quot;)&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="SkillCheck" tags="widget nobr" position="975,225">/* rolls a skill check on 1d6.
 
-ex: &lt;&lt;SkillCheck &quot;SUCCESS&quot; &quot;FAILURE&quot; 10 $int 1&gt;&gt;
+ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt;
 
 _difficultynum ($args[2]) is the difficulty you&#39;re trying to beat (if the difficulty is a 7, you want a 7 or higher)
 _stat (3) is the stat you&#39;re using with a number associated with it.
@@ -4901,30 +4917,7 @@ if _passive is false/not present:
         &lt;&lt;/if&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
-/*</tw-passagedata><tw-passagedata pid="19" name="StatChange" tags="widget nobr" position="1100,225">/*&lt;&lt;StatChange &quot;⯅&quot; $int &quot;int&quot; &quot;#intlvl&quot; true&gt;&gt;*/
-&lt;&lt;widget &quot;StatChange&quot;&gt;&gt;
-    &lt;&lt;set _text to $args[0]&gt;&gt;
-    &lt;&lt;set _increase to $args[4]&gt;&gt;
-    &lt;&lt;link _text&gt;&gt;
-        &lt;&lt;if $args[4] is true&gt;&gt;
-            &lt;&lt;set $args[1] += 1&gt;&gt;
-        &lt;&lt;else&gt;&gt;
-            &lt;&lt;set $args[1] -= 1&gt;&gt;
-        &lt;&lt;/if&gt;&gt;
-        &lt;&lt;replace $args[3]&gt;&gt;
-            $args[1]
-        &lt;&lt;/replace&gt;&gt;
-        &lt;&lt;if $args[2] is &quot;int&quot;&gt;&gt;
-            &lt;&lt;set $int to $args[1]&gt;&gt;
-        &lt;&lt;elseif $args[2] is &quot;psy&quot;&gt;&gt;
-            &lt;&lt;set $psy to $args[1]&gt;&gt;
-        &lt;&lt;elseif $args[2] is &quot;fys&quot;&gt;&gt;
-            &lt;&lt;set $fys to $args[1]&gt;&gt;
-        &lt;&lt;elseif $args[2] is &quot;mot&quot;&gt;&gt;
-            &lt;&lt;set $mot to $args[1]&gt;&gt;
-        &lt;&lt;/if&gt;&gt;
-    &lt;&lt;/link&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="SkillSuccess" tags="widget nobr" position="1225,225">&lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
+/*</tw-passagedata><tw-passagedata pid="19" name="SkillSuccess" tags="widget nobr" position="1100,225">&lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
 &lt;div id=&quot;SuccessImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckSuccess&quot; class=&quot;CheckText&quot;&gt;CHECK SUCCESS&lt;/div&gt;
 &lt;&lt;SetSpeaker &quot;&quot;&gt;&gt;

@@ -12,6 +12,10 @@ DONE - make "passive skills" actually do a skill check
 DONE - stat setting
 - level ups upping stats
 - inventory/items
+<<<<<<< HEAD
     -  bind close to esc key
 - thoughts?? (probably not)
 - stats don't actually change checks within same passage
+=======
+- thoughts?? (probably not)
+>>>>>>> parent of 36c563b... got stat changes ui working

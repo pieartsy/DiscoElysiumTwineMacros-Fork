@@ -24,3 +24,16 @@ $(document).on("keyup", function (e) {
   }
 });
 
+<<<<<<< HEAD:disco/meta/scripts/script.js
+=======
+  if ((e.keyCode == 27) && (document.getElementById("menu-story"))) {
+    var menu = document.getElementById("menu-story");
+    menu.children[0].getElementsByClassName("link-internal")[0].click();
+  }
+
+  if ((e.keyCode == 27) && (document.getElementById("#ui-overlay"))) {
+    var dia = document.getElementById("#ui-overlay");
+    console.log(dia)
+  }
+});
+>>>>>>> parent of 36c563b... got stat changes ui working:disco/scripts/js/script.js

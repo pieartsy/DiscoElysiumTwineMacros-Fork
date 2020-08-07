@@ -6,7 +6,7 @@ normal skill speaking
 <<PassiveSkill "Logic">>
 
 setting a passive check
-<<PassiveSkill "Logic" "This is so easy." "Wow guess it wasn't that easy...!" 3 $int 0>>
+<<PassiveSkill "Logic" "This is so easy." "Wow guess it wasn't that easy...!" 3 $stats.int 0>>
 
 after a passive check
 <<PassiveSkill "Logic" 5 >>
