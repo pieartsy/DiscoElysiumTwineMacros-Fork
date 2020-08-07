@@ -20,7 +20,7 @@ if _passive is true:
         if the roll succeeds, set $success to true (interacts with PassiveSkill macro)
         if it fails, set it to false.
 
-if _passive is false/not present:
+if _passage is false/not present:
         if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
 =======
 if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).

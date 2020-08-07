@@ -2569,6 +2569,7 @@ $(document).on("keyup", function (e) {
   &lt;&lt;capture _optionpassage, _optiontext&gt;&gt;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* if _optionpassage[0] (the true/false for whether the option is a check) is true,
     pass the difficulty into the &lt;&lt;Difficulties macro and set the _label accordingly
     rewrite _optiontext as [skill + label + difficulty] - ([Visual Calculus - Heroic 10] - ) + _optiontext
@@ -2577,6 +2578,10 @@ $(document).on("keyup", function (e) {
   /* if _optionpassage[0] (the true/false for whether the option is a check) is true, put the check styling to a link. when clicked, the link runs the SkillCheck widget.
 
 >>>>>>> parent of b80aacd... fixed the overlay not firing
+=======
+  /* if _optionpassage[0] (the true/false for whether the option is a check) is true, put the .check styling to a link with _optiontext as its text. when clicked, the link runs the SkillCheck widget.
+
+>>>>>>> parent of c2c32f6... documentation and whitespace fixes
   Corresponding to the arguments in SkillCheck:
   _optionpassage[1] = success passage
   2 = failure passage
@@ -2600,7 +2605,7 @@ $(document).on("keyup", function (e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
       &lt;div id=&quot;oddsinfo&quot; style=&quot;display: none;&quot;&gt;
-        blah
+        
       &lt;/div&gt;
 =======
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
@@ -2878,9 +2883,12 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot;&gt;&gt;
     &lt;&lt;set $overlays.push(_overlay)&gt;&gt;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Difficulties" tags="widget nobr" position="1225,100">/* sets labels based on the difficulty rating */
+=======
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Difficulties" tags="widget" position="1225,100">&lt;&lt;widget &quot;Difficulties&quot;&gt;&gt;
+>>>>>>> parent of c2c32f6... documentation and whitespace fixes
 &lt;&lt;silently&gt;&gt;
-&lt;&lt;widget &quot;Difficulties&quot;&gt;&gt;
     &lt;&lt;if $args[0] is 1&gt;&gt;
         &lt;&lt;set _label to &quot;Trivial&quot;&gt;&gt;
     &lt;&lt;elseif $args[0] is 2&gt;&gt;
@@ -2900,6 +2908,7 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot;&gt;&gt;
     &lt;&lt;elseif $args[0] &gt;= 11&gt;&gt;
         &lt;&lt;set _label to &quot;Impossible&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
+<<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DisplayParagraphs" tags="widget" position="100,225">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
 =======
@@ -2908,6 +2917,10 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot;&gt;&gt;
 =======
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="DisplayParagraphs" tags="widget" position="1225,100">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
+=======
+&lt;&lt;/silently&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DisplayParagraphs" tags="widget" position="100,225">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
+>>>>>>> parent of c2c32f6... documentation and whitespace fixes
 &lt;&lt;widget &quot;DisplayParagraphs&quot;&gt;&gt;&lt;&lt;set _paragraph to $paragraphs[0]&gt;&gt;&lt;&lt;set _overlay to $overlays[0]&gt;&gt;\
 &lt;&lt;run $paragraphs.deleteAt(0)&gt;&gt;&lt;&lt;run $overlays.deleteAt(0)&gt;&gt;\
 =======
@@ -3180,7 +3193,15 @@ args[6] is the overlay
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 if _passive is false/not present:
+=======
+if _passive is true:
+        if the roll succeeds, set $success to true (interacts with PassiveSkill macro)
+        if it fails, set it to false.
+
+if _passage is false/not present:
+>>>>>>> parent of c2c32f6... documentation and whitespace fixes
         if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it&#39;s a fail, show the fail animation and forward to the fail passage (1).
 =======
 if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it&#39;s a fail, show the fail animation and forward to the fail passage (1).
