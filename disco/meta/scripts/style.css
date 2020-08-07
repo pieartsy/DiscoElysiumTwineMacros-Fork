@@ -233,7 +233,11 @@ a.macro-linkreplace .motoverlay  {
 }
 <<<<<<< HEAD:disco/meta/scripts/style.css
 
+<<<<<<< HEAD:disco/meta/scripts/style.css
 .stats th:nth-child(even) {
+=======
+.stats td:nth-child(even) {
+>>>>>>> parent of 36c563b... got stat changes ui working:disco/scripts/style.css
   background-color: #d2d3cd;
   color: black;
 >>>>>>> parent of 36c563b... got stat changes ui working:disco/scripts/style.css

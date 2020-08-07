@@ -15,6 +15,7 @@ DONE - stat setting
 - level ups upping stats
 - inventory/items
 <<<<<<< HEAD
+<<<<<<< HEAD
     -  bind close to esc key
 - thoughts?? (probably not)
 - stats don't actually change checks within same passage
@@ -27,3 +28,6 @@ DONE - stat setting
 =======
 - make overlays happen AFTER or DURING passive skills being set, rather than before
 >>>>>>> parent of 2504024... added overview menu button
+=======
+- thoughts?? (probably not)
+>>>>>>> parent of 36c563b... got stat changes ui working

@@ -33,6 +33,7 @@
 <<AddParagraph "Hi!" "int">>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<PassiveSkill "Rhetoric" "Easy" "Success">>
 <<AddParagraph "Se seems nice.">>
 =======
@@ -54,3 +55,12 @@
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
+=======
+<<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
+<<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
+<<TaskComplete "Sexiness" 5>>
+<<SetSpeaker "Aster">>
+<<AddParagraph "I hope you're doing fine!" "none">>
+<<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $stats.int 2 "Logic">>
+<<AddOption "testoption" false "Start">>
+>>>>>>> parent of 36c563b... got stat changes ui working

@@ -3,7 +3,12 @@
 
 ex: <<PassiveSkill "Logic">>
 
+<<<<<<< HEAD
 <<PassiveSkill "Logic" "Easy" "This is so easy." "Wow guess it wasn't that easy...!" 3 $stats.int 0>>
+=======
+setting a passive check
+<<PassiveSkill "Logic" "This is so easy." "Wow guess it wasn't that easy...!" 3 $stats.int 0>>
+>>>>>>> parent of 36c563b... got stat changes ui working
 
 <<<<<<< HEAD
 <<<<<<< HEAD

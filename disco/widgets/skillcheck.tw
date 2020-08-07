@@ -2,6 +2,9 @@
 /* rolls a skill check on 1d6.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 36c563b... got stat changes ui working
 ex: <<SkillCheck 10 stats.int 1>>
 
 _difficultynum ($args[2]) is the difficulty you're trying to beat (if the difficulty is a 7, you want a 7 or higher)
