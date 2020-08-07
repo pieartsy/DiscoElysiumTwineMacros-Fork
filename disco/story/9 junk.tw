@@ -1,4 +1,0 @@
-::Junk [nobr]
-<<AddSkillParagraph "You know what? I’m going to do you a solid and remove that choice for you." "volition">>
-
-<<include "Questions list">>
