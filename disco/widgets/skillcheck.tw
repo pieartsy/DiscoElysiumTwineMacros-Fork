@@ -35,11 +35,15 @@ ex: <<SkillCheck 10 stats.int 1>> */
 <<<<<<< HEAD
 <<<<<<< HEAD
     <<if _roll >= _difficultynum>>
+        <<SkillSuccess>>
+        <<timed 3s>>
             <<goto $args[0]>>
-        
+        <</timed>>
     <<else>>
-
+        <<SkillFailure>>
+        <<timed 3s>>
             <<goto $args[1]>>
+        <</timed>>
     <</if>>
 <<<<<<< HEAD
 <</widget>>

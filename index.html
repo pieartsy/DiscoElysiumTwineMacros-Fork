@@ -2520,10 +2520,15 @@ $(document).on("keyup", function (e) {
 &lt;&lt;for _optiontext, _optionpassage range $optionmap&gt;&gt;
   &lt;&lt;capture _optionpassage, _optiontext&gt;&gt;
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* if _optionpassage[0] (the true/false for whether the option is a check) is true,
     pass the difficulty into the &lt;&lt;Difficulties macro and set the _label accordingly
     rewrite _optiontext as [skill + label + difficulty] - ([Visual Calculus - Heroic 10] - ) + _optiontext
     put the .check styling to a link with _optiontext as its text. when clicked, the link runs the SkillCheck widget.
+=======
+  /* if _optionpassage[0] (the true/false for whether the option is a check) is true, put the check styling to a link. when clicked, the link runs the SkillCheck widget.
+
+>>>>>>> parent of b80aacd... fixed the overlay not firing
   Corresponding to the arguments in SkillCheck:
   _optionpassage[1] = success passage
   2 = failure passage
@@ -2544,12 +2549,15 @@ $(document).on("keyup", function (e) {
         &lt;&lt;link _optiontext _optionpassage[0]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;
       &lt;/li&gt;@@
 <<<<<<< HEAD
+<<<<<<< HEAD
       &lt;div id=&quot;oddsinfo&quot; style=&quot;display: none;&quot;&gt;
         blah
       &lt;/div&gt;
 =======
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
       /* otherwise, put the .option style on a link */
+=======
+>>>>>>> parent of b80aacd... fixed the overlay not firing
     &lt;&lt;else&gt;&gt;
       &lt;li&gt;-
         @@.option;&lt;&lt;link _optiontext _optionpassage[0]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;@@
@@ -2559,6 +2567,7 @@ $(document).on("keyup", function (e) {
 &lt;&lt;/for&gt;&gt;
 &lt;/ol&gt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 &lt;&lt;set $optionmap to new Map()&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="FAIL" tags="" position="225,100">&lt;&lt;SkillFailure&gt;&gt;
 <<<<<<< HEAD
 &lt;&lt;PassiveSkill &quot;logic&quot; &quot;success&quot; &quot;fail&quot; 9 $int 0&gt;&gt;
@@ -2567,6 +2576,9 @@ $(document).on("keyup", function (e) {
 =======
 &lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Failure&quot;&gt;&gt;
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
+=======
+&lt;&lt;set $optionmap to new Map()&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="FAIL" tags="" position="225,100">&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Failure&quot;&gt;&gt;
+>>>>>>> parent of b80aacd... fixed the overlay not firing
 &lt;&lt;AddParagraph &quot;YOU FAILED!!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="PassageFooter" tags="" position="350,100">&lt;&lt;DisplayParagraphs&gt;&gt;\</tw-passagedata><tw-passagedata pid="4" name="PassageHeader" tags="" position="475,100">&lt;&lt;set $paragraphs to []&gt;&gt;
 &lt;&lt;if $lastoption&gt;&gt;
 @@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
@@ -2677,6 +2689,7 @@ $(document).on("keyup", function (e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 &lt;&lt;set $int to 1&gt;&gt;
 &lt;&lt;set $psy to 0&gt;&gt;
 &lt;&lt;set $fys to 0&gt;&gt;
@@ -2707,6 +2720,9 @@ $(document).on("keyup", function (e) {
 &lt;&lt;AddParagraph &quot;Very sexy of you.&quot; &quot;none&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;;)&quot; &quot;none&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AddOption" tags="widget nobr" position="975,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
 =======
+=======
+&lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SUCCEED" tags="" position="850,100">&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
+>>>>>>> parent of b80aacd... fixed the overlay not firing
 &lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AddOption" tags="widget nobr" position="975,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
 >>>>>>> parent of 9e82f8f... passive check overlays
     &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6], $args[7]])&gt;&gt;
@@ -2993,11 +3009,18 @@ ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
     &lt;&lt;print _roll&gt;&gt;
     &lt;&lt;if _roll &gt;= _difficultynum&gt;&gt;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        &lt;&lt;SkillSuccess&gt;&gt;
+        &lt;&lt;timed 3s&gt;&gt;
+>>>>>>> parent of b80aacd... fixed the overlay not firing
             &lt;&lt;goto $args[0]&gt;&gt;
-        
+        &lt;&lt;/timed&gt;&gt;
     &lt;&lt;else&gt;&gt;
-
+        &lt;&lt;SkillFailure&gt;&gt;
+        &lt;&lt;timed 3s&gt;&gt;
             &lt;&lt;goto $args[1]&gt;&gt;
+<<<<<<< HEAD
 =======
         &lt;&lt;SkillSuccess&gt;&gt;
         &lt;&lt;goto $args[0]&gt;&gt;
@@ -3005,6 +3028,9 @@ ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
         &lt;&lt;SkillFailure&gt;&gt;
         &lt;&lt;goto $args[1]&gt;&gt;
 >>>>>>> parent of affc0cb... almostish
+=======
+        &lt;&lt;/timed&gt;&gt;
+>>>>>>> parent of b80aacd... fixed the overlay not firing
     &lt;&lt;/if&gt;&gt;
 <<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;

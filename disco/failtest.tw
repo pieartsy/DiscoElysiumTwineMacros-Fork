@@ -1,4 +1,3 @@
 ::FAIL
-<<SkillFailure>>
 <<PassiveSkill "Logic" "Easy" "Failure">>
 <<AddParagraph "YOU FAILED!!">>

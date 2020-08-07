@@ -1,4 +1,3 @@
 ::SUCCEED
-<<SkillSuccess>>
 <<PassiveSkill "Logic" "Easy" "Success">>
 <<AddParagraph "YOU SUCCEEDED!">>
