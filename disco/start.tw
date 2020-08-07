@@ -32,8 +32,13 @@
 =======
 <<AddParagraph "Hi!" "int">>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<PassiveSkill "Rhetoric" "Easy" "Success">>
 <<AddParagraph "Se seems nice.">>
+=======
+<<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
+<<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
+>>>>>>> parent of 2504024... added overview menu button
 <<SetSpeaker "Aster">>
 <<AddParagraph "I hope you're doing fine!" "none">>
 

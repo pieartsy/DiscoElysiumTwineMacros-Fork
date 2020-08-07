@@ -3,6 +3,7 @@ DONE - make "passive skills" actually do a skill check
 - add roll results to checksuccess and checkfailure somehow? 
 - add roll results to passive checks?
 <<<<<<< HEAD
+<<<<<<< HEAD
 - make overlays happen AFTER or DURING passive skills being set, rather than before
 - tippy...
 - why is it tiny???? why is the text tiny????
@@ -20,6 +21,9 @@ DONE - stat setting
 =======
 - thoughts?? (probably not)
 >>>>>>> parent of 36c563b... got stat changes ui working
+=======
+- make overlays happen AFTER or DURING passive skills being set, rather than before
+>>>>>>> parent of 2504024... added overview menu button
 =======
 - make overlays happen AFTER or DURING passive skills being set, rather than before
 >>>>>>> parent of 2504024... added overview menu button

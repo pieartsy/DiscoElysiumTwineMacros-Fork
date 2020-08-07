@@ -65,7 +65,10 @@ a:active {
   margin-left: -1.5em;
 }
 
+<<<<<<< HEAD:disco/meta/scripts/style.css
 
+=======
+>>>>>>> parent of 2504024... added overview menu button:disco/scripts/style.css
 .dim {
   transition: opacity 0.5s;
   opacity: 0.5;
@@ -219,6 +222,7 @@ a.macro-linkreplace .motoverlay  {
 <<<<<<< HEAD:disco/meta/scripts/style.css
 <<<<<<< HEAD:disco/meta/scripts/style.css
 <<<<<<< HEAD:disco/meta/scripts/style.css
+<<<<<<< HEAD:disco/meta/scripts/style.css
 =======
 }
 =======
@@ -237,4 +241,8 @@ a.macro-linkreplace .motoverlay  {
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels:disco/style.css
 }
 =======
+>>>>>>> parent of 2504024... added overview menu button:disco/scripts/style.css
+=======
+
+}
 >>>>>>> parent of 2504024... added overview menu button:disco/scripts/style.css
