@@ -2,6 +2,7 @@
 
 html {
   height: 100%;
+  zoom: 2;
 }
 
 body, tw-story
@@ -24,7 +25,6 @@ body, tw-story
   line-height: 1.25;
   font-size: large;
   margin-left: 1.5em;
-  font-size: 1.5rem;
 }
 
 a {
@@ -146,6 +146,7 @@ a.macro-linkreplace .motoverlay  {
 }
 
 #SuccessImg {
+<<<<<<< HEAD:disco/meta/scripts/style.css
   background: [img[SuccessOverlay]] no-repeat right;
   background-size: contain;
 }
@@ -153,6 +154,13 @@ a.macro-linkreplace .motoverlay  {
 #FailureImg {
   background: [img[FailureOverlay]] no-repeat right;
   background-size: contain;
+=======
+  background: url(SuccessOverlay.png) no-repeat center;
+}
+
+#FailureImg {
+  background: url(FailureOverlay.png) no-repeat center;
+>>>>>>> parent of 623fb1e... tweaked styles a bit:disco/scripts/style.css
 }
 
 @keyframes Flash {

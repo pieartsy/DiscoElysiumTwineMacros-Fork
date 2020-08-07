@@ -13,10 +13,10 @@
 <<if $flagsMap["sit"] is true>>
 
     <<NoOverlay>>
-    <<AddParagraph "He looks up at you and takes a slow, deep breath." "Kim Kitsuragi">>
+    <<AddParagraph "He takes a slow, deep breath." "Kim Kitsuragi">>
 <<else>>
     <<NoOverlay>>
-    <<AddParagraph "He takes a slow, deep breath." "Kim Kitsuragi">>
+    <<AddParagraph "He looks up at you and takes a slow, deep breath." "Kim Kitsuragi">>
 <</if>>
 
 <<AddOverlay "psy">>
