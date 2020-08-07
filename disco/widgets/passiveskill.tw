@@ -50,7 +50,15 @@ if after a passive check:
     /* if there's a fourth argument present (indicating a failure state), run the SkillCheck macro as per usual. Skillcheck's 6th argument checking whether it's a passive check is set to true.
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
     
+<<<<<<< HEAD
     if SkillCheck passes/$success is true, set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
+=======
+    if SkillCheck passes/$success is true,
+        set the skill rating to the _label determined by the <<Difficulties>> widget
+    
+    
+    set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
+>>>>>>> parent of 623fb1e... tweaked styles a bit
     if it fails, set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
     
 <<<<<<< HEAD

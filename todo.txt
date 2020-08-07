@@ -4,6 +4,9 @@ DONE - make "passive skills" actually do a skill check
 - add roll results to passive checks?
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 623fb1e... tweaked styles a bit
 - make overlays happen AFTER or DURING passive skills being set, rather than before
 - tippy...
 - why is it tiny???? why is the text tiny????
