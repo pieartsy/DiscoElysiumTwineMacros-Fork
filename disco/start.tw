@@ -4,9 +4,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<SkillCheck "SUCCEED" "FAIL" 6 $stats.int 2>>
 >>>>>>> parent of 3ac7536... some more documentation
+=======
+>>>>>>> parent of d2e403e... got passive check overlay working
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
 =======

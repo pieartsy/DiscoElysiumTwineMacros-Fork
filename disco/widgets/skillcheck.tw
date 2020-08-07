@@ -19,8 +19,11 @@ if _passive is false/not present:
 =======
 if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
 <<<<<<< HEAD
+<<<<<<< HEAD
 (animations not currently working)
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
+=======
+>>>>>>> parent of d2e403e... got passive check overlay working
 =======
 >>>>>>> parent of d2e403e... got passive check overlay working
 */

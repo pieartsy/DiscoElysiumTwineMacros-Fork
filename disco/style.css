@@ -99,6 +99,7 @@ a.macro-linkreplace {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 a.macro-linkreplace .intoverlay  {
   background-image: [img[intoverlay]];
   background-size: cover;
@@ -118,6 +119,8 @@ a.macro-linkreplace .motoverlay  {
   background-image: [img[motoverlay]];
   background-size: cover;
 }
+=======
+>>>>>>> parent of d2e403e... got passive check overlay working
 =======
 >>>>>>> parent of d2e403e... got passive check overlay working
 
