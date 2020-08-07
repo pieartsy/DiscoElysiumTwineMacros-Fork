@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<SkillCheck "SUCCEED" "FAIL" 6 $stats.int 2>>
 >>>>>>> parent of 3ac7536... some more documentation
@@ -21,3 +22,9 @@
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" "Start">>
 >>>>>>> parent of affc0cb... almostish
+=======
+
+<<linkreplace "@@#ContinueBtn;.psyoverlay.padding;CONTINUE ➤@@" t8n>>test<</linkreplace>>
+<<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
+<<AddOption "testoption" false "Start">>
+>>>>>>> parent of 9e82f8f... passive check overlays

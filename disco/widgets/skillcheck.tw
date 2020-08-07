@@ -41,10 +41,16 @@ ex: <<SkillCheck 10 stats.int 1>> */
         <<SkillSuccess>>
         <<timed 3s>>
             <<goto $args[0]>>
+<<<<<<< HEAD
         <</timed>>
     <<else>>
         <<SkillFailure>>
         <<timed 3s>>
+=======
+        
+    <<else>>
+
+>>>>>>> parent of 9e82f8f... passive check overlays
             <<goto $args[1]>>
         <</timed>>
     <</if>>

@@ -2637,6 +2637,7 @@ $(document).on("keyup", function (e) {
 =======
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="nobr" position="600,100">&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 &lt;&lt;AddParagraph &quot;Hi!&quot; &quot;int&quot;&gt;&gt;
 &lt;&lt;PassiveSkill &quot;Rhetoric&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
@@ -2667,6 +2668,12 @@ $(document).on("keyup", function (e) {
 >>>>>>> parent of d2e403e... got passive check overlay working
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
 <<<<<<< HEAD
+>>>>>>> parent of 9e82f8f... passive check overlays
+=======
+&lt;&lt;AddParagraph &quot;Hi!&quot;&gt;&gt;
+
+&lt;&lt;linkreplace &quot;@@#ContinueBtn;.psyoverlay.padding;CONTINUE ➤@@&quot; t8n&gt;&gt;test&lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
 >>>>>>> parent of 9e82f8f... passive check overlays
 &lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
 =======
@@ -2721,6 +2728,7 @@ $(document).on("keyup", function (e) {
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 =======
 &lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
+<<<<<<< HEAD
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 &lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot; &quot;fys&quot;&gt;&gt;
 &lt;&lt;PassiveSkill &quot;electrochemistry&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
@@ -2730,6 +2738,9 @@ $(document).on("keyup", function (e) {
 =======
 &lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SUCCEED" tags="" position="850,100">&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
 >>>>>>> parent of b80aacd... fixed the overlay not firing
+&lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AddOption" tags="widget nobr" position="975,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
+>>>>>>> parent of 9e82f8f... passive check overlays
+=======
 &lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AddOption" tags="widget nobr" position="975,100">&lt;&lt;widget &quot;AddOption&quot;&gt;&gt;
 >>>>>>> parent of 9e82f8f... passive check overlays
     &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6], $args[7]])&gt;&gt;
@@ -2774,6 +2785,7 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
     &lt;&lt;set _para to (_para + $currentspeaker + $args[0])&gt;&gt;
     &lt;&lt;run $paragraphs.push(_para)&gt;&gt;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     &lt;&lt;set $overlays.push(_overlay)&gt;&gt;
@@ -2825,6 +2837,20 @@ otherwise, set _para to $currentspeaker + paragraph, and push to $paragraphs*/</
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;include DisplayOptions&gt;&gt;
 &lt;&lt;/if&gt;&gt;
+=======
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="DisplayParagraphs" tags="widget" position="1225,100">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
+&lt;&lt;widget &quot;DisplayParagraphs&quot;&gt;&gt;&lt;&lt;set _paragraph to $paragraphs[0]&gt;&gt;\
+&lt;&lt;run $paragraphs.deleteAt(0)&gt;&gt;\
+@@.paragraph;&lt;&lt;print _paragraph&gt;&gt;@@
+/*if the length of $paragraphs continues to be more than zero, keep displaying a clickable CONTINUE button (that runs through the widget)*/
+&lt;&lt;if $paragraphs.length &gt; 0&gt;&gt;
+&lt;&lt;linkreplace &quot;@@#ContinueBtn;CONTINUE ➤@@&quot; t8n&gt;&gt;&lt;&lt;DisplayParagraphs&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+/*otherwise, display options.*/
+&lt;&lt;include DisplayOptions&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+/* the script dims the paragraphs after they&#39;ve been clicked. */
+>>>>>>> parent of 9e82f8f... passive check overlays
 &lt;&lt;timed 0.5s&gt;&gt;&lt;&lt;script&gt;&gt;
 var paragraphs = document.getElementsByClassName(&#39;paragraph&#39;);
 if (paragraphs.length &gt; 1) {
@@ -3025,10 +3051,16 @@ ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
         &lt;&lt;timed 3s&gt;&gt;
 >>>>>>> parent of b80aacd... fixed the overlay not firing
             &lt;&lt;goto $args[0]&gt;&gt;
+<<<<<<< HEAD
         &lt;&lt;/timed&gt;&gt;
     &lt;&lt;else&gt;&gt;
         &lt;&lt;SkillFailure&gt;&gt;
         &lt;&lt;timed 3s&gt;&gt;
+=======
+        
+    &lt;&lt;else&gt;&gt;
+
+>>>>>>> parent of 9e82f8f... passive check overlays
             &lt;&lt;goto $args[1]&gt;&gt;
 <<<<<<< HEAD
 =======

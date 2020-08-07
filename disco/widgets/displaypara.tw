@@ -1,0 +1,20 @@
+:: DisplayParagraphs [widget]
+/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
+<<widget "DisplayParagraphs">><<set _paragraph to $paragraphs[0]>>\
+<<run $paragraphs.deleteAt(0)>>\
+@@.paragraph;<<print _paragraph>>@@
+/*if the length of $paragraphs continues to be more than zero, keep displaying a clickable CONTINUE button (that runs through the widget)*/
+<<if $paragraphs.length > 0>>
+<<linkreplace "@@#ContinueBtn;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>\
+<<else>>\
+/*otherwise, display options.*/
+<<include DisplayOptions>>
+<</if>>
+/* the script dims the paragraphs after they've been clicked. */
+<<timed 0.5s>><<script>>
+var paragraphs = document.getElementsByClassName('paragraph');
+if (paragraphs.length > 1) {
+	paragraphs[paragraphs.length-2].classList.add("dim");
+}
+<</script>><</timed>>\
+<</widget>>
