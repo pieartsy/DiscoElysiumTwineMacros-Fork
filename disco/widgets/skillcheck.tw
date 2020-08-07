@@ -8,6 +8,7 @@ _stat (3) is the stat you're using with a number associated with it.
 _mods (4) is any stat number modifiers you might have due to previous actions, like drinking alcohol giving you a -1 or taking meds giving you a +1.
 _roll is a random roll on 1d6, + _stat + _mods
 _passive (5) is whether it's a passive check or not.
+args[6] is the overlay
 
 if _passive is true:
         if the roll succeeds, set $success to true (interacts with PassiveSkill macro)
@@ -31,6 +32,7 @@ if _passive is false/not present:
     <<else>>
         <<if _roll >= _difficultynum>>
                 <<goto $args[0]>>
+                
         <<else>>
                 <<goto $args[1]>>
         <</if>>
