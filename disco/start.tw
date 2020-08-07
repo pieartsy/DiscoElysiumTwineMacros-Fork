@@ -1,10 +1,7 @@
 ::Start [nobr]
 <<SetSpeaker "Aster">>
-<<AddParagraph "Hi!" "int">>
-<<PassiveSkill "Rhetoric" "Easy" "Success">>
-<<AddParagraph "Se seems nice.">>
-<<SetSpeaker "Aster">>
-<<AddParagraph "I hope you're doing fine!" "none">>
+<<AddParagraph "Hi!">>
 
-<<AddOption "testcheck" true "SUCCEED" "FAIL" 3 $stats.int 2>>
+<<linkreplace "@@#ContinueBtn;.psyoverlay.padding;CONTINUE ➤@@" t8n>>test<</linkreplace>>
+<<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" false "Start">>

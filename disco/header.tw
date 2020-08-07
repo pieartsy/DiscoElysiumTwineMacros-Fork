@@ -1,6 +1,5 @@
 :: PassageHeader
 <<set $paragraphs to []>>
-<<set $overlays to []>>
 <<if $lastoption>>
 @@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
 <</if>>
