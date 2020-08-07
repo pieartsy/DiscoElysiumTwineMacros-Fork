@@ -1,0 +1,63 @@
+:: GreenTextWidgets [widget nobr]
+/* various widgets for "green text" popups. have a generic text that can be customized with arguments */
+<<widget "TaskComplete">>
+/*The first argument is the task, the second is the experience gained (if any).
+
+<<TaskComplete "Get Kim to drink" 10>> */
+<<run $greentext.push("@@.green;Task complete: " + $args[0] + "@@")>>
+<<if $args[1]>>
+    <<run $greentext.push("@@.green;Gained experience: +" + $args[1] + "@@")>>
+    <<set $xp += $args[1]>>
+<</if>>
+<<set $paraAppendMode to true>>
+<</widget>>
+
+<<widget "SecretTaskComplete">>
+/*The first argument is the task, the second is the experience gained (if any).
+
+<<SecretTaskComplete "Dance sexily" 25>> */
+<<run $greentext.push("@@.green;Secret task complete: " + $args[0] + "@@")>>
+<<if $args[1]>>
+    <<run $greentext.push("@@.green;+" + $args[1] + " XP: gained experience@@")>>
+    <<set $xp += $args[1]>>
+<</if>>
+<<set $paraAppendMode to true>>
+<</widget>>
+
+<<widget "NewTask">>
+/* <<NewTask "Dance">> */
+<<run $greentext.push("@@.green;New task: " + $args[0] + "@@")>>
+<<set $paraAppendMode to true>>
+<</widget>>
+
+<<widget "ItemGained">>
+/* the first argument is the item.
+
+<<ItemGained "Cheese">> */
+<<run $greentext.push("@@.green;Item gained: " + $args[0] + "@@")>>
+<<set $paraAppendMode to true>>
+<<set $items.push($args[0])>>
+<</widget>>
+
+<<widget "ItemLost">>
+/* the first argument is the item.
+
+<<ItemLost "Cheese">> */
+<<run $greentext.push("@@.green;Item lost: " + $args[0] + "@@")>>
+<<set $paraAppendMode to true>>
+<<set $items.delete($args[0])>>
+<</widget>>
+
+<<widget "ThoughtGained">>
+/* the first argument is the item.
+
+<<ThoughtGained "Cheese is great">> */
+<<run $greentext.push("@@.green;Thought gained: " + $args[0] + "@@")>>
+<<set $paraAppendMode to true>>
+<</widget>>
+
+<<widget "LevelUp">>
+/* <<LevelUp>> */
+<<run $greentext.push("@@.green;Level up!@@")>>
+<<set $paraAppendMode to true>>
+<</widget>>

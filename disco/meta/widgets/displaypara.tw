@@ -1,0 +1,42 @@
+:: DisplayParagraphs [widget]
+/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.
+
+this shows up only at PassageFooter; you don't need to call it otherwise
+*/
+<<widget "DisplayParagraphs">>\
+<<silently>>
+	<<set _paragraph to $paragraphs[0]>>
+	<<set _overlay to $overlays[0]>>\
+	<<run $paragraphs.deleteAt(0)>>
+	<<run $overlays.deleteAt(0)>>
+<</silently>>\
+@@.paragraph;<<print _paragraph>>@@
+/*if the length of $paragraphs continues to be more than zero, keep displaying a clickable CONTINUE button (that runs through the widget)
+
+*/
+<<nobr>>
+<<if $paragraphs.length > 0>>
+	<<if _overlay is "int">>
+		<<linkreplace "@@#ContinueBtn;.padding.intoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
+	<<elseif _overlay is "psy">>
+		<<linkreplace "@@#ContinueBtn;.padding.psyoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
+	<<elseif _overlay is "fys">>
+		<<linkreplace "@@#ContinueBtn;.padding.fysoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
+	<<elseif _overlay is "mot">>
+		<<linkreplace "@@#ContinueBtn;.padding.motoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
+	<<else>>
+		<<linkreplace "@@#ContinueBtn;.padding;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
+	<</if>>
+<<else>>
+	/*otherwise, display options.*/
+	<<include DisplayOptions>>
+<</if>>
+
+/* the script dims the paragraphs after they've been clicked.*/
+<<timed 0.5s>><<script>>
+var paragraphs = document.getElementsByClassName('paragraph');
+if (paragraphs.length > 1) {
+	paragraphs[paragraphs.length-2].classList.add("dim");
+}
+<</script>><</timed>><</nobr>>\
+<</widget>>

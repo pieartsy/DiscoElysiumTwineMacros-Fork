@@ -1,0 +1,13 @@
+::NoOverlay [widget nobr]
+/* for when there's no overlay, just call this as an empty function 
+
+ex:
+<<NoOverlay>>
+
+put this at every paragraph OTHER THAN the starting paragraph of a passage.
+
+*/
+
+<<widget "NoOverlay">>
+    <<set $overlays.push(false)>>
+<</widget>>

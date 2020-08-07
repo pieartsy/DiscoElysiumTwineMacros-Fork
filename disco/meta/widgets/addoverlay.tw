@@ -1,0 +1,13 @@
+    
+::AddOverlay [widget nobr]
+/* adds an overlay to the following "continue button".
+
+ex:
+<<AddOverlay "int">>
+
+$args[0] = overlay*/
+
+<<widget "AddOverlay">>
+    <<set _overlay to $args[0]>>
+    <<set $overlays.push(_overlay)>>
+<</widget>>

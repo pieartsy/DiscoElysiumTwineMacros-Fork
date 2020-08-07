@@ -1,0 +1,85 @@
+:: DisplayOptions [nobr]
+/* ordered list of options, included in the DisplayParagraph widget in the PassageFooter. you don't need to do anything else with this passage!
+
+
+first line creates an ordered list
+*/
+<ol id="OptionList">
+/* for each text (key) and passage (value) in $optionmap, capture those things.*/ 
+<<for _optiontext, _optionpassage range $optionmap>>
+  <<capture _optionpassage, _optiontext>>
+  /*  
+    args[0] = text for the option.
+    args[1] = _optionspassage (an array)
+    _optionspassage[0] = the passage that the option sends you to
+
+    if it's got a flag attached
+    1 = flag in $flagsMap
+    2 = flag's value
+    
+    if it's simulating a check
+    3 = skill
+    4 = difficulty
+    
+    */
+
+  <<if _optionpassage[1] and Object.keys($flagsMap).includes(_optionpassage[1])>>
+  /* if there's a 3rd variable in the _optionspassage array  (indicating it's a variable setter) and it's in $flagsMap
+  set the $flagsMap's variable to the value */
+      <<if _optionpassage[3]>>
+          /* if there's a 2nd variable in the _optionspassage array (indicating that it's a check) and the check is true,
+          format it with the .check styling and make it a link */  
+          <<set _skillname to _optionpassage[3].charAt(0).toUpperCase() + _optionpassage[3].slice(1);>>
+          <<set _difficultylabel to _optionpassage[4].charAt(0).toUpperCase() + _optionpassage[4].slice(1);>>
+          <<set _optiontext to " [" + _skillname + "- "  + _difficultylabel + "] - " + _optiontext>>
+            @@.check;<li>-
+              <<link _optiontext _optionpassage[0]>>
+                <<set $lastoption to _optiontext>>
+                <<SetFlag _optionpassage[1] _optionpassage[2]>>
+              <</link>>
+            </li>@@
+      <<else>>
+          /* otherwise set styling to .option */
+          @@.option;<li>-
+              <<link _optiontext _optionpassage[0]>>
+                <<set $lastoption to _optiontext>>
+                <<SetFlag _optionpassage[1] _optionpassage[2]>>
+              <</link>>
+            </li>@@
+      <</if>>
+  <<else>>
+    /*if _optionpassage[3] (the skill indicating that the option is a check) exists, 
+    rewrite _optiontext as [skill + difficulty label]
+      ex: [Visual Calculus - Heroic]
+    + _optiontext
+    put the .check styling to a link with _optiontext as its text.
+    sets the $lastoption variable, used in the PassageHeader passage, to _optiontext
+    
+    to have this trigger, you need to put empty values for arguments 2 and 3 (no flags set)
+  
+    ex: <<AddOption "text" "Passage" "" "" "logic" "easy">>
+  */
+
+      <<if _optionpassage[3]>>
+          <<set _skillname to _optionpassage[3].charAt(0).toUpperCase() + _optionpassage[3].slice(1);>>
+          <<set _difficultylabel to _optionpassage[4].charAt(0).toUpperCase() + _optionpassage[4].slice(1);>>
+          <<set _optiontext to " [" + _skillname + "- "  + _difficultylabel + "] - " + _optiontext>>
+            @@.check;<li>-
+              <<link _optiontext _optionpassage[0]>>
+                <<set $lastoption to _optiontext>>
+              <</link>>
+            </li>@@
+        /* otherwise just add the option styling */
+      <<else>>
+            @@.option;<li>-
+              <<link _optiontext _optionpassage[0]>>
+                <<set $lastoption to _optiontext>>
+              <</link>>
+            </li>@@
+      <</if>>
+  <</if>>
+  <</capture>>
+<</for>>
+/* closing off ordered list and resetting $optionmap*/
+</ol>
+<<set $optionmap to new Map()>>

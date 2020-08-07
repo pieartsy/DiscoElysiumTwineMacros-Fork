@@ -1,0 +1,11 @@
+:: PassageHeader
+/*resets all variables that would display paragraphs and overlays back to empty.
+
+lastoption is used with the DisplayOptions passage. */
+
+<<set $paragraphs to []>>
+<<set $overlays to []>>
+<<if $lastoption>>
+@@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
+<</if>>
+<br>

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=PT+Sans+Narrow&display=swap');
+
+html {
+  height: 100%;
+}
+
+body, tw-story
+{
+  font-family: 'David Libre', serif;
+  margin-left: 2em;
+  color: #d2d3cd;
+  height: 100%;
+}
+
+
+#story {
+  height: 100%;
+  overflow-y: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.passage {
+  line-height: 1.25;
+  font-size: large;
+  margin-left: 1.5em;
+  font-size: 1.5rem;
+}
+
+a {
+  color: #b6523a;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+a:active {
+  color: white;
+}
+
+/* for option list */
+.passage ol {
+  margin-left: -1em;
+}
+
+.option {
+  font-weight: bold;
+}
+
+/* skill voice colors */
+.psyche {
+  color: #705cbb;
+}
+
+.fysique {
+  color: #c6496b;
+}
+
+.intellect {
+  color: #6cc6ce;
+}
+
+.motorics {
+  color: #e4b934;
+}
+
+.speaker {
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+
+/* for inserted paragraphs and past paragraphs */
+.dim {
+  transition: opacity 0.5s;
+  opacity: 0.5;
+}
+
+.macro-timed-insert {
+	transition-duration: 2s;
+}
+
+.pastchoice {
+  color: #737c87;
+}
+
+/* continue macros and overlays */
+span.continueblock {
+  display: none;
+}
+
+a.macro-linkreplace {
+  background-color: #90280f;
+  color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-left: -1.5em;
+  display: block;
+}
+
+a.macro-linkreplace .padding {
+  padding: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: block;
+}
+
+a.macro-linkreplace .intoverlay  {
+  background-image: [img[intoverlay]];
+  background-size: cover;
+}
+
+a.macro-linkreplace .psyoverlay  {
+  background-image: [img[psyoverlay]];
+  background-size: cover;
+}
+
+a.macro-linkreplace .fysoverlay  {
+  background-image: [img[fysoverlay]];
+  background-size: cover;
+}
+
+a.macro-linkreplace .motoverlay  {
+  background-image: [img[motoverlay]];
+  background-size: cover;
+}
+
+/* greentext */
+.green {
+  color: #98b48b; 
+  margin-left: -1.5em;
+}
+
+/* check overlay animations */
+.CheckOverlay {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  opacity: 0;
+  animation-name: Flash;
+  animation-duration: 2s;
+}
+
+#SuccessImg {
+  background: [img[SuccessOverlay]] no-repeat right;
+  background-size: contain;
+}
+
+#FailureImg {
+  background: [img[FailureOverlay]] no-repeat right;
+  background-size: contain;
+}
+
+@keyframes Flash {
+  0%  {opacity: 0}
+  20% {opacity: 1}
+  50% {opacity: 1}
+  100% {opacity: 0}
+}
+
+.CheckText {
+  color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  opacity: 0;
+  padding: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  animation-name: SlideAndFade;
+  animation-duration: 2.5s;
+  animation-delay: 1s;
+}
+
+#CheckSuccess {
+  background-color: #40ce68;
+  box-shadow: 0em 0em 0.2em 0.3em #40ce68;
+}
+
+#CheckFailure {
+  background-color: #90280f;
+  box-shadow: 0em 0em 0.2em 0.3em #90280f;
+}
+
+@keyframes SlideAndFade {
+  0% {opacity: 0.75; left: 45%}
+  10% {opacity: 1; left: 50%}
+  60% {opacity: 1; left: 50%}
+  100% {opacity: 0; left: 80%}
+}
+
+/* styling for white check */
+.check a {
+  font-weight: bold;
+  background-color: #d2d3cd;
+  color: black;
+  padding: 3px;
+  display: inline-block;
+}
+
+.check a:hover {
+  background-color: #82837f;
+  color: white;
+}

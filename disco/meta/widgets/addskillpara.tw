@@ -1,0 +1,72 @@
+::AddSkillParagraph [widget nobr]
+/* similar to the AddParagraph widget, but with the speaker being a skill, that can optionally simulate a passive check.
+
+ex:
+normal skill speaking
+<<AddSkillParagraph "Logical response" "Logic">>
+
+if it's a passive check
+<<AddSkillParagrah "Logical response" "Logic" "Success" "Heroic">>
+
+args[0] = paragraph
+1 = name of skill
+
+if it's a passive check:
+    2 = difficulty
+    3 = success or fail
+
+*/
+<<widget "AddSkillParagraph">>
+<<silently>>
+/* sets a temporary variable, _skillpara, which will be used for the DisplayPara widget */
+    <<set _skillpara to "">>
+    /*     if $paraAppendMode (used for greentext) is true, add greentext, then clear the greentext and set it back to false. */
+    <<if $paraAppendMode is true>>
+        <<for _text range $greentext>>
+            <<set _skillpara to (_skillpara + _skilltext + "<br /><br />")>>
+        <</for>>
+        <<set $greentext to []>>
+        <<set $paraAppendMode to false>>
+    <</if>>
+
+    /* sets _skillname to the second argument, the skill, in uppercase. sets _skillresult as empty */
+    <<set _skillname to ($args[1].toUpperCase())>>
+
+    /*If the skill name is in the $motorics array, set $currentspeaker to the skill, styling it with the .motorics and .speaker classes. same with the others. */
+    <<if $motorics.includes(_skillname)>>
+        <<set $currentspeaker to ("@@.motorics.speaker;" + _skillname + "@@")>>
+    <<elseif $intellect.includes(_skillname)>>
+        <<set $currentspeaker to ("@@.intellect.speaker;" + _skillname + "@@")>>
+    <<elseif $fysique.includes(_skillname)>>
+        <<set $currentspeaker to ("@@.fysique.speaker;" + _skillname + "@@")>>
+    <<elseif $psyche.includes(_skillname)>>
+        <<set $currentspeaker to ("@@.psyche.speaker;" + _skillname + "@@")>>
+    <</if>>
+
+    
+    /* if there's a third argument (indicating that there's a skill rating / the passive skill is simulating a check)
+     */
+
+    <<if $args[2]>>
+   /*set the skill result (success or fail) to the 3rd argument, $args[2] + the skill rating, the fourth argument, $args[3]
+     
+    ex result: [Easy: Success] */
+        <<set $result to $args[2].charAt(0).toUpperCase() + $args[2].slice(1)>>
+        <<set $rating to $args[3].charAt(0).toUpperCase() + $args[3].slice(1)>>
+        <<set _skillresult to ("@@.dim; [" + $result + ": " + $rating + "]@@")>>
+        <<set $currentspeaker += _skillresult>>
+    <</if>>
+    /*regardless, add a dash.*/
+    
+    <<set $currentspeaker += " - ">>
+
+    /*
+    set _skillpara to $currentspeaker + paragraph, and push to $paragraphs.
+    then set the current speaker to nothing (so a name doesn't keep appearing over and over)
+    */
+    <<set _skillpara to (_skillpara + $currentspeaker + $args[0])>>
+    <<set $currentspeaker to "">>
+
+    <<run $paragraphs.push(_skillpara)>>
+<</silently>>
+<</widget>>
