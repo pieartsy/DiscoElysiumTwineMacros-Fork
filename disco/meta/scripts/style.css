@@ -147,6 +147,7 @@ a.macro-linkreplace .motoverlay  {
 
 #SuccessImg {
 <<<<<<< HEAD:disco/meta/scripts/style.css
+<<<<<<< HEAD:disco/meta/scripts/style.css
   background: [img[SuccessOverlay]] no-repeat right;
   background-size: contain;
 }
@@ -154,6 +155,13 @@ a.macro-linkreplace .motoverlay  {
 #FailureImg {
   background: [img[FailureOverlay]] no-repeat right;
   background-size: contain;
+=======
+  background: url(SuccessOverlay.png) no-repeat center;
+}
+
+#FailureImg {
+  background: url(FailureOverlay.png) no-repeat center;
+>>>>>>> parent of 623fb1e... tweaked styles a bit:disco/scripts/style.css
 =======
   background: url(SuccessOverlay.png) no-repeat center;
 }
