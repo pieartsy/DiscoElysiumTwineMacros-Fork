@@ -1,0 +1,8 @@
+:: SkillFailure [widget nobr]
+/* displays the failure animation. */
+<<widget "SkillFailure">>
+<div id="FailureImg" class="CheckOverlay"></div>
+<div id="CheckFailure" class="CheckText">CHECK FAILURE</div>
+<<SetSpeaker "">>
+<<AddParagraph "//Red flashes at the edges of your vision - a failure.//">>
+<</widget>>

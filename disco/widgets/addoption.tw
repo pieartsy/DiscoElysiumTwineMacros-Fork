@@ -11,6 +11,7 @@ args[0] = text for the option.
 4 = skillcheck difficulty number
 5 = skillcheck stat
 6 = skillcheck mod
+7 = passage for success
 
 i'm sorry this is obscene
 ex: <<AddOption "here's a check" "true" "Succeed" "Fail" 10 $skill.int 1>>

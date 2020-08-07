@@ -2,6 +2,7 @@
 <<SetSpeaker "Aster">>
 <<AddParagraph "Hi!">>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
 =======
@@ -9,3 +10,7 @@
 <<AddOption "testcheck" "Start" true>>
 <<AddOption "testoption" "Start">>
 >>>>>>> parent of d645706... got skill roll working but not overlay
+=======
+<<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
+<<AddOption "testoption" "Start">>
+>>>>>>> parent of affc0cb... almostish

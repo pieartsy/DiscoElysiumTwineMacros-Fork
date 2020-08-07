@@ -2643,6 +2643,7 @@ $(document).on("keyup", function (e) {
 =======
 &lt;&lt;AddParagraph &quot;Hi!&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 6 $stats.int 2&gt;&gt;
+<<<<<<< HEAD
 >>>>>>> parent of 9e82f8f... passive check overlays
 &lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
 =======
@@ -2655,6 +2656,9 @@ $(document).on("keyup", function (e) {
 &lt;&lt;AddOption &quot;testoption&quot; &quot;Start&quot;&gt;&gt;
 &lt;&lt;SkillFailure&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="StoryInit" tags="" position="600,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
 >>>>>>> parent of d645706... got skill roll working but not overlay
+=======
+&lt;&lt;AddOption &quot;testoption&quot; &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
+>>>>>>> parent of affc0cb... almostish
 &lt;&lt;set $ischeck to []&gt;&gt;
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 
@@ -2717,6 +2721,7 @@ args[0] = text for the option.
 4 = skillcheck difficulty number
 5 = skillcheck stat
 6 = skillcheck mod
+7 = passage for success
 
 i&#39;m sorry this is obscene
 ex: &lt;&lt;AddOption &quot;here&#39;s a check&quot; &quot;true&quot; &quot;Succeed&quot; &quot;Fail&quot; 10 $skill.int 1&gt;&gt;
@@ -2800,11 +2805,15 @@ if (paragraphs.length &gt; 1) {
 }
 &lt;&lt;/script&gt;&gt;&lt;&lt;/timed&gt;&gt;\
 <<<<<<< HEAD
+<<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SkillFailure" tags="widget nobr" position="100,225">/* displays the failure animation. 
 
 &lt;&lt;SkillFailure&gt;&gt;
 
 */
+=======
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SkillFailure" tags="widget nobr" position="100,225">/* displays the failure animation. */
+>>>>>>> parent of affc0cb... almostish
 &lt;&lt;widget &quot;SkillFailure&quot;&gt;&gt;
 =======
 &lt;&lt;/widget&gt;&gt;
@@ -2973,12 +2982,21 @@ if _roll is more than or equal to the difficulty, show the success animation and
     &lt;&lt;set _stat to $args[3]&gt;&gt;
     &lt;&lt;set _mods to $args[4]&gt;&gt;
     &lt;&lt;set _roll to random(1, 6) + _stat + _mods&gt;&gt;
+    &lt;&lt;print _roll&gt;&gt;
     &lt;&lt;if _roll &gt;= _difficultynum&gt;&gt;
+<<<<<<< HEAD
             &lt;&lt;goto $args[0]&gt;&gt;
         
     &lt;&lt;else&gt;&gt;
 
             &lt;&lt;goto $args[1]&gt;&gt;
+=======
+        &lt;&lt;SkillSuccess&gt;&gt;
+        &lt;&lt;goto $args[0]&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;SkillFailure&gt;&gt;
+        &lt;&lt;goto $args[1]&gt;&gt;
+>>>>>>> parent of affc0cb... almostish
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 /*</tw-passagedata><tw-passagedata pid="16" name="Speaker" tags="widget" position="725,225">&lt;&lt;nobr&gt;&gt;
