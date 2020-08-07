@@ -6,8 +6,7 @@
 <<TaskComplete "Get Kim to drink" 10>> */
 <<run $greentext.push("@@.green;Task complete: " + $args[0] + "@@")>>
 <<if $args[1]>>
-    <<run $greentext.push("@@.green;Gained experience: +" + $args[1] + "@@")>>
-    <<set $xp += $args[1]>>
+<<run $greentext.push("@@.green;Gained experience: +" + $args[1] + "@@")>>
 <</if>>
 <<set $paraAppendMode to true>>
 <</widget>>
@@ -18,8 +17,7 @@
 <<SecretTaskComplete "Dance sexily" 25>> */
 <<run $greentext.push("@@.green;Secret task complete: " + $args[0] + "@@")>>
 <<if $args[1]>>
-    <<run $greentext.push("@@.green;+" + $args[1] + " XP: gained experience@@")>>
-    <<set $xp += $args[1]>>
+<<run $greentext.push("@@.green;+" + $args[1] + " XP: gained experience@@")>>
 <</if>>
 <<set $paraAppendMode to true>>
 <</widget>>
@@ -36,7 +34,6 @@
 <<ItemGained "Cheese">> */
 <<run $greentext.push("@@.green;Item gained: " + $args[0] + "@@")>>
 <<set $paraAppendMode to true>>
-<<set $items.push($args[0])>>
 <</widget>>
 
 <<widget "ItemLost">>
@@ -45,7 +42,6 @@
 <<ItemLost "Cheese">> */
 <<run $greentext.push("@@.green;Item lost: " + $args[0] + "@@")>>
 <<set $paraAppendMode to true>>
-<<set $items.delete($args[0])>>
 <</widget>>
 
 <<widget "ThoughtGained">>

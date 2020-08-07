@@ -7,5 +7,11 @@
 <<widget "SkillFailure">>
 <div id="FailureImg" class="CheckOverlay"></div>
 <div id="CheckFailure" class="CheckText">CHECK FAILURE</div>
+<<<<<<< HEAD:disco/meta/widgets/failure.tw
 <<AddParagraph "//Red flashes at the edges of your vision - a failure.//">>
+=======
+<<SetSpeaker "">>
+<<AddParagraph "//Red flashes at the edges of your vision - a failure." + $roll + "//">>
+<<set $roll to 0>>
+>>>>>>> parent of 2504024... added overview menu button:disco/widgets/failure.tw
 <</widget>>
