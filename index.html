@@ -116,6 +116,10 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 html {
   height: 100%;
+<<<<<<< HEAD
+=======
+  zoom: 0.6;
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 }
 
 body, tw-story
@@ -2645,6 +2649,7 @@ $(document).on("keyup", function (e) {
 &lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;I hope you&#39;re doing fine!&quot; &quot;none&quot;&gt;&gt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 5 $stats.int 2 &quot;Logic&quot;&gt;&gt;
 <<<<<<< HEAD
 >>>>>>> parent of 36c563b... got stat changes ui working
@@ -2691,6 +2696,12 @@ $(document).on("keyup", function (e) {
 >>>>>>> parent of affc0cb... almostish
 &lt;&lt;set $ischeck to []&gt;&gt;
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
+=======
+
+&lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 3 $stats.int 2&gt;&gt;
+&lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
+&lt;&lt;set $ischeck to []&gt;&gt;
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 
 &lt;&lt;set $motorics to [&quot;composure&quot;, &quot;hand-eye coordination&quot;, &quot;interfacing&quot;, &quot;perception&quot;, &quot;reaction speed&quot;, &quot;savoir faire&quot;, &quot;perception (sight)&quot;, &quot;perception (taste)&quot;, &quot;perception (touch)&quot;]&gt;&gt;
 &lt;&lt;set $intellect to [&quot;conceptualization&quot;, &quot;drama&quot;, &quot;encyclopedia&quot;, &quot;logic&quot;, &quot;rhetoric&quot;, &quot;visual Calculus&quot;]&gt;&gt;
@@ -2719,6 +2730,7 @@ $(document).on("keyup", function (e) {
 &lt;&lt;set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="SUCCEED" tags="" position="850,100">&lt;&lt;SkillSuccess&gt;&gt;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 2504024... added overview menu button
 &lt;&lt;PassiveSkill &quot;Logic&quot; 5 &quot;Success&quot;&gt;&gt;
 &lt;&lt;PassiveSkill &quot;logic&quot; &quot;success&quot; &quot;fail&quot; 9 $int 0&gt;&gt;
@@ -2729,6 +2741,9 @@ $(document).on("keyup", function (e) {
 =======
 &lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
 <<<<<<< HEAD
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
+=======
+&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 &lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot; &quot;fys&quot;&gt;&gt;
 &lt;&lt;PassiveSkill &quot;electrochemistry&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
@@ -2859,6 +2874,9 @@ if (paragraphs.length &gt; 1) {
 &lt;&lt;/script&gt;&gt;&lt;&lt;/timed&gt;&gt;\
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SkillFailure" tags="widget nobr" position="100,225">/* displays the failure animation. 
 
 &lt;&lt;SkillFailure&gt;&gt;
@@ -2879,10 +2897,18 @@ set _paragraph to the first item in $paragraphs
 &lt;div id=&quot;CheckFailure&quot; class=&quot;CheckText&quot;&gt;CHECK FAILURE&lt;/div&gt;
 &lt;&lt;SetSpeaker &quot;&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Red flashes at the edges of your vision - a failure.//&quot;&gt;&gt;
+<<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;
 /*
 displays the failure animation.
 */</tw-passagedata><tw-passagedata pid="10" name="GreenTextWidgets" tags="widget nobr" position="1225,100">&lt;&lt;widget &quot;TaskComplete&quot;&gt;&gt;
+=======
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="GreenTextWidgets" tags="widget nobr" position="225,225">/* various widgets for &quot;green text&quot; popups. have a generic text that can be customized with arguments */
+&lt;&lt;widget &quot;TaskComplete&quot;&gt;&gt;
+/*The first argument is the task, the second is the experience gained (if any).
+
+&lt;&lt;TaskComplete &quot;Get Kim to drink&quot; 10&gt;&gt; */
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 &lt;&lt;run $greentext.push(&quot;@@.green;Task complete: &quot; + $args[0] + &quot;@@&quot;)&gt;&gt;
 &lt;&lt;if $args[1]&gt;&gt;
 &lt;&lt;run $greentext.push(&quot;@@.green;Gained experience: +&quot; + $args[1] + &quot;@@&quot;)&gt;&gt;
@@ -2927,6 +2953,7 @@ displays the failure animation.
 ex: &lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 args[0] = name of skill
 if running a passive check:
     1 = success state
@@ -2940,6 +2967,8 @@ if after a passive check:
     2 = success or fail
 =======
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
+=======
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 */
 &lt;&lt;widget &quot;PassiveSkill&quot;&gt;&gt;
     /* sets _skillname to the first argument, the skill, in lowercase. sets _skillresult as empty */
@@ -2959,6 +2988,7 @@ if after a passive check:
     &lt;&lt;elseif $psyche.includes(_skillname)&gt;&gt;
         &lt;&lt;set $currentspeaker to (&quot;@@.psyche.speaker;&quot; + _skillname + &quot;@@&quot;)&gt;&gt;
     &lt;&lt;/if&gt;&gt;
+<<<<<<< HEAD
 <<<<<<< HEAD
     /* if there&#39;s a fourth argument present (indicating a failure state), run the SkillCheck macro as per usual. Skillcheck&#39;s 6th argument checking whether it&#39;s a passive check is set to true.
     
@@ -3005,6 +3035,11 @@ if after a passive check:
     &lt;&lt;if _skillresult&gt;&gt;
         &lt;&lt;set $currentspeaker += _skillresult&gt;&gt;
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
+=======
+    /* if there&#39;s a skill result, add the skill result to the current speaker text: Logic [Easy: Success]. Then add a dash. */
+    &lt;&lt;if _skillresult&gt;&gt;
+        &lt;&lt;set $currentspeaker += _skillresult&gt;&gt;
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
     &lt;&lt;/if&gt;&gt;
     &lt;&lt;set $currentspeaker += &quot; - &quot;&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="SetSpeaker" tags="widget" position="475,225">/*sets $current speaker to the first argument, styled with the .speaker class
@@ -3021,6 +3056,7 @@ _mods (4) is any stat number modifiers you might have due to previous actions, l
 _roll is a random roll on 1d6, + _stat + _mods
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if _passive is false/not present:
         if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it&#39;s a fail, show the fail animation and forward to the fail passage (1).
 =======
@@ -3033,6 +3069,10 @@ if _roll is more than or equal to the difficulty, show the success animation and
 >>>>>>> parent of d2e403e... got passive check overlay working
 =======
 >>>>>>> parent of d2e403e... got passive check overlay working
+=======
+if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it&#39;s a fail, show the fail animation and forward to the fail passage (1).
+(animations not currently working)
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 */
 =======
 ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
@@ -3042,6 +3082,7 @@ ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
     &lt;&lt;set _stat to $args[3]&gt;&gt;
     &lt;&lt;set _mods to $args[4]&gt;&gt;
     &lt;&lt;set _roll to random(1, 6) + _stat + _mods&gt;&gt;
+<<<<<<< HEAD
     &lt;&lt;print _roll&gt;&gt;
     &lt;&lt;if _roll &gt;= _difficultynum&gt;&gt;
 <<<<<<< HEAD
@@ -3073,6 +3114,12 @@ ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
 =======
         &lt;&lt;/timed&gt;&gt;
 >>>>>>> parent of b80aacd... fixed the overlay not firing
+=======
+    &lt;&lt;if _roll &gt;= _difficultynum&gt;&gt;
+            &lt;&lt;goto $args[0]&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+            &lt;&lt;goto $args[1]&gt;&gt;
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
     &lt;&lt;/if&gt;&gt;
 <<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;
@@ -3127,7 +3174,11 @@ _skillname +
 $args[0] -
 @@
 &lt;&lt;/widget&gt;&gt;
+<<<<<<< HEAD
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="SkillSuccess" tags="widget" position="600,225">&lt;&lt;nobr&gt;&gt;
+=======
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="SkillSuccess" tags="widget" position="850,225">&lt;&lt;nobr&gt;&gt;
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 &lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
 &lt;div id=&quot;SuccessImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckSuccess&quot; class=&quot;CheckText&quot;&gt;CHECK SUCCESS&lt;/div&gt;

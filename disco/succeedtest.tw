@@ -1,3 +1,12 @@
 ::SUCCEED
+<<<<<<< HEAD
 <<PassiveSkill "Logic" "Easy" "Success">>
 <<AddParagraph "YOU SUCCEEDED!">>
+=======
+<<SkillSuccess>>
+<<PassiveSkill "Logic" "Easy" "Success">>
+<<AddParagraph "YOU SUCCEEDED!" "fys">>
+<<PassiveSkill "electrochemistry" "Easy" "Success">>
+<<AddParagraph "Very sexy of you." "none">>
+<<AddParagraph ";)" "none">>
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!

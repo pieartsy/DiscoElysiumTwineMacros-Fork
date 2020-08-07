@@ -1,5 +1,6 @@
 ::Start [nobr]
 <<SetSpeaker "Aster">>
+<<<<<<< HEAD
 <<AddParagraph "Hi!">>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,3 +29,13 @@
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
 >>>>>>> parent of 9e82f8f... passive check overlays
+=======
+<<AddParagraph "Hi!" "int">>
+<<PassiveSkill "Rhetoric" "Easy" "Success">>
+<<AddParagraph "Se seems nice.">>
+<<SetSpeaker "Aster">>
+<<AddParagraph "I hope you're doing fine!" "none">>
+
+<<AddOption "testcheck" true "SUCCEED" "FAIL" 3 $stats.int 2>>
+<<AddOption "testoption" false "Start">>
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!

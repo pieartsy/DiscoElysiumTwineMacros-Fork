@@ -1,5 +1,13 @@
 :: SkillFailure [widget nobr]
+<<<<<<< HEAD
 /* displays the failure animation. */
+=======
+/* displays the failure animation. 
+
+<<SkillFailure>>
+
+*/
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 <<widget "SkillFailure">>
 <div id="FailureImg" class="CheckOverlay"></div>
 <div id="CheckFailure" class="CheckText">CHECK FAILURE</div>

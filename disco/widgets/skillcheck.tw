@@ -10,6 +10,7 @@ _mods (4) is any stat number modifiers you might have due to previous actions, l
 _roll is a random roll on 1d6, + _stat + _mods
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if _passive is true:
         if the roll succeeds, set $success to true (interacts with PassiveSkill macro)
         if it fails, set it to false.
@@ -26,6 +27,10 @@ if _roll is more than or equal to the difficulty, show the success animation and
 >>>>>>> parent of d2e403e... got passive check overlay working
 =======
 >>>>>>> parent of d2e403e... got passive check overlay working
+=======
+if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
+(animations not currently working)
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 */
 =======
 ex: <<SkillCheck 10 stats.int 1>> */
@@ -35,6 +40,7 @@ ex: <<SkillCheck 10 stats.int 1>> */
     <<set _stat to $args[1]>>
     <<set _mods to $args[2]>>
     <<set _roll to random(1, 6) + _stat + _mods>>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <<if _roll >= _difficultynum>>
@@ -63,6 +69,12 @@ ex: <<SkillCheck 10 stats.int 1>> */
         <<SKillSuccess>>
     <<else>>
         <<SkillFailure>>
+=======
+    <<if _roll >= _difficultynum>>
+            <<goto $args[0]>>
+    <<else>>
+            <<goto $args[1]>>
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
     <</if>>
 <</widget>>
 >>>>>>> parent of d645706... got skill roll working but not overlay
