@@ -1,5 +1,5 @@
 :: SkillFailure [widget nobr]
-/* displays the failure animation.
+/* displays the failure animation. 
 
 <<SkillFailure>>
 
@@ -11,7 +11,11 @@
 <<AddParagraph "//Red flashes at the edges of your vision - a failure.//">>
 =======
 <<SetSpeaker "">>
+<<<<<<< HEAD:disco/meta/widgets/failure.tw
 <<AddParagraph "//Red flashes at the edges of your vision - a failure." + $roll + "//">>
 <<set $roll to 0>>
 >>>>>>> parent of 2504024... added overview menu button:disco/widgets/failure.tw
+=======
+<<AddParagraph "//Red flashes at the edges of your vision - a failure.//">>
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!:disco/widgets/failure.tw
 <</widget>>

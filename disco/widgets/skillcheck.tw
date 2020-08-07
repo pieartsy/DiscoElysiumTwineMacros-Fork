@@ -7,35 +7,28 @@ _difficultynum ($args[2]) is the difficulty you're trying to beat (if the diffic
 _stat (3) is the stat you're using with a number associated with it.
 _mods (4) is any stat number modifiers you might have due to previous actions, like drinking alcohol giving you a -1 or taking meds giving you a +1.
 _roll is a random roll on 1d6, + _stat + _mods
-_passive (5) is whether it's a passive check or not.
-args[6] is the overlay
 
+<<<<<<< HEAD
 if _passive is true:
         if the roll succeeds, set $success to true (interacts with PassiveSkill macro)
         if it fails, set it to false.
 
 if _passive is false/not present:
         if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
+=======
+if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
+(animations not currently working)
+>>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 */
 <<widget "SkillCheck">>
     <<set _difficultynum to $args[2]>>
     <<set _stat to $args[3]>>
     <<set _mods to $args[4]>>
     <<set _roll to random(1, 6) + _stat + _mods>>
-    <<set _passive to $args[5]>>
-    <<if _passive>>
-        <<if _roll >= _difficultynum>>
-                <<set $success to true>>
-        <<else>>
-                <<set $success to false>>
-        <</if>>
+    <<if _roll >= _difficultynum>>
+            <<goto $args[0]>>
     <<else>>
-        <<if _roll >= _difficultynum>>
-                <<goto $args[0]>>
-                
-        <<else>>
-                <<goto $args[1]>>
-        <</if>>
+            <<goto $args[1]>>
     <</if>>
 <</widget>>
 /* 

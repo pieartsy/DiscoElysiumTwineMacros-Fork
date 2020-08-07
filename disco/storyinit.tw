@@ -1,6 +1,6 @@
 :: StoryInit
 <<set $optionmap to new Map()>>
-<<set $success to "">>
+<<set $ischeck to []>>
 
 <<set $motorics to ["composure", "hand-eye coordination", "interfacing", "perception", "reaction speed", "savoir faire", "perception (sight)", "perception (taste)", "perception (touch)"]>>
 <<set $intellect to ["conceptualization", "drama", "encyclopedia", "logic", "rhetoric", "visual Calculus"]>>
