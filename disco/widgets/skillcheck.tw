@@ -8,6 +8,11 @@ _difficultynum ($args[2]) is the difficulty you're trying to beat (if the diffic
 _stat (3) is the stat you're using with a number associated with it.
 _mods (4) is any stat number modifiers you might have due to previous actions, like drinking alcohol giving you a -1 or taking meds giving you a +1.
 _roll is a random roll on 1d6, + _stat + _mods
+<<<<<<< HEAD
+=======
+_passive (5) is whether it's a passive check or not.
+args[6] is the overlay
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,6 +55,7 @@ ex: <<SkillCheck 10 stats.int 1>> */
 <<<<<<< HEAD
         <</timed>>
     <<else>>
+<<<<<<< HEAD
         <<SkillFailure>>
         <<timed 3s>>
 =======
@@ -75,6 +81,14 @@ ex: <<SkillCheck 10 stats.int 1>> */
     <<else>>
             <<goto $args[1]>>
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
+=======
+        <<if _roll >= _difficultynum>>
+                <<goto $args[0]>>
+                
+        <<else>>
+                <<goto $args[1]>>
+        <</if>>
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
     <</if>>
 <</widget>>
 >>>>>>> parent of d645706... got skill roll working but not overlay

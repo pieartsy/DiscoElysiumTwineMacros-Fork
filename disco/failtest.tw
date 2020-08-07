@@ -1,3 +1,7 @@
 ::FAIL
+<<<<<<< HEAD
+=======
+<<SkillFailure>>
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 <<PassiveSkill "Logic" "Easy" "Failure">>
 <<AddParagraph "YOU FAILED!!">>

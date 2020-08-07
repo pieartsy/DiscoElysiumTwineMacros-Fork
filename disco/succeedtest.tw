@@ -4,7 +4,11 @@
 <<AddParagraph "YOU SUCCEEDED!">>
 =======
 <<SkillSuccess>>
+<<<<<<< HEAD
 <<PassiveSkill "Logic">>
+=======
+<<PassiveSkill "Logic" "Easy" "Success">>
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 <<AddParagraph "YOU SUCCEEDED!" "fys">>
 <<PassiveSkill "electrochemistry" "Easy" "Success">>
 <<AddParagraph "Very sexy of you." "none">>

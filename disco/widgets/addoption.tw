@@ -11,7 +11,10 @@ args[0] = text for the option.
 4 = skillcheck difficulty number
 5 = skillcheck stat
 6 = skillcheck mod
+<<<<<<< HEAD
 7 = passage for success
+=======
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 
 i'm sorry this is obscene
 <<<<<<< HEAD

@@ -20,12 +20,19 @@
 =======
 >>>>>>> parent of 3ac7536... some more documentation
     <<if _optionpassage[0] is true>>
+<<<<<<< HEAD
 =======
     <<if _optionpassage[1] is true>>
 >>>>>>> parent of d645706... got skill roll working but not overlay
       @@.check;<li>-
         <<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>
       </li>@@
+=======
+      @@.check;<li>-
+        <<link _optiontext>><<SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3] _optionpassage[4] _optionpassage[5]>><<set $lastoption to _optiontext>><</link>>
+      </li>@@
+      /* otherwise, put the .option style on a link */
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
     <<else>>
       <li>-
         @@.option;<<link _optiontext _optionpassage[0]>><<set $lastoption to _optiontext>><</link>>@@

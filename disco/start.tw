@@ -31,6 +31,7 @@
 >>>>>>> parent of 9e82f8f... passive check overlays
 =======
 <<AddParagraph "Hi!" "int">>
+<<<<<<< HEAD
 <<PassiveSkill "Rhetoric" "Easy" "Success">>
 <<AddParagraph "Se seems nice.">>
 <<SetSpeaker "Aster">>
@@ -39,3 +40,12 @@
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 3 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
+=======
+<<PassiveSkill "Logic" "Hard" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
+<<PassiveSkill "electrochemistry" "Trivial" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
+<<SetSpeaker "Aster">>
+<<AddParagraph "I hope you're doing fine!" "none">>
+
+<<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $stats.int 2>>
+<<AddOption "testoption" false "Start">>
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels

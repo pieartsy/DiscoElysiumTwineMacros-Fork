@@ -211,14 +211,46 @@ span.continueblock {
 a.macro-linkreplace {
   background-color: #90280f;
   color: white;
+<<<<<<< HEAD
   padding: 15px;
   padding-bottom: 5px;
   padding-top: 10px;
+=======
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
   font-family: 'PT Sans Narrow', sans-serif;
   margin-left: -1.5em;
   display: block;
 }
 
+<<<<<<< HEAD
+=======
+a.macro-linkreplace .padding {
+  padding: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: block;
+}
+
+a.macro-linkreplace .intoverlay  {
+  background-image: url(intoverlay.png);
+  background-size: cover;
+}
+
+a.macro-linkreplace .psyoverlay  {
+  background-image: url(psyoverlay.png);
+  background-size: cover;
+}
+
+a.macro-linkreplace .fysoverlay  {
+  background-image: url(fysoverlay.png);
+  background-size: cover;
+}
+
+a.macro-linkreplace .motoverlay  {
+  background-image: url(motoverlay.png);
+  background-size: cover;
+}
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 
 .green {
   color: #98b48b; 
@@ -289,7 +321,11 @@ a.macro-linkreplace {
   background-color: #d2d3cd;
   color: black;
   padding: 3px;
+<<<<<<< HEAD
   border-radius: 5px;
+=======
+  display: inline-block;
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 }
 
 .check a:hover {
@@ -321,6 +357,7 @@ $(document).on("keyup", function (e) {
       list.children[childIndex].getElementsByClassName("link-internal")[0].click();
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2523,6 +2560,9 @@ $(document).on("keyup", function (e) {
 =======
 });</script><tw-passagedata pid="1" name="DisplayOptions" tags="nobr" position="100,100">/* ordered list of options */
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
+=======
+});</script><tw-passagedata pid="1" name="DisplayOptions" tags="nobr" position="100,100">/* ordered list of options */
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 &lt;ol id=&quot;OptionList&quot;&gt;
 /* for each text (key) and passage (value) in $optionmap, capture those things.*/ 
 &lt;&lt;for _optiontext, _optionpassage range $optionmap&gt;&gt;
@@ -2547,6 +2587,7 @@ $(document).on("keyup", function (e) {
 =======
 >>>>>>> parent of 3ac7536... some more documentation
     &lt;&lt;if _optionpassage[0] is true&gt;&gt;
+<<<<<<< HEAD
 =======
 });</script><tw-passagedata pid="1" name="DisplayOptions" tags="nobr" position="100,100">&lt;ol id=&quot;OptionList&quot;&gt;
 &lt;&lt;for _optiontext, _optionpassage range $optionmap&gt;&gt;
@@ -2563,6 +2604,11 @@ $(document).on("keyup", function (e) {
       &lt;/div&gt;
 =======
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
+=======
+      @@.check;&lt;li&gt;-
+        &lt;&lt;link _optiontext&gt;&gt;&lt;&lt;SkillCheck _optionpassage[1] _optionpassage[2] _optionpassage[3] _optionpassage[4] _optionpassage[5]&gt;&gt;&lt;&lt;set $lastoption to _optiontext&gt;&gt;&lt;&lt;/link&gt;&gt;
+      &lt;/li&gt;@@
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
       /* otherwise, put the .option style on a link */
 =======
 >>>>>>> parent of b80aacd... fixed the overlay not firing
@@ -2578,6 +2624,7 @@ $(document).on("keyup", function (e) {
 <<<<<<< HEAD
 &lt;&lt;set $optionmap to new Map()&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="FAIL" tags="" position="225,100">&lt;&lt;SkillFailure&gt;&gt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 &lt;&lt;PassiveSkill &quot;logic&quot; &quot;success&quot; &quot;fail&quot; 9 $int 0&gt;&gt;
 &lt;&lt;PassiveSkill &quot;logic&quot; &quot;success&quot; &quot;fail&quot; 9 $int 0&gt;&gt;
 &lt;&lt;PassiveSkill &quot;Logic&quot; 5 &quot;Failure&quot;&gt;&gt;
@@ -2587,9 +2634,13 @@ $(document).on("keyup", function (e) {
 =======
 &lt;&lt;set $optionmap to new Map()&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="FAIL" tags="" position="225,100">&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Failure&quot;&gt;&gt;
 >>>>>>> parent of b80aacd... fixed the overlay not firing
+=======
+&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Failure&quot;&gt;&gt;
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 &lt;&lt;AddParagraph &quot;YOU FAILED!!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="PassageFooter" tags="" position="350,100">&lt;&lt;DisplayParagraphs&gt;&gt;\</tw-passagedata><tw-passagedata pid="4" name="PassageHeader" tags="" position="475,100">&lt;&lt;set $paragraphs to []&gt;&gt;
 &lt;&lt;if $lastoption&gt;&gt;
 @@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
+<<<<<<< HEAD
 <<<<<<< HEAD
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;silently&gt;&gt;
@@ -2658,6 +2709,16 @@ $(document).on("keyup", function (e) {
 =======
 
 <<<<<<< HEAD
+&lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 5 $stats.int 2&gt;&gt;
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
+=======
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="nobr" position="600,100">&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Hi!&quot; &quot;int&quot;&gt;&gt;
+&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Hard&quot; &quot;This is so easy.&quot; &quot;Wow guess it wasn&#39;t that easy...!&quot; 6 $stats.int 0&gt;&gt;
+&lt;&lt;PassiveSkill &quot;electrochemistry&quot; &quot;Trivial&quot; &quot;Succeeding is sexy as hell.&quot; &quot;Unsexy! Failing is unsexy!&quot; 2 $stats.int 0&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Aster&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I hope you&#39;re doing fine!&quot; &quot;none&quot;&gt;&gt;
+
 &lt;&lt;AddOption &quot;testcheck&quot; true &quot;SUCCEED&quot; &quot;FAIL&quot; 5 $stats.int 2&gt;&gt;
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 &lt;&lt;AddOption &quot;testoption&quot; false &quot;Start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="725,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
@@ -2732,6 +2793,7 @@ $(document).on("keyup", function (e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 2504024... added overview menu button
 &lt;&lt;PassiveSkill &quot;Logic&quot; 5 &quot;Success&quot;&gt;&gt;
 &lt;&lt;PassiveSkill &quot;logic&quot; &quot;success&quot; &quot;fail&quot; 9 $int 0&gt;&gt;
@@ -2749,6 +2811,9 @@ $(document).on("keyup", function (e) {
 =======
 &lt;&lt;PassiveSkill &quot;Logic&quot;&gt;&gt;
 >>>>>>> parent of e0765ad... the [easy:success] stuff shows up now
+=======
+&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 &lt;&lt;AddParagraph &quot;YOU SUCCEEDED!&quot; &quot;fys&quot;&gt;&gt;
 &lt;&lt;PassiveSkill &quot;electrochemistry&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Very sexy of you.&quot; &quot;none&quot;&gt;&gt;
@@ -2778,7 +2843,10 @@ args[0] = text for the option.
 4 = skillcheck difficulty number
 5 = skillcheck stat
 6 = skillcheck mod
+<<<<<<< HEAD
 7 = passage for success
+=======
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 
 i&#39;m sorry this is obscene
 ex: &lt;&lt;AddOption &quot;here&#39;s a check&quot; &quot;CheckingPassage&quot; &quot;true&quot; 10 $skill.int 1 &quot;WinPassage&quot; &quot;FailPassage&quot;&gt;&gt;
@@ -2809,6 +2877,7 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot;&gt;&gt;
 <<<<<<< HEAD
     &lt;&lt;set $overlays.push(_overlay)&gt;&gt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Difficulties" tags="widget nobr" position="1225,100">/* sets labels based on the difficulty rating */
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;widget &quot;Difficulties&quot;&gt;&gt;
@@ -2833,6 +2902,9 @@ ex: &lt;&lt;AddParagraph &quot;I really like talking&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 &lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DisplayParagraphs" tags="widget" position="100,225">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
+=======
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="DisplayParagraphs" tags="widget" position="1225,100">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 =======
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="DisplayParagraphs" tags="widget" position="1225,100">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.*/
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
@@ -2879,9 +2951,13 @@ if (paragraphs.length &gt; 1) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SkillFailure" tags="widget nobr" position="100,225">/* displays the failure animation. 
+=======
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SkillFailure" tags="widget nobr" position="100,225">/* displays the failure animation.
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 
 &lt;&lt;SkillFailure&gt;&gt;
 
@@ -2900,6 +2976,7 @@ set _paragraph to the first item in $paragraphs
 &lt;div id=&quot;FailureImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckFailure&quot; class=&quot;CheckText&quot;&gt;CHECK FAILURE&lt;/div&gt;
 &lt;&lt;SetSpeaker &quot;&quot;&gt;&gt;
+<<<<<<< HEAD
 &lt;&lt;AddParagraph &quot;//Red flashes at the edges of your vision - a failure.//&quot;&gt;&gt;
 <<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;
@@ -2907,6 +2984,10 @@ set _paragraph to the first item in $paragraphs
 displays the failure animation.
 */</tw-passagedata><tw-passagedata pid="10" name="GreenTextWidgets" tags="widget nobr" position="1225,100">&lt;&lt;widget &quot;TaskComplete&quot;&gt;&gt;
 =======
+=======
+&lt;&lt;AddParagraph &quot;//Red flashes at the edges of your vision - a failure.&quot; + $roll + &quot;//&quot;&gt;&gt;
+&lt;&lt;set $roll to 0&gt;&gt;
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="GreenTextWidgets" tags="widget nobr" position="225,225">/* various widgets for &quot;green text&quot; popups. have a generic text that can be customized with arguments */
 &lt;&lt;widget &quot;TaskComplete&quot;&gt;&gt;
 /*The first argument is the task, the second is the experience gained (if any).
@@ -2952,6 +3033,7 @@ displays the failure animation.
 &lt;&lt;run $greentext.push(&quot;@@.green;Level up!@@&quot;)&gt;&gt;
 &lt;&lt;set $paraAppendMode to true&gt;&gt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="PassiveSkill" tags="widget nobr" position="350,225">/* represents the dialogue of passive skills, a unique set speaker.
 
 ex: &lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;Success&quot;&gt;&gt;
@@ -2973,6 +3055,14 @@ if after a passive check:
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 =======
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
+=======
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="PassiveSkill" tags="widget nobr" position="350,225">/* represents the dialogue of passive skills, a unique set speaker.
+
+ex: &lt;&lt;PassiveSkill &quot;Logic&quot;&gt;&gt;
+
+&lt;&lt;PassiveSkill &quot;Logic&quot; &quot;Easy&quot; &quot;This is so easy.&quot; &quot;Wow guess it wasn&#39;t that easy...!&quot; 3 $stats.int 0&gt;&gt;
+
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 */
 &lt;&lt;widget &quot;PassiveSkill&quot;&gt;&gt;
     /* sets _skillname to the first argument, the skill, in lowercase. sets _skillresult as empty */
@@ -2995,10 +3085,14 @@ if after a passive check:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* if there&#39;s a fourth argument present (indicating a failure state), run the SkillCheck macro as per usual. Skillcheck&#39;s 6th argument checking whether it&#39;s a passive check is set to true.
 =======
     /* if there&#39;s a second argument present, run the SkillCheck macro as per usual. Skillcheck&#39;s 6th argument checking whether it&#39;s a passive check is set to true.
 >>>>>>> parent of e0765ad... the [easy:success] stuff shows up now
+=======
+    /* if there&#39;s a fourth argument present (indicating a failure state), run the SkillCheck macro as per usual. Skillcheck&#39;s 6th argument checking whether it&#39;s a passive check is set to true.
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
     
     if SkillCheck passes/$success is true, set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
     if it fails, set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
@@ -3007,6 +3101,7 @@ if after a passive check:
     add the skill result to the current speaker: Logic [Easy: Success]
     then add a dash. */
     &lt;&lt;if $args[3]&gt;&gt;
+<<<<<<< HEAD
 <<<<<<< HEAD
         &lt;&lt;SkillCheck $args[1] $args[2] $args[4] $args[5] $args[6] true&gt;&gt;
         &lt;&lt;Difficulties $args[4]&gt;&gt;
@@ -3018,12 +3113,19 @@ if after a passive check:
 >>>>>>> parent of e0765ad... the [easy:success] stuff shows up now
         &lt;&lt;SkillCheck $args[2] $args[3] $args[4] $args[5] $args[6] true&gt;&gt;
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
+=======
+        &lt;&lt;SkillCheck $args[2] $args[3] $args[4] $args[5] $args[6] true&gt;&gt;
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
         &lt;&lt;if $success is true&gt;&gt;
             &lt;&lt;set _skillresult to (&quot; [&quot; + $args[1] + &quot;: &quot; + &quot;Success&quot; + &quot;]&quot;)&gt;&gt;
             &lt;&lt;set $currentspeaker += _skillresult&gt;&gt;
             &lt;&lt;set $currentspeaker += &quot; - &quot;&gt;&gt;
 <<<<<<< HEAD
+<<<<<<< HEAD
             &lt;&lt;AddParagraph $args[1] $args[3]&gt;&gt;
+=======
+            &lt;&lt;AddParagraph $args[2]&gt;&gt;
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 =======
             &lt;&lt;AddParagraph $args[2]&gt;&gt;
 >>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
@@ -3034,6 +3136,13 @@ if after a passive check:
             &lt;&lt;AddParagraph $args[3]&gt;&gt;
         &lt;&lt;/if&gt;&gt;
     &lt;&lt;else&gt;&gt;
+<<<<<<< HEAD
+=======
+        &lt;&lt;if $args[1]&gt;&gt;
+            &lt;&lt;set _skillresult to (&quot; [&quot; + $args[1] + &quot;: &quot; + $args[2] + &quot;]&quot;)&gt;&gt;
+            &lt;&lt;set $currentspeaker += _skillresult&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
         &lt;&lt;set $currentspeaker += &quot; - &quot;&gt;&gt;
 =======
     /* if there&#39;s a skill result, add the skill result to the current speaker text: Logic [Easy: Success]. Then add a dash. */
@@ -3046,7 +3155,11 @@ if after a passive check:
         &lt;&lt;set $currentspeaker += _skillresult&gt;&gt;
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
     &lt;&lt;/if&gt;&gt;
+<<<<<<< HEAD
     &lt;&lt;set $currentspeaker += &quot; - &quot;&gt;&gt;
+=======
+    /* Add a dash. */
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="SetSpeaker" tags="widget" position="475,225">/*sets $current speaker to the first argument, styled with the .speaker class
 
 ex: &lt;&lt;SetSpeaker &quot;Kim Kitsuragi&gt;&gt;*/
@@ -3059,6 +3172,11 @@ _difficultynum ($args[2]) is the difficulty you&#39;re trying to beat (if the di
 _stat (3) is the stat you&#39;re using with a number associated with it.
 _mods (4) is any stat number modifiers you might have due to previous actions, like drinking alcohol giving you a -1 or taking meds giving you a +1.
 _roll is a random roll on 1d6, + _stat + _mods
+<<<<<<< HEAD
+=======
+_passive (5) is whether it&#39;s a passive check or not.
+args[6] is the overlay
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3100,6 +3218,7 @@ ex: &lt;&lt;SkillCheck 10 stats.int 1&gt;&gt; */
 <<<<<<< HEAD
         &lt;&lt;/timed&gt;&gt;
     &lt;&lt;else&gt;&gt;
+<<<<<<< HEAD
         &lt;&lt;SkillFailure&gt;&gt;
         &lt;&lt;timed 3s&gt;&gt;
 =======
@@ -3168,6 +3287,14 @@ _skillname +
         &lt;&lt;SKillSuccess&gt;&gt;
     &lt;&lt;else&gt;&gt;
         &lt;&lt;SkillFailure&gt;&gt;
+=======
+        &lt;&lt;if _roll &gt;= _difficultynum&gt;&gt;
+                &lt;&lt;goto $args[0]&gt;&gt;
+                
+        &lt;&lt;else&gt;&gt;
+                &lt;&lt;goto $args[1]&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Speaker" tags="widget" position="475,225">&lt;&lt;nobr&gt;&gt;
 >>>>>>> parent of d645706... got skill roll working but not overlay
@@ -3180,11 +3307,21 @@ $args[0] -
 @@
 &lt;&lt;/widget&gt;&gt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="SkillSuccess" tags="widget" position="600,225">&lt;&lt;nobr&gt;&gt;
 =======
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="SkillSuccess" tags="widget" position="850,225">&lt;&lt;nobr&gt;&gt;
 >>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
 &lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
+=======
+/*</tw-passagedata><tw-passagedata pid="16" name="Speaker" tags="widget" position="725,225">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;widget &quot;speaker&quot;&gt;&gt;
+@@.speaker;
+$args[0] -
+@@
+&lt;&lt;/widget&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="SkillSuccess" tags="widget nobr" position="850,225">&lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
+>>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 &lt;div id=&quot;SuccessImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckSuccess&quot; class=&quot;CheckText&quot;&gt;CHECK SUCCESS&lt;/div&gt;
 &lt;&lt;SetSpeaker &quot;&quot;&gt;&gt;
