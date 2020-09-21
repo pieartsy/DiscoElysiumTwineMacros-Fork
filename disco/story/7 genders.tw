@@ -1,6 +1,8 @@
 ::Genders [nobr]
 <<if $flagsMap["ask"]>>
     <<AddParagraph "Kim nods. “Consider me impressed again. Yes, that’s correct, but only one of the options possible.”">>
+<<elseif $flagsMap["notatall"]>>
+	<<AddParagraph "Kim’s examination of your face continues for a moment longer. Finally he pulls his gaze away and shrugs. “Alright. Yes, that’s correct, but only one of the options possible.”" "Kim Kitsuragi">>
 <<else>>
     <<AddParagraph "Kim nods. “Consider me impressed. Yes, that’s correct, but only one of the options possible.”">>
 <</if>>
