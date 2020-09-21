@@ -1,0 +1,62 @@
+::Sample start [nobr]
+<<AddParagraph "Sample text from Cleaning Out The Rooms by bitochondria.">>
+
+<<AddOption "Go forward to the sample text." "COTRNew">>
+<<AddOption "Go forward to the sample text but with a check styling." "COTRNew" "Encyclopedia" "Easy">>
+
+::COTRNew [nobr]
+<<SkillFailure>>
+
+<<AddOverlay "mot">>
+<<AddSkillParagraph "You wake up with your face crushed into an unfamiliar pillow." "perception (touch)" "easy" "success">>
+
+<<AddOverlay "mot">>
+<<AddSkillParagraph "You open your eyes. The room is unfamiliar as well. But you don’t have a headache and you remember yesterday, so you probably didn’t black out. You actually slept last night. Without dreaming." "perception (sight)" "medium" "success">>
+
+<<AddOverlay "mot">>
+<<AddSkillParagraph "You can smell coffee brewing. You can’t remember the last time you woke up to the smell of coffee brewing." "perception (smell)" "easy" "success">>
+
+<<AddOverlay "int">>
+<<AddSkillParagraph "Not that you can remember much of anything from before this past week." "logic" "Easy" "Success">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "You’re in Lieutenant Kitsuragi’s apartment. You remember this because while you were definitely tired last night, you weren’t drunk." "volition" "Easy" "Success">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "Wait. The faint lingering odor of something like a recently smothered campfire, woodsy and smoky and faintly astringent. The barest undertone of tar resting softly under a bed of fragrant leaves. Astras." "perception (smell)">>
+
+<<AddOverlay "int">>
+<<AddSkillParagraph "You're in Kim's bed." "logic" "Easy" "Success">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "The hairs stand up on the back of your neck and your pulse quickens. You fucked Kim? Fuck yeah! Who even knew that was an option!? Good work, man. You should find him and do it again." "electrochemistry" "Easy" "Failure">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "Don’t be stupid. You did not have sex with the Liutenant. He took the couch and let you sleep in his bed because you were shot three days ago. And after last night…" "volition" "Easy" "Success">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "It’s after midnight, and you all stand around the precinct looking at each other like every other member of the squad has the secret envelope with the instructions for what comes next. Jean groans when you ask, as politely as you can, where you live." "esprit de corps" "Medium" "Success">>
+
+<<NoOverlay>>
+<<AddParagraph "He knows where you live. You dig through your desk and belongings. You have no keys. Dear god, you’re Idiot Doom Spiral. You thought his story was totally implausible but now you’re going to be homeless because you lost your keys.">>
+
+<<NoOverlay>>
+<<AddParagraph "Kim— who hasn’t gone back to his own station yet— gently suggests that your keys are very likely in the ignition of the dearly departed police carriage back under the sea ice.">>
+
+<<NoOverlay>>
+<<AddParagraph "Jean stares at you for what feels like forever, and then swings open the door to the holding cell. He points to the slab mattress like death pointing to an open grave.">>
+
+<<NoOverlay>>
+<<AddParagraph "“Sleep there, then. It’s where we keep the drunk fucks anyway.”" "Jean">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "Jean wants to be kinder to you. His jaw, set in a tight grimace, is locked to prevent him from saying something stupid like, ‘hey, Harry, you can stay with me, old friend.’ He can’t do that to himself." "empathy" "Challenging" "Success">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "He wants to believe you’re really trying this time. Desperately. But he can’t believe it at his own expense. Your recovery— if that’s what it is— can’t supercede his own well-being." "empathy" "Formidable" "Success">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "Kim put his hand on the back of your arm. He looks at you from the corner of his eye, behind his glasses. He’s thinking about Doom Spiral, too." "empathy" "Easy" "Success">>
+
+<<NoOverlay>>
+<<AddParagraph "“You can stay at my place, Harry. We can break into your apartment tomorrow.”" "Kim">>
