@@ -1,16 +1,10 @@
 ::SetFlag [widget nobr]
 
-/* easier syntax to set a flag, either in the text itself or in DisplayOptions 
-
-<<SetFlag "revelation">>
+/* easier syntax to set a flag, either in the text itself or in DisplayOptions
 
 <<SetFlag "flag" true>>
 */
 
 <<widget "SetFlag">>
-    <<if $args[0] is "revelation">>
-        <<set $flagsMap[$args[0]] += 1>>
-    <<else>>
-        <<set $flagsMap[$args[0]] to $args[1]>>
-    <</if>>
+    <<set $flagsMap[$args[0]] to $args[1]>>
 <</widget>>
