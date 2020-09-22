@@ -1,11 +1,8 @@
 ::Bring me here [nobr]
 <<if $flagsMap["sit"] is true>>
-
+    <<SetFlag "kimstate" "+">>
     <<NoOverlay>>
-    <<AddParagraph "He allows himself a slight smile as you plop down beside him." "Kim Kitsuragi">>
-
-    <<NoOverlay>>
-    <<AddParagraph "“I’m sure you’re wondering why I invited you out here.”">>
+    <<AddParagraph "He allows himself a slight smile as you plop down beside him. “I’m sure you’re wondering why I invited you out here.”" "Kim Kitsuragi">>
 <</if>>
 
 <<AddSkillParagraph "Kim’s never been one to indulge in leisurely activities like this, so he’s probably invited you out here for a reason. Something important." "Logic">>

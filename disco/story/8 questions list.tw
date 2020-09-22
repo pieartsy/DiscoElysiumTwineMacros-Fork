@@ -1,0 +1,17 @@
+::Questions list [nobr]
+<<AddOption "“How did you figure this out?”" "Figure out">>
+<<AddOption "“What does it feel like?”" "Feels like">>
+<<AddOption "“Do other people know this about you?”" "Others know">>
+<<AddOption "“How many nonbinary people are out there?”" "Out there">>
+
+<<if $flagsMap["junk"] is false>>
+    <<AddOption "“What junk are you packing in those pants of yours?”" "Junk">>
+<</if>>
+
+<<if $flagsMap["questioned"] is true>>
+    <<AddOption "I think I’m done with questioning.">>
+<</if>>
+
+<<if $flagsMap["realization"] >= 5>>
+    <<AddOption "Realize what you are." "Realization" "realization" true>>
+<</if>>

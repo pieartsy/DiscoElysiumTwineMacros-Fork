@@ -12,7 +12,7 @@
 <<AddOverlay "psy">>
 <<AddSkillParagraph "Colors, swirling inside your gut. Red and blue, mixing to purple, mixing to yellow, mixing to black, to nothing at all." "inland empire" "legendary" "success">>
 
-<<SetFlag "revelation">>
+<<SetFlag "realization" "+">>
 
 <<AddParagraph "Kim seems to be analyzing your expression, his eyes flicking across your facial features." "Kim Kitsuragi">>
 

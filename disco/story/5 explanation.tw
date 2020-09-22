@@ -30,6 +30,7 @@
     <<AddParagraph "“In any case, no, 'anti-bisexual' not what nonbinary means.”" "Kim Kitsuragi">>
 
 <<elseif $flagsMap["ask"] is true>>
+    <<SetFlag "kimstate" "+">>
     <<AddParagraph "His shoulders relax. “I’m impressed that you’re admitting you didn’t know.”" "Kim Kitsuragi">>
 <<else>>
     <<AddParagraph "Kim sighs. “You have no idea what that means, do you?”" "Kim Kitsuragi">>
@@ -41,6 +42,6 @@
     <<AddParagraph "As you open your mouth to speak, he adds, “We are still definitely human, though.”">>
 <</if>>
 
-<<AddOption "“But you look and sound like a man.”" "Man?">>
+<<AddOption "“But you look and sound like a man.”" "Man?" "kimstate" "-">>
 <<AddOption "“So what are you, then?”" "What are you">>
 <<AddOption "“That's really interesting, Kim!”" "Interesting">>

@@ -5,7 +5,7 @@
 
 <<AddSkillParagraph "...familiar." "inland empire">>
 
-<<SetFlag "revelation">>
+<<SetFlag "realization" "+">>
 
-<<AddOption "“No, see, I’m disco too.”" "Disco">>
+<<AddOption "“No, see, I’m disco too.”" "Disco" "kimstate" "-">>
 <<AddOption "“I think I…relate?”" "Relate">>

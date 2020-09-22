@@ -2,7 +2,8 @@
 <<silently>>
 <<set $optionmap to new Map()>>
 <<set $flagsMap to {
-                        "revelation": 0,
+                        "kimstate": 0,
+                        "realization": 0,
                         "sit": false,
                         "love": false,
                         "gay": false,
@@ -16,6 +17,12 @@
                         "getsit": false,
                         "notman": false,
                         "oRly": false,
+                        "trust": false,
+                        "dontgetit": false,
+                        "questioned": false,
+                        "junk": false,
+                        "junkcurious": false,
+                        "genitals": false
                     }>>
 
 <<set $motorics to ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)", "PERCEPTION (SMELL)", "PERCEPTION (HEARING)"]>>

@@ -2,14 +2,20 @@
 
 /* easier syntax to set a flag, either in the text itself or in DisplayOptions 
 
-<<SetFlag "revelation">>
+<<SetFlag "realization">>
 
 <<SetFlag "flag" true>>
 */
 
 <<widget "SetFlag">>
-    <<if $args[0] is "revelation">>
-        <<set $flagsMap[$args[0]] += 1>>
+    <<if Number.isInteger($args[1])>>
+        <<if $args[1] is "+">>
+            <<set $flagsMap[$args[0]] += 1>>
+        <<elseif $args[1] is "-">>
+            <<set $flagsMap[$args[0]] -= 1>>
+        <<else>>
+            <<set $flagsMap[$args[0]] to $args[1]>>
+        <</if>>
     <<else>>
         <<set $flagsMap[$args[0]] to $args[1]>>
     <</if>>

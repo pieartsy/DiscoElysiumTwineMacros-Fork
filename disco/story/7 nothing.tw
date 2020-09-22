@@ -5,7 +5,7 @@
 <<AddParagraph "His eyes search your face again.">>
 
 <<NoOverlay>>
-<<AddSkillParagraph "You’re not sure what he’s seeing there, but you’re reasonably sure that your attempt to conceal it are failing." "composure" "medium" "failing">>
+<<AddSkillParagraph "You’re not sure what he’s seeing there, but you’re reasonably sure that your attempt to conceal it are failing." "composure" "medium" "fail">>
 
 <<NoOverlay>>
 <<AddParagraph "“Do you relate to that feeling, detective?”" "Kim Kitsuragi">>
@@ -13,7 +13,7 @@
 <<NoOverlay>>
 <<AddSkillParagraph "Pale aged vodka left to evaporate. That’s what you are, Harry. Nothing, nothing." "inland empire">>
 
-<<SetFlag "revelation">>
+<<SetFlag "realization" "+">>
 
 <<AddOverlay "fys">>
 <<AddSkillParagraph "Don’t listen to that weirdo, Harry! You’re a real, hot-blooded, hairy-chested, virile man’s man. A slaps-women’s-asses, drinks-swigs-of-beer, belches-loudly-and-doesn’t-give-a-damn kind of man." "electrochemistry" "medium" "success">>
