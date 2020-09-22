@@ -1,6 +1,10 @@
 :: StoryInit
 <<silently>>
 <<set $optionmap to new Map()>>
+/* add flags below!
+
+remember to put the flag name in quotes, and add a comma at the end of every line EXCEPT the last line!
+*/
 <<set $flagsMap to {
                         "revelation": 0,
                         "sit": false,
