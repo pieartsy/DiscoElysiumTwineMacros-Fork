@@ -147,12 +147,12 @@ a.macro-linkreplace .motoverlay  {
 
 #SuccessImg {
   background: [img[SuccessOverlay]] no-repeat right;
-  background-size: contain;
+  background-size: cover;
 }
 
 #FailureImg {
   background: [img[FailureOverlay]] no-repeat right;
-  background-size: contain;
+  background-size: cover;
 }
 
 @keyframes Flash {
