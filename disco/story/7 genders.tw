@@ -3,6 +3,7 @@
     <<SetFlag "kimstate" "+">>
     <<AddParagraph "Kim nods. “Consider me impressed again. Yes, that’s correct, but only one of the options possible.”">>
 <<elseif $flagsMap["notatall"] is true>>
+    <<SetFlag "realization" "-">>
 	<<AddParagraph "Kim’s examination of your face continues for a moment longer. Finally he pulls his gaze away and shrugs. “Alright. Yes, that’s correct, but only one of the options possible.”" "Kim Kitsuragi">>
 <<else>>
     <<SetFlag "kimstate" "+">>
@@ -15,6 +16,6 @@
 
 <<AddSkillParagraph "Like he said before, you don’t strike him as that knowledgeable about this." "rhetoric">>
 
-<<AddSkillParagraph "Well consider yourself knowledgeable about it now! Definition stored and saved. Though a bit more information couldn’t hurt…">>
+<<AddSkillParagraph "Well consider yourself knowledgeable about it now! Definition stored and saved. Though a bit more information couldn’t hurt…" "encyclopedia">>
 
 <<AddOption "“I’d like to ask a few more questions.”" "Questions" "inquire" true>>

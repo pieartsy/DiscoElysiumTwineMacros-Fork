@@ -2,6 +2,9 @@
 <<if $flagsMap["dontgetit"] is true>>
     <<SetFlag "kimstate" "-">>
     <<AddParagraph "Kim sighs heavily. “It seems I was right to assume you wouldn’t. I suppose you’ll want to ask me some questions about it now.” He removes his glasses and rubs his eyes, then puts the glasses back on." "Kim Kitsuragi">>
+<<elseif $flagsMap["authority"]>>
+    <<SetFlag "kimstate" "-">>
+    <<AddParagraph "The energy dissipates as he catches himself, schooling his face back to a neutral expression. “Right. I shouldn’t press you like that. My apologies, detective, I did open up the conversation after all.” Kim takes one more deep breath as he switches gears." "Kim Kitsuragi">>
 <<elseif $flagsMap["inquire"] is true>>
     <<if $flagsMap["gay"] is true>>
         <<AddParagraph "Kim smirks again. “Is the infamous Human Can-Opener going to give me the third degree about my gender now?”" "Kim Kitsuragi">>
@@ -10,8 +13,10 @@
     <</if>>
 <</if>>
 
-<<NoOverlay>>
-<<AddParagraph "“Well that’s fine. I did open the conversation after all.”">>
+<<if $flagsMap["authorty"] is false>>
+    <<NoOverlay>>
+    <<AddParagraph "“Well that’s fine. I did open the conversation after all.”">>
+<</if>>
 
 <<NoOverlay>>
 <<AddParagraph "“Ask away - within reason.” He gives you a pointed look.">>

@@ -857,13 +857,18 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
                         &quot;ask&quot;: false,
                         &quot;getsit&quot;: false,
                         &quot;notman&quot;: false,
+                        &quot;assman&quot;: false,
                         &quot;oRly&quot;: false,
                         &quot;trust&quot;: false,
+                        &quot;notatall&quot;: false,
                         &quot;dontgetit&quot;: false,
+                        &quot;inquire&quot;: false,
                         &quot;questioned&quot;: false,
                         &quot;junk&quot;: false,
                         &quot;junkcurious&quot;: false,
-                        &quot;genitals&quot;: false
+                        &quot;genitals&quot;: false,
+                        &quot;underground&quot;: false,
+                        &quot;authority&quot;: false
                     }&gt;&gt;
 
 &lt;&lt;set $motorics to [&quot;COMPOSURE&quot;, &quot;HAND-EYE COORDINATION&quot;, &quot;INTERFACING&quot;, &quot;PERCEPTION&quot;, &quot;REACTION SPEED&quot;, &quot;SAVOIR FAIRE&quot;, &quot;PERCEPTION (SIGHT)&quot;, &quot;PERCEPTION (TASTE)&quot;, &quot;PERCEPTION (TOUCH)&quot;, &quot;PERCEPTION (SMELL)&quot;, &quot;PERCEPTION (HEARING)&quot;]&gt;&gt;
@@ -899,7 +904,6 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;AddSkillParagraph &quot;Kim’s never been one to indulge in leisurely activities like this, so he’s probably invited you out here for a reason. Something important.&quot; &quot;Logic&quot;&gt;&gt;
 
 &lt;&lt;if $flagsMap[&quot;sit&quot;] is true&gt;&gt;
-
     &lt;&lt;NoOverlay&gt;&gt;
     &lt;&lt;AddParagraph &quot;He looks up at you and takes a slow, deep breath.&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;
@@ -1095,6 +1099,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
     &lt;&lt;SetFlag &quot;kimstate&quot; &quot;+&quot;&gt;&gt;
     &lt;&lt;AddParagraph &quot;Kim nods. “Consider me impressed again. Yes, that’s correct, but only one of the options possible.”&quot;&gt;&gt;
 &lt;&lt;elseif $flagsMap[&quot;notatall&quot;] is true&gt;&gt;
+    &lt;&lt;SetFlag &quot;realization&quot; &quot;-&quot;&gt;&gt;
 	&lt;&lt;AddParagraph &quot;Kim’s examination of your face continues for a moment longer. Finally he pulls his gaze away and shrugs. “Alright. Yes, that’s correct, but only one of the options possible.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;
     &lt;&lt;SetFlag &quot;kimstate&quot; &quot;+&quot;&gt;&gt;
@@ -1107,7 +1112,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 
 &lt;&lt;AddSkillParagraph &quot;Like he said before, you don’t strike him as that knowledgeable about this.&quot; &quot;rhetoric&quot;&gt;&gt;
 
-&lt;&lt;AddSkillParagraph &quot;Well consider yourself knowledgeable about it now! Definition stored and saved. Though a bit more information couldn’t hurt…&quot;&gt;&gt;
+&lt;&lt;AddSkillParagraph &quot;Well consider yourself knowledgeable about it now! Definition stored and saved. Though a bit more information couldn’t hurt…&quot; &quot;encyclopedia&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;“I’d like to ask a few more questions.”&quot; &quot;Questions&quot; &quot;inquire&quot; true&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Nothing" tags="nobr" position="850,475">&lt;&lt;AddParagraph &quot;Kim&#39;s brow furrows. “That’s one of the options, yes.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 
@@ -1129,9 +1134,13 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;AddSkillParagraph &quot;Don’t listen to that weirdo, Harry! You’re a real, hot-blooded, hairy-chested, virile man’s man. A slaps-women’s-asses, drinks-swigs-of-beer, belches-loudly-and-doesn’t-give-a-damn kind of man.&quot; &quot;electrochemistry&quot; &quot;medium&quot; &quot;success&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Am I really?&quot; &quot;Not that man&quot; &quot;oRly&quot; true&gt;&gt;
-&lt;&lt;AddOption &quot;I don&#39;t think I&#39;m that kind of man.&quot; &quot;Not that man&quot; &quot;notman&quot; true&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Questions" tags="nobr" position="975,475">&lt;&lt;if $flagsMap[&quot;dontgetit&quot;] is true&gt;&gt;
+&lt;&lt;AddOption &quot;I don&#39;t think I&#39;m that kind of man.&quot; &quot;Not that man&quot; &quot;notman&quot; true&gt;&gt;
+&lt;&lt;AddOption &quot;“I love beer and asses too much to be *nothing*, Kim!”&quot; &quot;Real man&quot;&gt;</tw-passagedata><tw-passagedata pid="38" name="Questions" tags="nobr" position="975,475">&lt;&lt;if $flagsMap[&quot;dontgetit&quot;] is true&gt;&gt;
     &lt;&lt;SetFlag &quot;kimstate&quot; &quot;-&quot;&gt;&gt;
     &lt;&lt;AddParagraph &quot;Kim sighs heavily. “It seems I was right to assume you wouldn’t. I suppose you’ll want to ask me some questions about it now.” He removes his glasses and rubs his eyes, then puts the glasses back on.&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
+&lt;&lt;elseif $flagsMap[&quot;authority&quot;]&gt;&gt;
+    &lt;&lt;SetFlag &quot;kimstate&quot; &quot;-&quot;&gt;&gt;
+    &lt;&lt;AddParagraph &quot;The energy dissipates as he catches himself, schooling his face back to a neutral expression. “Right. I shouldn’t press you like that. My apologies, detective, I did open up the conversation after all.” Kim takes one more deep breath as he switches gears.&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 &lt;&lt;elseif $flagsMap[&quot;inquire&quot;] is true&gt;&gt;
     &lt;&lt;if $flagsMap[&quot;gay&quot;] is true&gt;&gt;
         &lt;&lt;AddParagraph &quot;Kim smirks again. “Is the infamous Human Can-Opener going to give me the third degree about my gender now?”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
@@ -1140,8 +1149,10 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;NoOverlay&gt;&gt;
-&lt;&lt;AddParagraph &quot;“Well that’s fine. I did open the conversation after all.”&quot;&gt;&gt;
+&lt;&lt;if $flagsMap[&quot;authorty&quot;] is false&gt;&gt;
+    &lt;&lt;NoOverlay&gt;&gt;
+    &lt;&lt;AddParagraph &quot;“Well that’s fine. I did open the conversation after all.”&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;NoOverlay&gt;&gt;
 &lt;&lt;AddParagraph &quot;“Ask away - within reason.” He gives you a pointed look.&quot;&gt;&gt;
@@ -1177,7 +1188,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 
 &lt;&lt;AddParagraph &quot;Kim is still staring at you, waiting for you to answer.&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;“Not at all.”&quot; &quot;Genders&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;“Not at all.”&quot; &quot;Genders&quot; &quot;notatall&quot; true&gt;&gt;
 &lt;&lt;AddOption &quot;“If I didn’t relate before, but I do now, does that still count?”&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Questions list" tags="nobr" position="225,600">&lt;&lt;AddOption &quot;“How did you figure this out?”&quot; &quot;Figure out&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;“What does it feel like?”&quot; &quot;Feels like&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;“Do other people know this about you?”&quot; &quot;Others know&quot;&gt;&gt;
@@ -1193,11 +1204,44 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 
 &lt;&lt;if $flagsMap[&quot;realization&quot;] &gt;= 5&gt;&gt;
     &lt;&lt;AddOption &quot;Realize what you are.&quot; &quot;Realization&quot; &quot;realization&quot; true&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Relate" tags="nobr" position="350,600">&lt;&lt;AddParagraph &quot;“I really hope you’re not joking right now, officer. What do you mean, you *relate*?”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Junk" tags="nobr" position="475,600">&lt;&lt;SetFlag &quot;junk&quot; true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Relate" tags="nobr" position="350,600">&lt;&lt;AddParagraph &quot;There’s a glare from the sun reflecting off of Kim’s glasses as he peers at you. “I really hope you’re not joking right now, officer. What do you mean, you *relate*?”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Count" tags="nobr" position="475,600">&lt;&lt;AddParagraph &quot;Both of Kim’s eyebrows lift slightly. A few moments go by, and you swear you can hear the gears turning in his head.&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
+
+&lt;&lt;NoOverlay&gt;&gt;
+&lt;&lt;AddSkillParagraph &quot;[some metaphor about dust being dust even if it remembers being something else]&quot; &quot;inland empire&quot;&gt;&gt;
+&lt;&lt;SetFlag &quot;realization&quot; &quot;+&quot;&gt;&gt;
+
+&lt;&lt;NoOverlay&gt;&gt;
+&lt;&lt;AddParagraph &quot;“Who you are in the past doesn’t matter as much as who you are in the present. If something about your identity seems true for you now, there’s no reason to treat it as false.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
+
+&lt;&lt;if $flagsMap[&quot;sit&quot;] is true&gt;&gt;
+    &lt;&lt;AddOverlay &quot;mot&quot;&gt;&gt;
+    &lt;&lt;AddSkillParagraph &quot;The armrest on the bench creaks as Kim puts his weight on it, leaning closer to you.&quot; &quot;perception (hearing)&quot; &quot;medium&quot; &quot;success&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;&lt;AddOverlay &quot;mot&quot;&gt;&gt;
+    &lt;&lt;AddSkillParagraph &quot;The bench creaks as Kim leans forward, as if he&#39;s about to stand up next to you.&quot; &quot;perception (hearing)&quot; &quot;medium&quot; &quot;success&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;NoOverlay&gt;&gt;
+&lt;&lt;AddParagraph &quot;“So does this *nothing* feeling - gender, rather. Do you relate to it? Does it seem true for you?”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
+
+&lt;&lt;AddOverlay &quot;mot&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;There’s an energy in his pose, an anticipation in his eyes.&quot; &quot;composure&quot; &quot;easy&quot; &quot;success&quot;&gt;&gt;
+
+&lt;&lt;AddOverlay &quot;psy&quot;&gt;&gt;
+&lt;&lt;AddSKillParagraph &quot;He’s acting like he’s on the brink of getting a suspect to confess.&quot; &quot;Esprit de corps&quot; &quot;formidable&quot;&gt;&gt;
+
+&lt;&lt;AddSkillParagraph &quot;Wait a minute, since when did you become a *suspect*? You’re the one who should be asking the questions around here!&quot; &quot;authority&quot;&gt;&gt;
+
+&lt;&lt;AddOption &quot;“Uhhh…” [Shrug noncommittally]&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;“*I’m* the one who should be asking the questions around here, not you.”&quot; &quot;authority&quot; &quot;medium&quot; &quot;authority&quot; true&gt;&gt;
+
+&lt;&lt;if $flagsMap[&quot;realization&quot;] &gt;= 5&gt;&gt;
+    &lt;&lt;AddOption &quot;Realize what you are.&quot; &quot;conceptualization&quot; &quot;heroic&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Junk" tags="nobr" position="600,600">&lt;&lt;SetFlag &quot;junk&quot; true&gt;&gt;
 &lt;&lt;AddSkillParagraph &quot;You know what? I’m going to do you a solid and remove that choice for you.&quot; &quot;Volition&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;But I&#39;m really curious!&quot; &quot;Junk2&quot; &quot;junkcurious&quot; true&gt;&gt;
-&lt;&lt;AddOption &quot;...Yeah, fair.&quot; &quot;Junk2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Junk2" tags="nobr" position="600,600">&lt;&lt;if $flagsMap[&quot;junkcurious&quot;] is true&gt;&gt;
+&lt;&lt;AddOption &quot;...Yeah, fair.&quot; &quot;Junk2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Junk2" tags="nobr" position="725,600">&lt;&lt;if $flagsMap[&quot;junkcurious&quot;] is true&gt;&gt;
     &lt;&lt;AddSkillParagraph &quot;Alright, it&#39;s your grave.&quot; &quot;Volition&quot;&gt;&gt;
     &lt;&lt;AddParagraph &quot;Feel free to back out now and ask a reasonable question, though.&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;

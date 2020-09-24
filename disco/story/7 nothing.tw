@@ -20,3 +20,4 @@
 
 <<AddOption "Am I really?" "Not that man" "oRly" true>>
 <<AddOption "I don't think I'm that kind of man." "Not that man" "notman" true>>
+<<AddOption "“I love beer and asses too much to be *nothing*, Kim!”" "Real man">

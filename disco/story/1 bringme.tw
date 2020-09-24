@@ -8,7 +8,6 @@
 <<AddSkillParagraph "Kim’s never been one to indulge in leisurely activities like this, so he’s probably invited you out here for a reason. Something important." "Logic">>
 
 <<if $flagsMap["sit"] is true>>
-
     <<NoOverlay>>
     <<AddParagraph "He looks up at you and takes a slow, deep breath." "Kim Kitsuragi">>
 <<else>>

@@ -16,13 +16,18 @@
                         "ask": false,
                         "getsit": false,
                         "notman": false,
+                        "assman": false,
                         "oRly": false,
                         "trust": false,
+                        "notatall": false,
                         "dontgetit": false,
+                        "inquire": false,
                         "questioned": false,
                         "junk": false,
                         "junkcurious": false,
-                        "genitals": false
+                        "genitals": false,
+                        "underground": false,
+                        "authority": false
                     }>>
 
 <<set $motorics to ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)", "PERCEPTION (SMELL)", "PERCEPTION (HEARING)"]>>
