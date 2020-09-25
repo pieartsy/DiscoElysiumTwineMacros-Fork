@@ -1,5 +1,6 @@
 ::New term [nobr]
 <<SkillFailure>>
+<<NoOverlay>>
 <<AddSkillParagraph "Yes, yes, the most perfect term, one that truly encapsulates the *feeling* of the *experience* of what Kim’s described to you! A light bulb turns on in your brain." "conceptualization" "challenging" "failure">>
 
 <<NoOverlay>>
@@ -10,6 +11,7 @@
 
 <<NoOverlay>>
 <<AddParagraph "Kim exhales sharply." "kim kitsuragi">>
+<<SetFlag "kimstate" "+">>
 
 <<AddOverlay "mot">>
 <<if $flagsMap["realman"] is true or $flagsMap["dontgetit"] is true>>

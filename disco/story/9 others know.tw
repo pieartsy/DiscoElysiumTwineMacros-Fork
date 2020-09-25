@@ -1,5 +1,5 @@
 ::Others know [nobr]
-<<AddParagraph "“A few others.” Kim shifts his position on the bench, which creaks threateningly." "Kim Kitsuragi">>
+<<AddParagraph "“A few others.” Kim shifts his position on the bench, which creaks ominously." "Kim Kitsuragi">>
 
 <<if $flagsMap["underground"] is true>>
     <<NoOverlay>>

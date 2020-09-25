@@ -14,4 +14,4 @@
 <<AddParagraph "Kim is still staring at you, waiting for you to answer." "Kim Kitsuragi">>
 
 <<AddOption "“Not at all.”" "Genders" "notatall" true>>
-<<AddOption "“If I didn’t relate before, but I do now, does that still count?”">>
+<<AddOption "“If I didn’t relate before, but I do now, does that still count?”" "Count">>
