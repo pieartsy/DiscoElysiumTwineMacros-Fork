@@ -28,8 +28,8 @@
 <<AddSkillParagraph "Wait a minute, since when did you become a *suspect*? You’re the one who should be asking the questions around here!" "authority">>
 
 <<AddOption "“Uhhh…” [Shrug noncommittally]">>
-<<AddOption "“*I’m* the one who should be asking the questions around here, not you.”" "authority" "medium" "authority" true>>
+<<AddOption "“*I’m* the one who should be asking the questions around here, not you.”" "authority" true>>
 
 <<if $flagsMap["realization"] >= 5>>
-    <<AddOption "Realize what you are." "conceptualization" "heroic">>
+    <<AddOption "Realize what you are." "Realization" "realization" true "conceptualization" "heroic">>
 <</if>>

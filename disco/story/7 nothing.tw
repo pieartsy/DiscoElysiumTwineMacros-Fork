@@ -1,8 +1,12 @@
 ::Nothing [nobr]
-<<AddParagraph "Kim's brow furrows. “That’s one of the options, yes.”" "Kim Kitsuragi">>
+<<AddParagraph "Kim's brow furrows. “That could be one of the options, yes.”" "Kim Kitsuragi">>
 
 <<NoOverlay>>
+<<if hasVisited("Guesses")>>
 <<AddParagraph "His eyes search your face again.">>
+<<else>>
+<<AddParagraph "His eyes search your face.">>
+<</if>>
 
 <<NoOverlay>>
 <<AddSkillParagraph "You’re not sure what he’s seeing there, but you’re reasonably sure that your attempt to conceal it are failing." "composure" "medium" "fail">>
@@ -20,4 +24,4 @@
 
 <<AddOption "Am I really?" "Not that man" "oRly" true>>
 <<AddOption "I don't think I'm that kind of man." "Not that man" "notman" true>>
-<<AddOption "“I love beer and asses too much to be *nothing*, Kim!”" "Real man">
+<<AddOption "“I love beer and asses too much to be *nothing*, Kim!”" "Real man" "realman" true>>

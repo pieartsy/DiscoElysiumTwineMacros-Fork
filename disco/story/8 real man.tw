@@ -1,0 +1,22 @@
+::Real man [nobr]
+<<SetFlag "realization" "-">>
+<<AddParagraph "Kim shakes his head and sighs." "Kim Kitsuragi">>
+
+<<AddOverlay "mot">>
+<<AddSkillParagraph "The way he casts his eyes downward, presses his lips together - he almost seems disappointed." "composure" "challenging" "success">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "Can he not handle the raw masculine energy you exude? Is it simply too overwhelming for Lieutenant Not-Man to be in the presence of such a perfect male specimen?" "physical instrument" "medium" "failure">>
+
+<<NoOverlay>>
+<<AddParagraph "“I feel I must inform you that neither beer nor women’s asses are things only men can enjoy,” he says coolly." "Kim Kitsuragi">>
+
+<<AddOverlay "phys">>
+<<AddSkillParagraph "He’s being ridiculous, Harry! Don’t listen to him, he’s got an *agenda*!" "half light" "medium" "success">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "No no, he seems on the level right now." "drama" "challenging" "success">>
+
+<<AddSkillParagraph "You did meet Ruby, remember? She loved beer and women’s asses." "Logic">>
+
+<<AddSkillParagraph "Whether she had a hairy chest is, uh, unknown." "Perception">>

@@ -1,4 +1,8 @@
 ::Disco [nobr]
-<<AddParagraph "Kim looks down at the planks of the boardwalk. He says nothing." "Kim Kitsuragi">>
+<<SkillFailure>>
+<<SetFlag "kimstate" "-">>
+<<AddParagraph "You wink and finger gun at him. “S'all groovy, Kim! I'm disco too!”" "You">>
+
+<<AddParagraph "Kim does not return your finger guns. Instead, he looks down at the rotting planks of the boardwalk. He says nothing." "Kim Kitsuragi">>
 
 <<AddSkillParagraph "He’s upset. He trusted you with this piece of his identity and you just had to fuck around with it." "Empathy" "easy" "success">>

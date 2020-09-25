@@ -6,6 +6,6 @@
 <<AddSkillParagraph "...familiar." "inland empire">>
 
 <<SetFlag "realization" "+">>
-
-<<AddOption "“No, see, I’m disco too.”" "Disco" "kimstate" "-">>
+<<SetFlag "kimstate" "-">>
+<<AddOption "Pick the moment back up with your trademark disco charm." "Disco" "" "" "savoire faire" "formidable">>
 <<AddOption "“I think I…relate?”" "Relate">>

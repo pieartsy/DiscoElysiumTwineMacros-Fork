@@ -1,0 +1,26 @@
+<<AddParagraph " “In the underground? A few handfuls of us. Occasionally we have small gatherings to discuss these topics.”" "Kim Kitsuragi">>
+
+<<if $flagsMap["underground"] is false>>
+    <<AddOverlay "int">>
+    <<AddSkillParagraph "He’s talking about the homo-sexual underground. Not the actual sewers beneath the city. Just to be clear." "encyclopedia" "trivial" "success">>
+    <<SetFlag "underground" true>>
+
+    <<NoOverlay>>
+    <<AddParagraph "“In the whole world? I’m not sure. It’s not a well-known concept outside of such spaces, so probably not very many.”" "Kim Kitsuragi">>
+<<else>>
+    <<NoOverlay>>
+    <<AddParagraph "“In the whole world? I’m not sure. It’s not a well-known concept outside of such spaces, so probably not very many.”">>
+<</if>>
+
+<<NoOverlay>>
+<<AddParagraph "Though, I have a suspicion that if more people knew about it, a larger number of them would resonate with the idea than one would think.">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "Think of how many people are out there, completely ignorant of what they are or could be! Transcendent from manhood and womanhood entirely. Can you believe it? Just close your eyes and picture it." "conceptualization">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "No color, no light, but a ringing in your ears, like a tuning fork." "inland empire" "challenging" "success">>
+
+<<SetFlag "realization" "+">>
+
+<<AddOption "I'd like to ask some other questions." "Questions list">>

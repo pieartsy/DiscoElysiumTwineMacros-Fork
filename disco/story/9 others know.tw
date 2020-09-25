@@ -1,0 +1,27 @@
+::Others know [nobr]
+<<AddParagraph "“A few others.” Kim shifts his position on the bench, which creaks threateningly." "Kim Kitsuragi">>
+
+<<if $flagsMap["underground"] is true>>
+    <<NoOverlay>>
+    <<AddParagraph "“As I stated, I have discussed it with people from the underground before.”">>
+<</if>>
+
+<<NoOverlay>>
+<<AddParagraph "“No one from the precincts, though. Except for you, now.”">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "The break room of Precinct 57, crowded with cops. Drinking coffee, murmurs making a low buzz. Captain McDoogle strolls in, claps an officer on the back, grins. “Good work on that dispatch, Mathias,” he says warmly. “Couldn’t imagine what these schoolgirls would’ve done without a man like you leading the way.” The commander thumbs in the direction of two female officers." "Esprit de corps" "challenging" "success">>
+
+<<NoOverlay>>
+<<AddParagraph "One of the women’s shoulders bow in, like a shawl, as the rest of the room laughs. The second woman smiles tightly.">>
+
+<<NoOverlay>>
+<<AddParagraph "Officer Mathias chuckles, deep and gruff. “Well, sometimes you gotta have the balls to just shoot the asshole. You know how it is.”">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "Kim’s put faith in the idea that you’ll act differently than they do." "empathy" "easy" "success">>
+
+<<AddSkillParagraph "Don't prove him wrong." "suggestion">>
+
+<<AddOption "“Telling me was pretty brave of you, considering…” [Gesture to yourself]" "Considering">>
+<<AddOption "I'd like to ask some other questions." "Questions list">>
