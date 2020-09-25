@@ -5,7 +5,7 @@
 <<AddSkillParagraph "Gulls squawk and squabble overhead, and the lapping of the surf against the sand below sounds almost anxious. The rotted beams that raise you above the sea creak threateningly as you and the Lieutenant walk to the benches at one end of it." "perception (hearing)">>
 
 <<AddOverlay "int">>
-<<AddSkillParagraph "You survey the benches and the boards under them warily, but from what you can tell, there’s probably a few more days of lounging in them yet." "visual calculus" "success" "challenging">>
+<<AddSkillParagraph "You survey the benches and the boards under them warily, but from what you can tell, there’s probably a few more days of lounging in them yet." "visual calculus" "medium" "success">>
 
 <<NoOverlay>>
 <<AddParagraph "Probably.">>
