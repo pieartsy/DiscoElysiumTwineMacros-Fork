@@ -37,3 +37,4 @@
 
 <<set $greentext to []>>
 <<set $paraAppendMode to false>>
+<</silently>>
