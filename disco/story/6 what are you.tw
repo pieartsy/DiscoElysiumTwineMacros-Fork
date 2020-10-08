@@ -1,7 +1,7 @@
 ::What are you [nobr]
 <<if $flagsMap["getsit"] is true>>
     <<AddParagraph "“Really now. You do?”" "Kim Kitsuragi">>
-<<elseif $flagsMap["trust"] is true>>
+<<if $flagsMap["trust"] is true>>
     <<SetFlag "kimstate" "+">>
     <<AddParagraph "His hands relax, and he smooths out the creases in his trousers. “Really?”" "Kim Kitsuragi">>
 <<else>>

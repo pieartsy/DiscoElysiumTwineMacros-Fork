@@ -1,4 +1,3 @@
-::Out there [nobr]
 <<AddParagraph " “In the underground? A few handfuls of us. Occasionally we have small gatherings to discuss these topics.”" "Kim Kitsuragi">>
 
 <<if $flagsMap["underground"] is false>>

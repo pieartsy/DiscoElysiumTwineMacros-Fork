@@ -1,6 +1,5 @@
 ::Guesses [nobr]
 <<SkillFailure>>
-<<NoOverlay>>
 <<if $flagsMap["tapshead"] is true>>
     <<AddSkillParagraph "You rack this bad boy that can fit so much knowledge in it, but it apparently didn’t fit this tidbit in. You have no idea." "encyclopedia" "formidable" "failure">>
 <<else>>

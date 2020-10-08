@@ -20,15 +20,15 @@
 <<AddParagraph "“So does this *nothing* feeling - gender, rather. Do you relate to it? Does it seem true for you?”" "Kim Kitsuragi">>
 
 <<AddOverlay "mot">>
-<<AddSkillParagraph "There’s an energy in his pose, an anticipation in his eyes." "composure" "easy" "success">>
+<<AddParagraph "There’s an energy in his pose, an anticipation in his eyes." "composure" "easy" "success">>
 
 <<AddOverlay "psy">>
-<<AddSkillParagraph "He’s acting like he’s on the brink of getting a suspect to confess." "Esprit de corps" "formidable" "success">>
+<<AddSKillParagraph "He’s acting like he’s on the brink of getting a suspect to confess." "Esprit de corps" "formidable">>
 
 <<AddSkillParagraph "Wait a minute, since when did you become a *suspect*? You’re the one who should be asking the questions around here!" "authority">>
 
 <<AddOption "“Uhhh…” [Shrug noncommittally]">>
-<<AddOption "“*I’m* the one who should be asking the questions around here, not you.”" "Questions" "authority" true>>
+<<AddOption "“*I’m* the one who should be asking the questions around here, not you.”" "authority" true>>
 
 <<if $flagsMap["realization"] >= 5>>
     <<AddOption "Realize what you are." "Realization" "realization" true "conceptualization" "heroic">>
