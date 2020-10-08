@@ -1,0 +1,25 @@
+::New term [nobr]
+<<SkillFailure>>
+<<AddSkillParagraph "Yes, yes, the most perfect term, one that truly encapsulates the *feeling* of the *experience* of what Kim’s described to you! A light bulb turns on in your brain." "conceptualization" "challenging" "failure">>
+
+<<NoOverlay>>
+<<AddParagraph "You smirk and hold up your index finger, you know, the way geniuses do, and what tumbles out of your mouth is, “How about ‘Un-guy’?”" "you">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "The light bulb turns off." "conceptualization">>
+
+<<NoOverlay>>
+<<AddParagraph "Kim exhales sharply." "kim kitsuragi">>
+
+<<AddOverlay "mot">>
+<<if $flagsMap["realman"] is true or $flagsMap["dontgetit"] is true>>
+    <<AddSkillParagraph "Not a sigh of frustration for once, but his version of a laugh." "composure" "medium" "success">>
+<<else>>
+    <<AddSkillParagraph "Not a sigh of frustration, but his version of a laugh." "composure" "medium" "success">>
+<</if>>
+
+<<NoOverlay>>
+<<AddParagraph "“That makes it sound as if I’m some variety of mushroom.”" "Kim kitsuragi">>
+
+<<AddOverlay "int">>
+<<AddSkillParagraph "Mushrooms are classified under the taxonomic kingdom known as “fungi”." "encyclopedia" "easy" "success">>

@@ -1,0 +1,26 @@
+::Guesses [nobr]
+<<SkillFailure>>
+<<if $flagsMap["tapshead"] is true>>
+    <<AddSkillParagraph "You rack this bad boy that can fit so much knowledge in it, but it apparently didn’t fit this tidbit in. You have no idea." "encyclopedia" "formidable" "failure">>
+<<else>>
+    <<AddSkillParagraph "You rack your brain’s dictionary to try and figure it out, but you have no idea." "encyclopedia" "formidable" "failure">>
+<</if>>
+
+<<NoOverlay>>
+<<AddSkillParagraph "But you can guess, can’t you? Non-binary: “not binary”. What do those words evoke in you? What emotion do they stir inside you?" "Conceptualization">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "Colors, swirling inside your gut. Red and blue, mixing to purple, mixing to yellow, mixing to black, to nothing at all." "inland empire" "legendary" "success">>
+
+<<SetFlag "realization" "+">>
+
+<<AddParagraph "Kim seems to be analyzing your expression, his eyes flicking across your facial features." "Kim Kitsuragi">>
+
+<<AddParagraph "He’s frowning.">>
+
+<<AddSkillParagraph "Say something, quick!" "reaction speed">>
+
+<<AddOption "“You’re the secret fourth tape computer?”" "Explanation" "computer" true>>
+<<AddOption "“You're a moralist?”" "Explanation" "moralist" true>>
+<<AddOption "“You hate bisexual people?”" "Explanation" "bisexual" true>>
+<<AddOption "“What does 'nonbinary' mean?”" "Explanation" "ask" true>>

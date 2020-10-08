@@ -1,0 +1,32 @@
+::Man? [nobr]
+<<AddParagraph "“What you see or hear can only tell you so much.” Kim looks back out at the sea. “And sometimes the information given is completely inaccurate.”" "Kim Kitsuragi">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "Inaccurate? How dare! If you can't rely on your senses, what *can* you rely on?" "perception">>
+
+<<AddOverlay "mot">>
+<<AddSkillParagraph "His hands tense on the legs of his trousers, causing the fabric to fold slightly." "composure" "medium" "success">>
+
+<<NoOverlay>>
+<<AddParagraph "“Sometimes it’s best to trust that what other people say they’re experiencing is correct, at least to them.” He pauses." "Kim Kitsuragi">>
+
+<<NoOverlay>>
+<<AddParagraph "That's what I did with you, after all.">>
+
+<<NoOverlay>>
+<<AddParagraph "What is he going on about?" "rhetoric" "easy" "failure">>
+
+<<AddOverlay "int">>
+<<AddSkillParagraph "He’s talking about your memory and how you up and lost it, dumbass!" "logic" "medium" "success">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "Yes. He believed your words implicitly, even before it was undeniable that you actually had forgotten everything. Indeed, at first it was because you outranked him as an officer in the RCM, and trusting other officers is what he’s been trained to do. But shouldn’t that understanding extend from you to him as well?" "esprit de corps">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "And his trust in you has extended far beyond that at this point. It’s why he’s telling you this now." "empathy">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "So try not to insult him anymore, ok?" "suggestion" "medium" "success">>
+
+<<AddOption "“You’re right. I trust you too.”" "What are you" "trust" true>>
+<<AddOption "“I still don’t get it.”" "Questions" "dontgetit" true>>

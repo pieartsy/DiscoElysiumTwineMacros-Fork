@@ -1,0 +1,35 @@
+::Count [nobr]
+<<AddParagraph "Both of Kim’s eyebrows lift slightly. A few moments go by, and you swear you can hear the gears turning in his head." "Kim Kitsuragi">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "[some metaphor about dust being dust even if it remembers being something else]" "inland empire">>
+<<SetFlag "realization" "+">>
+
+<<NoOverlay>>
+<<AddParagraph "“Who you are in the past doesn’t matter as much as who you are in the present. If something about your identity seems true for you now, there’s no reason to treat it as false.”" "Kim Kitsuragi">>
+
+<<if $flagsMap["sit"] is true>>
+    <<AddOverlay "mot">>
+    <<AddSkillParagraph "The armrest on the bench creaks as Kim puts his weight on it, leaning closer to you." "perception (hearing)" "medium" "success">>
+<<else>>
+    <<AddOverlay "mot">>
+    <<AddSkillParagraph "The bench creaks as Kim leans forward, as if he's about to stand up next to you." "perception (hearing)" "medium" "success">>
+<</if>>
+
+<<NoOverlay>>
+<<AddParagraph "“So does this *nothing* feeling - gender, rather. Do you relate to it? Does it seem true for you?”" "Kim Kitsuragi">>
+
+<<AddOverlay "mot">>
+<<AddParagraph "There’s an energy in his pose, an anticipation in his eyes." "composure" "easy" "success">>
+
+<<AddOverlay "psy">>
+<<AddSKillParagraph "He’s acting like he’s on the brink of getting a suspect to confess." "Esprit de corps" "formidable">>
+
+<<AddSkillParagraph "Wait a minute, since when did you become a *suspect*? You’re the one who should be asking the questions around here!" "authority">>
+
+<<AddOption "“Uhhh…” [Shrug noncommittally]">>
+<<AddOption "“*I’m* the one who should be asking the questions around here, not you.”" "authority" true>>
+
+<<if $flagsMap["realization"] >= 5>>
+    <<AddOption "Realize what you are." "Realization" "realization" true "conceptualization" "heroic">>
+<</if>>

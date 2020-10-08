@@ -1,0 +1,29 @@
+::What are you [nobr]
+<<if $flagsMap["getsit"] is true>>
+    <<AddParagraph "“Really now. You do?”" "Kim Kitsuragi">>
+<<if $flagsMap["trust"] is true>>
+    <<SetFlag "kimstate" "+">>
+    <<AddParagraph "His hands relax, and he smooths out the creases in his trousers. “Really?”" "Kim Kitsuragi">>
+<<else>>
+    <<AddParagraph "“As I said, ‘something else’ is the best way to describe it. I’m neither entirely a man nor entirely a woman, but that leaves many other options.”" "Kim Kitsuragi">>
+
+    <<NoOverlay>>
+    <<AddSkillParagraph "His words are precise, and spoken with little hesitation at this point. He’s practiced these answers." "rhetoric">>
+
+    <<AddOverlay "psy">>
+    <<AddSkillParagraph "He’s practiced specifically in order to tell you." "empathy" "medium" "success">>
+<</if>>
+
+<<AddOverlay "int">>
+<<AddSkillParagraph "Yes, there are so many other ways to be, to *exist* outside of solely manhood and womanhood! You could be both at the same time! You could flow between them, or stay perfectly in the middle! You could be an entirely new piece of existence, outside and beyond them!" "conceptualization" "challenging" "success">>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "Or you could be a vanished color. An alcohol stain. Nothing at all." "inland empire" "medium" "success">>
+
+<<SetFlag "realization" "+">>
+
+<<AddOption "“Is it like being both a man and a woman at the same time?”" "Genders">>
+<<AddOption "“Is it like flowing between manhood and womanhood?”" "Genders">>
+<<AddOption "“Is it like being perfectly in-between manhood and womanhood?”" "Genders">>
+<<AddOption "“Is it like being entirely outside of manhood or womanhood?”" "Genders">>
+<<AddOption "“Is it like being nothing at all?”" "Nothing">>

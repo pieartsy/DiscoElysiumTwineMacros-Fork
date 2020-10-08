@@ -1,0 +1,17 @@
+::Not that man [nobr]
+<<if $flagsMap["oRly"] is true>>
+    <<AddSkillParagraph "Hell yeah you are! You’re not only *a* man. You’re *the* man. You’re Harry Du Bois! You’re Tequila Sunset!" "electrochemistry">>
+<<elseif $flagsMap["notman"] is true>>
+    <<AddSkillParagraph "Are you kidding? Who’s the *man* who called himself Tequila Sunset again?" "electrochemistry">>
+<</if>>
+
+<<AddSkillParagraph "With the main difference being that you happened to lose your memory between ‘Tequila Sunset’ time and now." "Logic">>
+
+<<AddParagraph "Not to mention all the other existential and occasionally life-threatening experiences you had in the middle." "pain threshold">>
+
+<<AddSkillParagraph "Yeah, but come on, that doesn't matter, does it?" "electrochemistry">>
+
+<<AddParagraph "Kim is still staring at you, waiting for you to answer." "Kim Kitsuragi">>
+
+<<AddOption "“Not at all.”" "Genders" "notatall" true>>
+<<AddOption "“If I didn’t relate before, but I do now, does that still count?”">>

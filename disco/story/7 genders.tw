@@ -1,0 +1,21 @@
+::Genders [nobr]
+<<if $flagsMap["ask"] is true>>
+    <<SetFlag "kimstate" "+">>
+    <<AddParagraph "Kim nods. “Consider me impressed again. Yes, that’s correct, but only one of the options possible.”">>
+<<elseif $flagsMap["notatall"] is true>>
+    <<SetFlag "realization" "-">>
+	<<AddParagraph "Kim’s examination of your face continues for a moment longer. Finally he pulls his gaze away and shrugs. “Alright. Yes, that’s correct, but only one of the options possible.”" "Kim Kitsuragi">>
+<<else>>
+    <<SetFlag "kimstate" "+">>
+    <<AddParagraph "Kim nods. “Consider me impressed. Yes, that’s correct, but only one of the options possible.”">>
+<</if>>
+
+<<AddParagraph "“As for myself, I don’t find what option I take, or whatever category I happen to be, as all that important. Though, that is the point on some level.”">>
+
+<<AddParagraph "He chuckles quietly. “I’ll admit, detective, I didn’t expect you to take this as well as you have.”" "Kim Kitsuragi">>
+
+<<AddSkillParagraph "Like he said before, you don’t strike him as that knowledgeable about this." "rhetoric">>
+
+<<AddSkillParagraph "Well consider yourself knowledgeable about it now! Definition stored and saved. Though a bit more information couldn’t hurt…" "encyclopedia">>
+
+<<AddOption "“I’d like to ask a few more questions.”" "Questions" "inquire" true>>
