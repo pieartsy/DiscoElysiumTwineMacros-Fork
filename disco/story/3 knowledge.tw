@@ -1,0 +1,5 @@
+::Knowledge [nobr]
+<<AddParagraph "He looks doubtful. â€œIâ€™ll take your word for it.â€" "Kim Kitsuragi">>
+
+<<AddOption "â€œCome on, Kim, you can tell me.â€" "Stalling" "tellme" true>>
+<<AddOption "â€œYouâ€™re stalling.â€" "Stalling" "stalling" true>>

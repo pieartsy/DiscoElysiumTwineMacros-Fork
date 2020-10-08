@@ -1,0 +1,10 @@
+::Interesting [nobr]
+<<SetFlag "kimstate" "+">>
+<<if $flagsMap["ask"] is true>>
+    <<AddParagraph "Kim smiles, more tension draining out of his body. â€œIâ€™m glad you find it interesting. I was concerned you might consider it, well. Strange.â€" "Kim Kitsuragi">>
+<<else>>
+    <<AddParagraph "Kim smiles, and tension seems to drain out of his body. â€œIâ€™m glad you find it interesting. I was concerned you might consider it, well. Strange.â€" "Kim Kitsuragi">>
+<</if>>
+
+<<AddOption "â€œNo, I think I get it.â€" "What are you" "getsit" true>>
+<<AddOption "â€œOh itâ€™s strange as hell. Thatâ€™s what makes it disco.â€" "Strange" "kimstate" "-">>

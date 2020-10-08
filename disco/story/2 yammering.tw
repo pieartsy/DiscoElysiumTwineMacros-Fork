@@ -1,0 +1,25 @@
+::Yammering [nobr]
+<<if $flagsMap["love"] is true>>
+    <<AddParagraph "The lieutenant immediately turns his face away, toward the ocean. â€œNo, thatâ€™s notâ€¦Khm.â€" "Kim Kitsuragi">>
+    
+    <<NoOverlay>>
+    <<AddParagraph "â€œThat's not what I was going to say today, no.â€">>
+
+    <<AddOverlay "mot">>
+    <<AddSkillParagraph "Today?" "REACTION SPEED" "challenging" "success">>
+<<elseif $flagsMap["gay"] is true>>
+    <<AddParagraph "The lieutenant smirks. â€œIf I recall correctly, Iâ€™ve told you that already, detective.â€" "Kim Kitsuragi">>
+    <<AddParagraph "â€œThat's not what I was going to say, no.â€">>
+<<else>>
+<</if>>
+
+<<AddParagraph "â€œFor the record, itâ€™s not critical to tell you. It has nothing to do with police work - itâ€™s a moreâ€¦personal matter.â€" "Kim Kitsuragi">>
+
+<<AddSkillParagraph "Your partner hardly ever talks about himself. Could this be the forbidden Secret that heâ€™s refused to tell you thus far?" "rhetoric">>
+
+<<AddParagraph "â€œAs well, Iâ€™m not sure if youâ€™ll have context for it. Youâ€™ve never struck me as - â€" "Kim Kitsuragi">>
+
+<<AddParagraph "He quickly scans you. â€œ - knowledgeable about this sort of thing.â€">>
+
+<<AddOption "â€œWhat do you mean? This bad boy can fit so much knowledge in it.â€ [Tap your head]" "Knowledge" "tapshead" true>>
+<<AddOption "â€œYouâ€™re stalling.â€" "Stalling" "stalling" true>>

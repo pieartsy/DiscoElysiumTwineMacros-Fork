@@ -1,0 +1,25 @@
+::Feels like [nobr]
+<<AddParagraph "â€œThe experience is unique for different people.â€" "Kim Kitsuragi">>
+
+<<if hasVisited("What are you")>>
+    <<AddParagraph "â€œYouâ€™ve already identified some options.â€">>
+<</if>>
+
+<<AddSkillParagraph "Yes, but what is the experience for *him*? What is the unique qualia of *Kimâ€™s* nonbinary feelings?" "conceptualization">>
+
+<<AddParagraph "â€œFor me, itâ€™s a vague detachment, or disconnect. When people refer to me as a man, it doesnâ€™t â€˜fitâ€™ right for what I understand myself to be. As if Iâ€™m being forced into a coat thatâ€™s too small.â€ He pulls his bomber jacket tighter to him as a chill breeze drifts off the sea." "Kim Kitsuragi">>
+
+<<if hasVisited("Man?")>>
+    <<AddSkillParagraph "Whoops. Really put your foot in your mouth back there, huh?" "suggestion">>
+
+    <<AddParagraph "â€œThereâ€™s not any specific names for each experience under the nonbinary â€˜umbrellaâ€™ - not yet, at least.â€" "Kim Kitsuragi">>
+<<else>>
+    <<AddParagraph "â€œThereâ€™s not any specific names for each experience under the nonbinary â€˜umbrellaâ€™ - not yet, at least.â€">>
+<</if>>
+
+<<AddParagraph "â€œItâ€™s a very new concept, at least in Revachol. There might be developments in understanding on other islands and isolas, but I am not aware of them. So thatâ€™s the best that I can describe it for you, unfortunately.â€">>
+
+<<AddSkillParagraph "What a shame. Labeling and categorizing things is *very* important for accuracy." "encyclopedia">>
+
+<<AddOption "Try and come up with a label for Kimâ€™s gender." "New term" "" "" "conceptualization" "challenging">>
+<<AddOption "I'd like to ask some other questions." "Questions list">>

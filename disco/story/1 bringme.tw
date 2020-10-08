@@ -1,0 +1,32 @@
+::Bring me here [nobr]
+<<if $flagsMap["sit"] is true>>
+    <<SetFlag "kimstate" "+">>
+    <<NoOverlay>>
+    <<AddParagraph "He allows himself a slight smile as you plop down beside him. â€œIâ€™m sure youâ€™re wondering why I invited you out here.â€" "Kim Kitsuragi">>
+<</if>>
+
+<<AddSkillParagraph "Kimâ€™s never been one to indulge in leisurely activities like this, so heâ€™s probably invited you out here for a reason. Something important." "Logic">>
+
+<<if $flagsMap["sit"] is true>>
+    <<NoOverlay>>
+    <<AddParagraph "He looks up at you and takes a slow, deep breath." "Kim Kitsuragi">>
+<<else>>
+    <<NoOverlay>>
+    <<AddParagraph "He takes a slow, deep breath." "Kim Kitsuragi">>
+<</if>>
+
+<<AddOverlay "psy">>
+<<AddSkillParagraph "Heâ€™s nervous. Whatever heâ€™s going to do now is not something heâ€™s really done before." "empathy" "medium" "success">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "Aw yeah, heâ€™s gonna kiss you isnâ€™t he? Lean in, lean in!" "electrochemistry" "medium" "failure">>
+
+<<NoOverlay>>
+<<AddSkillParagraph "No, heâ€™s going to say something. Shut up and pay attention." "volition">>
+
+<<NoOverlay>>
+<<AddParagraph "â€œThereâ€™s something Iâ€™ve wanted to tell you for a while, now that weâ€™ve gotten to know each other better.â€" "Kim Kitsuragi">>
+
+<<AddOption "â€œYouâ€™re in love with me?â€" "Yammering" "love" true>>
+<<AddOption "â€œYouâ€™re part of the homo-sexual underground?â€" "Yammering" "gay" true>>
+<<AddOption "Shut up and pay attention." "Yammering">>

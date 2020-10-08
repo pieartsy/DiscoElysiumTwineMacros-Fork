@@ -1,0 +1,19 @@
+::Questions list [nobr]
+<<AddParagraph "Kim waits patiently for you to form a sentence. His expression is constructed to be pleasant in a vague way, as if he's being interviewed." "Kim Kitsuragi">>
+
+<<AddOption "â€œHow did you figure this out?â€" "Figure out">>
+<<AddOption "â€œWhat does it feel like?â€" "Feels like">>
+<<AddOption "â€œDo other people know this about you?â€" "Others know">>
+<<AddOption "â€œHow many nonbinary people are out there?â€" "Out there">>
+
+<<if $flagsMap["junk"] is false>>
+    <<AddOption "â€œWhat junk are you packing in those pants of yours?â€" "Junk">>
+<</if>>
+
+<<if $flagsMap["realization"] >= 5>>
+    <<AddOption "Realize what you are." "Realization" "realization" true "conceptualization" "heroic">>
+<</if>>
+
+<<if $flagsMap["questioned"] is true>>
+    <<AddOption "I think Iâ€™m done with questioning.">>
+<</if>>

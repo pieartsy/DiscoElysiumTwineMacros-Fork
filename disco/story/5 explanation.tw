@@ -1,0 +1,47 @@
+::Explanation [nobr]
+<<if $flagsMap["computer"] is true>>
+    <<AddParagraph "â€œâ€¦I assure you Iâ€™m a human, officer.â€" "Kim Kitsuragi">>
+
+    <<AddSkillParagraph "A likely story! Thatâ€™s just what a secret tape computer would say!" "drama" "medium" "failure">>
+
+    <<AddParagraph "His voice remains measured as he adds, â€œYouâ€™ve seen me bleeding before. Profusely.â€" "Kim Kitsuragi">>
+
+    <<AddSkillParagraph "â€¦Right. The tribunal proved beyond a shadow of a doubt that Kim is just as mortal as you are." "logic">>
+
+    <<AddSkillParagraph "Unless he was killed and replaced by a lookalike thatâ€™s a tape computer -" "half light">>
+
+    <<AddSkillParagraph "No." "volition">>
+
+    <<AddParagraph "â€œIn any case, no, thatâ€™s not what nonbinary means.â€" "Kim Kitsuragi">>
+
+<<elseif $flagsMap["moralist"] is true>>
+    <<AddParagraph "â€œI will remind you that Iâ€™m an officer because of the Moralintern, detective.â€" "Kim Kitsuragi">>
+
+    <<AddSkillParagraph "That proves nothing. Youâ€™re an officer because of the Moralintern, and just look at you!" "rhetoric">>
+
+    <<AddParagraph "â€œIn any case, no, 'moralist' is not what nonbinary means.â€" "Kim Kitsuragi">>
+
+<<elseif $flagsMap["bisexual"] is true>>
+    <<AddParagraph "Kimâ€™s eyebrows raise, causing his forehead to crease. â€œWhy would I hate you, Harry?â€" "Kim Kitsuragi">>
+
+    <<AddOverlay "mot">>
+    <<AddSkillParagraph "Wait, what?" "reaction speed" "easy" "success">>
+
+    <<AddParagraph "â€œIn any case, no, 'anti-bisexual' not what nonbinary means.â€" "Kim Kitsuragi">>
+
+<<elseif $flagsMap["ask"] is true>>
+    <<SetFlag "kimstate" "+">>
+    <<AddParagraph "His shoulders relax. â€œIâ€™m impressed that youâ€™re admitting you didnâ€™t know.â€" "Kim Kitsuragi">>
+<<else>>
+    <<AddParagraph "Kim sighs. â€œYou have no idea what that means, do you?â€" "Kim Kitsuragi">>
+<</if>>
+
+<<AddParagraph "â€œTo be nonbinary is to not feel restricted by the binaries of â€˜manâ€™ and â€˜womanâ€™. Nonbinary people are not either gender. We are something else.â€">>
+
+<<if $flagsMap["computer"] is true>>
+    <<AddParagraph "As you open your mouth to speak, he adds, â€œWe are still definitely human, though.â€">>
+<</if>>
+
+<<AddOption "â€œBut you look and sound like a man.â€" "Man?" "kimstate" "-">>
+<<AddOption "â€œSo what are you, then?â€" "What are you">>
+<<AddOption "â€œThat's really interesting, Kim!â€" "Interesting">>

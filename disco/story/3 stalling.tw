@@ -1,0 +1,12 @@
+::Stalling [nobr]
+<<if $flagsMap["stalling"] is true>>
+    <<AddParagraph "Kimâ€™s eyes widen, then he shakes his head as if to clear it. â€œYouâ€™re right. Apologies, detective. Iâ€™ll just say it then.â€ He clears his throat, and hesitates for just a moment more." "Kim Kitsuragi">>
+<<elseif $flagsMap["tellme"] is true>>
+    <<SetFlag "kimstate" "+">>
+    <<AddParagraph "Kimâ€™s eyes soften, then he shakes his head as if to clear it. â€œYes, of course detective. Iâ€™ll just say it then.â€ He clears his throat, and hesitates for just a moment more." "Kim Kitsuragi">>
+<</if>>
+
+<<AddParagraph "â€œI am nonbinary.â€">>
+
+<<AddOption "Nod sagely." "Explanation">>
+<<AddOption "Wait, what's nonbinary mean?" "Guesses" "" "" "encyclopedia

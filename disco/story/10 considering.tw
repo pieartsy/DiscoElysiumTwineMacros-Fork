@@ -1,0 +1,5 @@
+::Considering [nobr]
+<<AddParagraph "Kim tilts his head slightly and looks up and down your figure as you gesture. “Consideringâ€¦?”" "Kim kitsuragi">>
+
+<<AddOption "“You know, the fact that I'm another cop.”" "Mess" "cop" true>>
+<<AddOption "“You know, the fact that Iâ€™m a mess.”" "Mess" "mess" true>>
