@@ -2,8 +2,8 @@ disco/story/8 disco.tw
 ::Disco [nobr]
 <<SkillFailure>>
 <<SetFlag "kimstate" "-">>
-<<AddParagraph "You wink and finger gun at him. â€œS'all groovy, Kim! I'm disco too!â€" "You">>
+<<AddParagraph "You wink and finger gun at him. “S'all groovy, Kim! I'm disco too!”" "You">>
 
 <<AddParagraph "Kim does not return your finger guns. Instead, he looks down at the rotting planks of the boardwalk. He says nothing." "Kim Kitsuragi">>
 
-<<AddSkillParagraph "Heâ€™s upset. He trusted you with this piece of his identity and you just had to fuck around with it." "Empathy" "easy" "success">>
+<<AddSkillParagraph "He’s upset. He trusted you with this piece of his identity and you just had to fuck around with it." "Empathy" "easy" "success">>

@@ -1,11 +1,11 @@
 ::Strange [nobr]
-<<AddParagraph "The smile abruptly flatlines. â€œIâ€™m not sure I should take that as a compliment,â€ Kim says carefully." "Kim Kitsuragi">>
+<<AddParagraph "The smile abruptly flatlines. “I’m not sure I should take that as a compliment,” Kim says carefully." "Kim Kitsuragi">>
 
-<<AddSkillParagraph "Dammit, pick it back up, pick it back up! Itâ€™s not just that itâ€™s disco, itâ€™s something else, something..." "savoir faire" "challenging" "failure">>
+<<AddSkillParagraph "Dammit, pick it back up, pick it back up! It’s not just that it’s disco, it’s something else, something..." "savoir faire" "challenging" "failure">>
 
 <<AddSkillParagraph "...familiar." "inland empire">>
 
 <<SetFlag "realization" "+">>
 <<SetFlag "kimstate" "-">>
 <<AddOption "Pick the moment back up with your trademark disco charm." "Disco" "" "" "savoire faire" "formidable">>
-<<AddOption "â€œI think Iâ€¦relate?â€" "Relate">>
+<<AddOption "“I think Iâ€¦relate?”" "Relate">>

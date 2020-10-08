@@ -1,5 +1,5 @@
 ::Nothing [nobr]
-<<AddParagraph "Kim's brow furrows. â€œThat could be one of the options, yes.â€" "Kim Kitsuragi">>
+<<AddParagraph "Kim's brow furrows. “That could be one of the options, yes.”" "Kim Kitsuragi">>
 
 <<NoOverlay>>
 <<if hasVisited("Guesses")>>
@@ -9,19 +9,19 @@
 <</if>>
 
 <<NoOverlay>>
-<<AddSkillParagraph "Youâ€™re not sure what heâ€™s seeing there, but youâ€™re reasonably sure that your attempt to conceal it are failing." "composure" "medium" "fail">>
+<<AddSkillParagraph "You’re not sure what he’s seeing there, but you’re reasonably sure that your attempt to conceal it are failing." "composure" "medium" "fail">>
 
 <<NoOverlay>>
-<<AddParagraph "â€œDo you relate to that feeling, detective?â€" "Kim Kitsuragi">>
+<<AddParagraph "“Do you relate to that feeling, detective?”" "Kim Kitsuragi">>
 
 <<NoOverlay>>
-<<AddSkillParagraph "Pale aged vodka left to evaporate. Thatâ€™s what you are, Harry. Nothing, nothing." "inland empire">>
+<<AddSkillParagraph "Pale aged vodka left to evaporate. That’s what you are, Harry. Nothing, nothing." "inland empire">>
 
 <<SetFlag "realization" "+">>
 
 <<AddOverlay "fys">>
-<<AddSkillParagraph "Donâ€™t listen to that weirdo, Harry! Youâ€™re a real, hot-blooded, hairy-chested, virile manâ€™s man. A slaps-womenâ€™s-asses, drinks-swigs-of-beer, belches-loudly-and-doesnâ€™t-give-a-damn kind of man." "electrochemistry" "medium" "success">>
+<<AddSkillParagraph "Don’t listen to that weirdo, Harry! You’re a real, hot-blooded, hairy-chested, virile man’s man. A slaps-women’s-asses, drinks-swigs-of-beer, belches-loudly-and-doesn’t-give-a-damn kind of man." "electrochemistry" "medium" "success">>
 
 <<AddOption "Am I really?" "Not that man" "oRly" true>>
 <<AddOption "I don't think I'm that kind of man." "Not that man" "notman" true>>
-<<AddOption "â€œI love beer and asses too much to be *nothing*, Kim!â€" "Real man" "realman" true>>
+<<AddOption "“I love beer and asses too much to be *nothing*, Kim!”" "Real man" "realman" true>>

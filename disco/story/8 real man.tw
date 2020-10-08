@@ -10,14 +10,14 @@ disco/story/8 real man.tw
 <<AddSkillParagraph "Can he not handle the raw masculine energy you exude? Is it simply too overwhelming for Lieutenant Not-Man to be in the presence of such a perfect male specimen?" "physical instrument" "medium" "failure">>
 
 <<NoOverlay>>
-<<AddParagraph "â€œI feel I must inform you that neither beer nor womenâ€™s asses are things only men can enjoy,â€ he says coolly." "Kim Kitsuragi">>
+<<AddParagraph "“I feel I must inform you that neither beer nor women’s asses are things only men can enjoy,” he says coolly." "Kim Kitsuragi">>
 
 <<AddOverlay "phys">>
-<<AddSkillParagraph "Heâ€™s being ridiculous, Harry! Donâ€™t listen to him, heâ€™s got an *agenda*!" "half light" "medium" "success">>
+<<AddSkillParagraph "He’s being ridiculous, Harry! Don’t listen to him, he’s got an *agenda*!" "half light" "medium" "success">>
 
 <<AddOverlay "psy">>
 <<AddSkillParagraph "No no, he seems on the level right now." "drama" "challenging" "success">>
 
-<<AddSkillParagraph "You did meet Ruby, remember? She loved beer and womenâ€™s asses." "Logic">>
+<<AddSkillParagraph "You did meet Ruby, remember? She loved beer and women’s asses." "Logic">>
 
 <<AddSkillParagraph "Whether she had a hairy chest is, uh, unknown." "Perception">>

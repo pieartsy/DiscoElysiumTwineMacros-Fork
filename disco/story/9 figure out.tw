@@ -1,8 +1,8 @@
 ::Figure out [nobr]
-<<AddParagraph "â€œI have some connections in the underground who relate differently to manhood and womanhood, in the way I explained. As I talked further with them, I realized that I felt similarly.â€" "Kim kitsuragi">>
+<<AddParagraph "“I have some connections in the underground who relate differently to manhood and womanhood, in the way I explained. As I talked further with them, I realized that I felt similarly.”" "Kim kitsuragi">>
 
 <<if $flagsMap["underground"] is false>>
     <<AddOverlay "int">>
-    <<AddSkillParagraph "Heâ€™s talking about the homo-sexual underground. Not the actual sewers beneath the city. Just to be clear." "encyclopedia" "trivial" "success">>
+    <<AddSkillParagraph "He’s talking about the homo-sexual underground. Not the actual sewers beneath the city. Just to be clear." "encyclopedia" "trivial" "success">>
     <<SetFlag "underground" true>>
 <</if>>

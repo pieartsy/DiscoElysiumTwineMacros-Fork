@@ -5,13 +5,13 @@
 <<AddSkillParagraph "Gulls squawk and squabble overhead, and the lapping of the surf against the sand below sounds almost anxious. The rotted beams that raise you above the sea creak threateningly as you and the Lieutenant walk to the benches at one end of it." "perception (hearing)">>
 
 <<AddOverlay "int">>
-<<AddSkillParagraph "You survey the benches and the boards under them warily, but from what you can tell, thereâ€™s probably a few more days of lounging in them yet." "visual calculus" "medium" "success">>
+<<AddSkillParagraph "You survey the benches and the boards under them warily, but from what you can tell, there’s probably a few more days of lounging in them yet." "visual calculus" "medium" "success">>
 
 <<NoOverlay>>
 <<AddParagraph "Probably.">>
 
 <<NoOverlay>>
-<<AddParagraph "Kim seems to think itâ€™s safe too, and sits down without much hesitation. He doesnâ€™t quite gesture at you to join him, only quirks his eyebrow at you as he situates himself." "kim kitsuragi">>
+<<AddParagraph "Kim seems to think it’s safe too, and sits down without much hesitation. He doesn’t quite gesture at you to join him, only quirks his eyebrow at you as he situates himself." "kim kitsuragi">>
 
 <<AddOption "Sit down next to him." "Bring me here" "sit" true>>
-<<AddOption "â€œWhat did you bring me out here for, again?â€" "Bring me here">>
+<<AddOption "“What did you bring me out here for, again?”" "Bring me here">>

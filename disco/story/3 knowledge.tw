@@ -1,5 +1,5 @@
 ::Knowledge [nobr]
-<<AddParagraph "He looks doubtful. â€œIâ€™ll take your word for it.â€" "Kim Kitsuragi">>
+<<AddParagraph "He looks doubtful. “I’ll take your word for it.”" "Kim Kitsuragi">>
 
-<<AddOption "â€œCome on, Kim, you can tell me.â€" "Stalling" "tellme" true>>
-<<AddOption "â€œYouâ€™re stalling.â€" "Stalling" "stalling" true>>
+<<AddOption "“Come on, Kim, you can tell me.”" "Stalling" "tellme" true>>
+<<AddOption "“You’re stalling.”" "Stalling" "stalling" true>>

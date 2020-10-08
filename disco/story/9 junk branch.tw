@@ -1,6 +1,6 @@
 ::Junk [nobr]
 <<SetFlag "junk" true>>
-<<AddSkillParagraph "You know what? Iâ€™m going to do you a solid and remove that choice for you." "Volition">>
+<<AddSkillParagraph "You know what? I’m going to do you a solid and remove that choice for you." "Volition">>
 
 <<AddOption "But I'm really curious!" "Junk2" "junkcurious" true>>
 <<AddOption "...Yeah, fair." "Junk2">>
