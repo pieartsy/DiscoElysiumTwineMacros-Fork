@@ -12,7 +12,7 @@
 <<AddSkillParagraph "You’re not sure what he’s seeing there, but you’re reasonably sure that your attempt to conceal it are failing." "composure" "medium" "fail">>
 
 <<NoOverlay>>
-<<AddParagraph "“Do you relate to that feeling, detective?”" "Kim Kitsuragi">>
+<<AddParagraph "//[more lead up to kim saying this, showing his thought process?]// “Do you relate to that feeling, detective?”" "Kim Kitsuragi">>
 
 <<NoOverlay>>
 <<AddSkillParagraph "Pale aged vodka left to evaporate. That’s what you are, Harry. Nothing, nothing." "inland empire">>

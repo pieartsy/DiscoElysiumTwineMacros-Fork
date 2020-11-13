@@ -7,13 +7,14 @@
 
     <<AddOverlay "mot">>
     <<AddSkillParagraph "Today?" "REACTION SPEED" "challenging" "success">>
+    <<AddParagraph "“For the record, it’s not critical to tell you. It has nothing to do with police work - it’s a more…personal matter.”" "Kim Kitsuragi">>
 <<elseif $flagsMap["gay"] is true>>
     <<AddParagraph "The lieutenant smirks. “If I recall correctly, I’ve told you that already, detective.”" "Kim Kitsuragi">>
     <<AddParagraph "“That's not what I was going to say, no.”">>
-<<else>>
+    <<AddParagraph "“For the record, it’s not critical to tell you. It has nothing to do with police work - it’s a more…personal matter.”">>
+<<elseif $flagsMap["shutup"] is true>>
+    <<AddParagraph "He pauses and glances in your direction, but since you don't interject, he continues. “For the record, it’s not critical to tell you. It has nothing to do with police work - it’s a more…personal matter.”" "Kim Kitsuragi">>
 <</if>>
-
-<<AddParagraph "“For the record, it’s not critical to tell you. It has nothing to do with police work - it’s a more…personal matter.”" "Kim Kitsuragi">>
 
 <<AddSkillParagraph "Your partner hardly ever talks about himself. Could this be the forbidden Secret that he’s refused to tell you thus far?" "rhetoric">>
 

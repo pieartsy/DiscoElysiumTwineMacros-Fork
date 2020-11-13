@@ -845,30 +845,6 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;set $flagsMap to {
                         &quot;kimstate&quot;: 0,
                         &quot;realization&quot;: 0,
-                        &quot;sit&quot;: false,
-                        &quot;love&quot;: false,
-                        &quot;gay&quot;: false,
-                        &quot;tapshead&quot;: false,
-                        &quot;stalling&quot;: false,
-                        &quot;tellme&quot;: false,
-                        &quot;computer&quot;: false,
-                        &quot;moralist&quot;: false,
-                        &quot;bisexual&quot;: false,
-                        &quot;ask&quot;: false,
-                        &quot;getsit&quot;: false,
-                        &quot;notman&quot;: false,
-                        &quot;realman&quot;: false,
-                        &quot;oRly&quot;: false,
-                        &quot;trust&quot;: false,
-                        &quot;notatall&quot;: false,
-                        &quot;dontgetit&quot;: false,
-                        &quot;inquire&quot;: false,
-                        &quot;questioned&quot;: false,
-                        &quot;junk&quot;: false,
-                        &quot;junkcurious&quot;: false,
-                        &quot;genitals&quot;: false,
-                        &quot;underground&quot;: false,
-                        &quot;authority&quot;: false
                     }&gt;&gt;
 
 &lt;&lt;set $motorics to [&quot;COMPOSURE&quot;, &quot;HAND-EYE COORDINATION&quot;, &quot;INTERFACING&quot;, &quot;PERCEPTION&quot;, &quot;REACTION SPEED&quot;, &quot;SAVOIR FAIRE&quot;, &quot;PERCEPTION (SIGHT)&quot;, &quot;PERCEPTION (TASTE)&quot;, &quot;PERCEPTION (TOUCH)&quot;, &quot;PERCEPTION (SMELL)&quot;, &quot;PERCEPTION (HEARING)&quot;]&gt;&gt;
@@ -890,7 +866,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;AddParagraph &quot;Probably.&quot;&gt;&gt;
 
 &lt;&lt;NoOverlay&gt;&gt;
-&lt;&lt;AddParagraph &quot;Kim seems to think it’s safe too, and sits down without much hesitation. He doesn’t quite gesture at you to join him, only quirks his eyebrow at you as he situates himself.&quot; &quot;kim kitsuragi&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Kim seems to think it’s safe too, and sits down without much hesitation. He doesn’t quite gesture for you to join him, only quirks his eyebrow at you as he situates himself.&quot; &quot;kim kitsuragi&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Sit down next to him.&quot; &quot;Bring me here&quot; &quot;sit&quot; true&gt;&gt;
 &lt;&lt;AddOption &quot;“What did you bring me out here for, again?”&quot; &quot;Bring me here&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Bring me here" tags="nobr" position="850,350">&lt;&lt;if $flagsMap[&quot;sit&quot;] is true&gt;&gt;
@@ -923,7 +899,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 
 &lt;&lt;AddOption &quot;“You’re in love with me?”&quot; &quot;Yammering&quot; &quot;love&quot; true&gt;&gt;
 &lt;&lt;AddOption &quot;“You’re part of the homo-sexual underground?”&quot; &quot;Yammering&quot; &quot;gay&quot; true&gt;&gt;
-&lt;&lt;AddOption &quot;Shut up and pay attention.&quot; &quot;Yammering&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Considering" tags="nobr" position="975,350">&lt;&lt;AddParagraph &quot;Kim tilts his head slightly and looks up and down your figure as you gesture. “Consideringâ€¦?”&quot; &quot;Kim kitsuragi&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Shut up and pay attention.&quot; &quot;Yammering&quot; &quot;shutup&quot; true&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Considering" tags="nobr" position="975,350">&lt;&lt;AddParagraph &quot;Kim tilts his head slightly and looks up and down your figure as you gesture. “Considering…?”&quot; &quot;Kim kitsuragi&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;“You know, the fact that I&#39;m another cop.”&quot; &quot;Mess&quot; &quot;cop&quot; true&gt;&gt;
 &lt;&lt;AddOption &quot;“You know, the fact that I’m a mess.”&quot; &quot;Mess&quot; &quot;mess&quot; true&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="New term" tags="nobr" position="1100,350">&lt;&lt;SkillFailure&gt;&gt;
@@ -950,20 +926,21 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 
 &lt;&lt;AddOverlay &quot;int&quot;&gt;&gt;
 &lt;&lt;AddSkillParagraph &quot;Mushrooms are classified under the taxonomic kingdom known as “fungi”.&quot; &quot;encyclopedia&quot; &quot;easy&quot; &quot;success&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Yammering" tags="nobr" position="1225,350">&lt;&lt;if $flagsMap[&quot;love&quot;] is true&gt;&gt;
-    &lt;&lt;AddParagraph &quot;The lieutenant immediately turns his face away, toward the ocean. “No, that’s notâ€¦Khm.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
+    &lt;&lt;AddParagraph &quot;The lieutenant immediately turns his face away, toward the ocean. “No, that’s not…Khm.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
     
     &lt;&lt;NoOverlay&gt;&gt;
     &lt;&lt;AddParagraph &quot;“That&#39;s not what I was going to say today, no.”&quot;&gt;&gt;
 
     &lt;&lt;AddOverlay &quot;mot&quot;&gt;&gt;
     &lt;&lt;AddSkillParagraph &quot;Today?&quot; &quot;REACTION SPEED&quot; &quot;challenging&quot; &quot;success&quot;&gt;&gt;
+    &lt;&lt;AddParagraph &quot;“For the record, it’s not critical to tell you. It has nothing to do with police work - it’s a more…personal matter.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 &lt;&lt;elseif $flagsMap[&quot;gay&quot;] is true&gt;&gt;
     &lt;&lt;AddParagraph &quot;The lieutenant smirks. “If I recall correctly, I’ve told you that already, detective.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
     &lt;&lt;AddParagraph &quot;“That&#39;s not what I was going to say, no.”&quot;&gt;&gt;
-&lt;&lt;else&gt;&gt;
+    &lt;&lt;AddParagraph &quot;“For the record, it’s not critical to tell you. It has nothing to do with police work - it’s a more…personal matter.”&quot;&gt;&gt;
+&lt;&lt;elseif $flagsMap[&quot;shutup&quot;] is true&gt;&gt;
+    &lt;&lt;AddParagraph &quot;He pauses and glances in your direction, but since you don&#39;t interject, he continues. “For the record, it’s not critical to tell you. It has nothing to do with police work - it’s a more…personal matter.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;AddParagraph &quot;“For the record, it’s not critical to tell you. It has nothing to do with police work - it’s a moreâ€¦personal matter.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 
 &lt;&lt;AddSkillParagraph &quot;Your partner hardly ever talks about himself. Could this be the forbidden Secret that he’s refused to tell you thus far?&quot; &quot;rhetoric&quot;&gt;&gt;
 
@@ -985,7 +962,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;AddParagraph &quot;“I am nonbinary.”&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Nod sagely.&quot; &quot;Explanation&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Wait, what&#39;s nonbinary mean?&quot; &quot;Guesses&quot; &quot;&quot; &quot;&quot; &quot;encyclopedia</tw-passagedata><tw-passagedata pid="33" name="Guesses" tags="nobr" position="350,475">&lt;&lt;SkillFailure&gt;&gt;
+&lt;&lt;AddOption &quot;Wait, what&#39;s nonbinary mean?&quot; &quot;Guesses&quot; &quot;&quot; &quot;&quot; &quot;encyclopedia&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Guesses" tags="nobr" position="350,475">&lt;&lt;SkillFailure&gt;&gt;
 &lt;&lt;if $flagsMap[&quot;tapshead&quot;] is true&gt;&gt;
     &lt;&lt;AddSkillParagraph &quot;You rack this bad boy that can fit so much knowledge in it, but it apparently didn’t fit this tidbit in. You have no idea.&quot; &quot;encyclopedia&quot; &quot;formidable&quot; &quot;failure&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;
@@ -1010,13 +987,13 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;AddOption &quot;“You&#39;re a moralist?”&quot; &quot;Explanation&quot; &quot;moralist&quot; true&gt;&gt;
 &lt;&lt;AddOption &quot;“You hate bisexual people?”&quot; &quot;Explanation&quot; &quot;bisexual&quot; true&gt;&gt;
 &lt;&lt;AddOption &quot;“What does &#39;nonbinary&#39; mean?”&quot; &quot;Explanation&quot; &quot;ask&quot; true&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Explanation" tags="nobr" position="475,475">&lt;&lt;if $flagsMap[&quot;computer&quot;] is true&gt;&gt;
-    &lt;&lt;AddParagraph &quot;“â€¦I assure you I’m a human, officer.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
+    &lt;&lt;AddParagraph &quot;“…I assure you I’m a human, officer.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 
     &lt;&lt;AddSkillParagraph &quot;A likely story! That’s just what a secret tape computer would say!&quot; &quot;drama&quot; &quot;medium&quot; &quot;failure&quot;&gt;&gt;
 
     &lt;&lt;AddParagraph &quot;His voice remains measured as he adds, “You’ve seen me bleeding before. Profusely.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 
-    &lt;&lt;AddSkillParagraph &quot;â€¦Right. The tribunal proved beyond a shadow of a doubt that Kim is just as mortal as you are.&quot; &quot;logic&quot;&gt;&gt;
+    &lt;&lt;AddSkillParagraph &quot;…Right. The tribunal proved beyond a shadow of a doubt that Kim is just as mortal as you are.&quot; &quot;logic&quot;&gt;&gt;
 
     &lt;&lt;AddSkillParagraph &quot;Unless he was killed and replaced by a lookalike that’s a tape computer -&quot; &quot;half light&quot;&gt;&gt;
 
@@ -1151,7 +1128,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;AddSkillParagraph &quot;You’re not sure what he’s seeing there, but you’re reasonably sure that your attempt to conceal it are failing.&quot; &quot;composure&quot; &quot;medium&quot; &quot;fail&quot;&gt;&gt;
 
 &lt;&lt;NoOverlay&gt;&gt;
-&lt;&lt;AddParagraph &quot;“Do you relate to that feeling, detective?”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//[more lead up to kim saying this, showing his thought process?]// “Do you relate to that feeling, detective?”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 
 &lt;&lt;NoOverlay&gt;&gt;
 &lt;&lt;AddSkillParagraph &quot;Pale aged vodka left to evaporate. That’s what you are, Harry. Nothing, nothing.&quot; &quot;inland empire&quot;&gt;&gt;
@@ -1200,7 +1177,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;SetFlag &quot;realization&quot; &quot;+&quot;&gt;&gt;
 &lt;&lt;SetFlag &quot;kimstate&quot; &quot;-&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Pick the moment back up with your trademark disco charm.&quot; &quot;Disco&quot; &quot;&quot; &quot;&quot; &quot;savoire faire&quot; &quot;formidable&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;“I think Iâ€¦relate?”&quot; &quot;Relate&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Disco" tags="nobr" position="225,600">&lt;&lt;SkillFailure&gt;&gt;
+&lt;&lt;AddOption &quot;“I think I…relate?”&quot; &quot;Relate&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Disco" tags="nobr" position="225,600">&lt;&lt;SkillFailure&gt;&gt;
 &lt;&lt;SetFlag &quot;kimstate&quot; &quot;-&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;You wink and finger gun at him. “S&#39;all groovy, Kim! I&#39;m disco too!”&quot; &quot;You&quot;&gt;&gt;
 
@@ -1320,7 +1297,11 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
     &lt;&lt;AddOverlay &quot;int&quot;&gt;&gt;
     &lt;&lt;AddSkillParagraph &quot;He’s talking about the homo-sexual underground. Not the actual sewers beneath the city. Just to be clear.&quot; &quot;encyclopedia&quot; &quot;trivial&quot; &quot;success&quot;&gt;&gt;
     &lt;&lt;SetFlag &quot;underground&quot; true&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Junk" tags="nobr" position="1225,600">&lt;&lt;SetFlag &quot;junk&quot; true&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;AddParagraph &quot;“I have always tried to //[be aware of myself and discover new parts of my identity to better understand who I am (word this better)]//. This is just another instance of it.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
+
+&lt;&lt;AddSkillParagraph &quot;He views it almost like finding new evidence on a case.&quot; &quot;esprit de corps&quot; &quot;medium&quot; &quot;success&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Junk" tags="nobr" position="1225,600">&lt;&lt;SetFlag &quot;junk&quot; true&gt;&gt;
 &lt;&lt;AddSkillParagraph &quot;You know what? I’m going to do you a solid and remove that choice for you.&quot; &quot;Volition&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;But I&#39;m really curious!&quot; &quot;Junk2&quot; &quot;junkcurious&quot; true&gt;&gt;

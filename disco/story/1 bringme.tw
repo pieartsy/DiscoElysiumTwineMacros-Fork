@@ -29,4 +29,4 @@
 
 <<AddOption "“You’re in love with me?”" "Yammering" "love" true>>
 <<AddOption "“You’re part of the homo-sexual underground?”" "Yammering" "gay" true>>
-<<AddOption "Shut up and pay attention." "Yammering">>
+<<AddOption "Shut up and pay attention." "Yammering" "shutup" true>>

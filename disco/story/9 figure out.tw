@@ -6,3 +6,7 @@
     <<AddSkillParagraph "He’s talking about the homo-sexual underground. Not the actual sewers beneath the city. Just to be clear." "encyclopedia" "trivial" "success">>
     <<SetFlag "underground" true>>
 <</if>>
+
+<<AddParagraph "“I have always tried to //[be aware of myself and discover new parts of my identity to better understand who I am (word this better)]//. This is just another instance of it.”" "Kim Kitsuragi">>
+
+<<AddSkillParagraph "He views it almost like finding new evidence on a case." "esprit de corps" "medium" "success">>
