@@ -9,4 +9,4 @@
 <<AddParagraph "“I am nonbinary.”">>
 
 <<AddOption "Nod sagely." "Explanation">>
-<<AddOption "Wait, what's nonbinary mean?" "Guesses" "" "" "encyclopedia">>
+<<AddOption "Wait, what's nonbinary mean?" "Guesses" "" "" "encyclopedia" "formidable">>
