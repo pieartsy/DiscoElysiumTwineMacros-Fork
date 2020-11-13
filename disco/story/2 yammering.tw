@@ -1,6 +1,6 @@
 ::Yammering [nobr]
 <<if $flagsMap["love"] is true>>
-    <<AddParagraph "The lieutenant immediately turns his face away, toward the ocean. “No, that’s notâ€¦Khm.”" "Kim Kitsuragi">>
+    <<AddParagraph "The lieutenant immediately turns his face away, toward the ocean. “No, that’s not…Khm.”" "Kim Kitsuragi">>
     
     <<NoOverlay>>
     <<AddParagraph "“That's not what I was going to say today, no.”">>
@@ -13,7 +13,7 @@
 <<else>>
 <</if>>
 
-<<AddParagraph "“For the record, it’s not critical to tell you. It has nothing to do with police work - it’s a moreâ€¦personal matter.”" "Kim Kitsuragi">>
+<<AddParagraph "“For the record, it’s not critical to tell you. It has nothing to do with police work - it’s a more…personal matter.”" "Kim Kitsuragi">>
 
 <<AddSkillParagraph "Your partner hardly ever talks about himself. Could this be the forbidden Secret that he’s refused to tell you thus far?" "rhetoric">>
 

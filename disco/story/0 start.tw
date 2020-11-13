@@ -11,7 +11,7 @@
 <<AddParagraph "Probably.">>
 
 <<NoOverlay>>
-<<AddParagraph "Kim seems to think it’s safe too, and sits down without much hesitation. He doesn’t quite gesture at you to join him, only quirks his eyebrow at you as he situates himself." "kim kitsuragi">>
+<<AddParagraph "Kim seems to think it’s safe too, and sits down without much hesitation. He doesn’t quite gesture for you to join him, only quirks his eyebrow at you as he situates himself." "kim kitsuragi">>
 
 <<AddOption "Sit down next to him." "Bring me here" "sit" true>>
 <<AddOption "“What did you bring me out here for, again?”" "Bring me here">>

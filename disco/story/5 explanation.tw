@@ -1,12 +1,12 @@
 ::Explanation [nobr]
 <<if $flagsMap["computer"] is true>>
-    <<AddParagraph "“â€¦I assure you I’m a human, officer.”" "Kim Kitsuragi">>
+    <<AddParagraph "“…I assure you I’m a human, officer.”" "Kim Kitsuragi">>
 
     <<AddSkillParagraph "A likely story! That’s just what a secret tape computer would say!" "drama" "medium" "failure">>
 
     <<AddParagraph "His voice remains measured as he adds, “You’ve seen me bleeding before. Profusely.”" "Kim Kitsuragi">>
 
-    <<AddSkillParagraph "â€¦Right. The tribunal proved beyond a shadow of a doubt that Kim is just as mortal as you are." "logic">>
+    <<AddSkillParagraph "…Right. The tribunal proved beyond a shadow of a doubt that Kim is just as mortal as you are." "logic">>
 
     <<AddSkillParagraph "Unless he was killed and replaced by a lookalike that’s a tape computer -" "half light">>
 
