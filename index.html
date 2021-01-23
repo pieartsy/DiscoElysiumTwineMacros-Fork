@@ -1047,7 +1047,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
     &lt;&lt;AddParagraph &quot;Kim sighs. “You have no idea what that means, do you?”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;AddParagraph &quot;“To be nonbinary is to not feel restricted by the binaries of â€˜man’ and â€˜woman’. Nonbinary people are not either gender. We are something else.”&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;“To be nonbinary is to not feel restricted by the binaries of &#39;man&#39; and &#39;woman&#39;. Nonbinary people are not either gender. We are something else.”&quot;&gt;&gt;
 
 &lt;&lt;if $flagsMap[&quot;computer&quot;] is true&gt;&gt;
     &lt;&lt;AddParagraph &quot;As you open your mouth to speak, he adds, “We are still definitely human, though.”&quot;&gt;&gt;
@@ -1095,7 +1095,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;AddOption &quot;“You’re right. I trust you too.”&quot; &quot;What are you&quot; &quot;trust&quot; true&gt;&gt;
 &lt;&lt;AddOption &quot;“I still don’t get it.”&quot; &quot;Questions&quot; &quot;dontgetit&quot; true&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="What are you" tags="nobr" position="850,475">&lt;&lt;if $flagsMap[&quot;getsit&quot;] is true&gt;&gt;
     &lt;&lt;AddParagraph &quot;“Really now. You do?”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
-&lt;&lt;if $flagsMap[&quot;trust&quot;] is true&gt;&gt;
+&lt;&lt;elseif $flagsMap[&quot;trust&quot;] is true&gt;&gt;
     &lt;&lt;SetFlag &quot;kimstate&quot; &quot;+&quot;&gt;&gt;
     &lt;&lt;AddParagraph &quot;His hands relax, and he smooths out the creases in his trousers. “Really?”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;
