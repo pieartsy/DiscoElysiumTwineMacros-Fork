@@ -152,13 +152,15 @@ Example option with a white check:
 
     <<AddOption "option with a check" "New Passage" "logic" "easy">>
 
+Here, `logic` is the third argument (the skill) and `easy` is the fourth argument (the difficulty level).
+
 You can set flags with `AddOption`, since it interacts with the `SetFlag` macro. This means that when you click on the option, the flag is set along with it. The flag is set with argument three being the flag, and argument four being the value you're setting the flag to be.
 
 Example option with a flag and a white check:
 
     <<AddOption "option with a flag and check" "New passage" "logic" "easy" "flag">>
     
-Here, `logic` is the third argument (the skill) and `easy` is the fourth argument (the difficulty level).
+Here, `flag` is the fifth argument.
 
 If you want to add an option that sets a flag but doesn't have a check, you have to put empty values (not spaces, just nothing) for the third and fourth arguments.
 
