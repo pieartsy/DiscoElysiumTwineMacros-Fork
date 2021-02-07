@@ -121,54 +121,52 @@ You can find this macro with the same title in the Twine app, or as `setflag.tw`
 
 Example:
 
-    <<SetFlag "flag" true>>
+    <<SetFlag "flag">>
     
-Here, `flag` is the first argument (the name of the flag) and `true` is the second (the value stored in the flag).
+Here, `flag` is the first argument (the name of the flag), which will automatically be added to the array, or list, of flags.
 
 `SetFlag` and flags in general are used with the `if` macro, which is built into Sugarcube. You can find more info about `if` and other control macros at the Sugarcube docs: [link](http://www.motoslave.net/sugarcube/2/docs/#macros-control). In this code, the if statement will look something like this:
 
-    <<if $flagsMap["Flag"] is true>>
-        <<AddParagraph "Flag is true!>>
+    <<if $flagsArray.includes("Flag")>>
+        <<AddParagraph "Flag is here!>>
     <</if>>
     
-`<<if` is the start of the `if` macro. `$flagsMap` is a variable in the `StoryInit` passage that stores all of your flags, and does not change (**note**: the flags must already have been defined in `StoryInit`, otherwise you'll get an error!). `Flag` is the flag, and must be in quotes. `true` is the value we're checking for. `>>` closes the first statement. With this line, you're checking to see if `Flag`'s value matches the value `true`, and if so, to show the contents within the `if` macro - here it's `<<AddParagraph "Flag is true!>>` Then write `<</if>>` to indicate the end of the macro.
+`<<if` is the start of the `if` macro. `$flagsArray` is a variable in the `StoryInit` passage that stores all of your flags, and does not change. `Flag` is the flag, and must be in quotes. `>>` closes the first statement. With this line, you're checking to see if `Flag` is in the `flagsArray` list, and if so, to show the contents within the `if` macro - here it's `<<AddParagraph "Flag is here!>>` Then write `<</if>>` to indicate the end of the macro.
 
 Feel free to skip this macro if things like if/else statements and variables are too programmatic for your purposes.
 
 `SetFlag` also interacts with the `AddOption` macro.
 
 ### AddOption
-You can find this macro with the same title in the Twine app, or as `addoption.tw` when using Tweego should you want to edit it. This is how we give the player options that influence the outcome, and thus make the game truly interactive. The `AddOption` macro can take in several arguments (6 of them!) and is extremely modular. The first argument is the text of the option, and the second argument is the passage the option sends you to. That's the bare minimum you need to create an option.
+You can find this macro with the same title in the Twine app, or as `addoption.tw` when using Tweego should you want to edit it. This is how we give the player options that influence the outcome, and thus make the game truly interactive. The `AddOption` macro can take in several arguments (5 of them!) and is extremely modular. The first argument is the text of the option, and the second argument is the passage the option sends you to. That's the bare minimum you need to create an option.
 
 Example option:
     
     <<AddOption "option" "New passage">>
     
 Here, `<<AddOption` is to call the macro. `option` is the first argument (the text of the option) and `New passage` is the second (the passage the option sends you to). `>>` closes things off so Twine knows that's the end of the macro.
+    
+You can simulate a white check with the third argument being the skill the player is "rolling", and the fourth argument being the difficulty level. This will add the white background styling to the option, similar to the styling in Disco Elysium that indicates a white check option.
+
+Example option with a white check:
+
+    <<AddOption "option with a check" "New Passage" "logic" "easy">>
 
 You can set flags with `AddOption`, since it interacts with the `SetFlag` macro. This means that when you click on the option, the flag is set along with it. The flag is set with argument three being the flag, and argument four being the value you're setting the flag to be.
 
-Example option with just a flag:
-
-    <<AddOption "option with a flag" "New passage" "flag" "value">>
-    
-Here, `flag` is the third argument (the flag) and `value` is the fourth argument (the value of the flag).
-    
-You can simulate a white check with the fifth argument being the skill the player is "rolling", and the sixth argument being the difficulty level. This will add the white background styling to the option, similar to the styling in Disco Elysium that indicates a white check option.
-
 Example option with a flag and a white check:
 
-    <<AddOption "option with a flag and check" "New passage" "flag" "value" "logic" "easy">>
+    <<AddOption "option with a flag and check" "New passage" "logic" "easy" "flag">>
     
-Here, `logic` is the fifth argument (the skill) and `easy` is the sixth argument (the difficulty level).
+Here, `logic` is the third argument (the skill) and `easy` is the fourth argument (the difficulty level).
 
-If you want to add an option that has a white check but doesn't set a flag, you have to put empty values (not spaces, just nothing) for the third and fourth arguments.
+If you want to add an option that sets a flag but doesn't have a check, you have to put empty values (not spaces, just nothing) for the third and fourth arguments.
 
-Example option with just a check:
+Example option with just a flag:
 
-    <<AddOption "option with a flag and check" "Passage" "" "" "logic" "easy">>
+    <<AddOption "option with just a flag" "New Passage" "" "" "flag">>
 
-Here, the third and fourth arguments are completely empty, with the double quotes being placeholders of sorts. (I realize this is kind of inconvenient for people who don't want to mess with flags at all, and I'll try to noodle with it so that the third and fourth arguments simulate the white check, with the fifth and sixth arguments setting any flags....later).
+Here, the third and fourth arguments are completely empty, with the double quotes being placeholders of sorts. While this makes it a bit more inconvenient if you want to use flags, variables and if/else statements in your code, if you don't want any programmatic elements like that, you can just not include that argument.
 
 However many options you add, they will all be listed at the bottom of the page without any further calls on your part. The downside of using macros for this is that you will not automatically get a visual link between passages in Twine. If you would like that feature and are using the Twine app, just create a matching empty link to the correct passage immediately after the option, like so:
 

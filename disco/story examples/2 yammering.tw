@@ -1,5 +1,5 @@
 ::Yammering [nobr]
-<<if $flagsMap["love"] is true>>
+<<if $flagsArray.includes("love")>>
     <<AddParagraph "The lieutenant immediately turns his face away, toward the ocean." "Kim Kitsuragi">>
     <<NoOverlay>>
     <<AddParagraph "“No, that’s not…Khm.”">>
@@ -9,7 +9,7 @@
 
     <<AddOverlay "mot">>
     <<AddSkillParagraph "Today?" "REACTION SPEED" "challenging" "success">>
-<<elseif $flagsMap["gay"] is true>>
+<<elseif $flagsArray.includes("gay")>>
     <<AddParagraph "The lieutenant smirks. “If I recall correctly, I’ve told you that already, detective.”" "Kim Kitsuragi">>
     <<AddParagraph "“That's not what I was going to say, no.”">>
 <<else>>
@@ -25,5 +25,5 @@
 
 <<AddParagraph "“ - knowledgeable about this sort of thing.”">>
 
-<<AddOption "“What do you mean? This bad boy can fit so much knowledge in it.” [Tap your head]" "Knowledge" "tapshead" true>>
-<<AddOption "“You’re stalling.”" "Stalling" "stalling" true>>
+<<AddOption "“What do you mean? This bad boy can fit so much knowledge in it.” [Tap your head]" "Knowledge" "" "" "tapshead">>
+<<AddOption "“You’re stalling.”" "Stalling" "" "" "stalling">>

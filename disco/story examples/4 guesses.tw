@@ -1,6 +1,6 @@
 ::Guesses [nobr]
 <<CheckFailure>>
-<<if $flagsMap["tapshead"] is true>>
+<<if $flagsArray.includes("tapshead")>>
     <<AddSkillParagraph "You rack this bad boy that can fit so much knowledge in it, but it apparently didn’t fit this tidbit in. You have no idea." "encyclopedia" "formidable" "failure">>
 <<else>>
     <<AddSkillParagraph "You rack your brain’s dictionary to try and figure it out, but you have no idea." "encyclopedia" "formidable" "failure">>
@@ -20,7 +20,7 @@
 
 <<AddSkillParagraph "Say something, quick!" "reaction speed">>
 
-<<AddOption "“You’re the secret fourth tape computer?”" "Explanation" "computer" true>>
-<<AddOption "“You're a moralist?”" "Explanation" "moralist" true>>
-<<AddOption "“You hate bisexual people?”" "Explanation" "bisexual" true>>
-<<AddOption "“What does 'nonbinary' mean?”" "Explanation" "ask" true>>
+<<AddOption "“You’re the secret fourth tape computer?”" "Explanation" "" "" "computer">>
+<<AddOption "“You're a moralist?”" "Explanation" "" "" "moralist">>
+<<AddOption "“You hate bisexual people?”" "Explanation" "" "" "bisexual">>
+<<AddOption "“What does 'nonbinary' mean?”" "Explanation" "" "" "ask">>

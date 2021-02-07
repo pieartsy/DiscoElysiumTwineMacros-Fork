@@ -100,7 +100,8 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Disco Elysium Twine Macros" startnode="26" creator="Tweego" creator-version="1.3.0" ifid="5BD21ED8-62C2-4C12-9F44-05FA8FE75082" zoom="1" format="SugarCube" format-version="2.30.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "style.css" */
+	<tw-storydata name="Disco Elysium Twine Macros" startnode="26" creator="Tweego" creator-version="1.3.0" ifid="5BD21ED8-62C2-4C12-9F44-05FA8FE75082" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Story Stylesheet" */
+/* twine-user-stylesheet #1: "style.css" */
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Titillium+Web:wght@300&display=swap');
 
 html {
@@ -309,7 +310,218 @@ a.macro-linkreplace .motoverlay  {
 .check a:hover {
   background-color: #82837f;
   color: white;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "dialogue.js" */
+}
+/* twine-user-stylesheet #2: "style.css" */
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Titillium+Web:wght@300&display=swap');
+
+html {
+  height: 100%;
+}
+
+body, tw-story
+{
+  font-family: 'David Libre', serif;
+  margin-left: 2em;
+  color: #d2d3cd;
+  height: 100%;
+}
+
+
+#story {
+  height: 100%;
+  overflow-y: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.passage {
+  line-height: 1.25;
+  font-size: large;
+  margin-left: 1.5em;
+  font-size: 1.5rem;
+}
+
+a {
+  color: #b6523a;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+a:active {
+  color: white;
+}
+
+/* for option list */
+.passage ol {
+  margin-left: -1em;
+}
+
+.option {
+  font-weight: bold;
+}
+
+/* skill voice colors */
+.psyche {
+  color: #705cbb;
+}
+
+.fysique {
+  color: #c6496b;
+}
+
+.intellect {
+  color: #6cc6ce;
+}
+
+.motorics {
+  color: #e4b934;
+}
+
+.speaker {
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+
+/* for inserted paragraphs and past paragraphs */
+.dim {
+  transition: opacity 0.5s;
+  opacity: 0.5;
+}
+
+.macro-timed-insert {
+	transition-duration: 2s;
+}
+
+.pastchoice {
+  color: #737c87;
+}
+
+/* continue macros and overlays */
+span.continueblock {
+  display: none;
+}
+
+a.macro-linkreplace {
+  background-color: #90280f;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  margin-left: -1.5em;
+  display: block;
+}
+
+a.macro-linkreplace .padding {
+  padding: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: block;
+}
+
+a.macro-linkreplace .intoverlay  {
+  background-image: [img[intoverlay]];
+  background-size: cover;
+}
+
+a.macro-linkreplace .psyoverlay  {
+  background-image: [img[psyoverlay]];
+  background-size: cover;
+}
+
+a.macro-linkreplace .fysoverlay  {
+  background-image: [img[fysoverlay]];
+  background-size: cover;
+}
+
+a.macro-linkreplace .motoverlay  {
+  background-image: [img[motoverlay]];
+  background-size: cover;
+}
+
+/* greentext */
+.green {
+  color: #98b48b; 
+  margin-left: -1.5em;
+}
+
+/* check overlay animations */
+.CheckOverlay {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  opacity: 0;
+  animation-name: Flash;
+  animation-duration: 2s;
+}
+
+#SuccessImg {
+  background: [img[SuccessOverlay]] no-repeat right;
+  background-size: cover;
+}
+
+#FailureImg {
+  background: [img[FailureOverlay]] no-repeat right;
+  background-size: cover;
+}
+
+@keyframes Flash {
+  0%  {opacity: 0}
+  20% {opacity: 1}
+  50% {opacity: 1}
+  100% {opacity: 0}
+}
+
+.CheckText {
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  opacity: 0;
+  padding: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  animation-name: SlideAndFade;
+  animation-duration: 2.5s;
+  animation-delay: 1s;
+}
+
+#CheckSuccess {
+  background-color: #40ce68;
+  box-shadow: 0em 0em 0.2em 0.3em #40ce68;
+}
+
+#CheckFailure {
+  background-color: #90280f;
+  box-shadow: 0em 0em 0.2em 0.3em #90280f;
+}
+
+@keyframes SlideAndFade {
+  0% {opacity: 0.75; left: 45%}
+  10% {opacity: 1; left: 50%}
+  60% {opacity: 1; left: 50%}
+  100% {opacity: 0; left: 80%}
+}
+
+/* styling for white check */
+.check a {
+  font-weight: bold;
+  background-color: #d2d3cd;
+  color: black;
+  padding: 3px;
+  display: inline-block;
+}
+
+.check a:hover {
+  background-color: #82837f;
+  color: white;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "Story JavaScript" */
+/* twine-user-script #1: "dialogue.js" */
 // dialog API macro set, by chapel; for sugarcube 2
 // version 1.3.0
 // see the documentation: https://github.com/ChapelR/custom-macros-for-sugarcube-2#dialog-api-macros
@@ -425,6 +637,122 @@ $(document).on("keyup", function (e) {
     }
   }
 });
+/* twine-user-script #2: "dialogue.js" */
+// dialog API macro set, by chapel; for sugarcube 2
+// version 1.3.0
+// see the documentation: https://github.com/ChapelR/custom-macros-for-sugarcube-2#dialog-api-macros
+
+// <<dialog>> macro
+Macro.add('dialog', {
+    tags : ['onopen', 'onclose'],
+ handler : function () {
+     
+     // handle args (if any)
+     var errors = [];
+     var content = '', onOpen = null, onClose = null;
+     var title = (this.args.length > 0) ? this.args[0] : '';
+     var classes = (this.args.length > 1) ? this.args.slice(1).flatten() : [];
+
+     this.payload.forEach( function (pl, idx) {
+         if (idx === 0) {
+             content = pl.contents;
+         } else {
+             if (pl.name === 'onopen') {
+                 onOpen = onOpen ? onOpen + pl.contents : pl.contents;
+             } else {
+                 onClose = onClose ? onClose + pl.contents : pl.contents;
+             }
+         }
+     });
+     
+     // add the macro- class
+     classes.push('macro-' + this.name);
+     
+     // dialog box
+     Dialog.setup(title, classes.join(' '));
+     Dialog.wiki(content);
+
+     // should these be shadowWrapper-aware?
+     if (onOpen && typeof onOpen === 'string' && onOpen.trim()) {
+         $(document).one(':dialogopened', function () {
+             $.wiki(onOpen);
+         });
+     }
+
+     if (onClose && typeof onClose === 'string' && onClose.trim()) {
+         $(document).one(':dialogclosed', function () {
+             $.wiki(onClose);
+         });
+     }
+
+     Dialog.open();
+     
+ }
+
+});
+
+// <<popup>> macro
+Macro.add('popup', {
+ handler : function () {
+     
+     // errors
+     if (this.args.length < 1) {
+         return this.error('need at least one argument; the passage to display');
+     }
+     if (!Story.has(this.args[0])) {
+         return this.error('the passage ' + this.args[0] + 'does not exist');
+     }
+     
+     // passage name and title
+     var psg   = this.args[0];
+     var title = (this.args.length > 1) ? this.args[1] : '';
+     var classes = (this.args.length > 2) ? this.args.slice(2).flatten() : [];
+     
+     // add the macro- class
+     classes.push('macro-' + this.name);
+     
+     // dialog box
+     Dialog.setup(title, classes.join(' '));
+     Dialog.wiki(Story.get(psg).processText());
+     Dialog.open();
+     
+ }
+
+});
+
+// <<dialogclose>> macro
+Macro.add('dialogclose', { 
+ skipArgs : true, 
+ handler : function () {
+     Dialog.close()
+ } 
+});
+/* twine-user-script #3: "script.js" */
+$(document).click(function(e) {
+	if($("span.continueblock").length) {
+		$("span.continueblock").first().removeClass('continueblock');
+	}
+	e.stopPropagation();
+	return false;
+});
+
+postdisplay['paragraph'] = function (taskName) {
+	//$('.paragraph').hide().fadeIn(10000);
+};
+
+$(document).on("keyup", function (e) {
+  if ((e.keyCode == 32) && ($("#ContinueBtn"))) {
+    $("#ContinueBtn").click();
+  }
+
+  if ((e.keyCode >= 49 && e.keyCode <= 57) && (document.getElementById("OptionList"))) {
+    var list = document.getElementById("OptionList");
+    var childIndex = e.keyCode - 49; // 0 for '1', 1 for '2', etc
+    if (list.children[childIndex]) {
+      list.children[childIndex].getElementsByClassName("link-internal")[0].click();
+    }
+  }
+});
 
 </script><tw-passagedata pid="1" name="DisplayOptions" tags="nobr" position="100,100">/* ordered list of options, included in the DisplayParagraph widget in the PassageFooter. you don&#39;t need to do anything else with this passage!
 
@@ -478,10 +806,10 @@ first line creates an ordered list
   /* if there&#39;s a 3rd variable in the _optionspassage array  (indicating it&#39;s a flag setter) and it&#39;s in $flagsArray
   set the $flagsArray&#39;s variable to the value
   
-   to have this trigger, you need to put empty values for arguments 1 and 2 (no skill check set)
+   to have this trigger, you need to put empty values for arguments 2 and 3 (no skill check set)
   
     ex: &lt;&lt;AddOption &quot;text&quot; &quot;Passage&quot; &quot;&quot; &quot;&quot; &quot;flag&quot;&gt;&gt;*/
-  &lt;&lt;if _optionpassage[3]&gt;&gt;
+  &lt;&lt;if _optionpassage[3] and Object.keys($flagsArray).includes(_optionpassage[3])&gt;&gt;
       &lt;&lt;SetFlag _optionpassage[3]&gt;&gt;
   &lt;&lt;/if&gt;&gt;
 
@@ -815,10 +1143,12 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="SetFlag" tags="widget nobr" position="475,350">/* easier syntax to set a flag, either in the text itself or in DisplayOptions 
 
 &lt;&lt;SetFlag &quot;realization&quot;&gt;&gt;
+
+&lt;&lt;SetFlag &quot;flag&quot; true&gt;&gt;
 */
 
 &lt;&lt;widget &quot;SetFlag&quot;&gt;&gt;
-    &lt;&lt;set $flagsArray.push($args[0])&gt;&gt;
+    &lt;&lt;set $flagsArray.append($args[0])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="SkillSuccess" tags="widget nobr" position="600,350">&lt;&lt;widget &quot;SkillSuccess&quot;&gt;&gt;
 &lt;div id=&quot;SuccessImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;CheckSuccess&quot; class=&quot;CheckText&quot;&gt;CHECK SUCCESS&lt;/div&gt;
@@ -839,7 +1169,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;AddParagraph &quot;Kim seems to think it’s safe too, and sits down without much hesitation. He doesn’t quite gesture at you to join him, only quirks his eyebrow at you as he situates himself.&quot; &quot;kim kitsuragi&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Sit down next to him.&quot; &quot;Bring me here&quot; &quot;&quot; &quot;&quot; &quot;sit&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;“What did you bring me out here for, again?”&quot; &quot;Bring me here&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Bring me here" tags="nobr" position="850,350">&lt;&lt;if $flagsArray.includes(&quot;sit&quot;)&gt;&gt;
+&lt;&lt;AddOption &quot;“What did you bring me out here for, again?”&quot; &quot;Bring me here&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Bring me here" tags="nobr" position="850,350">&lt;&lt;if $flagsArray[&quot;sit&quot;]&gt;&gt;
 
     &lt;&lt;NoOverlay&gt;&gt;
     &lt;&lt;AddParagraph &quot;He allows himself a slight smile as you plop down beside him.&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
@@ -850,12 +1180,13 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 
 &lt;&lt;AddSkillParagraph &quot;Kim’s never been one to indulge in leisurely activities like this, so he’s probably invited you out here for a reason. Something important.&quot; &quot;Logic&quot;&gt;&gt;
 
-&lt;&lt;if $flagsArray.includes(&quot;sit&quot;)&gt;&gt;
-    &lt;&lt;NoOverlay&gt;&gt;
-    &lt;&lt;AddParagraph &quot;He takes a slow, deep breath.&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
-&lt;&lt;else&gt;&gt;
+&lt;&lt;if $flagsArray[&quot;sit&quot;]&gt;&gt;
+
     &lt;&lt;NoOverlay&gt;&gt;
     &lt;&lt;AddParagraph &quot;He looks up at you and takes a slow, deep breath.&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;
+    &lt;&lt;NoOverlay&gt;&gt;
+    &lt;&lt;AddParagraph &quot;He takes a slow, deep breath.&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;AddOverlay &quot;psy&quot;&gt;&gt;
@@ -872,7 +1203,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 
 &lt;&lt;AddOption &quot;“You’re in love with me?”&quot; &quot;Yammering&quot; &quot;&quot; &quot;&quot; &quot;love&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;“You’re part of the homo-sexual underground?”&quot; &quot;Yammering&quot; &quot;&quot; &quot;&quot; &quot;gay&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Shut up and pay attention.&quot; &quot;Yammering&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Yammering" tags="nobr" position="975,350">&lt;&lt;if $flagsArray.includes(&quot;love&quot;)&gt;&gt;
+&lt;&lt;AddOption &quot;Shut up and pay attention.&quot; &quot;Yammering&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Yammering" tags="nobr" position="975,350">&lt;&lt;if $flagsArray[&quot;love&quot;]&gt;&gt;
     &lt;&lt;AddParagraph &quot;The lieutenant immediately turns his face away, toward the ocean.&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
     &lt;&lt;NoOverlay&gt;&gt;
     &lt;&lt;AddParagraph &quot;“No, that’s not…Khm.”&quot;&gt;&gt;
@@ -882,7 +1213,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 
     &lt;&lt;AddOverlay &quot;mot&quot;&gt;&gt;
     &lt;&lt;AddSkillParagraph &quot;Today?&quot; &quot;REACTION SPEED&quot; &quot;challenging&quot; &quot;success&quot;&gt;&gt;
-&lt;&lt;elseif $flagsArray.includes(&quot;gay&quot;)&gt;&gt;
+&lt;&lt;elseif $flagsArray[&quot;gay&quot;]&gt;&gt;
     &lt;&lt;AddParagraph &quot;The lieutenant smirks. “If I recall correctly, I’ve told you that already, detective.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
     &lt;&lt;AddParagraph &quot;“That&#39;s not what I was going to say, no.”&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;
@@ -902,9 +1233,9 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 &lt;&lt;AddOption &quot;“You’re stalling.”&quot; &quot;Stalling&quot; &quot;&quot; &quot;&quot; &quot;stalling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Knowledge" tags="nobr" position="1100,350">&lt;&lt;AddParagraph &quot;He looks doubtful. “I’ll take your word for it.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;“Come on, Kim, you can tell me.”&quot; &quot;Stalling&quot; &quot;&quot; &quot;&quot; &quot;tellme&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;“You’re stalling.”&quot; &quot;Stalling&quot; &quot;&quot; &quot;&quot; &quot;stalling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Stalling" tags="nobr" position="1225,350">&lt;&lt;if $flagsArray.includes(&quot;stalling&quot;)&gt;&gt;
+&lt;&lt;AddOption &quot;“You’re stalling.”&quot; &quot;Stalling&quot; &quot;&quot; &quot;&quot; &quot;stalling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Stalling" tags="nobr" position="1225,350">&lt;&lt;if $flagsArray[&quot;stalling&quot;]&gt;&gt;
     &lt;&lt;AddParagraph &quot;Kim’s eyes widen, then he shakes his head as if to clear it. “You’re right. Apologies, detective. I’ll just say it then.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
-&lt;&lt;elseif $flagsArray.includes(&quot;tellme&quot;)&gt;&gt;
+&lt;&lt;elseif $flagsArray[&quot;tellme&quot;]&gt;&gt;
     &lt;&lt;AddParagraph &quot;Kim’s eyes soften, then he shakes his head as if to clear it. “Yes, of course detective. I’ll just say it then.”&quot; &quot;Kim Kitsuragi&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
@@ -912,7 +1243,7 @@ put this at every paragraph OTHER THAN the starting paragraph of a passage.
 
 &lt;&lt;AddOption &quot;Nod sagely.&quot; &quot;Explanation&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Wait, what&#39;s nonbinary mean?&quot; &quot;Guesses&quot; &quot;encyclopedia&quot; &quot;formidable&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Guesses" tags="nobr" position="100,475">&lt;&lt;CheckFailure&gt;&gt;
-&lt;&lt;if $flagsArray.includes(&quot;tapshead&quot;)&gt;&gt;
+&lt;&lt;if $flagsArray[&quot;tapshead&quot;]&gt;&gt;
     &lt;&lt;AddSkillParagraph &quot;You rack this bad boy that can fit so much knowledge in it, but it apparently didn’t fit this tidbit in. You have no idea.&quot; &quot;encyclopedia&quot; &quot;formidable&quot; &quot;failure&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;
     &lt;&lt;AddSkillParagraph &quot;You rack your brain’s dictionary to try and figure it out, but you have no idea.&quot; &quot;encyclopedia&quot; &quot;formidable&quot; &quot;failure&quot;&gt;&gt;
