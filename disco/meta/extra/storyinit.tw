@@ -3,16 +3,9 @@
 <<set $optionmap to new Map()>>
 /* add flags below!
 
-remember to put the flag name in quotes, and add a comma at the end of every line EXCEPT the last line!
+remember to put the flag name in quotes, and add a comma at the end of every flag EXCEPT the last one!
 */
-<<set $flagsMap to {
-                        "revelation": 0,
-                        "sit": false,
-                        "love": false,
-                        "gay": false,
-                        "tapshead": false,
-                        "stalling": false,
-                    }>>
+<<set $flagsArray to []>>
 
 <<set $motorics to ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)", "PERCEPTION (SMELL)", "PERCEPTION (HEARING)"]>>
 <<set $intellect to ["CONCEPTUALIZATION", "DRAMA", "ENCYCLOPEDIA", "LOGIC", "RHETORIC", "VISUAL CALCULUS"]>>
