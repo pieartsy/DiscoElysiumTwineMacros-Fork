@@ -5,29 +5,28 @@
     args[0] = text for the option.
     1 = the passage that the option sends you to
 
-    if it's got a flag attached:
-    2 = flag to change
-    3 = flag value
-
     if it's simulating a check:
-    4 = skill
-    5 = difficulty label
+    2 = skill
+    3 = difficulty label
+
+    if it's got a flag attached:
+    4 = flag to change
 
     extremely modular.
 
     normal option
     ex: <<AddOption "option" "Passage">>
 
-    option with a flag
-    ex: <<AddOption "option with a flag" "Passage" "var" "value">>
-
     option with a flag and a check
-    ex: <<AddOption "option with a flag and check" "Passage" "var" "value" "logic" "easy">>
+    ex: <<AddOption "option with a flag and check" "Passage" "logic" "easy" "flag">>
 
     option with only a check (must have empty values for the flag arguments)
-    ex: <<AddOption "option with a flag and check" "Passage" "" "" "logic" "easy">>
+    ex: <<AddOption "option with a flag and check" "Passage" "logic" "easy">>
+    
+    option with a flag (must have empty values for the check arguments)
+    ex: <<AddOption "option with a flag" "Passage" "" "" "flag">>
 
 */
 <<widget "AddOption">>
-    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5]])>>
+    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4]])>>
 <</widget>>

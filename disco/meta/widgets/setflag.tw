@@ -1,0 +1,10 @@
+::SetFlag [widget nobr]
+
+/* easier syntax to set a flag, either in the text itself or in DisplayOptions 
+
+<<SetFlag "realization">>
+*/
+
+<<widget "SetFlag">>
+    <<set $flagsArray.push($args[0])>>
+<</widget>>
