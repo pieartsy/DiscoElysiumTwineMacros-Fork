@@ -4,5 +4,9 @@ Disco Elysium Twine Macros
 :: StorySubtitle
 A sample template
 
-:: StorySettings
-ifid:5bd21ed8-62c2-4c12-9f44-05fa8fe75082
+:: StoryData
+{
+        "ifid": "B22CF083-CA91-477F-BBE8-7D6456685488",
+        "format": "SugarCube",
+        "format-version": "2.36.1"
+}
