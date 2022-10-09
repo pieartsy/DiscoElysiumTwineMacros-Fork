@@ -1,4 +1,4 @@
-::StoryMenu
+:: StoryMenu
 <<link 'Accessibility'>>
 	<<dialog 'Accessibility' 'Accessibility'>>\
     <<include "Accessibility">>
