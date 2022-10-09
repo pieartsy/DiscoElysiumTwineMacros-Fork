@@ -1,4 +1,4 @@
-::SetFlag [widget nobr]
+:: SetFlag [widget nobr]
 
 /* easier syntax to set a flag, either in the text itself or in DisplayOptions 
 

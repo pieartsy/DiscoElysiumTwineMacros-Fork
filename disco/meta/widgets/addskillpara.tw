@@ -1,4 +1,4 @@
-::AddSkillParagraph [widget nobr]
+:: AddSkillParagraph [widget nobr]
 /* similar to the AddParagraph widget, but with the speaker being a skill, that can optionally simulate a passive check.
 
 ex:

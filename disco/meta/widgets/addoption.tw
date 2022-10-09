@@ -1,4 +1,4 @@
-::AddOption [widget nobr]
+:: AddOption [widget nobr]
 /* adds a key, $args[0], and value, an array containing $args 1, to $optionmap
     this becomes _optiontext and _optionpassage in the DisplayOptions passage
 

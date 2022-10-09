@@ -1,5 +1,4 @@
-    
-::AddOverlay [widget nobr]
+:: AddOverlay [widget nobr]
 /* adds an overlay to the following "continue button".
 
 ex:

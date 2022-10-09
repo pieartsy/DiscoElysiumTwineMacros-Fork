@@ -1,4 +1,4 @@
-::NoOverlay [widget nobr]
+:: NoOverlay [widget nobr]
 /* for when there's no overlay, just call this as an empty function 
 
 ex:
