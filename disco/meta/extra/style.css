@@ -1,20 +1,10 @@
-<<<<<<< HEAD
+
 @import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
 
 html {
   height: 100%;
-<<<<<<< HEAD
-=======
-  zoom: 0.6;
->>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
-=======
-@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=PT+Sans+Narrow&display=swap');
-
-html {
-  height: 100%;
   zoom: 2;
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 }
 
 body, tw-story
@@ -102,21 +92,14 @@ span.continueblock {
 a.macro-linkreplace {
   background-color: #90280f;
   color: white;
-<<<<<<< HEAD
   padding: 15px;
   padding-bottom: 5px;
   padding-top: 10px;
-=======
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
   font-family: 'PT Sans Narrow', sans-serif;
   margin-left: -1.5em;
   display: block;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 a.macro-linkreplace .padding {
   padding: 15px;
   padding-bottom: 10px;
@@ -124,7 +107,6 @@ a.macro-linkreplace .padding {
   display: block;
 }
 
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 a.macro-linkreplace .intoverlay  {
   background-image: [img[intoverlay]];
   background-size: cover;
@@ -144,13 +126,6 @@ a.macro-linkreplace .motoverlay  {
   background-image: [img[motoverlay]];
   background-size: cover;
 }
-<<<<<<< HEAD
-=======
->>>>>>> parent of d2e403e... got passive check overlay working
-=======
->>>>>>> parent of d2e403e... got passive check overlay working
-=======
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 
 .green {
   color: #98b48b; 
@@ -171,8 +146,6 @@ a.macro-linkreplace .motoverlay  {
 }
 
 #SuccessImg {
-<<<<<<< HEAD:disco/meta/scripts/style.css
-<<<<<<< HEAD:disco/meta/scripts/style.css
   background: [img[SuccessOverlay]] no-repeat right;
   background-size: contain;
 }
@@ -180,20 +153,16 @@ a.macro-linkreplace .motoverlay  {
 #FailureImg {
   background: [img[FailureOverlay]] no-repeat right;
   background-size: contain;
-=======
   background: url(SuccessOverlay.png) no-repeat center;
 }
 
 #FailureImg {
   background: url(FailureOverlay.png) no-repeat center;
->>>>>>> parent of 623fb1e... tweaked styles a bit:disco/scripts/style.css
-=======
   background: url(SuccessOverlay.png) no-repeat center;
 }
 
 #FailureImg {
   background: url(FailureOverlay.png) no-repeat center;
->>>>>>> parent of 623fb1e... tweaked styles a bit:disco/scripts/style.css
 }
 
 @keyframes Flash {
@@ -239,42 +208,15 @@ a.macro-linkreplace .motoverlay  {
   background-color: #d2d3cd;
   color: black;
   padding: 3px;
-<<<<<<< HEAD
   border-radius: 5px;
-=======
-  display: inline-block;
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 }
 
 .check a:hover {
   background-color: #82837f;
   color: white;
-<<<<<<< HEAD:disco/meta/scripts/style.css
-<<<<<<< HEAD:disco/meta/scripts/style.css
-<<<<<<< HEAD:disco/meta/scripts/style.css
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:disco/meta/scripts/style.css
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
-=======
 }
-=======
->>>>>>> parent of 2504024... added overview menu button:disco/scripts/style.css
-
-=======
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels:disco/style.css
-}
-<<<<<<< HEAD:disco/meta/scripts/style.css
 
 .stats th:nth-child(even) {
   background-color: #d2d3cd;
   color: black;
->>>>>>> parent of 36c563b... got stat changes ui working:disco/scripts/style.css
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels:disco/style.css
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 }
-=======
->>>>>>> parent of 2504024... added overview menu button:disco/scripts/style.css

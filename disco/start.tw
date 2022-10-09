@@ -1,54 +1,28 @@
-::Start [nobr]
+:: Start [nobr]
 $int $$int
 <<SetSpeaker "Aster">>
-<<<<<<< HEAD
 <<AddParagraph "Hi!">>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 <<SkillCheck "SUCCEED" "FAIL" 6 $stats.int 2>>
->>>>>>> parent of 3ac7536... some more documentation
-=======
->>>>>>> parent of d2e403e... got passive check overlay working
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
-=======
 <<SkillCheck 1 stats.int 2>>
 <<AddOption "testcheck" "Start" true>>
 <<AddOption "testoption" "Start">>
->>>>>>> parent of d645706... got skill roll working but not overlay
-=======
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" "Start">>
->>>>>>> parent of affc0cb... almostish
-=======
-
 <<linkreplace "@@#ContinueBtn;.psyoverlay.padding;CONTINUE ➤@@" t8n>>test<</linkreplace>>
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
->>>>>>> parent of 9e82f8f... passive check overlays
-=======
 <<AddParagraph "Hi!" "int">>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<PassiveSkill "Rhetoric" "Easy" "Success">>
 <<AddParagraph "Se seems nice.">>
-=======
 <<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
 <<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
->>>>>>> parent of 2504024... added overview menu button
 <<SetSpeaker "Aster">>
 <<AddParagraph "I hope you're doing fine!" "none">>
 
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 3 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
->>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
-=======
 <<PassiveSkill "Logic" "Hard" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
 <<PassiveSkill "electrochemistry" "Trivial" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
 <<SetSpeaker "Aster">>
@@ -56,8 +30,6 @@ $int $$int
 
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $stats.int 2>>
 <<AddOption "testoption" false "Start">>
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
-=======
 <<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
 <<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
 <<TaskComplete "Sexiness" 5>>
@@ -65,8 +37,6 @@ $int $$int
 <<AddParagraph "I hope you're doing fine!" "none">>
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $stats.int 2 "Logic">>
 <<AddOption "testoption" false "Start">>
->>>>>>> parent of 36c563b... got stat changes ui working
-=======
 <<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $int 0>>
 <<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $int 0>>
 <<TaskComplete "Sexiness" 5>>
@@ -74,4 +44,3 @@ $int $$int
 <<AddParagraph "I hope you're doing fine!" "none">>
 <<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $int 2 "Logic">>
 <<AddOption "testoption" false "Start">>
->>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill

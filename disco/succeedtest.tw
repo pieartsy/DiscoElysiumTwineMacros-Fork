@@ -1,20 +1,11 @@
-::SUCCEED
-<<<<<<< HEAD
+:: SUCCEED
 <<PassiveSkill "Logic" "Easy" "Success">>
 <<AddParagraph "YOU SUCCEEDED!">>
-=======
 <<SkillSuccess>>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<PassiveSkill "Logic">>
-=======
 <<PassiveSkill "Logic" "Easy" "Success">>
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
-=======
 <<PassiveSkill "Logic" 5 "Success">>
->>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill
 <<AddParagraph "YOU SUCCEEDED!" "fys">>
 <<PassiveSkill "electrochemistry" "Easy" "Success">>
 <<AddParagraph "Very sexy of you." "none">>
 <<AddParagraph ";)" "none">>
->>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!

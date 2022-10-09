@@ -1,11 +1,6 @@
-::FAIL
-<<<<<<< HEAD
+:: FAIL
 =======
 <<SkillFailure>>
-<<<<<<< HEAD
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 <<PassiveSkill "Logic" "Easy" "Failure">>
-=======
 <<PassiveSkill "Logic" 5 "Failure">>
->>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill
 <<AddParagraph "YOU FAILED!!">>

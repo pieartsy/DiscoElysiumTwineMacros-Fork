@@ -2,11 +2,7 @@ DONE - make "passive skills" actually do a skill check
 - make the two variables $overlays and $paragraphs actually a key/value map rather than two arrays
 - add roll results to checksuccess and checkfailure somehow? 
 - add roll results to passive checks?
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 623fb1e... tweaked styles a bit
+
 - make overlays happen AFTER or DURING passive skills being set, rather than before
 - tippy...
 - why is it tiny???? why is the text tiny????
@@ -17,24 +13,8 @@ DONE - make "passive skills" actually do a skill check
 - stat setting
 - level ups upping stats
 - inventory/items
-<<<<<<< HEAD
-<<<<<<< HEAD
-    -  bind close to esc key
-<<<<<<< HEAD
+-  bind close to esc key
 - thoughts?? (probably not)
 - stats don't actually change checks within same passage
-=======
-- thoughts?? (probably not)
->>>>>>> parent of 36c563b... got stat changes ui working
-=======
-- make overlays happen AFTER or DURING passive skills being set, rather than before
->>>>>>> parent of 2504024... added overview menu button
-=======
-- make overlays happen AFTER or DURING passive skills being set, rather than before
->>>>>>> parent of 2504024... added overview menu button
-=======
-- thoughts?? (probably not)
->>>>>>> parent of 36c563b... got stat changes ui working
-=======
-- thoughts?? (probably not)
->>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill
+- got stat changes ui working
+- fixed esc key open and close, and added ANOTHER argument to passiveskill

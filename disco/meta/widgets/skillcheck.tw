@@ -1,101 +1,64 @@
-::SkillCheck [widget]
+:: SkillCheck [widget]
 /* rolls a skill check on 1d6.
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 36c563b... got stat changes ui working
 ex: <<SkillCheck 10 stats.int 1>>
 
 _difficultynum ($args[2]) is the difficulty you're trying to beat (if the difficulty is a 7, you want a 7 or higher)
 _stat (3) is the stat you're using with a number associated with it.
 _mods (4) is any stat number modifiers you might have due to previous actions, like drinking alcohol giving you a -1 or taking meds giving you a +1.
 _roll is a random roll on 1d6, + _stat + _mods
-<<<<<<< HEAD
-=======
 _passive (5) is whether it's a passive check or not.
 args[6] is the overlay
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 if _passive is true:
         if the roll succeeds, set $success to true (interacts with PassiveSkill macro)
         if it fails, set it to false.
 
 if _passage is false/not present:
         if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
-=======
-if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
-<<<<<<< HEAD
-<<<<<<< HEAD
-(animations not currently working)
->>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
-=======
->>>>>>> parent of d2e403e... got passive check overlay working
-=======
->>>>>>> parent of d2e403e... got passive check overlay working
-=======
 if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
 (animations not currently working)
->>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
+if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
+(animations not currently working)
 */
-=======
 ex: <<SkillCheck 10 stats.int 1>> */
->>>>>>> parent of 3ac7536... some more documentation
 <<widget "SkillCheck">>
     <<set _checknumber to $args[0]>>
     <<set _stat to $args[1]>>
     <<set _mods to $args[2]>>
     <<set _roll to random(1, 6) + _stat + _mods>>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <<if _roll >= _difficultynum>>
         <<SkillSuccess>>
         <<timed 3s>>
             <<goto $args[0]>>
-<<<<<<< HEAD
         <</timed>>
     <<else>>
-<<<<<<< HEAD
         <<SkillFailure>>
         <<timed 3s>>
-=======
         
     <<else>>
 
->>>>>>> parent of 9e82f8f... passive check overlays
             <<goto $args[1]>>
         <</timed>>
     <</if>>
-<<<<<<< HEAD
 <</widget>>
 /* 
-=======
     <<print _roll>>
     <<if _roll >= _checknumber>>
         <<SKillSuccess>>
     <<else>>
         <<SkillFailure>>
-=======
     <<if _roll >= _difficultynum>>
             <<goto $args[0]>>
     <<else>>
             <<goto $args[1]>>
->>>>>>> parent of 7d63c19... somehow got the passive checks working on the first try!?!?!
-=======
         <<if _roll >= _difficultynum>>
                 <<goto $args[0]>>
                 
         <<else>>
                 <<goto $args[1]>>
         <</if>>
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
     <</if>>
-<</widget>>
->>>>>>> parent of d645706... got skill roll working but not overlay
-=======
+
     <<print _roll>>
     <<if _roll >= _difficultynum>>
         <<SkillSuccess>>
@@ -105,8 +68,3 @@ ex: <<SkillCheck 10 stats.int 1>> */
         <<goto $args[1]>>
     <</if>>
 <</widget>>
-
->>>>>>> parent of affc0cb... almostish
-=======
-<</widget>>
->>>>>>> parent of 3ac7536... some more documentation

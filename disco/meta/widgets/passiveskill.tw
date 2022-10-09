@@ -3,15 +3,8 @@
 
 ex: <<PassiveSkill "Logic">>
 
-<<<<<<< HEAD
 <<PassiveSkill "Logic" "Easy" "This is so easy." "Wow guess it wasn't that easy...!" 3 $stats.int 0>>
-=======
-setting a passive check
-<<PassiveSkill "Logic" "This is so easy." "Wow guess it wasn't that easy...!" 3 $stats.int 0>>
->>>>>>> parent of 36c563b... got stat changes ui working
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 after a passive check
 <<PassiveSkill "Logic" 5 >>
 
@@ -25,10 +18,6 @@ if running a passive check:
 if after a passive check: 
     1 = difficulty
     2 = success or fail
-=======
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
-=======
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
 */
 <<widget "PassiveSkill">>
     /* sets _skillname to the first argument, the skill, in lowercase. sets _skillresult as empty */
@@ -44,64 +33,36 @@ if after a passive check:
     <<elseif $psyche.includes(_skillname)>>
         <<set $currentspeaker to ("@@.psyche.speaker;" + _skillname + "@@")>>
     <</if>>
-<<<<<<< HEAD
-    /* if there's a second argument present, run the SkillCheck macro as per usual. Skillcheck's 6th argument checking whether it's a passive check is set to true.
-=======
     /* if there's a fourth argument present (indicating a failure state), run the SkillCheck macro as per usual. Skillcheck's 6th argument checking whether it's a passive check is set to true.
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
     
-<<<<<<< HEAD
-    if SkillCheck passes/$success is true, set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
-=======
     if SkillCheck passes/$success is true,
         set the skill rating to the _label determined by the <<Difficulties>> widget
     
     
     set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info.
->>>>>>> parent of 623fb1e... tweaked styles a bit
     if it fails, set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
     
-<<<<<<< HEAD
     add the skill result to the current speaker: Logic [Easy: Success]
     then add a dash. */
     <<if $args[3]>>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <<SkillCheck $args[1] $args[2] $args[4] $args[5] $args[6] true>>
         <<Difficulties $args[4]>>
-=======
         <<SkillCheck $args[1] $args[2] $args[3] $args[4] $args[5] true>>
         <<Difficulties $args[3]>>
->>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill
         <<set _skillresult to (" [" + _label + ": ")>>
-=======
-=======
-    add the skill result to the current speaker: Logic [Easy: Success]*/
+   <</if>>
+   /*add the skill result to the current speaker: Logic [Easy: Success]*/
     <<if $args[1]>>
->>>>>>> parent of e0765ad... the [easy:success] stuff shows up now
         <<SkillCheck $args[2] $args[3] $args[4] $args[5] $args[6] true>>
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
-=======
         <<SkillCheck $args[2] $args[3] $args[4] $args[5] $args[6] true>>
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
         <<if $success is true>>
             <<set _skillresult to (" [" + $args[1] + ": " + "Success" + "]")>>
             <<set $currentspeaker += _skillresult>>
             <<set $currentspeaker += " - ">>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <<AddParagraph $args[1] $args[3]>>
-=======
             <<AddParagraph $args[2]>>
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
-=======
             <<AddParagraph $args[2]>>
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
-=======
             <<AddParagraph $args[1]>>
->>>>>>> parent of d47d866... fixed esc key open and close, and added ANOTHER argument to passiveskill
         <<else>>
             <<set _skillresult to (" [" + $args[1] + ": " + "Failure" + "]")>>
             <<set $currentspeaker += _skillresult>>
@@ -109,13 +70,10 @@ if after a passive check:
             <<AddParagraph $args[3]>>
         <</if>>
     <<else>>
-<<<<<<< HEAD
-=======
         <<if $args[1]>>
             <<set _skillresult to (" [" + $args[1] + ": " + $args[2] + "]")>>
             <<set $currentspeaker += _skillresult>>
         <</if>>
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels
         <<set $currentspeaker += " - ">>
     <</if>>
     /* Add a dash. */
