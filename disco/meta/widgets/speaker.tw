@@ -1,8 +1,0 @@
-:: Speaker [widget]
-<<nobr>>
-<<widget "speaker">>
-@@.speaker;
-$args[0] -
-@@
-<</widget>>
-<</nobr>>

@@ -13,14 +13,11 @@ if _passive is true:
         if the roll succeeds, set $success to true (interacts with PassiveSkill macro)
         if it fails, set it to false.
 
-if _passage is false/not present:
+if _passive is false/not present:
         if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
-if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
-(animations not currently working)
-if _roll is more than or equal to the difficulty, show the success animation and forward to the success passage (0). if it's a fail, show the fail animation and forward to the fail passage (1).
-(animations not currently working)
-*/
+
 ex: <<SkillCheck 10 stats.int 1>> */
+
 <<widget "SkillCheck">>
     <<set _checknumber to $args[0]>>
     <<set _stat to $args[1]>>

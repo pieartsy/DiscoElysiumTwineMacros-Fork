@@ -65,10 +65,6 @@ a:active {
   margin-left: -1.5em;
 }
 
-<<<<<<< HEAD:disco/meta/scripts/style.css
-
-=======
->>>>>>> parent of 2504024... added overview menu button:disco/scripts/style.css
 .dim {
   transition: opacity 0.5s;
   opacity: 0.5;
@@ -144,9 +140,6 @@ a.macro-linkreplace .motoverlay  {
 }
 
 #SuccessImg {
-<<<<<<< HEAD:disco/meta/scripts/style.css
-<<<<<<< HEAD:disco/meta/scripts/style.css
-<<<<<<< HEAD:disco/meta/scripts/style.css
   background: [img[SuccessOverlay]] no-repeat right;
   background-size: contain;
 }
@@ -154,27 +147,7 @@ a.macro-linkreplace .motoverlay  {
 #FailureImg {
   background: [img[FailureOverlay]] no-repeat right;
   background-size: contain;
-=======
   background: url(SuccessOverlay.png) no-repeat center;
-}
-
-#FailureImg {
-  background: url(FailureOverlay.png) no-repeat center;
->>>>>>> parent of 623fb1e... tweaked styles a bit:disco/scripts/style.css
-=======
-  background: url(SuccessOverlay.png) no-repeat center;
-}
-
-#FailureImg {
-  background: url(FailureOverlay.png) no-repeat center;
->>>>>>> parent of 623fb1e... tweaked styles a bit:disco/scripts/style.css
-=======
-  background: url(SuccessOverlay.png) no-repeat center;
-}
-
-#FailureImg {
-  background: url(FailureOverlay.png) no-repeat center;
->>>>>>> parent of 623fb1e... tweaked styles a bit:disco/scripts/style.css
 }
 
 @keyframes Flash {
@@ -225,36 +198,9 @@ a.macro-linkreplace .motoverlay  {
 
 .check a:hover {
   background-color: #82837f;
-  color: white;
-<<<<<<< HEAD:disco/meta/scripts/style.css
-<<<<<<< HEAD:disco/meta/scripts/style.css
-<<<<<<< HEAD:disco/meta/scripts/style.css
-<<<<<<< HEAD:disco/meta/scripts/style.css
-<<<<<<< HEAD:disco/meta/scripts/style.css
-=======
 }
-=======
->>>>>>> parent of 2504024... added overview menu button:disco/scripts/style.css
 
-=======
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels:disco/style.css
-}
-<<<<<<< HEAD:disco/meta/scripts/style.css
-
-<<<<<<< HEAD:disco/meta/scripts/style.css
 .stats th:nth-child(even) {
-=======
-.stats td:nth-child(even) {
->>>>>>> parent of 36c563b... got stat changes ui working:disco/scripts/style.css
   background-color: #d2d3cd;
   color: black;
->>>>>>> parent of 36c563b... got stat changes ui working:disco/scripts/style.css
-=======
->>>>>>> parent of 801426b... tried to enact tippy and got distracted with adding difficulty mod labels:disco/style.css
 }
-=======
->>>>>>> parent of 2504024... added overview menu button:disco/scripts/style.css
-=======
-
-}
->>>>>>> parent of 2504024... added overview menu button:disco/scripts/style.css

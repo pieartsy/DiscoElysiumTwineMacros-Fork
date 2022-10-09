@@ -22,12 +22,7 @@ $(document).on("keyup", function (e) {
       list.children[childIndex].getElementsByClassName("link-internal")[0].click();
     }
   }
-<<<<<<< HEAD:disco/meta/scripts/script.js
-<<<<<<< HEAD:disco/meta/scripts/script.js
-});
 
-<<<<<<< HEAD:disco/meta/scripts/script.js
-=======
   if ((e.keyCode == 27) && (document.getElementById("menu-story"))) {
     var menu = document.getElementById("menu-story");
     menu.children[0].getElementsByClassName("link-internal")[0].click();
@@ -38,10 +33,3 @@ $(document).on("keyup", function (e) {
     console.log(dia)
   }
 });
->>>>>>> parent of 36c563b... got stat changes ui working:disco/scripts/js/script.js
-=======
-});
->>>>>>> parent of 2504024... added overview menu button:disco/scripts/script.js
-=======
-});
->>>>>>> parent of 2504024... added overview menu button:disco/scripts/script.js
