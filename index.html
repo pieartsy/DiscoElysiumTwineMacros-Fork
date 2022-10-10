@@ -4453,18 +4453,18 @@ first line creates an ordered list
       ex: [Visual Calculus - Heroic] */
     &lt;&lt;set _skillname = _optionChecks[2].charAt(0).toUpperCase() + _optionChecks[2].slice(1).toLowerCase();&gt;&gt;
 
+    /* convert difficulty name to number */
+    &lt;&lt;set _difficultyRating = _optionChecks[4].charAt(0).toUpperCase() + _optionChecks[4].slice(1).toLowerCase()&gt;&gt;
+    &lt;&lt;Difficulties _difficultyRating&gt;&gt;
+
     /* add option text
     ex: [Visual Calculus - Heroic] - Do something heroic with Visual Calculus.*/
-
-    &lt;&lt;set _difficultyRating = _optionChecks[4].charAt(0).toUpperCase() + _optionChecks[4].slice(1).toLowerCase()&gt;&gt;
-    
     &lt;&lt;set _optiontext = &quot; [&quot; + _skillname + &quot; - &quot;  + _difficultyRating + &quot;] - &quot; + _optiontext&gt;&gt;
 
     /* put the .check styling to a link with _optiontext as its text. forwards you to the appropriate passage based on whether you succeeded or failed. sets the $lastoption variable, used in the PassageHeader passage, to _optiontext. */
       @@.check;&lt;li&gt;-
           &lt;&lt;link _optiontext&gt;&gt;
             &lt;&lt;set $lastoption = _optiontext&gt;&gt;
-            &lt;&lt;Difficulties _difficultyRating&gt;&gt;
             &lt;&lt;check _rating _usedStat _optionChecks[5]&gt;&gt;
               &lt;&lt;if $success == true&gt;&gt;
                 &lt;&lt;flag _optionChecks[3] true&gt;&gt;
@@ -4819,7 +4819,7 @@ skill speaking with no check
     0 = name of skill
 
 if it&#39;s a passive check:
-&lt;&lt;skillpara &quot;Logic&quot; &quot;trivial&quot;&gt;&gt;Succeful logic passive check||Failed logic passive check&lt;&lt;skillpara&gt;&gt;
+&lt;&lt;skillpara &quot;Logic&quot; &quot;trivial&quot;&gt;&gt;Succeful logic passive check&lt;&lt;skillpara&gt;&gt;
     1 = difficulty
 */
 &lt;&lt;widget &quot;skillpara&quot; container&gt;&gt;
@@ -4858,33 +4858,23 @@ if it&#39;s a passive check:
 
     /* if there&#39;s a 1st argument present (indicating a check), check to see if the skill is high enough [stat for now  until I build skills in].*/
     &lt;&lt;if $args[1]&gt;&gt;
-        &lt;&lt;set _passiveResults = _contents.split(&quot;||&quot;)&gt;&gt;&gt;&gt;
-        &lt;&lt;set _passiveSuccess = _passiveResults[0]&gt;&gt;
-        &lt;&lt;set _passiveFailure = _passiveResults[1]&gt;&gt;
             
         /* convert difficulty name to number */
         &lt;&lt;set _difficultyRating = $args[1].charAt(0).toUpperCase() + $args[1].slice(1)&gt;&gt;
         &lt;&lt;Difficulties _difficultyRating&gt;&gt;
 
        /* if check passes/$success is true,
-        set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info. */
+        set the skill rating to the 2nd argument + Success [Easy: Success] and display the success content. */
         &lt;&lt;if  (_usedStat + 6) &gt;= _rating&gt;&gt;
             &lt;&lt;set _skillresult = &quot; [&quot; + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + &quot;: Success ]&quot;&gt;&gt;
-            &lt;&lt;set _skillpara += _currentspeaker + _skillresult + &quot; - &quot; + _passiveSuccess&gt;&gt;
+            &lt;&lt;set _skillpara += _currentspeaker + _skillresult + &quot; - &quot; + _contents&gt;&gt;
             &lt;&lt;overlay _usedOverlay&gt;&gt;
-        /*  if it fails:
-            set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
-            add the skill result to the current speaker: Logic [Easy: Success] */
-        &lt;&lt;elseif (_usedStat + 6) &lt; _rating&gt;&gt;
-            &lt;&lt;set _skillresult = &quot; [&quot; + _args[1].charAt(0).toUpperCase() + _args[1].slice(1) + &quot;: Failure ]&quot;&gt;&gt;&gt;&gt;
-            &lt;&lt;set _skillpara += _currentspeaker + _skillresult + &quot; - &quot; + _passiveFailure&gt;&gt;
-            &lt;&lt;nooverlay&gt;&gt;
+            &lt;&lt;run $paragraphs.push(_skillpara)&gt;&gt;
        &lt;&lt;/if&gt;&gt;
     &lt;&lt;elseif !$args[1]&gt;&gt;
         &lt;&lt;set _skillpara += _currentspeaker + &quot; - &quot; + _contents&gt;&gt;
+        &lt;&lt;run $paragraphs.push(_skillpara)&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-    
-    &lt;&lt;run $paragraphs.push(_skillpara)&gt;&gt;
 
     /* set the current speaker to nothing (so a name doesn&#39;t keep appearing over and over */
     &lt;&lt;set _currentspeaker = &quot;&quot;&gt;&gt;
@@ -4914,8 +4904,8 @@ if it&#39;s a passive check:
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Start" tags="nobr" position="975,350" size="100,100">&lt;&lt;para &quot;Aster&quot;&gt;&gt;Hi!&lt;&lt;/para&gt;&gt;
 &lt;&lt;para&gt;&gt;How are you?&lt;&lt;/para&gt;&gt;
 &lt;&lt;skillpara &quot;empathy&quot;&gt;&gt;Se seems nice.&lt;&lt;/skillpara&gt;&gt;
-&lt;&lt;skillpara &quot;electrochemistry&quot; &quot;trivial&quot;&gt;&gt;Succeeding is sexy as hell.||Unsexy! Failing is unsexy!&lt;&lt;/skillpara&gt;&gt;
-&lt;&lt;skillpara &quot;composure&quot; &quot;easy&quot;&gt;&gt;Let&#39;s calm down.||Oh god!&lt;&lt;/skillpara&gt;&gt;
+&lt;&lt;skillpara &quot;electrochemistry&quot; &quot;trivial&quot;&gt;&gt;Succeeding is sexy as hell.&lt;&lt;/skillpara&gt;&gt;
+&lt;&lt;skillpara &quot;composure&quot; &quot;easy&quot;&gt;&gt;Let&#39;s calm down.&lt;&lt;/skillpara&gt;&gt;
 
 &lt;&lt;addoption &quot;click this normal option&quot; &quot;normal&quot;&gt;&gt;
 &lt;&lt;addoption &quot;click this option with a flag&quot; &quot;normal&quot; &quot;test&quot;&gt;&gt;

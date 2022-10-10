@@ -2,8 +2,8 @@
 <<para "Aster">>Hi!<</para>>
 <<para>>How are you?<</para>>
 <<skillpara "empathy">>Se seems nice.<</skillpara>>
-<<skillpara "electrochemistry" "trivial">>Succeeding is sexy as hell.||Unsexy! Failing is unsexy!<</skillpara>>
-<<skillpara "composure" "easy">>Let's calm down.||Oh god!<</skillpara>>
+<<skillpara "electrochemistry" "trivial">>Succeeding is sexy as hell.<</skillpara>>
+<<skillpara "composure" "easy">>Let's calm down.<</skillpara>>
 
 <<addoption "click this normal option" "normal">>
 <<addoption "click this option with a flag" "normal" "test">>

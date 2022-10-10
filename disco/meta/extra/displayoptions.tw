@@ -47,18 +47,18 @@ first line creates an ordered list
       ex: [Visual Calculus - Heroic] */
     <<set _skillname = _optionChecks[2].charAt(0).toUpperCase() + _optionChecks[2].slice(1).toLowerCase();>>
 
+    /* convert difficulty name to number */
+    <<set _difficultyRating = _optionChecks[4].charAt(0).toUpperCase() + _optionChecks[4].slice(1).toLowerCase()>>
+    <<Difficulties _difficultyRating>>
+
     /* add option text
     ex: [Visual Calculus - Heroic] - Do something heroic with Visual Calculus.*/
-
-    <<set _difficultyRating = _optionChecks[4].charAt(0).toUpperCase() + _optionChecks[4].slice(1).toLowerCase()>>
-    
     <<set _optiontext = " [" + _skillname + " - "  + _difficultyRating + "] - " + _optiontext>>
 
     /* put the .check styling to a link with _optiontext as its text. forwards you to the appropriate passage based on whether you succeeded or failed. sets the $lastoption variable, used in the PassageHeader passage, to _optiontext. */
       @@.check;<li>-
           <<link _optiontext>>
             <<set $lastoption = _optiontext>>
-            <<Difficulties _difficultyRating>>
             <<check _rating _usedStat _optionChecks[5]>>
               <<if $success == true>>
                 <<flag _optionChecks[3] true>>
