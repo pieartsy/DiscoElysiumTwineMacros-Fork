@@ -1,30 +1,38 @@
 :: success and failure [widget nobr]
 
 /* displays the success animation. 
-
 <<success>>
-
 */
 <<widget "success">>
+<<audio "successsound" play>>
+<<timed 1s>>
 <div id="SuccessImg" class="CheckOverlay"></div>
 <div id="CheckSuccess" class="CheckText">CHECK SUCCESS: $roll</div>
-<<para>>//Green flashes at the edges of your vision - a <div style="font: #40ce68"><<link "success">><<toggleclass "#success" "hide">><</link>>.</div>// <div id="success" class="hide"><<results>></div>//<</para>>
+<</timed>>
+<<para>><<timed 1s>>//Green flashes at the edges of your vision - a <span id="successresult"><<link "success">><<toggleclass "#success" "hide">><</link>><span id="success" class="hide"> - <<results>></span></span>.//<</timed>><</para>>
 <</widget>>
 
 
 /* displays the failure animation. 
-
 <<failure>>
-
 */
 <<widget "failure">>
+<<audio "failsound" play>>
+<<timed 2s>>
 <div id="FailureImg" class="CheckOverlay"></div>
 <div id="CheckFailure" class="CheckText">CHECK FAILURE: $roll</div>
-<<para>>//Red flashes at the edges of your vision - a <span style="font: #90280f"><<link "failure">><<toggleclass "#failure" "hide">><</link>>.<span style="font: #90280f" id="failure" class="hide"><<results>></span></span>//<</para>>
+<</timed>>
+<<para>><<timed 2s>>//Red flashes at the edges of your vision - a <span id="failresult"><<link "failure">><<toggleclass "#failure" "hide">><</link>><span id="failure" class="hide"> - <<results>></span></span>.//<</timed>><</para>>
 <</widget>>
 
 <<widget "results">>
 <<nobr>>
-    $roll ($rollOne + $rollTwo + $stat + $mods)
+    Roll: $roll ($rollOne + $rollTwo + $stat + $mods)
+        <<if $success == true>>
+            ''>''
+        <<else>>
+            ''<''
+        <</if>>
+    Difficulty: $difficultyrating
 <</nobr>>
 <</widget>>

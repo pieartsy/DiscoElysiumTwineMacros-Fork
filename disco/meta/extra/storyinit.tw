@@ -1,15 +1,18 @@
 :: StoryInit [nobr]
 <<silently>>
-<<set $optionmap = new Map()>>
-<<set $flagsMap = {}>>
+    <<set $optionmap = new Map()>>
+    <<set $flagsMap = {}>>
 
-<<set $motorics = ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)"]>>
-<<set $intellect = ["CONCEPTUALIZATION", "DRAMA", "ENCYCLOPEDIA", "LOGIC", "RHETORIC", "VISUAL CALCULUS"]>>
-<<set $fysique = ["ELECTROCHEMISTRY", "ENDURANCE", "HALF LIGHT", "PAIN THRESHOLD", "PHYSICAL INSTRUMENT", "SHIVERS"]>>
-<<set $psyche = ["AUTHORITY", "EMPATHY", "ESPRIT DE CORPS", "INLAND EMPIRE", "SUGGESTION", "VOLITION"]>>
-<<set $greentext = []>>
-<<set $paraAppendMode = false>>
+    <<set $motorics = ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)"]>>
+    <<set $intellect = ["CONCEPTUALIZATION", "DRAMA", "ENCYCLOPEDIA", "LOGIC", "RHETORIC", "VISUAL CALCULUS"]>>
+    <<set $fysique = ["ELECTROCHEMISTRY", "ENDURANCE", "HALF LIGHT", "PAIN THRESHOLD", "PHYSICAL INSTRUMENT", "SHIVERS"]>>
+    <<set $psyche = ["AUTHORITY", "EMPATHY", "ESPRIT DE CORPS", "INLAND EMPIRE", "SUGGESTION", "VOLITION"]>>
+    <<set $greentext = []>>
+    <<set $paraAppendMode = false>>
 
-<<set $xp = 0>>
-<<set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }>>
+    <<set $xp = 0>>
+    <<set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }>>
+
+    <<cacheaudio "successsound" "disco/meta/media/succcesssound.wav">>
+    <<cacheaudio "failsound" "disco/meta/media/failsound.wav">>
 <</silently>>

@@ -8,7 +8,7 @@
 
 <<addoption "click this normal option" "normal">>
 <<addoption "click this option with a flag" "normal" "test">>
-<<checkoption "click on this option with a check" "SUCCEED" "FAIL" "logic" "medium" 0 "checkroll" "cheese">>
+<<checkoption "click on this option with a check" "SUCCEED" "FAIL" "logic" "easy" 0 "checkroll" "cheese">>
 
 :: normal
 <<para>>$flagsMap.test<</para>>

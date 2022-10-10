@@ -1,0 +1,17 @@
+:: StoryData
+{
+    "ifid": "E6D156A3-6C0D-4514-A78E-4C66FE25DF0F",
+    "format": "SugarCube",
+    "format-version": "2.36.1"
+}
+
+:: StoryTitle
+Test
+
+:: Start
+<<link "test">>
+    <<audio "successsound" play>>
+<</link>>
+
+:: StoryInit
+<<cacheaudio "successsound" "disco/meta/media/succcesssound.wav">>

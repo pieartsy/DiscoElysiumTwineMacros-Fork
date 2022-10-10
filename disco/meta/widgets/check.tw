@@ -1,9 +1,9 @@
-:: check [widget]
+:: check [widget nobr]
 /* rolls a skill check on 1d6.
 ex: <<check 10 stats.int 1>>
 
 _difficultyrating ($args[0]) is the difficulty you're trying to beat (if the difficulty is a 7, you want a 7 or higher)
-_stat (1) is the stat you're using with a number associated with it.
+_stat (1) is the stat you're using with a numl-0pber associated with it.
 _mods (2) is any stat number modifiers you might have due to previous actions, like drinking alcohol giving you a -1 or taking meds giving you a +1.
 _roll is a random roll on 1d6, + _stat + _mods
 
@@ -19,8 +19,8 @@ if it fails, set $success to false.
     <<set $rollOne = random(1, 6)>>
     <<set $rollTwo = random(1, 6)>>
     <<set $roll = $rollOne + $rollTwo + $stat + $mods>>
-    <<if $roll >= $$difficultyrating>>
-        <<set $success = true>>
+    <<if $roll >= $difficultyrating>>
+        <<set $success = true>>00
     <<else>>
         <<set $success = false>>
     <</if>>

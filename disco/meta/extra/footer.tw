@@ -1,3 +1,9 @@
 :: PassageFooter
-<<DisplayParagraphs>>
+<<if tags().includes("roll")>>
+    <<timed 1s t8n>>
+        <<DisplayParagraphs>>
+    <</timed>>
+<<else>>
+    <<DisplayParagraphs>>
+<</if>>
 <br>

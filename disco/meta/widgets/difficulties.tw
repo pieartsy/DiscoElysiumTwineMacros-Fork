@@ -1,4 +1,4 @@
-:: Difficulties [widget]
+:: Difficulties [widget nobr]
 <<widget "Difficulties">>
 <<silently>>
     <<if $args[0] == "Trivial">>

@@ -7,22 +7,28 @@ html {
 body, tw-story
 {
   font-family: 'David Libre', serif;
-  margin-left: 2em;
-  color: #d2d3cd;
   height: 100%;
-}
+  width: 90vw;
 
+
+}
 
 #story {
   height: 100%;
   overflow-y: auto;
   margin-top: 0em;
   margin-bottom: 0em;
+  border-width: 0px 15px;
+  border-color: grey;
+  border-style: dashed;
+  position: relative;
+  background-color: #181411;
+  color: #e9e3e3;
 }
 
 .passage {
   line-height: 1.25;
-  font-size: large;
+  margin-top: 2em;
   margin-left: 1.5em;
   font-size: 1.5rem;
 }
@@ -73,8 +79,8 @@ a:active {
 
 /* for inserted paragraphs and past paragraphs */
 .dim {
-  transition: opacity 0.5s;
-  opacity: 0.5;
+  transition: color 0.5s;
+  color: #737c87;
 }
 
 .macro-timed-insert {
