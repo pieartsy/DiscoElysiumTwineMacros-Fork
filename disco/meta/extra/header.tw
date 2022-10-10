@@ -2,10 +2,17 @@
 /*resets all variables that would display paragraphs and overlays back to empty.
 
 lastoption is used with the DisplayOptions passage. */
-
 <<set $paragraphs = []>>
 <<set $overlays = []>>
 <<if $lastoption>>
 @@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
 <</if>>
-<br>
+<<nobr>>
+    <<if tags().includes("roll")>>
+        <<if $success == true>>
+            <<success>>
+        <<else>>
+            <<failure>>
+        <</if>>
+    <</if>>
+<</nobr>>

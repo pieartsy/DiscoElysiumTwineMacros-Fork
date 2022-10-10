@@ -6,7 +6,7 @@ this shows up only at PassageFooter; you don't need to call it otherwise
 <<widget "DisplayParagraphs">>\
 <<silently>>
 	<<set _paragraph to $paragraphs[0]>>
-	<<set _overlay to $overlays[0]>>\
+	<<set _overlay to $overlays[0]>>
 	<<run $paragraphs.deleteAt(0)>>
 	<<run $overlays.deleteAt(0)>>
 <</silently>>\
@@ -30,7 +30,7 @@ this shows up only at PassageFooter; you don't need to call it otherwise
 		/*otherwise, display options.*/
 		<<include DisplayOptions>>
 	<</if>>
-<</nobr>>
+<</nobr>>\
 /* the script dims the paragraphs after they've been clicked.*/
 <<silently>>
 	<<timed 0.5s>><<script>>

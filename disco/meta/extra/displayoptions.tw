@@ -40,13 +40,13 @@ first line creates an ordered list
 
     /*If the skill name is in the $motorics array, set _usedStat to the skill's appropriate stat for use with <<check>>. same with the others.*/
     <<if $motorics.includes(_skillname)>>
-        <<set _usedStat = $stat.mot>>
+        <<set _usedStat = $stats.mot>>
     <<elseif $intellect.includes(_skillname)>>
-        <<set _usedStat = $stat.int>>
+        <<set _usedStat = $stats.int>>
     <<elseif $fysique.includes(_skillname)>>
-        <<set _usedStat = $stat.fys>>
+        <<set _usedStat = $stats.fys>>
     <<elseif $psyche.includes(_skillname)>>
-        <<set _usedStat = $stat.psy>>
+        <<set _usedStat = $stats.psy>>
     <</if>>
 
     /*  rewrite _optiontext as [skill + difficulty label] (capitalizing the skill name)
@@ -71,7 +71,7 @@ first line creates an ordered list
                 /* if there's a succcess flag */
                 <<if _optionChecks[6]>>
                   <<flag _optionChecks[5] _optionChecks[6]>>
-                <<elseif !_optionChecks[6]>>
+                <<else>>
                   <<flag _optionChecks[5]>>
                 <</if>>
                 <<goto _optionChecks[0]>>

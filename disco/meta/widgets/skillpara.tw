@@ -33,19 +33,19 @@ if passing the passive check sets a flag to true:
     /*If the skill name is in the $motorics array, set _currentspeaker to the skill, styling it with the .motorics and .speaker classes. same with the others. set _usedStat to the skill's appropriate stat for use with <<check>>*/
     <<if $motorics.includes(_skillname)>>
         <<set _currentspeaker = "@@.motorics.speaker;" + _skillname + "@@">>
-        <<set _usedStat = $stat.mot>>
+        <<set _usedStat = $stats.mot>>
         <<set _usedOverlay to "mot">>
     <<elseif $intellect.includes(_skillname)>>
         <<set _currentspeaker = "@@.intellect.speaker;" + _skillname + "@@">>
-        <<set _usedStat = $stat.int>>
+        <<set _usedStat = $stats.int>>
         <<set _usedOverlay to "int">>
     <<elseif $fysique.includes(_skillname)>>
         <<set _currentspeaker = "@@.fysique.speaker;" + _skillname + "@@">>
-        <<set _usedStat = $stat.fys>>
+        <<set _usedStat = $stats.fys>>
         <<set _usedOverlay to "fys">>
     <<elseif $psyche.includes(_skillname)>>
         <<set _currentspeaker = "@@.psyche.speaker;" + _skillname + "@@">>
-        <<set _usedStat = $stat.psy>>
+        <<set _usedStat = $stats.psy>>
         <<set _usedOverlay to "psy">>
     <</if>>
 
@@ -56,8 +56,7 @@ if passing the passive check sets a flag to true:
         <<set _difficultyRating = $args[1].charAt(0).toUpperCase() + $args[1].slice(1)>>
         <<Difficulties _difficultyRating>>
 
-       /* if check passes/$success is true,
-        set the skill rating to the 2nd argument + Success [Easy: Success] and display the success content. */
+       /* if check is over the stat used + 6, set the skill rating to the 2nd argument + Success [Easy: Success] and display the success content. otherwise it shows nothing*/
         <<if  (_usedStat + 6) >= _rating>>
             <<set _skillresult = " [" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Success ]">>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>

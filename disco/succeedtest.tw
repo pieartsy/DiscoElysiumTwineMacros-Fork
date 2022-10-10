@@ -1,3 +1,2 @@
-:: SUCCEED
-<<success>>
+:: SUCCEED [roll]
 <<para>>YOU SUCCEEDED!<</para>>

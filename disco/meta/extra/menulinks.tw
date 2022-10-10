@@ -45,10 +45,10 @@ Disco Elysium world and inspiration - ZA/UM. Website: [[link|https://internation
         <td colspan="4">Stats</td>
     </tr>
     <tr>
-        <th>$stat.int</th>
-        <th>$stat.psy</th>
-        <th>$stat.fys</th>
-        <th>$stat.mot</th>
+        <th>$stats.int</th>
+        <th>$stats.psy</th>
+        <th>$stats.fys</th>
+        <th>$stats.mot</th>
     </tr>
     <tr>
         <td>INT</td>

@@ -194,6 +194,10 @@ a.macro-linkreplace .motoverlay  {
   100% {opacity: 0; left: 80%}
 }
 
+.hide {
+  display: none;
+}
+
 /* styling for white check */
 .check a {
   font-weight: bold;
@@ -208,6 +212,7 @@ a.macro-linkreplace .motoverlay  {
   color: white;
 }
 
+/* stats on overview screen */
 .stats {
   width: 100%;
   border-collapse:unset;

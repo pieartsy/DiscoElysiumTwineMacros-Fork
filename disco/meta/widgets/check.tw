@@ -13,11 +13,13 @@ if it fails, set $success to false.
 
 <<widget "check">>
 <<silently>>
-    <<set _difficultyrating = $args[0]>>
-    <<set _stat = $args[1]>>
-    <<set _mods = $args[2]>>
-    <<set $roll = random(1, 6) + random(1, 6) + _stat + _mods>>
-    <<if $roll >= _difficultyrating>>
+    <<set $difficultyrating = $args[0]>>
+    <<set $stat = $args[1]>>
+    <<set $mods = $args[2]>>
+    <<set $rollOne = random(1, 6)>>
+    <<set $rollTwo = random(1, 6)>>
+    <<set $roll = $rollOne + $rollTwo + $stat + $mods>>
+    <<if $roll >= $$difficultyrating>>
         <<set $success = true>>
     <<else>>
         <<set $success = false>>

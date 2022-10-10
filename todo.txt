@@ -1,23 +1,23 @@
-- make the two variables $overlays and $paragraphs actually a key/value map rather than two arrays [why would i do this, idr]
 - add roll results to checksuccess and checkfailure somehow?
 - add roll results to passive checks?
 
-- make overlays happen AFTER or DURING passive skills being set, rather than before
-- tippy...
-- why is it tiny???? why is the text tiny????
 
+- tippy...
 
 - modifiers (and listing them in a tippy)?
 - xp
 - stat setting
 - level ups upping stats
 - inventory/items
--  bind close to esc key
 - thoughts?? (probably not)
 - stats don't actually change checks within same passage
-- redo things using new container widget ability
+- fix display options so when failed flag value is not present it sets to false rather than true
+- disable scrolling spacebar
 
 DONE
 - make "passive skills" actually do a skill check
-- got stat changes ui working
-- fixed esc key open and close, and added ANOTHER argument to passiveskill
+- fixed esc key open and close
+- why is it tiny???? why is the text tiny???? (fixed)
+- redo things using new container widget ability
+- bind close to esc key
+- make overlays happen AFTER or DURING passive skills being set, rather than before

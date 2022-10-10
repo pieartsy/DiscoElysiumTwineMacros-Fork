@@ -18,7 +18,7 @@
     <<elseif $args[0] == "Godly">>
         <<set _rating = 16>>
     <<elseif $args[0] == "Impossible">>
-        <<set _rating = 17>>
+        <<set _rating = 18>>
     <</if>>
 <</silently>>
 <</widget>>
