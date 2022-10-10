@@ -13,18 +13,24 @@ first line creates an ordered list
     args[1] = _optionChecks (an array)
 
     within _optionChecks array:
-      normally:
+      with <<addoption>> - normal option:
         0 = the passage that the option sends you to by default
         if there's a flag:
-          1 = flag to set as true
+          1 = flag to set
+          2 = value to set it to (optional, defaults to true)
 
-      if it's making a check:
+      with <<checkoption>> - if it's making a check:
         0 = the passage that the option sends you to on a success
         1 = the passage that the option sends you to on a failure
         2 = skill
-        3 = flag, what to set it to based on succcess, and what to set it to based on failure
-        4 = difficulty rating
-        5 = roll modifier
+        3 = difficulty rating
+        4 = roll modifier
+        5 = flag to set
+        6 = value to set it on success (optional, defaults to true)
+        7 = value to set it on failure (optional, defaults to false)
+
+
+        
   */
 
   /* if _optionChecks[2] (the skill indicating that the option is a check) exists, */
@@ -45,26 +51,37 @@ first line creates an ordered list
 
     /*  rewrite _optiontext as [skill + difficulty label] (capitalizing the skill name)
       ex: [Visual Calculus - Heroic] */
-    <<set _skillname = _optionChecks[2].charAt(0).toUpperCase() + _optionChecks[2].slice(1).toLowerCase();>>
+    <<set _skillname = _optionChecks[2].charAt(0).toUpperCase() + _optionChecks[2].slice(1).toLowerCase()>>
 
     /* convert difficulty name to number */
-    <<set _difficultyRating = _optionChecks[4].charAt(0).toUpperCase() + _optionChecks[4].slice(1).toLowerCase()>>
+    <<set _difficultyRating = _optionChecks[3].charAt(0).toUpperCase() + _optionChecks[3].slice(1).toLowerCase()>>
     <<Difficulties _difficultyRating>>
 
     /* add option text
     ex: [Visual Calculus - Heroic] - Do something heroic with Visual Calculus.*/
     <<set _optiontext = " [" + _skillname + " - "  + _difficultyRating + "] - " + _optiontext>>
-
-    /* put the .check styling to a link with _optiontext as its text. forwards you to the appropriate passage based on whether you succeeded or failed. sets the $lastoption variable, used in the PassageHeader passage, to _optiontext. */
+  
+    /* put the .check styling to a link with _optiontext as its text. forwards you to the appropriate passage based on whether you succeeded or failed.*/
       @@.check;<li>-
           <<link _optiontext>>
+          /* sets the $lastoption variable, used in the PassageHeader passage, to _optiontext. */
             <<set $lastoption = _optiontext>>
-            <<check _rating _usedStat _optionChecks[5]>>
+            <<check _rating _usedStat _optionChecks[4]>>
               <<if $success == true>>
-                <<flag _optionChecks[3] true>>
+                /* if there's a succcess flag */
+                <<if _optionChecks[6]>>
+                  <<flag _optionChecks[5] _optionChecks[6]>>
+                <<elseif !_optionChecks[6]>>
+                  <<flag _optionChecks[5]>>
+                <</if>>
                 <<goto _optionChecks[0]>>
               <<elseif $success == false>>
-                <<flag _optionChecks[3] false>>
+              /* if there's a failure flag */
+                <<if _optionChecks[7]>>
+                  <<flag _optionChecks[5] _optionChecks[7]>>
+                <<elseif !_optionChecks[7]>>
+                  <<flag _optionChecks[5] false>>
+                <</if>>
                 <<goto _optionChecks[1]>>
               <</if>>
           <</link>>
@@ -77,7 +94,12 @@ first line creates an ordered list
         /* if there's a 2nd variable in the _optionChecks array (indicating it's a flag setter) and there's no check, set the $flagsMap's variable to the value
          ex: <<addoption "text" "Passage" "flag">> */
         <<if _optionChecks[1]>>
-          <<flag _optionChecks[1] true>>
+          <<if _optionChecks[2]>>
+            <<flag _optionChecks[1] _optionChecks[2]>>
+          /* otherwise set to true */
+          <<else>>
+            <<flag _optionChecks[1]>>
+          <</if>>
         <</if>>
         <<set $lastoption = _optiontext>>
         <<goto _optionChecks[0]>>

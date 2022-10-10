@@ -1,5 +1,5 @@
 :: skillpara [widget nobr]
-/* represents the dialogue of passive skills, a unique set speaker. you need to include an argument - the skill name. additional arguments indicate that you're running a check, and they must be numbers (with no quotes)
+/* represents the dialogue of passive skills, a unique set speaker. you need to include at least one argument. the passive check and flag arguments are optional.
 
 ex:
 skill speaking with no check
@@ -9,6 +9,11 @@ skill speaking with no check
 if it's a passive check:
 <<skillpara "Logic" "trivial">>Succeful logic passive check<<skillpara>>
     1 = difficulty
+
+if passing the passive check sets a flag to true:
+<<skillpara "Logic" "trivial" "isThisLogical">>Successful logic passive check<<skillpara>>
+    2 = flag to set
+    3 = what to set it to (optional, defaults to true)
 */
 <<widget "skillpara" container>>
 <<silently>>
@@ -57,8 +62,20 @@ if it's a passive check:
             <<set _skillresult = " [" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Success ]">>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>
             <<overlay _usedOverlay>>
+            /* if there's a flag */
+            <<if $args[2]>>
+                /* if the flag value is specified, set to that value */
+                <<if $args[3]>>
+                    <<flag _args[2] _args[3]>>
+                /* otherwise set to true */
+                <<elseif !$args[3]>>
+                    <<flag _args[2]>>
+                <</if>>
+            <</if>>
             <<run $paragraphs.push(_skillpara)>>
        <</if>>
+
+    /*if it's just a  normal skill comment with no passive*/
     <<elseif !$args[1]>>
         <<set _skillpara += _currentspeaker + " - " + _contents>>
         <<run $paragraphs.push(_skillpara)>>

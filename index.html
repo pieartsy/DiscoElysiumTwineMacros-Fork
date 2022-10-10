@@ -4419,18 +4419,24 @@ first line creates an ordered list
     args[1] = _optionChecks (an array)
 
     within _optionChecks array:
-      normally:
+      with &lt;&lt;addoption&gt;&gt; - normal option:
         0 = the passage that the option sends you to by default
         if there&#39;s a flag:
-          1 = flag to set as true
+          1 = flag to set
+          2 = value to set it to (optional, defaults to true)
 
-      if it&#39;s making a check:
+      with &lt;&lt;checkoption&gt;&gt; - if it&#39;s making a check:
         0 = the passage that the option sends you to on a success
         1 = the passage that the option sends you to on a failure
         2 = skill
-        3 = flag, what to set it to based on succcess, and what to set it to based on failure
-        4 = difficulty rating
-        5 = roll modifier
+        3 = difficulty rating
+        4 = roll modifier
+        5 = flag to set
+        6 = value to set it on success (optional, defaults to true)
+        7 = value to set it on failure (optional, defaults to false)
+
+
+        
   */
 
   /* if _optionChecks[2] (the skill indicating that the option is a check) exists, */
@@ -4451,26 +4457,37 @@ first line creates an ordered list
 
     /*  rewrite _optiontext as [skill + difficulty label] (capitalizing the skill name)
       ex: [Visual Calculus - Heroic] */
-    &lt;&lt;set _skillname = _optionChecks[2].charAt(0).toUpperCase() + _optionChecks[2].slice(1).toLowerCase();&gt;&gt;
+    &lt;&lt;set _skillname = _optionChecks[2].charAt(0).toUpperCase() + _optionChecks[2].slice(1).toLowerCase()&gt;&gt;
 
     /* convert difficulty name to number */
-    &lt;&lt;set _difficultyRating = _optionChecks[4].charAt(0).toUpperCase() + _optionChecks[4].slice(1).toLowerCase()&gt;&gt;
+    &lt;&lt;set _difficultyRating = _optionChecks[3].charAt(0).toUpperCase() + _optionChecks[3].slice(1).toLowerCase()&gt;&gt;
     &lt;&lt;Difficulties _difficultyRating&gt;&gt;
 
     /* add option text
     ex: [Visual Calculus - Heroic] - Do something heroic with Visual Calculus.*/
     &lt;&lt;set _optiontext = &quot; [&quot; + _skillname + &quot; - &quot;  + _difficultyRating + &quot;] - &quot; + _optiontext&gt;&gt;
-
-    /* put the .check styling to a link with _optiontext as its text. forwards you to the appropriate passage based on whether you succeeded or failed. sets the $lastoption variable, used in the PassageHeader passage, to _optiontext. */
+  
+    /* put the .check styling to a link with _optiontext as its text. forwards you to the appropriate passage based on whether you succeeded or failed.*/
       @@.check;&lt;li&gt;-
           &lt;&lt;link _optiontext&gt;&gt;
+          /* sets the $lastoption variable, used in the PassageHeader passage, to _optiontext. */
             &lt;&lt;set $lastoption = _optiontext&gt;&gt;
-            &lt;&lt;check _rating _usedStat _optionChecks[5]&gt;&gt;
+            &lt;&lt;check _rating _usedStat _optionChecks[4]&gt;&gt;
               &lt;&lt;if $success == true&gt;&gt;
-                &lt;&lt;flag _optionChecks[3] true&gt;&gt;
+                /* if there&#39;s a succcess flag */
+                &lt;&lt;if _optionChecks[6]&gt;&gt;
+                  &lt;&lt;flag _optionChecks[5] _optionChecks[6]&gt;&gt;
+                &lt;&lt;elseif !_optionChecks[6]&gt;&gt;
+                  &lt;&lt;flag _optionChecks[5]&gt;&gt;
+                &lt;&lt;/if&gt;&gt;
                 &lt;&lt;goto _optionChecks[0]&gt;&gt;
               &lt;&lt;elseif $success == false&gt;&gt;
-                &lt;&lt;flag _optionChecks[3] false&gt;&gt;
+              /* if there&#39;s a failure flag */
+                &lt;&lt;if _optionChecks[7]&gt;&gt;
+                  &lt;&lt;flag _optionChecks[5] _optionChecks[7]&gt;&gt;
+                &lt;&lt;elseif !_optionChecks[7]&gt;&gt;
+                  &lt;&lt;flag _optionChecks[5] false&gt;&gt;
+                &lt;&lt;/if&gt;&gt;
                 &lt;&lt;goto _optionChecks[1]&gt;&gt;
               &lt;&lt;/if&gt;&gt;
           &lt;&lt;/link&gt;&gt;
@@ -4483,7 +4500,12 @@ first line creates an ordered list
         /* if there&#39;s a 2nd variable in the _optionChecks array (indicating it&#39;s a flag setter) and there&#39;s no check, set the $flagsMap&#39;s variable to the value
          ex: &lt;&lt;addoption &quot;text&quot; &quot;Passage&quot; &quot;flag&quot;&gt;&gt; */
         &lt;&lt;if _optionChecks[1]&gt;&gt;
-          &lt;&lt;flag _optionChecks[1] true&gt;&gt;
+          &lt;&lt;if _optionChecks[2]&gt;&gt;
+            &lt;&lt;flag _optionChecks[1] _optionChecks[2]&gt;&gt;
+          /* otherwise set to true */
+          &lt;&lt;else&gt;&gt;
+            &lt;&lt;flag _optionChecks[1]&gt;&gt;
+          &lt;&lt;/if&gt;&gt;
         &lt;&lt;/if&gt;&gt;
         &lt;&lt;set $lastoption = _optiontext&gt;&gt;
         &lt;&lt;goto _optionChecks[0]&gt;&gt;
@@ -4651,13 +4673,33 @@ this shows up only at PassageFooter; you don&#39;t need to call it otherwise
 	}
 	&lt;&lt;/script&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/silently&gt;&gt;\
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="flag" tags="widget nobr" position="100,350" size="100,100">/* easier syntax to set a flag, either in the text itself or in DisplayOptions 
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="flag" tags="widget nobr" position="100,350" size="100,100">/* easier syntax to set a flag, either in the text itself, the &lt;&lt;options&gt;&gt; macro, or the &lt;&lt;skillpara&gt;&gt; macro.
+    args[0] = what the flag is named
 
-&lt;&lt;flag &quot;realization&quot; true&gt;&gt;
+    ex: &lt;&lt;flag &quot;realization&quot;&gt;&gt;
+
+    the flag defaults to setting to true, but if you want to change it, you can add a 2nd argument.
+    1 = what it should be set to (optional)
+
+    if you want to set it to false, null, or a number, do not add quotes.
+
+    ex: &lt;&lt;flag &quot;heterosexuality&quot; false&gt;&gt;
+
+    if you put &#39;+&#39; or &#39;-&#39; then it will instead increment or decrement a number. make sure you set it as a number previously or you&#39;ll get an error!
+
+    ex: &lt;&lt;flag &quot;gayPoints&quot; +&gt;&gt;
 */
 
 &lt;&lt;widget &quot;flag&quot;&gt;&gt;
-    &lt;&lt;set $flagsMap[$args[0]] = $args[1]&gt;&gt;
+    &lt;&lt;if !$args[1]&gt;&gt;
+        &lt;&lt;set $flagsMap[$args[0]] = true&gt;&gt;
+    &lt;&lt;elseif $args[1] == &quot;+&quot;&gt;&gt;
+        &lt;&lt;set $flagsMap[$args[0]] += 1&gt;&gt;
+    &lt;&lt;elseif $args[1] == &quot;-&quot;&gt;&gt;
+        &lt;&lt;set $flagsMap[$args[0]] -= 1&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;set $flagsMap[$args[0]] = $args[1]&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Greentext" tags="widget nobr" position="225,350" size="100,100">/* various widgets for &quot;green text&quot; popups. have a generic text that can be customized with arguments */
 &lt;&lt;widget &quot;taskcomplete&quot;&gt;&gt;
     /*The first argument is the task, the second is the experience gained (if any).
@@ -4720,19 +4762,16 @@ this shows up only at PassageFooter; you don&#39;t need to call it otherwise
 
     args[0] = text for the option.
     1 = the passage that the option sends you to by default
-
-    if a flag is set when you click it:
-    2 = flag to set as true
-
-    normal option
     ex: &lt;&lt;addoption &quot;option&quot; &quot;Passage&quot;&gt;&gt;
 
-    option with a flag
-    ex: &lt;&lt;addoption &quot;option with a check&quot; &quot;Passage&quot; &quot;flag&quot;&gt;&gt;
+    if a flag is set when you click it:
+    2 = flag to set
+    3 = what to set it to (optional, defaults to true)
+    ex: &lt;&lt;addoption &quot;option with a flag&quot; &quot;Passage&quot; &quot;flag&quot; false&gt;&gt;
 
 */
 &lt;&lt;widget &quot;addoption&quot;&gt;&gt;
-    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2]])&gt;&gt;
+    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
 /* adds a key, $args[0], and value, an array containing $args 1, to $optionmap
@@ -4743,18 +4782,21 @@ this shows up only at PassageFooter; you don&#39;t need to call it otherwise
     This version is specifically for when you want to add an option with a check (i.e. a die roll)    
     1 = the passage that the option sends you to on a success
     2 = the passage that the option sends you to on failure
-    4 = skill to use
-    3 = flag to set as true or false based on success or failure
+    3 = skill to use
+    4 = difficulty rating
 
-    [the following two must be numbers (without quotes)]
-    5 = difficulty rating
-    6 = roll modifier
+    the following must be a number (without quotes). if there is no mod, then put 0
+    5 = roll modifier
 
-    ex: &lt;&lt;checkoption &quot;option with a flag and check&quot; &quot;Success Passage&quot; &quot;Failure Passage&quot; &quot;logic&quot; &quot;flag&quot; 1 0&gt;&gt;
+    6 = flag to set
+    7 = what to set it to on success (optional, defaults to true)
+    8 = what to set it to on failure (optional, defaults to false)
+
+    ex: &lt;&lt;checkoption &quot;option with a flag and check&quot; &quot;Success Passage&quot; &quot;Failure Passage&quot; &quot;logic&quot; &quot;formidable&quot; 0 &quot;isThisLogical&quot;&gt;&gt;
 
 */
 &lt;&lt;widget &quot;checkoption&quot;&gt;&gt;
-    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6]])&gt;&gt;
+    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6], $args[7], $args[8]])&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="overlay widgets" tags="widget nobr" position="475,350" size="100,100">/* adds an overlay to the following &quot;continue button&quot;.
 
 &lt;&lt;overlay &quot;int&quot;&gt;&gt;
@@ -4811,7 +4853,7 @@ args[0] = the speaker of the paragraph (if any)
     &lt;&lt;run $paragraphs.push(_para)&gt;&gt;
     &lt;&lt;nooverlay&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="skillpara" tags="widget nobr" position="725,350" size="100,100">/* represents the dialogue of passive skills, a unique set speaker. you need to include an argument - the skill name. additional arguments indicate that you&#39;re running a check, and they must be numbers (with no quotes)
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="skillpara" tags="widget nobr" position="725,350" size="100,100">/* represents the dialogue of passive skills, a unique set speaker. you need to include at least one argument. the passive check and flag arguments are optional.
 
 ex:
 skill speaking with no check
@@ -4821,6 +4863,11 @@ skill speaking with no check
 if it&#39;s a passive check:
 &lt;&lt;skillpara &quot;Logic&quot; &quot;trivial&quot;&gt;&gt;Succeful logic passive check&lt;&lt;skillpara&gt;&gt;
     1 = difficulty
+
+if passing the passive check sets a flag to true:
+&lt;&lt;skillpara &quot;Logic&quot; &quot;trivial&quot; &quot;isThisLogical&quot;&gt;&gt;Successful logic passive check&lt;&lt;skillpara&gt;&gt;
+    2 = flag to set
+    3 = what to set it to (optional, defaults to true)
 */
 &lt;&lt;widget &quot;skillpara&quot; container&gt;&gt;
 &lt;&lt;silently&gt;&gt;
@@ -4869,8 +4916,20 @@ if it&#39;s a passive check:
             &lt;&lt;set _skillresult = &quot; [&quot; + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + &quot;: Success ]&quot;&gt;&gt;
             &lt;&lt;set _skillpara += _currentspeaker + _skillresult + &quot; - &quot; + _contents&gt;&gt;
             &lt;&lt;overlay _usedOverlay&gt;&gt;
+            /* if there&#39;s a flag */
+            &lt;&lt;if $args[2]&gt;&gt;
+                /* if the flag value is specified, set to that value */
+                &lt;&lt;if $args[3]&gt;&gt;
+                    &lt;&lt;flag _args[2] _args[3]&gt;&gt;
+                /* otherwise set to true */
+                &lt;&lt;elseif !$args[3]&gt;&gt;
+                    &lt;&lt;flag _args[2]&gt;&gt;
+                &lt;&lt;/if&gt;&gt;
+            &lt;&lt;/if&gt;&gt;
             &lt;&lt;run $paragraphs.push(_skillpara)&gt;&gt;
        &lt;&lt;/if&gt;&gt;
+
+    /*if it&#39;s just a  normal skill comment with no passive*/
     &lt;&lt;elseif !$args[1]&gt;&gt;
         &lt;&lt;set _skillpara += _currentspeaker + &quot; - &quot; + _contents&gt;&gt;
         &lt;&lt;run $paragraphs.push(_skillpara)&gt;&gt;
@@ -4906,10 +4965,11 @@ if it&#39;s a passive check:
 &lt;&lt;skillpara &quot;empathy&quot;&gt;&gt;Se seems nice.&lt;&lt;/skillpara&gt;&gt;
 &lt;&lt;skillpara &quot;electrochemistry&quot; &quot;trivial&quot;&gt;&gt;Succeeding is sexy as hell.&lt;&lt;/skillpara&gt;&gt;
 &lt;&lt;skillpara &quot;composure&quot; &quot;easy&quot;&gt;&gt;Let&#39;s calm down.&lt;&lt;/skillpara&gt;&gt;
+&lt;&lt;skillpara &quot;visual calculus&quot; &quot;trivial&quot; &quot;checkcheck&quot;&gt;&gt;Something seems off...&lt;&lt;/skillpara&gt;&gt;
 
 &lt;&lt;addoption &quot;click this normal option&quot; &quot;normal&quot;&gt;&gt;
 &lt;&lt;addoption &quot;click this option with a flag&quot; &quot;normal&quot; &quot;test&quot;&gt;&gt;
-&lt;&lt;checkoption &quot;click on this option with a check&quot; &quot;SUCCEED&quot; &quot;FAIL&quot; &quot;logic&quot; &quot;test&quot; &quot;trivial&quot; 3&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="normal" tags="" position="1100,350" size="100,100">&lt;&lt;para&gt;&gt;$flagsMap.test&lt;&lt;/para&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="SUCCEED" tags="" position="1225,350" size="100,100">&lt;&lt;success&gt;&gt;
+&lt;&lt;checkoption &quot;click on this option with a check&quot; &quot;SUCCEED&quot; &quot;FAIL&quot; &quot;logic&quot; &quot;medium&quot; 0 &quot;checkroll&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="normal" tags="" position="1100,350" size="100,100">&lt;&lt;para&gt;&gt;$flagsMap.test&lt;&lt;/para&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="SUCCEED" tags="" position="1225,350" size="100,100">&lt;&lt;success&gt;&gt;
 &lt;&lt;para&gt;&gt;YOU SUCCEEDED!&lt;&lt;/para&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */

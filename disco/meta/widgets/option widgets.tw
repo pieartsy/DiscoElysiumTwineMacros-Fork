@@ -4,19 +4,16 @@
 
     args[0] = text for the option.
     1 = the passage that the option sends you to by default
-
-    if a flag is set when you click it:
-    2 = flag to set as true
-
-    normal option
     ex: <<addoption "option" "Passage">>
 
-    option with a flag
-    ex: <<addoption "option with a check" "Passage" "flag">>
+    if a flag is set when you click it:
+    2 = flag to set
+    3 = what to set it to (optional, defaults to true)
+    ex: <<addoption "option with a flag" "Passage" "flag" false>>
 
 */
 <<widget "addoption">>
-    <<run $optionmap.set($args[0], [$args[1], $args[2]])>>
+    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])>>
 <</widget>>
 
 /* adds a key, $args[0], and value, an array containing $args 1, to $optionmap
@@ -27,17 +24,20 @@
     This version is specifically for when you want to add an option with a check (i.e. a die roll)    
     1 = the passage that the option sends you to on a success
     2 = the passage that the option sends you to on failure
-    4 = skill to use
-    3 = flag to set as true or false based on success or failure
+    3 = skill to use
+    4 = difficulty rating
 
-    [the following two must be numbers (without quotes)]
-    5 = difficulty rating
-    6 = roll modifier
+    the following must be a number (without quotes). if there is no mod, then put 0
+    5 = roll modifier
 
-    ex: <<checkoption "option with a flag and check" "Success Passage" "Failure Passage" "logic" "flag" 1 0>>
+    6 = flag to set
+    7 = what to set it to on success (optional, defaults to true)
+    8 = what to set it to on failure (optional, defaults to false)
+
+    ex: <<checkoption "option with a flag and check" "Success Passage" "Failure Passage" "logic" "formidable" 0 "isThisLogical">>
 
 */
 <<widget "checkoption">>
-    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6]])>>
+    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6], $args[7], $args[8]])>>
 <</widget>>
 
