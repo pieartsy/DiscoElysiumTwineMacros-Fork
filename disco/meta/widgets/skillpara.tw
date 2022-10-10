@@ -7,9 +7,8 @@ skill speaking with no check
     0 = name of skill
 
 if it's a passive check:
-<<skillpara "Logic" 3 0>>Succeful logic passive check||Failed logic passive check<<skillpara>>
+<<skillpara "Logic" 3>>Succeful logic passive check||Failed logic passive check<<skillpara>>
     1 = difficulty
-    2 = mod
 */
 <<widget "skillpara" container>>
 <<silently>>
@@ -46,24 +45,23 @@ if it's a passive check:
         <<set _usedOverlay to "psy">>
     <</if>>
 
-    /* if there's a 1st argument present (indicating a check), run the check macro.*/
+    /* if there's a 1st argument present (indicating a check), check to see if the skill is high enough [stat for now  until I build skills in].*/
     <<if $args[1]>>
         <<set _passiveResults = _contents.split("||")>>>>
         <<set _passiveSuccess = _passiveResults[0]>>
         <<set _passiveFailure = _passiveResults[1]>>
 
-        <<check $args[1] _usedStat $args[2]>>
         <<Difficulties $args[1]>>
        /* if check passes/$success is true,
         set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info. */
-        <<if $success is true>>
+        <<if $args[1] >= _usedStat>>
             <<set _skillresult = " [" + _label + ": Success ]">>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _passiveSuccess>>
             <<overlay _usedOverlay>>
         /*  if it fails:
             set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
             add the skill result to the current speaker: Logic [Easy: Success] */
-        <<elseif $success is false>>
+        <<elseif $args[1] < _usedStat>>
             <<set _skillresult = " [" + _label + ": Failure ]">>>>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _passiveFailure>>
             <<nooverlay>>

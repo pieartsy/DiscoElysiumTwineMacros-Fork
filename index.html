@@ -4817,9 +4817,8 @@ skill speaking with no check
     0 = name of skill
 
 if it&#39;s a passive check:
-&lt;&lt;skillpara &quot;Logic&quot; 3 0&gt;&gt;Succeful logic passive check||Failed logic passive check&lt;&lt;skillpara&gt;&gt;
+&lt;&lt;skillpara &quot;Logic&quot; 3&gt;&gt;Succeful logic passive check||Failed logic passive check&lt;&lt;skillpara&gt;&gt;
     1 = difficulty
-    2 = mod
 */
 &lt;&lt;widget &quot;skillpara&quot; container&gt;&gt;
 &lt;&lt;silently&gt;&gt;
@@ -4856,24 +4855,23 @@ if it&#39;s a passive check:
         &lt;&lt;set _usedOverlay to &quot;psy&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 
-    /* if there&#39;s a 1st argument present (indicating a check), run the check macro.*/
+    /* if there&#39;s a 1st argument present (indicating a check), check to see if the skill is high enough [stat for now  until I build skills in].*/
     &lt;&lt;if $args[1]&gt;&gt;
         &lt;&lt;set _passiveResults = _contents.split(&quot;||&quot;)&gt;&gt;&gt;&gt;
         &lt;&lt;set _passiveSuccess = _passiveResults[0]&gt;&gt;
         &lt;&lt;set _passiveFailure = _passiveResults[1]&gt;&gt;
 
-        &lt;&lt;check $args[1] _usedStat $args[2]&gt;&gt;
         &lt;&lt;Difficulties $args[1]&gt;&gt;
        /* if check passes/$success is true,
         set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info. */
-        &lt;&lt;if $success is true&gt;&gt;
+        &lt;&lt;if $args[1] &gt;= _usedStat&gt;&gt;
             &lt;&lt;set _skillresult = &quot; [&quot; + _label + &quot;: Success ]&quot;&gt;&gt;
             &lt;&lt;set _skillpara += _currentspeaker + _skillresult + &quot; - &quot; + _passiveSuccess&gt;&gt;
             &lt;&lt;overlay _usedOverlay&gt;&gt;
         /*  if it fails:
             set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
             add the skill result to the current speaker: Logic [Easy: Success] */
-        &lt;&lt;elseif $success is false&gt;&gt;
+        &lt;&lt;elseif $args[1] &lt; _usedStat&gt;&gt;
             &lt;&lt;set _skillresult = &quot; [&quot; + _label + &quot;: Failure ]&quot;&gt;&gt;&gt;&gt;
             &lt;&lt;set _skillpara += _currentspeaker + _skillresult + &quot; - &quot; + _passiveFailure&gt;&gt;
             &lt;&lt;nooverlay&gt;&gt;
@@ -4913,11 +4911,11 @@ if it&#39;s a passive check:
 &lt;&lt;para&gt;&gt;How are you?&lt;&lt;/para&gt;&gt;
 &lt;&lt;skillpara &quot;empathy&quot;&gt;&gt;Se seems nice.&lt;&lt;/skillpara&gt;&gt;
 &lt;&lt;skillpara &quot;electrochemistry&quot; 1 0&gt;&gt;Succeeding is sexy as hell.||Unsexy! Failing is unsexy!&lt;&lt;/skillpara&gt;&gt;
-&lt;&lt;skillpara &quot;composure&quot; 5 0&gt;&gt;Let&#39;s calm down.||Oh god!&lt;&lt;/skillpara&gt;&gt;
+&lt;&lt;skillpara &quot;composure&quot; 2 0&gt;&gt;Let&#39;s calm down.||Oh god!&lt;&lt;/skillpara&gt;&gt;
 
 &lt;&lt;addoption &quot;click this normal option&quot; &quot;normal&quot;&gt;&gt;
 &lt;&lt;addoption &quot;click this option with a flag&quot; &quot;normal&quot; &quot;test&quot;&gt;&gt;
-&lt;&lt;checkoption &quot;click on this option with a check&quot; &quot;SUCCEED&quot; &quot;FAIL&quot; &quot;logic&quot; &quot;test&quot; 7 0&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="normal" tags="" position="1100,350" size="100,100">&lt;&lt;para&gt;&gt;$flagsMap.test&lt;&lt;/para&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="SUCCEED" tags="" position="1225,350" size="100,100">&lt;&lt;success&gt;&gt;
+&lt;&lt;checkoption &quot;click on this option with a check&quot; &quot;SUCCEED&quot; &quot;FAIL&quot; &quot;logic&quot; &quot;test&quot; 4 0&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="normal" tags="" position="1100,350" size="100,100">&lt;&lt;para&gt;&gt;$flagsMap.test&lt;&lt;/para&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="SUCCEED" tags="" position="1225,350" size="100,100">&lt;&lt;success&gt;&gt;
 &lt;&lt;para&gt;&gt;YOU SUCCEEDED!&lt;&lt;/para&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
