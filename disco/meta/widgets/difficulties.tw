@@ -1,24 +1,24 @@
 :: Difficulties [widget]
 <<widget "Difficulties">>
 <<silently>>
-    <<if $args[0] is 1>>
-        <<set _label = "Trivial">>
-    <<elseif $args[0] is 2>>
-        <<set _label = "Easy">>
-    <<elseif $args[0] >= 3 and $args[0] <= 4>>
-        <<set _label = "Medium">>
-    <<elseif $args[0] >= 5 and $args[0] <= 6 >>
-        <<set _label = "Challenging">>
-    <<elseif $args[0] is 7>>
-        <<set _label = "Formidable">>
-    <<elseif $args[0] is 8>>
-        <<set _label = "Legendary">>
-    <<elseif $args[0] is 9>>
-        <<set _label = "Heroic">>
-    <<elseif $args[0] is 10>>
-        <<set _label = "Godly">>
-    <<elseif $args[0] >= 11>>
-        <<set _label = "Impossible">>
+    <<if $args[0] == "Trivial">>
+        <<set _rating = 6>>
+    <<elseif $args[0] == "Easy">>
+        <<set _rating = 8>>
+    <<elseif $args[0] == "Medium">>
+        <<set _rating = 10>>
+    <<elseif $args[0] == "Challenging">>
+        <<set _rating = 12>>
+    <<elseif $args[0] == "Formidable">>
+        <<set _rating = 13>>
+    <<elseif $args[0] == "Legendary">>
+        <<set _rating = 14>>
+    <<elseif $args[0] == "Heroic">>
+        <<set _rating = 15>>
+    <<elseif $args[0] == "Godly">>
+        <<set _rating = 16>>
+    <<elseif $args[0] == "Impossible">>
+        <<set _rating = 17>>
     <</if>>
 <</silently>>
 <</widget>>

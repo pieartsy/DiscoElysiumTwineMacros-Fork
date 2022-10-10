@@ -4451,19 +4451,21 @@ first line creates an ordered list
 
     /*  rewrite _optiontext as [skill + difficulty label] (capitalizing the skill name)
       ex: [Visual Calculus - Heroic] */
-    &lt;&lt;set _skillname = _optionChecks[2].charAt(0).toUpperCase() + _optionChecks[2].slice(1);&gt;&gt;
-    &lt;&lt;Difficulties _optionChecks[4]&gt;&gt;
-    &lt;&lt;set _difficultylabel = _label&gt;&gt;
+    &lt;&lt;set _skillname = _optionChecks[2].charAt(0).toUpperCase() + _optionChecks[2].slice(1).toLowerCase();&gt;&gt;
 
     /* add option text
     ex: [Visual Calculus - Heroic] - Do something heroic with Visual Calculus.*/
-    &lt;&lt;set _optiontext = &quot; [&quot; + _skillname + &quot;- &quot;  + _difficultylabel + &quot;] - &quot; + _optiontext&gt;&gt;
+
+    &lt;&lt;set _difficultyRating = _optionChecks[4].charAt(0).toUpperCase() + _optionChecks[4].slice(1).toLowerCase()&gt;&gt;
+    
+    &lt;&lt;set _optiontext = &quot; [&quot; + _skillname + &quot; - &quot;  + _difficultyRating + &quot;] - &quot; + _optiontext&gt;&gt;
 
     /* put the .check styling to a link with _optiontext as its text. forwards you to the appropriate passage based on whether you succeeded or failed. sets the $lastoption variable, used in the PassageHeader passage, to _optiontext. */
       @@.check;&lt;li&gt;-
           &lt;&lt;link _optiontext&gt;&gt;
             &lt;&lt;set $lastoption = _optiontext&gt;&gt;
-            &lt;&lt;check _optionChecks[4] _usedStat _optionChecks[5]&gt;&gt;
+            &lt;&lt;Difficulties _difficultyRating&gt;&gt;
+            &lt;&lt;check _rating _usedStat _optionChecks[5]&gt;&gt;
               &lt;&lt;if $success == true&gt;&gt;
                 &lt;&lt;flag _optionChecks[3] true&gt;&gt;
                 &lt;&lt;goto _optionChecks[0]&gt;&gt;
@@ -4579,8 +4581,8 @@ if it fails, set $success to false.
     &lt;&lt;set _difficultyrating = $args[0]&gt;&gt;
     &lt;&lt;set _stat = $args[1]&gt;&gt;
     &lt;&lt;set _mods = $args[2]&gt;&gt;
-    &lt;&lt;set _roll = random(1, 6) + _stat + _mods&gt;&gt;
-    &lt;&lt;if _roll &gt;= _difficultyrating&gt;&gt;
+    &lt;&lt;set $roll = random(1, 6) + random(1, 6) + _stat + _mods&gt;&gt;
+    &lt;&lt;if $roll &gt;= _difficultyrating&gt;&gt;
         &lt;&lt;set $success = true&gt;&gt;
     &lt;&lt;else&gt;&gt;
         &lt;&lt;set $success = false&gt;&gt;
@@ -4588,24 +4590,24 @@ if it fails, set $success to false.
 &lt;&lt;/silently&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Difficulties" tags="widget" position="1100,225" size="100,100">&lt;&lt;widget &quot;Difficulties&quot;&gt;&gt;
 &lt;&lt;silently&gt;&gt;
-    &lt;&lt;if $args[0] is 1&gt;&gt;
-        &lt;&lt;set _label = &quot;Trivial&quot;&gt;&gt;
-    &lt;&lt;elseif $args[0] is 2&gt;&gt;
-        &lt;&lt;set _label = &quot;Easy&quot;&gt;&gt;
-    &lt;&lt;elseif $args[0] &gt;= 3 and $args[0] &lt;= 4&gt;&gt;
-        &lt;&lt;set _label = &quot;Medium&quot;&gt;&gt;
-    &lt;&lt;elseif $args[0] &gt;= 5 and $args[0] &lt;= 6 &gt;&gt;
-        &lt;&lt;set _label = &quot;Challenging&quot;&gt;&gt;
-    &lt;&lt;elseif $args[0] is 7&gt;&gt;
-        &lt;&lt;set _label = &quot;Formidable&quot;&gt;&gt;
-    &lt;&lt;elseif $args[0] is 8&gt;&gt;
-        &lt;&lt;set _label = &quot;Legendary&quot;&gt;&gt;
-    &lt;&lt;elseif $args[0] is 9&gt;&gt;
-        &lt;&lt;set _label = &quot;Heroic&quot;&gt;&gt;
-    &lt;&lt;elseif $args[0] is 10&gt;&gt;
-        &lt;&lt;set _label = &quot;Godly&quot;&gt;&gt;
-    &lt;&lt;elseif $args[0] &gt;= 11&gt;&gt;
-        &lt;&lt;set _label = &quot;Impossible&quot;&gt;&gt;
+    &lt;&lt;if $args[0] == &quot;Trivial&quot;&gt;&gt;
+        &lt;&lt;set _rating = 6&gt;&gt;
+    &lt;&lt;elseif $args[0] == &quot;Easy&quot;&gt;&gt;
+        &lt;&lt;set _rating = 8&gt;&gt;
+    &lt;&lt;elseif $args[0] == &quot;Medium&quot;&gt;&gt;
+        &lt;&lt;set _rating = 10&gt;&gt;
+    &lt;&lt;elseif $args[0] == &quot;Challenging&quot;&gt;&gt;
+        &lt;&lt;set _rating = 12&gt;&gt;
+    &lt;&lt;elseif $args[0] == &quot;Formidable&quot;&gt;&gt;
+        &lt;&lt;set _rating = 13&gt;&gt;
+    &lt;&lt;elseif $args[0] == &quot;Legendary&quot;&gt;&gt;
+        &lt;&lt;set _rating = 14&gt;&gt;
+    &lt;&lt;elseif $args[0] == &quot;Heroic&quot;&gt;&gt;
+        &lt;&lt;set _rating = 15&gt;&gt;
+    &lt;&lt;elseif $args[0] == &quot;Godly&quot;&gt;&gt;
+        &lt;&lt;set _rating = 16&gt;&gt;
+    &lt;&lt;elseif $args[0] == &quot;Impossible&quot;&gt;&gt;
+        &lt;&lt;set _rating = 17&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="DisplayParagraphs" tags="widget" position="1225,225" size="100,100">/*set _paragraph to the first item in $paragraphs, then delete the first item. print _paragraph with the .paragraph class styling.
@@ -4817,7 +4819,7 @@ skill speaking with no check
     0 = name of skill
 
 if it&#39;s a passive check:
-&lt;&lt;skillpara &quot;Logic&quot; 3&gt;&gt;Succeful logic passive check||Failed logic passive check&lt;&lt;skillpara&gt;&gt;
+&lt;&lt;skillpara &quot;Logic&quot; &quot;trivial&quot;&gt;&gt;Succeful logic passive check||Failed logic passive check&lt;&lt;skillpara&gt;&gt;
     1 = difficulty
 */
 &lt;&lt;widget &quot;skillpara&quot; container&gt;&gt;
@@ -4833,7 +4835,6 @@ if it&#39;s a passive check:
         &lt;&lt;set $paraAppendMode = false&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 
- /* sets _skillname to the 1st argument, the skill, in uppercase.*/
     &lt;&lt;set _skillname = $args[0].toUpperCase()&gt;&gt;
 
     /*If the skill name is in the $motorics array, set _currentspeaker to the skill, styling it with the .motorics and .speaker classes. same with the others. set _usedStat to the skill&#39;s appropriate stat for use with &lt;&lt;check&gt;&gt;*/
@@ -4860,19 +4861,22 @@ if it&#39;s a passive check:
         &lt;&lt;set _passiveResults = _contents.split(&quot;||&quot;)&gt;&gt;&gt;&gt;
         &lt;&lt;set _passiveSuccess = _passiveResults[0]&gt;&gt;
         &lt;&lt;set _passiveFailure = _passiveResults[1]&gt;&gt;
+            
+        /* convert difficulty name to number */
+        &lt;&lt;set _difficultyRating = $args[1].charAt(0).toUpperCase() + $args[1].slice(1)&gt;&gt;
+        &lt;&lt;Difficulties _difficultyRating&gt;&gt;
 
-        &lt;&lt;Difficulties $args[1]&gt;&gt;
        /* if check passes/$success is true,
         set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info. */
-        &lt;&lt;if $args[1] &gt;= _usedStat&gt;&gt;
-            &lt;&lt;set _skillresult = &quot; [&quot; + _label + &quot;: Success ]&quot;&gt;&gt;
+        &lt;&lt;if  (_usedStat + 6) &gt;= _rating&gt;&gt;
+            &lt;&lt;set _skillresult = &quot; [&quot; + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + &quot;: Success ]&quot;&gt;&gt;
             &lt;&lt;set _skillpara += _currentspeaker + _skillresult + &quot; - &quot; + _passiveSuccess&gt;&gt;
             &lt;&lt;overlay _usedOverlay&gt;&gt;
         /*  if it fails:
             set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
             add the skill result to the current speaker: Logic [Easy: Success] */
-        &lt;&lt;elseif $args[1] &lt; _usedStat&gt;&gt;
-            &lt;&lt;set _skillresult = &quot; [&quot; + _label + &quot;: Failure ]&quot;&gt;&gt;&gt;&gt;
+        &lt;&lt;elseif (_usedStat + 6) &lt; _rating&gt;&gt;
+            &lt;&lt;set _skillresult = &quot; [&quot; + _args[1].charAt(0).toUpperCase() + _args[1].slice(1) + &quot;: Failure ]&quot;&gt;&gt;&gt;&gt;
             &lt;&lt;set _skillpara += _currentspeaker + _skillresult + &quot; - &quot; + _passiveFailure&gt;&gt;
             &lt;&lt;nooverlay&gt;&gt;
        &lt;&lt;/if&gt;&gt;
@@ -4910,12 +4914,12 @@ if it&#39;s a passive check:
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Start" tags="nobr" position="975,350" size="100,100">&lt;&lt;para &quot;Aster&quot;&gt;&gt;Hi!&lt;&lt;/para&gt;&gt;
 &lt;&lt;para&gt;&gt;How are you?&lt;&lt;/para&gt;&gt;
 &lt;&lt;skillpara &quot;empathy&quot;&gt;&gt;Se seems nice.&lt;&lt;/skillpara&gt;&gt;
-&lt;&lt;skillpara &quot;electrochemistry&quot; 1 0&gt;&gt;Succeeding is sexy as hell.||Unsexy! Failing is unsexy!&lt;&lt;/skillpara&gt;&gt;
-&lt;&lt;skillpara &quot;composure&quot; 2 0&gt;&gt;Let&#39;s calm down.||Oh god!&lt;&lt;/skillpara&gt;&gt;
+&lt;&lt;skillpara &quot;electrochemistry&quot; &quot;trivial&quot;&gt;&gt;Succeeding is sexy as hell.||Unsexy! Failing is unsexy!&lt;&lt;/skillpara&gt;&gt;
+&lt;&lt;skillpara &quot;composure&quot; &quot;easy&quot;&gt;&gt;Let&#39;s calm down.||Oh god!&lt;&lt;/skillpara&gt;&gt;
 
 &lt;&lt;addoption &quot;click this normal option&quot; &quot;normal&quot;&gt;&gt;
 &lt;&lt;addoption &quot;click this option with a flag&quot; &quot;normal&quot; &quot;test&quot;&gt;&gt;
-&lt;&lt;checkoption &quot;click on this option with a check&quot; &quot;SUCCEED&quot; &quot;FAIL&quot; &quot;logic&quot; &quot;test&quot; 4 0&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="normal" tags="" position="1100,350" size="100,100">&lt;&lt;para&gt;&gt;$flagsMap.test&lt;&lt;/para&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="SUCCEED" tags="" position="1225,350" size="100,100">&lt;&lt;success&gt;&gt;
+&lt;&lt;checkoption &quot;click on this option with a check&quot; &quot;SUCCEED&quot; &quot;FAIL&quot; &quot;logic&quot; &quot;test&quot; &quot;trivial&quot; 3&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="normal" tags="" position="1100,350" size="100,100">&lt;&lt;para&gt;&gt;$flagsMap.test&lt;&lt;/para&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="SUCCEED" tags="" position="1225,350" size="100,100">&lt;&lt;success&gt;&gt;
 &lt;&lt;para&gt;&gt;YOU SUCCEEDED!&lt;&lt;/para&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
