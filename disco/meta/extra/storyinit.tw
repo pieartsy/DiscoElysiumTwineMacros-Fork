@@ -1,13 +1,16 @@
 :: StoryInit
-<<set $optionmap to new Map()>>
-<<set $ischeck to []>>
+<<silently>>
+<<set $optionmap = new Map()>>
+<<set $flagsMap = {}>>
+<<set $success = false>>
 
-<<set $motorics to ["composure", "hand-eye coordination", "interfacing", "perception", "reaction speed", "savoir faire", "perception (sight)", "perception (taste)", "perception (touch)"]>>
-<<set $intellect to ["conceptualization", "drama", "encyclopedia", "logic", "rhetoric", "visual Calculus"]>>
-<<set $fysique to ["electrochemistry", "endurance", "half light", "pain threshold", "physical instrument", "shivers"]>>
-<<set $psyche to ["authority", "empathy", "esprit de corps", "inland empire", "suggestion", "volition"]>>
-<<set $greentext to []>>
-<<set $paraAppendMode to false>>
+<<set $motorics = ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)"]>>
+<<set $intellect = ["CONCEPTUALIZATION", "DRAMA", "ENCYCLOPEDIA", "LOGIC", "RHETORIC", "VISUAL CALCULUS"]>>
+<<set $fysique = ["ELECTROCHEMISTRY", "ENDURANCE", "HALF LIGHT", "PAIN THRESHOLD", "PHYSICAL INSTRUMENT", "SHIVERS"]>>
+<<set $psyche = ["AUTHORITY", "EMPATHY", "ESPRIT DE CORPS", "INLAND EMPIRE", "SUGGESTION", "VOLITION"]>>
+<<set $greentext = []>>
+<<set $paraAppendMode = false>>
 
-<<set $xp to 0>>
-<<set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }>>
+<<set $xp = 0>>
+<<set $stat to { int: 0, psy: 0, fys: 0, mot: 0 }>>
+<</silently>>

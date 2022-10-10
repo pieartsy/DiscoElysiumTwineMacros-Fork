@@ -6,10 +6,6 @@ $(document).click(function(e) {
 	return false;
 });
 
-postdisplay['paragraph'] = function (taskName) {
-	//$('.paragraph').hide().fadeIn(10000);
-};
-
 $(document).on("keyup", function (e) {
   if ((e.keyCode == 32) && ($("#ContinueBtn"))) {
     $("#ContinueBtn").click();

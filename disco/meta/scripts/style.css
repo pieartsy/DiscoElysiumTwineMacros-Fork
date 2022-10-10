@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Titillium+Web:wght@300&display=swap');
 
 html {
   height: 100%;
-  zoom: 2;
 }
 
 body, tw-story
@@ -25,6 +24,7 @@ body, tw-story
   line-height: 1.25;
   font-size: large;
   margin-left: 1.5em;
+  font-size: 1.5rem;
 }
 
 a {
@@ -40,10 +40,16 @@ a:active {
   color: white;
 }
 
+/* for option list */
 .passage ol {
   margin-left: -1em;
 }
 
+.option {
+  font-weight: bold;
+}
+
+/* skill voice colors */
 .psyche {
   color: #705cbb;
 }
@@ -65,6 +71,7 @@ a:active {
   margin-left: -1.5em;
 }
 
+/* for inserted paragraphs and past paragraphs */
 .dim {
   transition: opacity 0.5s;
   opacity: 0.5;
@@ -78,10 +85,7 @@ a:active {
   color: #737c87;
 }
 
-.option {
-  font-weight: bold;
-}
-
+/* continue macros and overlays */
 span.continueblock {
   display: none;
 }
@@ -89,7 +93,7 @@ span.continueblock {
 a.macro-linkreplace {
   background-color: #90280f;
   color: white;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   margin-left: -1.5em;
   display: block;
 }
@@ -103,29 +107,31 @@ a.macro-linkreplace .padding {
 
 a.macro-linkreplace .intoverlay  {
   background-image: [img[intoverlay]];
-  background-size: cover;
+  background-size: fill;
 }
 
 a.macro-linkreplace .psyoverlay  {
   background-image: [img[psyoverlay]];
-  background-size: cover;
+  background-size: fill;
 }
 
 a.macro-linkreplace .fysoverlay  {
   background-image: [img[fysoverlay]];
-  background-size: cover;
+  background-size: fill;
 }
 
 a.macro-linkreplace .motoverlay  {
   background-image: [img[motoverlay]];
-  background-size: cover;
+  background-size: fill;
 }
 
+/* greentext */
 .green {
   color: #98b48b; 
   margin-left: -1.5em;
 }
 
+/* check overlay animations */
 .CheckOverlay {
   width: 100%;
   height: 100%;
@@ -141,13 +147,12 @@ a.macro-linkreplace .motoverlay  {
 
 #SuccessImg {
   background: [img[SuccessOverlay]] no-repeat right;
-  background-size: contain;
+  background-size: cover;
 }
 
 #FailureImg {
   background: [img[FailureOverlay]] no-repeat right;
-  background-size: contain;
-  background: url(SuccessOverlay.png) no-repeat center;
+  background-size: cover;
 }
 
 @keyframes Flash {
@@ -159,7 +164,7 @@ a.macro-linkreplace .motoverlay  {
 
 .CheckText {
   color: white;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   position: absolute;
   bottom: 25%;
   left: 50%;
@@ -188,6 +193,8 @@ a.macro-linkreplace .motoverlay  {
   60% {opacity: 1; left: 50%}
   100% {opacity: 0; left: 80%}
 }
+
+/* styling for white check */
 .check a {
   font-weight: bold;
   background-color: #d2d3cd;
@@ -198,9 +205,29 @@ a.macro-linkreplace .motoverlay  {
 
 .check a:hover {
   background-color: #82837f;
+  color: white;
 }
 
-.stats th:nth-child(even) {
-  background-color: #d2d3cd;
-  color: black;
+.stats {
+  width: 100%;
+  border-collapse:unset;
+}
+
+.stats table, th, td {
+    padding: 1em;
+    text-align: center;
+  }
+
+.stats th:nth-child(even),
+.stats  td:nth-child(even) {
+    background-color: #d2d3cd;
+    color: black;
+  }
+
+.stats th {
+  font-size: 2.5rem;
+}
+
+.stats td {
+  font-size: 1.5rem;
 }

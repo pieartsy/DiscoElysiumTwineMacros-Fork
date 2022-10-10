@@ -1,6 +1,3 @@
 :: FAIL
-=======
-<<SkillFailure>>
-<<PassiveSkill "Logic" "Easy" "Failure">>
-<<PassiveSkill "Logic" 5 "Failure">>
-<<AddParagraph "YOU FAILED!!">>
+<<failure>>
+<<para>>YOU FAILED!<</para>>

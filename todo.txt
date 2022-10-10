@@ -15,6 +15,7 @@
 -  bind close to esc key
 - thoughts?? (probably not)
 - stats don't actually change checks within same passage
+- redo things using new container widget ability
 
 DONE
 - make "passive skills" actually do a skill check

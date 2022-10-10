@@ -1,0 +1,24 @@
+:: success and failure [widget nobr]
+
+/* displays the success animation. 
+
+<<success>>
+
+*/
+<<widget "success">>
+<div id="SuccessImg" class="CheckOverlay"></div>
+<div id="CheckSuccess" class="CheckText">CHECK SUCCESS</div>
+<<para>>//Green flashes at the edges of your vision - a success.//<</para>>
+<</widget>>
+
+
+/* displays the failure animation. 
+
+<<failure>>
+
+*/
+<<widget "failure">>
+<div id="FailureImg" class="CheckOverlay"></div>
+<div id="CheckFailure" class="CheckText">CHECK FAILURE</div>
+<<para>>//Red flashes at the edges of your vision - a failure.//<</para>>
+<</widget>>

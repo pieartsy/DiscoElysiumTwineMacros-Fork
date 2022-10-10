@@ -6,60 +6,85 @@ first line creates an ordered list
 */
 <ol id="OptionList">
 /* for each text (key) and passage (value) in $optionmap, capture those things.*/ 
-<<for _optiontext, _optionpassage range $optionmap>>
-  <<capture _optionpassage, _optiontext>>
+<<for _optiontext, _optionChecks range $optionmap>>
+  <<capture _optionChecks, _optiontext>>
   /*  
     args[0] = text for the option.
-    args[1] = _optionspassage (an array)
-    _optionspassage[0] = the passage that the option sends you to
+    args[1] = _optionChecks (an array)
 
-    if it's simulating a check
-    1 = skill
-    2 = difficulty
+    within _optionChecks array:
+      normally:
+        0 = the passage that the option sends you to by default
+        if there's a flag:
+          1 = flag to set as true
 
-    if it's got a flag attached
-    3 = flag in $flagsArray
-
-    --    
-    
-    if _optionpassage[1] (the skill indicating that the option is a check) exists, 
-    rewrite _optiontext as [skill + difficulty label]
-      ex: [Visual Calculus - Heroic]
-    + _optiontext
-    put the .check styling to a link with _optiontext as its text.
-    sets the $lastoption variable, used in the PassageHeader passage, to _optiontext
+      if it's making a check:
+        0 = the passage that the option sends you to on a success
+        1 = the passage that the option sends you to on a failure
+        2 = skill
+        3 = flag, what to set it to based on succcess, and what to set it to based on failure
+        4 = difficulty rating
+        5 = roll modifier
   */
 
-  <<if _optionpassage[1]>>
-    <<set _skillname to _optionpassage[1].charAt(0).toUpperCase() + _optionpassage[1].slice(1);>>
-    <<set _difficultylabel to _optionpassage[2].charAt(0).toUpperCase() + _optionpassage[2].slice(1);>>
-    <<set _optiontext to " [" + _skillname + "- "  + _difficultylabel + "] - " + _optiontext>>
+  /* if _optionChecks[2] (the skill indicating that the option is a check) exists, */
+  <<if _optionChecks[2]>>
+    /* sets _skillname to the 1st argument, the skill, in uppercase.*/
+    <<set _skillname = _optionChecks[2].toUpperCase()>>
+
+    /*If the skill name is in the $motorics array, set _usedStat to the skill's appropriate stat for use with <<check>>. same with the others.*/
+    <<if $motorics.includes(_skillname)>>
+        <<set _usedStat = $stat.mot>>
+    <<elseif $intellect.includes(_skillname)>>
+        <<set _usedStat = $stat.int>>
+    <<elseif $fysique.includes(_skillname)>>
+        <<set _usedStat = $stat.fys>>
+    <<elseif $psyche.includes(_skillname)>>
+        <<set _usedStat = $stat.psy>>
+    <</if>>
+
+    /*  rewrite _optiontext as [skill + difficulty label] (capitalizing the skill name)
+      ex: [Visual Calculus - Heroic] */
+    <<set _skillname = _optionChecks[2].charAt(0).toUpperCase() + _optionChecks[2].slice(1);>>
+    <<Difficulties _optionChecks[4]>>
+    <<set _difficultylabel = _label>>
+
+    /* add option text
+    ex: [Visual Calculus - Heroic] - Do something heroic with Visual Calculus.*/
+    <<set _optiontext = " [" + _skillname + "- "  + _difficultylabel + "] - " + _optiontext>>
+
+    /* put the .check styling to a link with _optiontext as its text. forwards you to the appropriate passage based on whether you succeeded or failed. sets the $lastoption variable, used in the PassageHeader passage, to _optiontext. */
       @@.check;<li>-
-        <<link _optiontext _optionpassage[0]>>
-        <<set $lastoption to _optiontext>>
-        <</link>>
+          <<link _optiontext>>
+            <<set $lastoption = _optiontext>>
+            <<check _optionChecks[4] _usedStat _optionChecks[5]>>
+              <<if $success == true>>
+                <<flag _optionChecks[3] true>>
+                <<goto _optionChecks[0]>>
+              <<elseif $success == false>>
+                <<flag _optionChecks[3] false>>
+                <<goto _optionChecks[1]>>
+              <</if>>
+          <</link>>
       </li>@@
-    /* otherwise just add the option styling */
+  
+  /* otherwise, if there's no check, just add the option styling */
   <<else>>
     @@.option;<li>-
-      <<link _optiontext _optionpassage[0]>>
-      <<set $lastoption to _optiontext>>
+      <<link _optiontext>>
+        /* if there's a 2nd variable in the _optionChecks array (indicating it's a flag setter) and there's no check, set the $flagsMap's variable to the value
+         ex: <<addoption "text" "Passage" "flag">> */
+        <<if _optionChecks[1]>>
+          <<flag _optionChecks[1] true>>
+        <</if>>
+        <<set $lastoption = _optiontext>>
+        <<goto _optionChecks[0]>>
       <</link>>
     </li>@@
-  <</if>>
-
-  /* if there's a 3rd variable in the _optionspassage array  (indicating it's a flag setter) and it's in $flagsArray
-  set the $flagsArray's variable to the value
-  
-   to have this trigger, you need to put empty values for arguments 1 and 2 (no skill check set)
-  
-    ex: <<AddOption "text" "Passage" "" "" "flag">>*/
-  <<if _optionpassage[3]>>
-      <<SetFlag _optionpassage[3]>>
   <</if>>
 
   <</capture>>
 <</for>>
 /* closing off ordered list and resetting $optionmap*/
 </ol>
-<<set $optionmap to new Map()>>
+<<set $optionmap = new Map()>>

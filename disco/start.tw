@@ -1,46 +1,13 @@
 :: Start [nobr]
-$int $$int
-<<SetSpeaker "Aster">>
-<<AddParagraph "Hi!">>
-<<SkillCheck "SUCCEED" "FAIL" 6 $stats.int 2>>
-<<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
-<<AddOption "testoption" false "Start">>
-<<SkillCheck 1 stats.int 2>>
-<<AddOption "testcheck" "Start" true>>
-<<AddOption "testoption" "Start">>
-<<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
-<<AddOption "testoption" "Start">>
-<<linkreplace "@@#ContinueBtn;.psyoverlay.padding;CONTINUE ➤@@" t8n>>test<</linkreplace>>
-<<AddOption "testcheck" true "SUCCEED" "FAIL" 6 $stats.int 2>>
-<<AddOption "testoption" false "Start">>
-<<AddParagraph "Hi!" "int">>
-<<PassiveSkill "Rhetoric" "Easy" "Success">>
-<<AddParagraph "Se seems nice.">>
-<<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
-<<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
-<<SetSpeaker "Aster">>
-<<AddParagraph "I hope you're doing fine!" "none">>
+<<para "Aster">>Hi!<</para>>
+<<para>>How are you?<</para>>
+<<skillpara "empathy">>Se seems nice.<</skillpara>>
+<<skillpara "electrochemistry" 1 0>>Succeeding is sexy as hell.||Unsexy! Failing is unsexy!<</skillpara>>
+<<skillpara "composure" 5 0>>Let's calm down.||Oh god!<</skillpara>>
 
-<<AddOption "testcheck" true "SUCCEED" "FAIL" 3 $stats.int 2>>
-<<AddOption "testoption" false "Start">>
-<<PassiveSkill "Logic" "Hard" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
-<<PassiveSkill "electrochemistry" "Trivial" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
-<<SetSpeaker "Aster">>
-<<AddParagraph "I hope you're doing fine!" "none">>
+<<addoption "click this normal option" "normal">>
+<<addoption "click this option with a flag" "normal" "test">>
+<<checkoption "click on this option with a check" "SUCCEED" "FAIL" "logic" "test" 7 0>>
 
-<<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $stats.int 2>>
-<<AddOption "testoption" false "Start">>
-<<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $stats.int 0>>
-<<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $stats.int 0>>
-<<TaskComplete "Sexiness" 5>>
-<<SetSpeaker "Aster">>
-<<AddParagraph "I hope you're doing fine!" "none">>
-<<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $stats.int 2 "Logic">>
-<<AddOption "testoption" false "Start">>
-<<PassiveSkill "logic" "This is so easy." "Wow guess it wasn't that easy...!" 6 $int 0>>
-<<PassiveSkill "electrochemistry" "Succeeding is sexy as hell." "Unsexy! Failing is unsexy!" 2 $int 0>>
-<<TaskComplete "Sexiness" 5>>
-<<SetSpeaker "Aster">>
-<<AddParagraph "I hope you're doing fine!" "none">>
-<<AddOption "testcheck" true "SUCCEED" "FAIL" 5 $int 2 "Logic">>
-<<AddOption "testoption" false "Start">>
+:: normal
+<<para>>$flagsMap.test<</para>>

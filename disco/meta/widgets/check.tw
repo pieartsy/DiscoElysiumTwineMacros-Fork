@@ -1,0 +1,26 @@
+:: check [widget]
+/* rolls a skill check on 1d6.
+ex: <<check 10 stats.int 1>>
+
+_difficultyrating ($args[0]) is the difficulty you're trying to beat (if the difficulty is a 7, you want a 7 or higher)
+_stat (1) is the stat you're using with a number associated with it.
+_mods (2) is any stat number modifiers you might have due to previous actions, like drinking alcohol giving you a -1 or taking meds giving you a +1.
+_roll is a random roll on 1d6, + _stat + _mods
+
+if the roll succeeds, set $success to true (interacts with PassiveSkill macro)
+if it fails, set $success to false.
+*/
+
+<<widget "check">>
+<<silently>>
+    <<set _difficultyrating = $args[0]>>
+    <<set _stat = $args[1]>>
+    <<set _mods = $args[2]>>
+    <<set _roll = random(1, 6) + _stat + _mods>>
+    <<if _roll >= _difficultyrating>>
+        <<set $success = true>>
+    <<else>>
+        <<set $success = false>>
+    <</if>>
+<</silently>>
+<</widget>>

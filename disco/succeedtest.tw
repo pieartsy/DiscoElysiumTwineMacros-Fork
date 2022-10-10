@@ -1,11 +1,3 @@
 :: SUCCEED
-<<PassiveSkill "Logic" "Easy" "Success">>
-<<AddParagraph "YOU SUCCEEDED!">>
-<<SkillSuccess>>
-<<PassiveSkill "Logic">>
-<<PassiveSkill "Logic" "Easy" "Success">>
-<<PassiveSkill "Logic" 5 "Success">>
-<<AddParagraph "YOU SUCCEEDED!" "fys">>
-<<PassiveSkill "electrochemistry" "Easy" "Success">>
-<<AddParagraph "Very sexy of you." "none">>
-<<AddParagraph ";)" "none">>
+<<success>>
+<<para>>YOU SUCCEEDED!<</para>>

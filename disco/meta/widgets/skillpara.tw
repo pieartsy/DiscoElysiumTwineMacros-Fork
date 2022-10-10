@@ -1,0 +1,81 @@
+:: skillpara [widget nobr]
+/* represents the dialogue of passive skills, a unique set speaker. you need to include an argument - the skill name. additional arguments indicate that you're running a check, and they must be numbers (with no quotes)
+
+ex:
+skill speaking with no check
+<<skillpara "Logic">>Logical statement.<<skillpara>>
+    0 = name of skill
+
+if it's a passive check:
+<<skillpara "Logic" 3 0>>Succeful logic passive check||Failed logic passive check<<skillpara>>
+    1 = difficulty
+    2 = mod
+*/
+<<widget "skillpara" container>>
+<<silently>>
+/* sets a temporary variable, _skillpara, which will be used for the DisplayPara widget */
+    <<set _skillpara = "">>
+    /* if $paraAppendMode (used for greentext) is true, add greentext, then clear the greentext and set it back to false. */
+    <<if $paraAppendMode is true>>
+        <<for _text range $greentext>>
+            <<set _skillpara += _skilltext + "<br /><br />">>
+        <</for>>
+        <<set $greentext = []>>
+        <<set $paraAppendMode = false>>
+    <</if>>
+
+ /* sets _skillname to the 1st argument, the skill, in uppercase.*/
+    <<set _skillname = $args[0].toUpperCase()>>
+
+    /*If the skill name is in the $motorics array, set _currentspeaker to the skill, styling it with the .motorics and .speaker classes. same with the others. set _usedStat to the skill's appropriate stat for use with <<check>>*/
+    <<if $motorics.includes(_skillname)>>
+        <<set _currentspeaker = "@@.motorics.speaker;" + _skillname + "@@">>
+        <<set _usedStat = $stat.mot>>
+        <<set _usedOverlay to "mot">>
+    <<elseif $intellect.includes(_skillname)>>
+        <<set _currentspeaker = "@@.intellect.speaker;" + _skillname + "@@">>
+        <<set _usedStat = $stat.int>>
+        <<set _usedOverlay to "int">>
+    <<elseif $fysique.includes(_skillname)>>
+        <<set _currentspeaker = "@@.fysique.speaker;" + _skillname + "@@">>
+        <<set _usedStat = $stat.fys>>
+        <<set _usedOverlay to "fys">>
+    <<elseif $psyche.includes(_skillname)>>
+        <<set _currentspeaker = "@@.psyche.speaker;" + _skillname + "@@">>
+        <<set _usedStat = $stat.psy>>
+        <<set _usedOverlay to "psy">>
+    <</if>>
+
+    /* if there's a 1st argument present (indicating a check), run the check macro.*/
+    <<if $args[1]>>
+        <<set _passiveResults = _contents.split("||")>>>>
+        <<set _passiveSuccess = _passiveResults[0]>>
+        <<set _passiveFailure = _passiveResults[1]>>
+
+        <<check $args[1] _usedStat $args[2]>>
+        <<Difficulties $args[1]>>
+       /* if check passes/$success is true,
+        set the skill rating to the 2nd argument + Success [Easy: Success] and display the success info. */
+        <<if $success is true>>
+            <<set _skillresult = " [" + _label + ": Success ]">>
+            <<set _skillpara += _currentspeaker + _skillresult + " - " + _passiveSuccess>>
+            <<overlay _usedOverlay>>
+        /*  if it fails:
+            set the skill rating to the 2nd argument + Failure [Easy: Failure] and display the failure info.
+            add the skill result to the current speaker: Logic [Easy: Success] */
+        <<elseif $success is false>>
+            <<set _skillresult = " [" + _label + ": Failure ]">>>>
+            <<set _skillpara += _currentspeaker + _skillresult + " - " + _passiveFailure>>
+            <<nooverlay>>
+       <</if>>
+    <<elseif !$args[1]>>
+        <<set _skillpara += _currentspeaker + " - " + _contents>>
+    <</if>>
+    
+    <<run $paragraphs.push(_skillpara)>>
+
+    /* set the current speaker to nothing (so a name doesn't keep appearing over and over */
+    <<set _currentspeaker = "">>
+
+<</silently>>
+<</widget>>

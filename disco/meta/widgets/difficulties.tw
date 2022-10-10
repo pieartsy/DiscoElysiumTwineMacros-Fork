@@ -2,23 +2,23 @@
 <<widget "Difficulties">>
 <<silently>>
     <<if $args[0] is 1>>
-        <<set _label to "Trivial">>
+        <<set _label = "Trivial">>
     <<elseif $args[0] is 2>>
-        <<set _label to "Easy">>
+        <<set _label = "Easy">>
     <<elseif $args[0] >= 3 and $args[0] <= 4>>
-        <<set _label to "Medium">>
+        <<set _label = "Medium">>
     <<elseif $args[0] >= 5 and $args[0] <= 6 >>
-        <<set _label to "Challenging">>
+        <<set _label = "Challenging">>
     <<elseif $args[0] is 7>>
-        <<set _label to "Formidable">>
+        <<set _label = "Formidable">>
     <<elseif $args[0] is 8>>
-        <<set _label to "Legendary">>
+        <<set _label = "Legendary">>
     <<elseif $args[0] is 9>>
-        <<set _label to "Heroic">>
+        <<set _label = "Heroic">>
     <<elseif $args[0] is 10>>
-        <<set _label to "Godly">>
+        <<set _label = "Godly">>
     <<elseif $args[0] >= 11>>
-        <<set _label to "Impossible">>
+        <<set _label = "Impossible">>
     <</if>>
 <</silently>>
 <</widget>>
