@@ -14,10 +14,10 @@
 /* change the numbers if you want to change your starting stat points
     change the numbers if you want to change the starting stat points */
     <<set $stats = { 
-        "intellect": [{"CONCEPTUALIZATION": 0, "DRAMA": 0, "ENCYCLOPEDIA": 0, "LOGIC": 0, "RHETORIC": 0, "VISUAL CALCULUS": 0}, 0],
-        "psyche": [{"AUTHORITY": 0, "EMPATHY": 0, "ESPRIT DE CORPS": 0, "INLAND EMPIRE": 0, "SUGGESTION": 0, "VOLITION": 0}, 0],
-        "fysique": [{"ELECTROCHEMISTRY": 0, "ENDURANCE": 0, "HALF LIGHT": 0, "PAIN THRESHOLD": 0, "PHYSICAL INSTRUMENT": 0, "SHIVERS": 0}, 0],
-        "motorics": [{"COMPOSURE": 0, "HAND-EYE COORDINATION": 0, "INTERFACING": 0, "PERCEPTION": 0, "REACTION SPEED": 0, "SAVOIR FAIRE": 0}, 0]
+        "intellect": [{"LOGIC": 0, "ENCYCLOPEDIA": 0, "RHETORIC": 0, "DRAMA": 0, "CONCEPTUALIZATION": 0, "VISUAL CALCULUS": 0}, 0],
+        "psyche": [{"VOLITION": 0, "INLAND EMPIRE": 0, "EMPATHY": 0, "AUTHORITY": 0, "ESPRIT DE CORPS": 0, "SUGGESTION": 0, }, 0],
+        "fysique": [{"ENDURANCE": 0, "PAIN THRESHOLD": 0, "PHYSICAL INSTRUMENT": 0, "ELECTROCHEMISTRY": 0, "SHIVERS": 0, "HALF LIGHT": 0 }, 0],
+        "motorics": [{"HAND-EYE COORDINATION": 0, "PERCEPTION": 0, "REACTION SPEED": 0, "SAVOIR FAIRE": 0, "INTERFACING": 0, "COMPOSURE": 0, }, 0]
      }>>
 
     <<cacheaudio "successsound" "disco/meta/media/succcesssound.wav">>

@@ -40,39 +40,30 @@ Writing - Aster Fialla. Website: [[link|https://asterfialla.com]]
 Disco Elysium world and inspiration - ZA/UM. Website: [[link|https://internationale.zaumstudio.com/]] and game: [[link|https://www.gog.com/game/disco_elysium]]
 
 :: Overview
-<<silently>>
-    <<set _intEnt = Object.entries($intellect)>>
-    <<set _psyEnt = Object.entries($psyche)>>
-    <<set _fysEnt = Object.entries($fysique)>>
-    <<set _motEnt = Object.entries($motorics)>>
-    <<set _skilltbl = "">>
-    <<for _i, _stat range $statNames>>
-        <<set _skilltbl += "<tr><td>" + _intEnt[_i][0] + "</td><td class='num'>" + _intEnt[_i][1] + "</td><td>" + _psyEnt[_i][0] + "</td><td class='num'>"+ _psyEnt[_i][1] + "</td><td>" + _fysEnt[_i][0] + "</td><td class='num'>" + _fysEnt[_i][1] + "</td><td>" + _motEnt[_i][0] + "</td><td class='num'>" + _motEnt[_i][1] + "</td></tr>">>
-    <</for>>
-<</silently>>
+<<silently>><<set _maxLength = 0>><</silently>>
 <table class="skills">
     <tr>
         <th colspan="8">Skills</th>
     </tr>
     <tr>
-        <td id='intStat'>INT</td>
-        <td class='num'>$stats.int</td>
-        <td id='psyStat'>PSY</td>
-        <td class='num'>$stats.psy</td>
-        <td id='fysStat'>FYS</td>
-        <td class='num'>$stats.fys</td>
-        <td id='motStat'>MOT</td>
-        <td class='num'>$stats.mot</td>
+        <<for _stat, _statArray range $stats>>
+            <th @class = _stat>_stat</th>
+            <th class="num">_statArray[1]</th>
+            <<set _maxLength = Math.max(_maxLength, Object.keys(_statArray[0]).length)>>
+        <</for>>
     </tr>
-    _skilltbl
+    <<for _i = 0; _i lt _maxLength; _i++>>
+        <tr>
+        <<for _stat, _statArray range $stats>>
+            <<set _skills = Object.keys(_statArray[0])>>
+            <<if _i lt _skills.length>>
+                <<script>>
+                    console.log(State.getVar("_statArray"))
+                <</script>>
+                <td>_skills[_i]</td>
+                <td class="num">_statArray[1]</td>
+            <</if>>
+        <</for>>
+        </tr>
+    <</for>>
 </table>
-/*
-<tr>
-    <td>logic</td>
-    <td>volition</td>
-</tr>
-<tr>
-    <td>encyclopedia</td>
-    <td>inland empire</td>
-</tr>
-*/

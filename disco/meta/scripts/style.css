@@ -8,7 +8,20 @@ body, tw-story
 {
   font-family: 'David Libre', serif;
   height: 100%;
-  width: 90vw;
+}
+
+@media screen and (max-width: 600px) {
+  body, tw-story
+  {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  body, tw-story
+  {
+    width: 90vw;
+  }
 }
 
 :root {
@@ -32,6 +45,7 @@ body, tw-story
 }
 
 .passage {
+  padding: .5em;
   line-height: 1.25;
   margin-top: 2em;
   margin-left: 1.5em;
@@ -225,7 +239,6 @@ a.macro-linkreplace .motoverlay  {
 
 /* skills table on overview screen */
 .skills {
-  width: 100%;
   border: 10px solid #d2d3cd;
 }
 
@@ -235,32 +248,35 @@ a.macro-linkreplace .motoverlay  {
   }
 
 .skills td {
-  padding: 1em;
+  padding: .75em;
   text-align: center;
   border: 10px;
   }
 
-.skills td.num {
+.skills th.num, td.num {
   background-color: #d2d3cd;
   color: black;
+  padding: .5em;
   }
 
-
-
-.skills #intStat {
+.skills .intellect {
   background-color: var(--int);
+  color: black;
 }
 
-.skills #psyStat {
+.skills .psyche {
   background-color: var(--psy);
+  color: black;
 }
 
-.skills #fysStat {
+.skills .fysique {
   background-color: var(--fys);
+  color: black;
 }
 
-.skills #motStat {
+.skills .motorics {
   background-color: var(--mot);
+  color: black;
 }
 
 .skills th {
@@ -269,4 +285,9 @@ a.macro-linkreplace .motoverlay  {
 
 .skills td {
   font-size: 1.5rem;
+}
+
+/* making dialog box "fullscreen" */
+#ui-dialog {
+	max-width: 100%;
 }
