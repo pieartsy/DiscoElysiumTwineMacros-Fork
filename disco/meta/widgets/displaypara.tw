@@ -15,13 +15,13 @@ this shows up only at PassageFooter; you don't need to call it otherwise
 	/*if the length of $paragraphs continues to be more than zero, keep displaying a clickable CONTINUE button (that runs through the widget) */
 	<<if $paragraphs.length > 0>>
 	<br>
-		<<if _overlay is "int">>
+		<<if _overlay is "intellect">>
 			<<linkreplace "@@#ContinueBtn;.padding.intoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
-		<<elseif _overlay is "psy">>
+		<<elseif _overlay is "psyche">>
 			<<linkreplace "@@#ContinueBtn;.padding.psyoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
-		<<elseif _overlay is "fys">>
+		<<elseif _overlay is "fysique">>
 			<<linkreplace "@@#ContinueBtn;.padding.fysoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
-		<<elseif _overlay is "mot">>
+		<<elseif _overlay is "motorics">>
 			<<linkreplace "@@#ContinueBtn;.padding.motoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
 		<<else>>
 			<<linkreplace "@@#ContinueBtn;.padding;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>

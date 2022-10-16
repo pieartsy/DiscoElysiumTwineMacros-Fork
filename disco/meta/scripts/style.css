@@ -9,8 +9,13 @@ body, tw-story
   font-family: 'David Libre', serif;
   height: 100%;
   width: 90vw;
+}
 
-
+:root {
+  --psy: #705cbb;
+  --fys: #c6496b;
+  --int: #6cc6ce;
+  --mot: #e4b934;
 }
 
 #story {
@@ -22,7 +27,7 @@ body, tw-story
   border-color: grey;
   border-style: dashed;
   position: relative;
-  background-color: #181411;
+  background-color: #1b1714;
   color: #e9e3e3;
 }
 
@@ -57,19 +62,19 @@ a:active {
 
 /* skill voice colors */
 .psyche {
-  color: #705cbb;
+  color: var(--psy);
 }
 
 .fysique {
-  color: #c6496b;
+  color: var(--fys);
 }
 
 .intellect {
-  color: #6cc6ce;
+  color: var(--int);
 }
 
 .motorics {
-  color: #e4b934;
+  color: var(--mot);
 }
 
 .speaker {
@@ -218,27 +223,50 @@ a.macro-linkreplace .motoverlay  {
   color: white;
 }
 
-/* stats on overview screen */
-.stats {
+/* skills table on overview screen */
+.skills {
   width: 100%;
-  border-collapse:unset;
+  border: 10px solid #d2d3cd;
 }
 
-.stats table, th, td {
-    padding: 1em;
-    text-align: center;
+.skills table, th {
+  padding: 1em;
+  text-align: center;
   }
 
-.stats th:nth-child(even),
-.stats  td:nth-child(even) {
-    background-color: #d2d3cd;
-    color: black;
+.skills td {
+  padding: 1em;
+  text-align: center;
+  border: 10px;
   }
 
-.stats th {
+.skills td.num {
+  background-color: #d2d3cd;
+  color: black;
+  }
+
+
+
+.skills #intStat {
+  background-color: var(--int);
+}
+
+.skills #psyStat {
+  background-color: var(--psy);
+}
+
+.skills #fysStat {
+  background-color: var(--fys);
+}
+
+.skills #motStat {
+  background-color: var(--mot);
+}
+
+.skills th {
   font-size: 2.5rem;
 }
 
-.stats td {
+.skills td {
   font-size: 1.5rem;
 }

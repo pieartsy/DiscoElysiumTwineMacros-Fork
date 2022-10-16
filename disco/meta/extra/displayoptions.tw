@@ -38,16 +38,23 @@ first line creates an ordered list
     /* sets _skillname to the 1st argument, the skill, in uppercase.*/
     <<set _skillname = _optionChecks[2].toUpperCase()>>
 
-    /*If the skill name is in the $motorics array, set _usedStat to the skill's appropriate stat for use with <<check>>. same with the others.*/
-    <<if $motorics.includes(_skillname)>>
-        <<set _usedStat = $stats.mot>>
-    <<elseif $intellect.includes(_skillname)>>
-        <<set _usedStat = $stats.int>>
-    <<elseif $fysique.includes(_skillname)>>
-        <<set _usedStat = $stats.fys>>
-    <<elseif $psyche.includes(_skillname)>>
-        <<set _usedStat = $stats.psy>>
+    /*If the skill name is in the $motorics array, set _usedSkill to the skill's appropriate stat for use with <<check>>. same with the others.
+    <<if Object.keys($motorics).includes(_skillname) || $perceptions.includes(_skillname)>>
+        <<set _usedSkill = $stats.mot + $motorics[_skillname]>>
+    <<elseif Object.keys($intellect).includes(_skillname)>>
+        <<set _usedSkill = $stats.int + $intellect[_skillname]>>
+    <<elseif Object.keys($fysique).includes(_skillname)>>
+        <<set _usedSkill = $stats.fys + $fysique[_skillname]>>
+    <<elseif Object.keys($psyche).includes(_skillname)>>
+        <<set _usedSkill = $stats.psy + $psyche[_skillname]>>
     <</if>>
+    */
+    <<for _stat, _statArray range $stats>>
+      <<if Object.keys(_statArray[0]).includes(_skillname) || _stat == "motorics" && $perceptions.includes(_skillname)>>
+          <<set _usedSkill = _statArray[1] + _statArray[0][_skillname]>>
+        <</if>>
+    <</for>>
+
 
     /*  rewrite _optiontext as [skill + difficulty label] (capitalizing the skill name)
       ex: [Visual Calculus - Heroic] */
@@ -66,7 +73,7 @@ first line creates an ordered list
           <<link _optiontext>>
           /* sets the $lastoption variable, used in the PassageHeader passage, to _optiontext. */
             <<set $lastoption = _optiontext>>
-            <<check _rating _usedStat _optionChecks[4]>>
+            <<check _rating _usedSkill _optionChecks[4]>>
               <<if $success == true>>
                 /* if there's a succcess flag */
                 <<if _optionChecks[6]>>

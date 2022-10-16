@@ -30,24 +30,15 @@ if passing the passive check sets a flag to true:
 
     <<set _skillname = $args[0].toUpperCase()>>
 
-    /*If the skill name is in the $motorics array, set _currentspeaker to the skill, styling it with the .motorics and .speaker classes. same with the others. set _usedStat to the skill's appropriate stat for use with <<check>>*/
-    <<if $motorics.includes(_skillname)>>
-        <<set _currentspeaker = "@@.motorics.speaker;" + _skillname + "@@">>
-        <<set _usedStat = $stats.mot>>
-        <<set _usedOverlay to "mot">>
-    <<elseif $intellect.includes(_skillname)>>
-        <<set _currentspeaker = "@@.intellect.speaker;" + _skillname + "@@">>
-        <<set _usedStat = $stats.int>>
-        <<set _usedOverlay to "int">>
-    <<elseif $fysique.includes(_skillname)>>
-        <<set _currentspeaker = "@@.fysique.speaker;" + _skillname + "@@">>
-        <<set _usedStat = $stats.fys>>
-        <<set _usedOverlay to "fys">>
-    <<elseif $psyche.includes(_skillname)>>
-        <<set _currentspeaker = "@@.psyche.speaker;" + _skillname + "@@">>
-        <<set _usedStat = $stats.psy>>
-        <<set _usedOverlay to "psy">>
-    <</if>>
+    /*If the skill name is in the $motorics array, set _currentspeaker to the skill, styling it with the .motorics and .speaker classes. same with the others. set _usedSkill to the skill's appropriate stat for use with <<check>>
+    */
+    <<for _stat, _statArray range $stats>>
+        <<if Object.keys(_statArray[0]).includes(_skillname) || _stat == "motorics" && $perceptions.includes(_skillname)>>
+            <<set _currentspeaker = "@@." + _stat + ".speaker;" + _skillname + "@@">>
+            <<set _usedSkill = _statArray[1] + _statArray[0][_skillname]>>
+            <<set _usedOverlay to _stat>>
+        <</if>>
+    <</for>>
 
     /* if there's a 1st argument present (indicating a check), check to see if the skill is high enough [stat for now  until I build skills in].*/
     <<if $args[1]>>
@@ -57,7 +48,7 @@ if passing the passive check sets a flag to true:
         <<Difficulties _difficultyRating>>
 
        /* if check is over the stat used + 6, set the skill rating to the 2nd argument + Success [Easy: Success] and display the success content. otherwise it shows nothing*/
-        <<if  (_usedStat + 6) >= _rating>>
+        <<if  (_usedSkill + 6) >= _rating>>
             <<set _skillresult = " [" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Success ]">>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>
             <<overlay _usedOverlay>>

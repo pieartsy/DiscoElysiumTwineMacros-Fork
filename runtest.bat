@@ -1,1 +1,1 @@
-tweego -w -t -o index.html test.tw
+tweego -w -t -o index.html disco

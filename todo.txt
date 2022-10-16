@@ -1,6 +1,4 @@
-- add roll results to checksuccess and checkfailure somehow?
 - add roll results to passive checks?
-
 
 - tippy...
 
@@ -10,9 +8,17 @@
 - level ups upping stats
 - inventory/items
 - thoughts?? (probably not)
-- stats don't actually change checks within same passage
 - fix display options so when failed flag value is not present it sets to false rather than true
 - disable scrolling spacebar
+
+
+- make skills formatted correctly
+    - make sure skills show as stat + skill across the board
+    - description for skills + breakdown of pluses and minuses
+    - button arrows to increase/decrease skill number
+    - link to upping object
+    - link to how much xp you have to spend
+    - link to inventory?
 
 DONE
 - make "passive skills" actually do a skill check
@@ -21,3 +27,4 @@ DONE
 - redo things using new container widget ability
 - bind close to esc key
 - make overlays happen AFTER or DURING passive skills being set, rather than before
+- add roll results to checksuccess and checkfailure somehow?

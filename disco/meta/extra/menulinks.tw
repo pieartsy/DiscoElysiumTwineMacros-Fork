@@ -40,20 +40,39 @@ Writing - Aster Fialla. Website: [[link|https://asterfialla.com]]
 Disco Elysium world and inspiration - ZA/UM. Website: [[link|https://internationale.zaumstudio.com/]] and game: [[link|https://www.gog.com/game/disco_elysium]]
 
 :: Overview
-<table class="stats">
+<<silently>>
+    <<set _intEnt = Object.entries($intellect)>>
+    <<set _psyEnt = Object.entries($psyche)>>
+    <<set _fysEnt = Object.entries($fysique)>>
+    <<set _motEnt = Object.entries($motorics)>>
+    <<set _skilltbl = "">>
+    <<for _i, _stat range $statNames>>
+        <<set _skilltbl += "<tr><td>" + _intEnt[_i][0] + "</td><td class='num'>" + _intEnt[_i][1] + "</td><td>" + _psyEnt[_i][0] + "</td><td class='num'>"+ _psyEnt[_i][1] + "</td><td>" + _fysEnt[_i][0] + "</td><td class='num'>" + _fysEnt[_i][1] + "</td><td>" + _motEnt[_i][0] + "</td><td class='num'>" + _motEnt[_i][1] + "</td></tr>">>
+    <</for>>
+<</silently>>
+<table class="skills">
     <tr>
-        <td colspan="4">Stats</td>
+        <th colspan="8">Skills</th>
     </tr>
     <tr>
-        <th>$stats.int</th>
-        <th>$stats.psy</th>
-        <th>$stats.fys</th>
-        <th>$stats.mot</th>
+        <td id='intStat'>INT</td>
+        <td class='num'>$stats.int</td>
+        <td id='psyStat'>PSY</td>
+        <td class='num'>$stats.psy</td>
+        <td id='fysStat'>FYS</td>
+        <td class='num'>$stats.fys</td>
+        <td id='motStat'>MOT</td>
+        <td class='num'>$stats.mot</td>
     </tr>
-    <tr>
-        <td>INT</td>
-        <td>PSY</td>
-        <td>FYS</td>
-        <td>MOT</td>
-    </tr>
+    _skilltbl
 </table>
+/*
+<tr>
+    <td>logic</td>
+    <td>volition</td>
+</tr>
+<tr>
+    <td>encyclopedia</td>
+    <td>inland empire</td>
+</tr>
+*/

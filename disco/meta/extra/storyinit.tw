@@ -3,15 +3,22 @@
     <<set $optionmap = new Map()>>
     <<set $flagsMap = {}>>
 
-    <<set $motorics = ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)"]>>
-    <<set $intellect = ["CONCEPTUALIZATION", "DRAMA", "ENCYCLOPEDIA", "LOGIC", "RHETORIC", "VISUAL CALCULUS"]>>
-    <<set $fysique = ["ELECTROCHEMISTRY", "ENDURANCE", "HALF LIGHT", "PAIN THRESHOLD", "PHYSICAL INSTRUMENT", "SHIVERS"]>>
-    <<set $psyche = ["AUTHORITY", "EMPATHY", "ESPRIT DE CORPS", "INLAND EMPIRE", "SUGGESTION", "VOLITION"]>>
+/* change the names if you want to change your skill names
+    change the numbers if you want to change the starting skill points */
+    <<set $perceptions = ["PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)", "PERCEPTION (HEARING)", "PERCEPTION (SMELL)", "PERCEPTION"]>>
+
     <<set $greentext = []>>
     <<set $paraAppendMode = false>>
 
     <<set $xp = 0>>
-    <<set $stats to { int: 0, psy: 0, fys: 0, mot: 0 }>>
+/* change the numbers if you want to change your starting stat points
+    change the numbers if you want to change the starting stat points */
+    <<set $stats = { 
+        "intellect": [{"CONCEPTUALIZATION": 0, "DRAMA": 0, "ENCYCLOPEDIA": 0, "LOGIC": 0, "RHETORIC": 0, "VISUAL CALCULUS": 0}, 0],
+        "psyche": [{"AUTHORITY": 0, "EMPATHY": 0, "ESPRIT DE CORPS": 0, "INLAND EMPIRE": 0, "SUGGESTION": 0, "VOLITION": 0}, 0],
+        "fysique": [{"ELECTROCHEMISTRY": 0, "ENDURANCE": 0, "HALF LIGHT": 0, "PAIN THRESHOLD": 0, "PHYSICAL INSTRUMENT": 0, "SHIVERS": 0}, 0],
+        "motorics": [{"COMPOSURE": 0, "HAND-EYE COORDINATION": 0, "INTERFACING": 0, "PERCEPTION": 0, "REACTION SPEED": 0, "SAVOIR FAIRE": 0}, 0]
+     }>>
 
     <<cacheaudio "successsound" "disco/meta/media/succcesssound.wav">>
     <<cacheaudio "failsound" "disco/meta/media/failsound.wav">>
