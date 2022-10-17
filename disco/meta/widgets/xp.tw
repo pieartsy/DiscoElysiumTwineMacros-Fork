@@ -1,0 +1,21 @@
+:: xp [widget nobr]
+/* called in the greentext macros, this automatically increments by the number amount you set and collects skillpoints as you do. it also flashes a "level up!" thing like the check success pop up.
+
+you can also just run this manually if you want to award xp for no reason :) if you do, put it in a <<para>> widget so it doesn't go off automatically.
+
+<<xp 40>>*/
+<<widget "xp">>
+    <<set _xp = $xp>>
+    <<set _xp += _args[0]>>
+    <br>@@.green;Gained experience: _args[0]@@
+    <<if _xp >= 100>>
+        <<set $skillpoints += 1>>
+        <div id="CheckSuccess" class="CheckText">New Skill Point!</div>
+        <<set $xp = 0>>
+        <<timed 2s>>
+            <br><br>@@.green;You got a new Skill Point!@@
+        <</timed>>
+    <<else>>
+        <<set $xp = _xp>>
+    <</if>>
+<</widget>>

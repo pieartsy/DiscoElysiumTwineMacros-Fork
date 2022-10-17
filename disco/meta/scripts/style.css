@@ -197,6 +197,7 @@ a.macro-linkreplace .motoverlay  {
 .CheckText {
   color: white;
   font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
   position: absolute;
   bottom: 25%;
   left: 50%;
@@ -206,7 +207,7 @@ a.macro-linkreplace .motoverlay  {
   padding-right: 1.5em;
   animation-name: SlideAndFade;
   animation-duration: 2.5s;
-  animation-delay: 1s;
+  animation-delay: 500ms;
 }
 
 #CheckSuccess {

@@ -19,14 +19,6 @@ if passing the passive check sets a flag to true:
 <<silently>>
 /* sets a temporary variable, _skillpara, which will be used for the DisplayPara widget */
     <<set _skillpara = "">>
-    /* if $paraAppendMode (used for greentext) is true, add greentext, then clear the greentext and set it back to false. */
-    <<if $paraAppendMode is true>>
-        <<for _text range $greentext>>
-            <<set _skillpara += _skilltext + "<br /><br />">>
-        <</for>>
-        <<set $greentext = []>>
-        <<set $paraAppendMode = false>>
-    <</if>>
 
     <<set _skillname = _args[0].toUpperCase()>>
 

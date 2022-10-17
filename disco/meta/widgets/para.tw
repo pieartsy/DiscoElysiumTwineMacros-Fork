@@ -13,15 +13,6 @@ args[0] = the speaker of the paragraph (if any)
 <<silently>>
 /* sets a temporary variable, _para, which will be used for the DisplayPara widget */
     <<set _para = "">>
-    /*     if $paraAppendMode (used for greentext) is true, add greentext, then clear the greentext and set it back to false. */
-    <<if $paraAppendMode is true>>
-        <<for _text range $greentext>>
-            <<set _para += _text + "<br /><br />">>
-        <</for>>
-        <<set $greentext = []>>
-        <<set $paraAppendMode = false>>
-    <</if>>
-
     /*if there's a 1st argument, set $current speaker to the 1st argument, styled with the .speaker class
     set _para to _currentspeaker + paragraph, and push to $paragraphs.
     then set the current speaker to nothing (so a name doesn't keep appearing over and over)

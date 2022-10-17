@@ -1,59 +1,116 @@
 :: Greentext [widget nobr]
 /* various widgets for "green text" popups. have a generic text that can be customized with arguments */
+
+<<widget "newtask" container>>
+    /* the first argument is the task.
+
+    In between the tags, put a more detailed description of the task.
+    
+    <<newtask "Get Kim to drink">>You think Kim needs to loosen up with an ol' Tequila Sunset.<</newtask>> */
+    <<para>>
+        <div id="CheckSuccess" class="CheckText">New task: _args[0]</div>    
+        <<timed 2s>>
+            <br>@@.green;New task: _args[0]@@
+        <</timed>>
+    <</para>>
+    <<run $tasks[_args[0]] = _contents>>
+<</widget>>
+
 <<widget "taskcomplete">>
     /*The first argument is the task, the second is the experience gained (if any).
-
+    
     <<taskcomplete "Get Kim to drink" 10>> */
-    <<run $greentext.push("@@.green;Task complete: " + _args[0] + "@@")>>
-    <<if _args[1]>>
-        <<run $greentext.push("@@.green;Gained experience: +" + _args[1] + "@@")>>
-    <</if>>
-    <<set $paraAppendMode to true>>
+    <<para>>
+        <div id="CheckSuccess" class="CheckText">Task complete: _args[0]</div>    
+        <<timed 2s>>
+            @@.green;Task complete: _args[0]@@
+            <<if _args[1]>>
+                <<xp _args[1]>>
+            <</if>>
+        <</timed>>
+    <</para>>
+    <<run delete $tasks[_args[0]]>>
+<</widget>>
+
+<<widget "newsecrettask">>
+    /* the first argument is the task. This one is simpler because you don't see secret tasks initially, but it's good to keep track of them in my opinion.
+
+    <<newsecrettask "Dance sexily">>*/
+    <<run $secrettasks.push(_args[0])>>
 <</widget>>
 
 <<widget "secrettaskcomplete">>
     /*The first argument is the task, the second is the experience gained (if any).
-
-    <<secrettaskcomplete "Dance sexily" 25>> */
-    <<run $greentext.push("@@.green;Secret task complete: " + _args[0] + "@@")>>
-    <<if _args[1]>>
-        <<run $greentext.push("@@.green;+" + _args[1] + " XP: gained experience@@")>>
-    <</if>>
-    <<set $paraAppendMode to true>>
+    
+    <<secrettaskcomplete "Dance sexily" 10>> */
+    <<para>>
+        <div id="CheckSuccess" class="CheckText">Secret Task complete: _args[0]</div>    
+        <<timed 2s>>
+            @@.green;Secret Task complete: _args[0]@@
+            <<if _args[1]>>
+                <<xp _args[1]>>
+            <</if>>
+        <</timed>>
+    <</para>>
+    <<run delete $secrettasks[_args[0]]>>
 <</widget>>
 
-<<widget "newtask">>
-    /* <<newtask "Dance">> */
-    <<run $greentext.push("@@.green;New task: " + _args[0] + "@@")>>
-    <<set $paraAppendMode to true>>
-<</widget>>
-
-<<widget "itemgained">>
+<<widget "itemgained" container>>
     /* the first argument is the item.
 
-    <<itemgained "Cheese">> */
-    <<run $greentext.push("@@.green;Item gained: " + _args[0] + "@@")>>
-    <<set $paraAppendMode to true>>
+    In between the tags, put a more detailed description of the item.
+
+    <<itemgained "Cheese">>Rogue River Blue?! That's impossible to find nowadays!<</itemgained>>*/
+    <<para>>
+        <div id="CheckSuccess" class="CheckText">Item gained: _args[0]</div>    
+        <<timed 2s>>
+            <br>@@.green;Item gained: _args[0]@@
+        <</timed>>
+    <</para>>
+    <<run $inventory[_args[0]] = _contents>>
+
 <</widget>>
 
 <<widget "itemlost">>
     /* the first argument is the item.
 
     <<itemlost "Cheese">> */
-    <<run $greentext.push("@@.green;Item lost: " + _args[0] + "@@")>>
-    <<set $paraAppendMode to true>>
+    <<<para>>
+        <div id="CheckSuccess" class="CheckText">Item lost: _args[0]</div>    
+        <<timed 2s>>
+            <br>@@.green;Item lost: _args[0]@@
+        <</timed>>
+    <</para>>
+    <<run delete $inventory[_args[0]]>>
 <</widget>>
 
-<<widget "thoughtgained">>
-    /* the first argument is the item.
+<<widget "thoughtgained" container>>
+    /* the first argument is the thought.
 
-    <<thoughtgained "Cheese is great">> */
-    <<run $greentext.push("@@.green;Thought gained: " + _args[0] + "@@")>>
-    <<set $paraAppendMode to true>>
+    In between the tags, put a more detailed description of the thought.
+
+    <<thoughtgained "Cheese is great">>Have you ever eaten a cheese? Boy you should.<</thoughtgained>> */
+    <<para>>
+        <div id="CheckSuccess" class="CheckText">Thought gained: _args[0]</div>    
+        <<timed 2s>>
+                <br>@@.green;Thought gained: _args[0]@@
+        <</timed>>
+    <</para>>
+    <<run $thoughts[_args[0]] = _contents>>
 <</widget>>
 
-<<widget "levelup">>
-    /* <<levelup>> */
-    <<run $greentext.push("@@.green;Level up!@@")>>
-    <<set $paraAppendMode to true>>
+<<widget "thoughtcomplete">>
+    /*The first argument is the task, the second is the experience gained (if any).
+    
+    <<thoughtcomplete "Cheese is great">>The farts? Worth it.<</thoughtcomplete>> */
+     <<para>>
+        <div id="CheckSuccess" class="CheckText">Thought complete: _args[0]</div>    
+        <<timed 2s>>
+            @@.green;Thought complete: _args[0]@@
+            <<if _args[1]>>
+                <<xp _args[1]>>
+            <</if>>
+        <</timed>>
+    <</para>>
+    <<run delete $thoughts[_args[0]]>>
 <</widget>>

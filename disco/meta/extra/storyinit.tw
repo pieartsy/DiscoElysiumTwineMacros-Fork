@@ -2,15 +2,17 @@
 <<silently>>
     <<set $optionmap = new Map()>>
     <<set $flagsMap = {}>>
+    /* greentext variables */
+    <<set $tasks = {}>>
+    <<set $secrettasks = []>>
+    <<set $inventory = {}>>
+    <<set $xp = 0>>
+    <<set $skillpoints = 0>>
+    <<set $thoughts = {}>>
 
 /* change the names if you want to change your skill names
     change the numbers if you want to change the starting skill points */
     <<set $perceptions = ["PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)", "PERCEPTION (HEARING)", "PERCEPTION (SMELL)", "PERCEPTION"]>>
-
-    <<set $greentext = []>>
-    <<set $paraAppendMode = false>>
-
-    <<set $xp = 0>>
 /* change the numbers if you want to change your starting stat points
     change the numbers if you want to change the starting stat points */
     <<set $stats = { 

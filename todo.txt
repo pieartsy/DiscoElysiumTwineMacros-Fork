@@ -13,12 +13,12 @@
 - make sure perception variations work right
 
 - make skills formatted correctly
-    - description for skills + breakdown of pluses and minuses
+    - breakdown of pluses and minuses
     - button arrows to increase/decrease skill number
     - link to upping object
     - link to how much xp you have to spend
     - link to inventory?
-    - limit to how much skill can be upped?
+    - limit to how much skill can be upped??
 
 DONE
 - make "passive skills" actually do a skill check
@@ -29,3 +29,4 @@ DONE
 - make overlays happen AFTER or DURING passive skills being set, rather than before
 - add roll results to checksuccess and checkfailure somehow?
 - make sure skills show as stat + skill across the board
+- description for skills
