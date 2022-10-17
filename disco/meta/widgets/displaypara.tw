@@ -16,15 +16,15 @@ this shows up only at PassageFooter; you don't need to call it otherwise
 	<<if $paragraphs.length > 0>>
 	<br>
 		<<if _overlay is "intellect">>
-			<<linkreplace "@@#ContinueBtn;.padding.intoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
+			<<linkreplace "@@#ContinueBtn;.continue.intoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
 		<<elseif _overlay is "psyche">>
-			<<linkreplace "@@#ContinueBtn;.padding.psyoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
+			<<linkreplace "@@#ContinueBtn;.continue.psyoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
 		<<elseif _overlay is "fysique">>
-			<<linkreplace "@@#ContinueBtn;.padding.fysoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
+			<<linkreplace "@@#ContinueBtn;.continue.fysoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
 		<<elseif _overlay is "motorics">>
-			<<linkreplace "@@#ContinueBtn;.padding.motoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
+			<<linkreplace "@@#ContinueBtn;.continue.motoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
 		<<else>>
-			<<linkreplace "@@#ContinueBtn;.padding;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
+			<<linkreplace "@@#ContinueBtn;.continue;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
 		<</if>>
 	<<else>>
 		/*otherwise, display options.*/

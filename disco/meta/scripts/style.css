@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Titillium+Web:wght@300&display=swap');
 
+
+:root {
+  --psy: #705cbb;
+  --fys: #c6496b;
+  --int: #6cc6ce;
+  --mot: #e4b934;
+  --whitecheck: #d2d3cd;
+  --film: #1b1714;
+}
+
 html {
   height: 100%;
+  font-size: 25px;
+  color: var(--whitecheck);
 }
 
 body, tw-story
@@ -24,13 +36,7 @@ body, tw-story
   }
 }
 
-:root {
-  --psy: #705cbb;
-  --fys: #c6496b;
-  --int: #6cc6ce;
-  --mot: #e4b934;
-  --whitecheck: #d2d3cd;
-}
+
 
 #story {
   height: 100%;
@@ -41,16 +47,14 @@ body, tw-story
   border-color: grey;
   border-style: dashed;
   position: relative;
-  background-color: #1b1714;
-  color: #e9e3e3;
+  background-color: var(--film);
 }
 
 .passage {
-  padding: .5em;
+  padding: 1em;
   line-height: 1.25;
   margin-top: 2em;
   margin-left: 1.5em;
-  font-size: 1.5rem;
 }
 
 a {
@@ -124,11 +128,16 @@ a.macro-linkreplace {
   display: block;
 }
 
-a.macro-linkreplace .padding {
+a.macro-linkreplace .continue {
   padding: 15px;
   padding-bottom: 10px;
   padding-top: 10px;
   display: block;
+}
+
+a.macro-linkreplace .continue:hover {
+  background-color: #b34f36;
+  border: 1px solid white;
 }
 
 a.macro-linkreplace .intoverlay  {
@@ -248,11 +257,11 @@ a.macro-linkreplace .motoverlay  {
   text-align: center;
   }
 
-.skills th.num, td.num {
+.num {
   background-color: var(--whitecheck);
   color: black;
   padding: 0 .35em;
-  }
+}
 
 .skills th.intellect {
   background-color: var(--int);
@@ -275,10 +284,6 @@ a.macro-linkreplace .motoverlay  {
 }
 
 .skills th {
-  font-size: 2.5rem;
-}
-
-.skills td {
   font-size: 1.5rem;
 }
 
@@ -296,7 +301,35 @@ a.macro-linkreplace .motoverlay  {
   color: black;
 }
 
+/* skills description formatting */
+#skillDescs {
+  border: 10px solid var(--whitecheck);
+  padding: .5em;
+}
+
 /* making dialog box "fullscreen" */
 #ui-dialog {
 	max-width: 100%;
+}
+
+/* formatting menu */
+#story-title {
+	margin: 0;
+	font-size: 1.25em;
+}
+
+#menu li {
+	margin: 0;
+  font-size: .9em;
+}
+
+#ui-bar {
+	background-color: var(--film);
+	border-right: 1px solid #444;
+	text-align: center;
+}
+
+#ui-bar-toggle,
+#ui-bar-history [id|="history"] {
+	font-size: unset;
 }
