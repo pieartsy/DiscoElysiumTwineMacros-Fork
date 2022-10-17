@@ -22,8 +22,7 @@
 <</link>>
 
 :: Accessibility
-/* with the code in script.js, pressing a number will select the appropriate branching option that a player is presented with. spacebar presses continue, and esc opens the overview and closes all dialog windows (popups)*/
-!Accessibility
+/* with the code in script.js, pressing a number will select the appropriate branching option that a player is presented with. spacebar presses continue, and esc opens the overview and closes all dialog windows (popups)*/\
 You can press the numbers on your keyboard to select a numbered option.
 
 You can press the spacebar on your keyboard to press the continue button.
@@ -42,18 +41,17 @@ Disco Elysium world and inspiration - ZA/UM. Website: [[link|https://internation
 
 :: Overview
 /* this is the stats, skills, inventory, etc screen. it can be opened and closed with the escape key*/\
-<<nobr>>
 <<silently>>
     <<include "Descriptions">>
-<</silently>>
-
+<</silently>>\
+<<nobr>>\
 <table class="skills">
     <tr>
         <th colspan="8">Skills</th>
     </tr>
     <tr>
         <<for _stat, _statArray range $stats>>
-            <th @class = _stat>_stat</th>
+            <th @class = _stat><<= _stat.slice(0, 3).toUpperCase()>></th>
             <th class="num">_statArray[1]</th>
         <</for>>
     </tr>
@@ -80,5 +78,5 @@ Disco Elysium world and inspiration - ZA/UM. Website: [[link|https://internation
         </tr>
     <</for>>
 </table>
-<</nobr>>
+<</nobr>>\
 <div id='skillDescs'></div>

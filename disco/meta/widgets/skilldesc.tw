@@ -10,7 +10,7 @@
     <<set _skillDescName = _args[0].toUpperCase()>>
     <<for _stat, _statArray range $stats>>
         <<if Object.keys(_statArray[0]).includes(_skillDescName)>>
-            <<set $skillDesc[_skillDescName] = `<h1 class= ${_stat}>${_skillDescName} — <span class = 'num'>Total: ${_statArray[1] + _statArray[0][_skillDescName]}</span></h1>`>>
+            <<set $skillDesc[_skillDescName] = `<h1 class= ${_stat}>${_skillDescName}<br><span class = 'num'>Total: ${_statArray[1] + _statArray[0][_skillDescName]}</span></h1>`>>
             <<if _args[1]>>
                 <<set $skillDesc[_skillDescName] += `<hr>${_args[1]}<hr>`>>
                 <<if _contents>>
@@ -26,5 +26,6 @@
 <<silently>>
 <<skilldesc "LOGIC" "Wield raw intellectual power. Deduce the world.">>Cool for: Analysts, Pure Rationalists, Obviously Logicians.
 
-Logic urges you to analyze the living daylights out of the case.(etc...) <</skilldesc>><</silently>>
-$skillDesc.LOGIC
+Logic urges you to analyze the living daylights out of the case. It enables you to piece evidence together, detect inconsistencies in statements, and impress everyone with your astonishing conclusions. It’s the bread and butter of many a detective.
+
+At high levels, Logic will be able to solve even the most complicated puzzle. You will be very proud and thus susceptible to intellectual flattery; for those blinded by their own brilliance often miss important clues. With low levels of Logic, you’re going to have a hard time solving even the simplest puzzles. Even if you find the pieces, good luck putting them together.<</skilldesc>><</silently>>
