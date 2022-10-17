@@ -4,9 +4,9 @@
     /*The first argument is the task, the second is the experience gained (if any).
 
     <<taskcomplete "Get Kim to drink" 10>> */
-    <<run $greentext.push("@@.green;Task complete: " + $args[0] + "@@")>>
-    <<if $args[1]>>
-        <<run $greentext.push("@@.green;Gained experience: +" + $args[1] + "@@")>>
+    <<run $greentext.push("@@.green;Task complete: " + _args[0] + "@@")>>
+    <<if _args[1]>>
+        <<run $greentext.push("@@.green;Gained experience: +" + _args[1] + "@@")>>
     <</if>>
     <<set $paraAppendMode to true>>
 <</widget>>
@@ -15,16 +15,16 @@
     /*The first argument is the task, the second is the experience gained (if any).
 
     <<secrettaskcomplete "Dance sexily" 25>> */
-    <<run $greentext.push("@@.green;Secret task complete: " + $args[0] + "@@")>>
-    <<if $args[1]>>
-        <<run $greentext.push("@@.green;+" + $args[1] + " XP: gained experience@@")>>
+    <<run $greentext.push("@@.green;Secret task complete: " + _args[0] + "@@")>>
+    <<if _args[1]>>
+        <<run $greentext.push("@@.green;+" + _args[1] + " XP: gained experience@@")>>
     <</if>>
     <<set $paraAppendMode to true>>
 <</widget>>
 
 <<widget "newtask">>
     /* <<newtask "Dance">> */
-    <<run $greentext.push("@@.green;New task: " + $args[0] + "@@")>>
+    <<run $greentext.push("@@.green;New task: " + _args[0] + "@@")>>
     <<set $paraAppendMode to true>>
 <</widget>>
 
@@ -32,7 +32,7 @@
     /* the first argument is the item.
 
     <<itemgained "Cheese">> */
-    <<run $greentext.push("@@.green;Item gained: " + $args[0] + "@@")>>
+    <<run $greentext.push("@@.green;Item gained: " + _args[0] + "@@")>>
     <<set $paraAppendMode to true>>
 <</widget>>
 
@@ -40,7 +40,7 @@
     /* the first argument is the item.
 
     <<itemlost "Cheese">> */
-    <<run $greentext.push("@@.green;Item lost: " + $args[0] + "@@")>>
+    <<run $greentext.push("@@.green;Item lost: " + _args[0] + "@@")>>
     <<set $paraAppendMode to true>>
 <</widget>>
 
@@ -48,7 +48,7 @@
     /* the first argument is the item.
 
     <<thoughtgained "Cheese is great">> */
-    <<run $greentext.push("@@.green;Thought gained: " + $args[0] + "@@")>>
+    <<run $greentext.push("@@.green;Thought gained: " + _args[0] + "@@")>>
     <<set $paraAppendMode to true>>
 <</widget>>
 

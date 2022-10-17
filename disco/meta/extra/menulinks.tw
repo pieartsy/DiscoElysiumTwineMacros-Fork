@@ -1,4 +1,5 @@
 :: StoryMenu
+/* lists the available links on the sidebar in the game. You can add more if you want, just following this formatting and adding the appropriate passages to this file*/
 <<link "Overview">>
 	<<dialog 'Overview' 'Overview'>>
 		<<include "Overview">>
@@ -21,26 +22,30 @@
 <</link>>
 
 :: Accessibility
+/* with the code in script.js, pressing a number will select the appropriate branching option that a player is presented with. spacebar presses continue, and esc opens the overview and closes all dialog windows (popups)*/
 !Accessibility
 You can press the numbers on your keyboard to select a numbered option.
 
 You can press the spacebar on your keyboard to press the continue button.
 
+You can press the escape key on your keyboard to open the Overview tab on the sidebar. The escape key also closes all popup boxes from the sidebar.
+
 :: CNs
 !Content Notes
-Some spoilers for the ending of Disco Elysium. Cissexist remarks depending on what options you pick.
 
 :: Credits
 Original Twine macros and Disco Elysium-style framework - apepers on github: [[link| https://github.com/apepers/DiscoElysiumTwineMacros/]] and itch.io: [[link|https://apepers.itch.io/re-hearsed-a-disco-elysium-fanwork]].
 
 Updated Twine macros for apepers' framework - Aster Fialla on github: [[link|https://github.com/pieartsy/Disco-Elysium-Twine-Macros/]] and itch.io: [[link|https://pieartsy.itch.io]].
 
-Writing - Aster Fialla. Website: [[link|https://asterfialla.com]]
-
 Disco Elysium world and inspiration - ZA/UM. Website: [[link|https://internationale.zaumstudio.com/]] and game: [[link|https://www.gog.com/game/disco_elysium]]
 
 :: Overview
-<<silently>><<set _maxLength = 0>><</silently>>
+/* this is the stats, skills, inventory, etc screen. it can be opened and closed with the escape key*/
+<<silently>>
+    <<include "Descriptions">>
+<</silently>>
+<<nobr>>
 <table class="skills">
     <tr>
         <th colspan="8">Skills</th>
@@ -49,21 +54,28 @@ Disco Elysium world and inspiration - ZA/UM. Website: [[link|https://internation
         <<for _stat, _statArray range $stats>>
             <th @class = _stat>_stat</th>
             <th class="num">_statArray[1]</th>
-            <<set _maxLength = Math.max(_maxLength, Object.keys(_statArray[0]).length)>>
         <</for>>
     </tr>
-    <<for _i = 0; _i lt _maxLength; _i++>>
+    <<for _i = 0; _i lt Object.keys($stats)[0].length; _i++>>
         <tr>
         <<for _stat, _statArray range $stats>>
             <<set _skills = Object.keys(_statArray[0])>>
             <<if _i lt _skills.length>>
-                <<script>>
-                    console.log(State.getVar("_statArray"))
-                <</script>>
-                <td>_skills[_i]</td>
-                <td class="num">_statArray[1]</td>
+                <td @class = _stat>
+                    <<set _skill = _skills[_i]>>
+                    <<button _skills[_i]>>
+                        <<replace "#skillDescs">>
+                            _stat
+                            _skill
+                        <</replace>>
+                    <</button>>
+                </td>
+                <td class="num"><<= _statArray[1] + _statArray[0][_skills[_i]]>></td>
             <</if>>
         <</for>>
         </tr>
     <</for>>
 </table>
+<</nobr>>
+<div id='skillDescs'>
+</div>

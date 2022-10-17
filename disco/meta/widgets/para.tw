@@ -26,8 +26,8 @@ args[0] = the speaker of the paragraph (if any)
     set _para to _currentspeaker + paragraph, and push to $paragraphs.
     then set the current speaker to nothing (so a name doesn't keep appearing over and over)
     */
-    <<if $args[0]>>
-        <<set _currentspeaker = "@@.speaker;" + $args[0] + "@@ - ">>
+    <<if _args[0]>>
+        <<set _currentspeaker = "@@.speaker;" + _args[0] + "@@ - ">>
         <<set _para += _currentspeaker + _contents>>
         <<set _currentspeaker = "">>
     /* otherwise, set _para to a paragraph with no speaker.*/

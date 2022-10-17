@@ -3,10 +3,10 @@
 
 <<overlay "int">>
 
-$args[0] = the color of overlay you want
+_args[0] = the color of overlay you want
 */
 <<widget "overlay">>
-    <<set $overlays.push($args[0])>>
+    <<set $overlays.push(_args[0])>>
 <</widget>>
 
 /* for when there's no overlay, just call this as an empty function. add this as a buffer when the overlays get wonky

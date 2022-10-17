@@ -18,13 +18,13 @@
 */
 
 <<widget "flag">>
-    <<if !$args[1]>>
-        <<set $flagsMap[$args[0]] = true>>
-    <<elseif $args[1] == "+">>
-        <<set $flagsMap[$args[0]] += 1>>
-    <<elseif $args[1] == "-">>
-        <<set $flagsMap[$args[0]] -= 1>>
+    <<if !_args[1]>>
+        <<set $flagsMap[_args[0]] = true>>
+    <<elseif _args[1] == "+">>
+        <<set $flagsMap[_args[0]] += 1>>
+    <<elseif _args[1] == "-">>
+        <<set $flagsMap[_args[0]] -= 1>>
     <<else>>
-        <<set $flagsMap[$args[0]] = $args[1]>>
+        <<set $flagsMap[_args[0]] = _args[1]>>
     <</if>>
 <</widget>>

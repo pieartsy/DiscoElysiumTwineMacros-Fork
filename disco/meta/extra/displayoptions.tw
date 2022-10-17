@@ -1,7 +1,6 @@
 :: DisplayOptions [nobr]
 /* ordered list of options, included in the DisplayParagraph widget in the PassageFooter. you don't need to do anything else with this passage!
 
-
 first line creates an ordered list
 */
 <ol id="OptionList">
@@ -27,10 +26,7 @@ first line creates an ordered list
         4 = roll modifier
         5 = flag to set
         6 = value to set it on success (optional, defaults to true)
-        7 = value to set it on failure (optional, defaults to false)
-
-
-        
+        7 = value to set it on failure (optional, defaults to false)        
   */
 
   /* if _optionChecks[2] (the skill indicating that the option is a check) exists, */

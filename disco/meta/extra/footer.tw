@@ -1,4 +1,5 @@
 :: PassageFooter
+/* if "roll" is in the tags, delay the appearance of paragraphs for 1 second (to help time it with the roll sound!) otherwise, display it as normal*/
 <<if tags().includes("roll")>>
     <<timed 1s t8n>>
         <<DisplayParagraphs>>

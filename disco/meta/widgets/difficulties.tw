@@ -1,23 +1,23 @@
 :: Difficulties [widget nobr]
 <<widget "Difficulties">>
 <<silently>>
-    <<if $args[0] == "Trivial">>
+    <<if _args[0] == "Trivial">>
         <<set _rating = 6>>
-    <<elseif $args[0] == "Easy">>
+    <<elseif _args[0] == "Easy">>
         <<set _rating = 8>>
-    <<elseif $args[0] == "Medium">>
+    <<elseif _args[0] == "Medium">>
         <<set _rating = 10>>
-    <<elseif $args[0] == "Challenging">>
+    <<elseif _args[0] == "Challenging">>
         <<set _rating = 12>>
-    <<elseif $args[0] == "Formidable">>
+    <<elseif _args[0] == "Formidable">>
         <<set _rating = 13>>
-    <<elseif $args[0] == "Legendary">>
+    <<elseif _args[0] == "Legendary">>
         <<set _rating = 14>>
-    <<elseif $args[0] == "Heroic">>
+    <<elseif _args[0] == "Heroic">>
         <<set _rating = 15>>
-    <<elseif $args[0] == "Godly">>
+    <<elseif _args[0] == "Godly">>
         <<set _rating = 16>>
-    <<elseif $args[0] == "Impossible">>
+    <<elseif _args[0] == "Impossible">>
         <<set _rating = 18>>
     <</if>>
 <</silently>>

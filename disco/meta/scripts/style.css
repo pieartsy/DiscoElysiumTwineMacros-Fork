@@ -29,6 +29,7 @@ body, tw-story
   --fys: #c6496b;
   --int: #6cc6ce;
   --mot: #e4b934;
+  --whitecheck: #d2d3cd;
 }
 
 #story {
@@ -226,7 +227,7 @@ a.macro-linkreplace .motoverlay  {
 /* styling for white check */
 .check a {
   font-weight: bold;
-  background-color: #d2d3cd;
+  background-color: var(--whitecheck);
   color: black;
   padding: 3px;
   display: inline-block;
@@ -239,42 +240,36 @@ a.macro-linkreplace .motoverlay  {
 
 /* skills table on overview screen */
 .skills {
-  border: 10px solid #d2d3cd;
+  border: 10px solid var(--whitecheck);
 }
 
-.skills table, th {
-  padding: 1em;
+.skills table, th, td {
+  padding: .25em 0;
   text-align: center;
-  }
-
-.skills td {
-  padding: .75em;
-  text-align: center;
-  border: 10px;
   }
 
 .skills th.num, td.num {
-  background-color: #d2d3cd;
+  background-color: var(--whitecheck);
   color: black;
-  padding: .5em;
+  padding: 0 .35em;
   }
 
-.skills .intellect {
+.skills th.intellect {
   background-color: var(--int);
   color: black;
 }
 
-.skills .psyche {
+.skills th.psyche {
   background-color: var(--psy);
   color: black;
 }
 
-.skills .fysique {
+.skills th.fysique {
   background-color: var(--fys);
   color: black;
 }
 
-.skills .motorics {
+.skills th.motorics {
   background-color: var(--mot);
   color: black;
 }
@@ -285,6 +280,20 @@ a.macro-linkreplace .motoverlay  {
 
 .skills td {
   font-size: 1.5rem;
+}
+
+.skills button {
+  width: 100%;
+  height: inherit;
+  color: unset;
+  background-color: unset;
+  border: unset;
+  margin: -22px 0;
+}
+
+.skills button:hover {
+  background-color: var(--whitecheck);
+  color: black;
 }
 
 /* making dialog box "fullscreen" */

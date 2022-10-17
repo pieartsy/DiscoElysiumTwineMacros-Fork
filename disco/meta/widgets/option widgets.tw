@@ -1,5 +1,5 @@
 :: option widgets [widget nobr]
-/* adds a key, $args[0], and value, an array containing $args 1, to $optionmap
+/* adds a key, _args[0], and value, an array containing _args 1, to $optionmap
     this becomes _optiontext and _optionpassage in the DisplayOptions passage
 
     args[0] = text for the option.
@@ -13,10 +13,10 @@
 
 */
 <<widget "addoption">>
-    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])>>
+    <<run $optionmap.set(_args[0], [_args[1], _args[2], _args[3]])>>
 <</widget>>
 
-/* adds a key, $args[0], and value, an array containing $args 1, to $optionmap
+/* adds a key, _args[0], and value, an array containing _args 1, to $optionmap
     this becomes _optiontext and _optionpassage in the DisplayOptions passage
 
     args[0] = text for the option.
@@ -38,6 +38,6 @@
 
 */
 <<widget "checkoption">>
-    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5], $args[6], $args[7], $args[8]])>>
+    <<run $optionmap.set(_args[0], [_args[1], _args[2], _args[3], _args[4], _args[5], _args[6], _args[7], _args[8]])>>
 <</widget>>
 
