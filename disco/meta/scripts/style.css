@@ -22,9 +22,7 @@ body, tw-story
 
 .passage {
   line-height: 1.25;
-  font-size: large;
-  margin-left: 1.5em;
-  font-size: 1.5rem;
+  margin: 2em 1.5em 10em;
 }
 
 a {
@@ -90,7 +88,7 @@ span.continueblock {
   display: none;
 }
 
-a.macro-linkreplace {
+a.macro-linkreplace, .passage a.macro-link {
   background-color: #90280f;
   color: white;
   font-family: 'Titillium Web', sans-serif;
@@ -98,29 +96,33 @@ a.macro-linkreplace {
   display: block;
 }
 
-a.macro-linkreplace .padding {
+.continue {
   padding: 15px;
   padding-bottom: 10px;
   padding-top: 10px;
   display: block;
 }
 
-a.macro-linkreplace .intoverlay  {
+.continue:hover, .continue:focus {
+  background-color: #b34f36;
+  border: 1px solid white;
+}
+
+.intoverlay  {
   background-image: [img[intoverlay]];
   background-size: cover;
 }
-
-a.macro-linkreplace .psyoverlay  {
+.psyoverlay  {
   background-image: [img[psyoverlay]];
   background-size: cover;
 }
 
-a.macro-linkreplace .fysoverlay  {
+.fysoverlay  {
   background-image: [img[fysoverlay]];
   background-size: cover;
 }
 
-a.macro-linkreplace .motoverlay  {
+.motoverlay  {
   background-image: [img[motoverlay]];
   background-size: cover;
 }
