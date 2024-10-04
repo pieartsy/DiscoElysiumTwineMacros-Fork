@@ -2,11 +2,11 @@
 Disco Elysium Twine Macros
 
 :: StorySubtitle
-A template with rolls!
+A static template for telling non-choice stories.
 
 :: StoryData
 {
         "ifid": "B22CF083-CA91-477F-BBE8-7D6456685488",
         "format": "SugarCube",
-        "format-version": "2.36.1"
+        "format-version": "2.37.3"
 }

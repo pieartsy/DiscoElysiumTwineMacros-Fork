@@ -5,10 +5,8 @@ this shows up only at PassageFooter; you don't need to call it otherwise
 */
 <<widget "DisplayParagraphs">>
 <<silently>>
-	<<set _paragraph to $paragraphs[0]>>
-	<<set _overlay to $overlays[0]>>
-	<<run $paragraphs.deleteAt(0)>>
-	<<run $overlays.deleteAt(0)>>
+	<<set _paragraph to $paragraphs.shift()>>
+	<<set _overlay to $overlays.shift()>>
 <</silently>>
 @@.paragraph;<<print _paragraph>>@@
 <br>
@@ -26,9 +24,6 @@ this shows up only at PassageFooter; you don't need to call it otherwise
 		<<else>>
 			<<linkreplace "@@#ContinueBtn;.continue;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
 		<</if>>
-	<<else>>
-		/*otherwise, display options.*/
-		<<include DisplayOptions>>
 	<</if>>
 /* the script dims the paragraphs after they've been clicked.*/
 <<silently>>

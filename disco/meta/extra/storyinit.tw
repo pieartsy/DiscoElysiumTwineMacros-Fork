@@ -1,32 +1,13 @@
 :: StoryInit [nobr]
 <<silently>>
-    <<set $optionmap = new Map()>>
-    <<set $flagsMap = {}>>
     /* greentext variables */
     <<set $tasks = {}>>
     <<set $secrettasks = []>>
-    <<set $inventory = {}>>
-    <<set $xp = 0>>
-    <<set $skillpoints = 0>>
-    <<set $thoughts = {}>>
-
-/* change the names if you want to change your skill names
-    change the numbers if you want to change the starting skill points */
-    <<set $perceptions = ["PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)", "PERCEPTION (HEARING)", "PERCEPTION (SMELL)", "PERCEPTION"]>>
-/* change the numbers if you want to change your starting stat points
-    change the numbers if you want to change the starting stat points */
-    <<set $stats = { 
-        "intellect": [{"LOGIC": 2, "ENCYCLOPEDIA": 0, "RHETORIC": 0, "DRAMA": 0, "CONCEPTUALIZATION": 0, "VISUAL CALCULUS": 0}, 1],
-        "psyche": [{"VOLITION": 0, "INLAND EMPIRE": 0, "EMPATHY": 0, "AUTHORITY": 0, "ESPRIT DE CORPS": 0, "SUGGESTION": 0, }, 2],
-        "fysique": [{"ENDURANCE": 0, "PAIN THRESHOLD": 0, "PHYSICAL INSTRUMENT": 0, "ELECTROCHEMISTRY": 0, "SHIVERS": 0, "HALF LIGHT": 0 }, 3],
-        "motorics": [{"HAND-EYE COORDINATION": 0, "PERCEPTION": 0, "REACTION SPEED": 0, "SAVOIR FAIRE": 0, "INTERFACING": 0, "COMPOSURE": 0, }, 4]
-     }>>
-    /* add skill descriptions here using the <<skilldesc>> widget. Check the widget at skilldesc.tw for more information.
-
-        <<skilldesc "LOGIC" "Wield raw intellectual power. Deduce the world.">>Cool for: Analysts, Pure Rationalists, Obviously Logicians. Logic urges you to analyze the living daylights out of the case. (etc...) <</skilldesc>>
-    */
-    <<set $skillDesc = {}>>
-
+/* change the names if you want to change your skill names*/
+    <<set $motorics to ["COMPOSURE", "HAND-EYE COORDINATION", "INTERFACING", "PERCEPTION", "REACTION SPEED", "SAVOIR FAIRE", "PERCEPTION (SIGHT)", "PERCEPTION (TASTE)", "PERCEPTION (TOUCH)", "PERCEPTION (SMELL)", "PERCEPTION (HEARING)"]>>
+    <<set $intellect to ["CONCEPTUALIZATION", "DRAMA", "ENCYCLOPEDIA", "LOGIC", "RHETORIC", "VISUAL CALCULUS"]>>
+    <<set $fysique to ["ELECTROCHEMISTRY", "ENDURANCE", "HALF LIGHT", "PAIN THRESHOLD", "PHYSICAL INSTRUMENT", "SHIVERS"]>>
+    <<set $psyche to ["AUTHORITY", "EMPATHY", "ESPRIT DE CORPS", "INLAND EMPIRE", "SUGGESTION", "VOLITION"]>>
     <<cacheaudio "successsound" "disco/meta/media/succcesssound.wav">>
     <<cacheaudio "failsound" "disco/meta/media/failsound.wav">>
 <</silently>>

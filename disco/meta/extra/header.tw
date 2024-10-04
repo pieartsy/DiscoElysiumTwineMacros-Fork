@@ -4,17 +4,3 @@
 lastoption is used with the DisplayOptions passage. */
 <<set $paragraphs = []>>
 <<set $overlays = []>>
-<<if $lastoption>>
-    <br>
-    @@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
-    <br><br>
-<</if>>
-/* adds the success or failure animations depending on the previous roll. you must add the roll tag to the title of the passage
-    ex: :: Title [roll] */
-<<if tags().includes("roll")>>
-    <<if $success == true>>
-        <<success>>
-    <<else>>
-        <<failure>>
-    <</if>>
-<</if>>
