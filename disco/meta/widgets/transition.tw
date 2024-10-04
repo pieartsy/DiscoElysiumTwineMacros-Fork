@@ -1,0 +1,5 @@
+:: Transition [widget]
+
+<<widget "transition">>
+    <<link "@@#ContinueBtn;.continue;CONTINUE ➤@@" _args[0]>><</link>>
+<</widget>>

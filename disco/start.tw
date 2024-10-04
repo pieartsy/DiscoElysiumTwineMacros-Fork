@@ -1,7 +1,0 @@
-:: Start [nobr]
-<<para "Aster">>Hi!<</para>>
-<<para>>How are you?<</para>>
-<<skillpara "empathy">>Se seems nice.<</skillpara>>
-<<skillpara "electrochemistry" "trivial" "success">>Succeeding is sexy as hell.<</skillpara>>
-<<skillpara "composure">>Let's calm down.<</skillpara>>
-<<skillpara "visual calculus" "trivial" "failure">>Something seems off...<</skillpara>>
