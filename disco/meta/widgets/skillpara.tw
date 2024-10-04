@@ -39,11 +39,11 @@ if it's a passive check:
            /* if the 2nd argument is True, set the skill rating to the 2nd argument + Success, for ex:[Easy: Success], if False, show the 2nd argument + Failure, for ex: [Easy: Failure]*/
     <<if _args[2]>>
         <<if _args[2] == "success">>
-            <<set _skillresult = " [" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Success ]">>
+            <<set _skillresult = " [" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Success]">>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>
             <<overlay _usedOverlay>>
         <<elseif _args[2] == "failure">>
-            <<set _skillresult = " [" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Failure ]">>
+            <<set _skillresult = " [" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Failure]">>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>
             <<nooverlay>>
         <</if>>
