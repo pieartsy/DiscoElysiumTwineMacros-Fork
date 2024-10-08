@@ -17,6 +17,15 @@ if it's a passive check:
 /* sets a temporary variable, _skillpara, which will be used for the DisplayPara widget */
     <<set _skillpara = "">>
 
+        <<if $paraAppendMode is true>>
+        <<for _text range $greentext>>
+            <<set _skillpara to (_skillpara + _skilltext + "<br /><br />")>>
+        <</for>>
+        <<set $greentext to []>>
+        <<set $paraAppendMode to false>>
+    <</if>>
+    /* sets _skillname to the second argument, the skill, in uppercase. sets _skillresult as empty */
+
     <<set _skillname = _args[0].toUpperCase()>>
 
     /*If the skill name is in the $motorics array, set _currentspeaker to the skill, styling it with the .motorics and .speaker classes. same with the others. */
@@ -39,17 +48,17 @@ if it's a passive check:
            /* if the 2nd argument is True, set the skill rating to the 2nd argument + Success, for ex:[Easy: Success], if False, show the 2nd argument + Failure, for ex: [Easy: Failure]*/
     <<if _args[2]>>
         <<if _args[2] == "success">>
-            <<set _skillresult = " [" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Success]">>
+            <<set _skillresult = "@@dim;[" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Success]@@">>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>
             <<overlay _usedOverlay>>
         <<elseif _args[2] == "failure">>
-            <<set _skillresult = " [" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Failure]">>
+            <<set _skillresult = "@@dim;[" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Failure]@@">>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>
             <<nooverlay>>
         <</if>>
 
         <<run $paragraphs.push(_skillpara)>>
-    /*if it's just a  normal skill comment with no passive*/
+    /*if it's just a  normal skill comment with no passive, set _skillpara to $currentspeaker + paragraph, and push to $paragraphs.*/
     <<elseif !_args[1]>>
         <<set _skillpara += _currentspeaker + " - " + _contents>>
         <<nooverlay>>
