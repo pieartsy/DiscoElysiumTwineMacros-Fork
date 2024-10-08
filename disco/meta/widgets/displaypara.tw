@@ -5,6 +5,7 @@ this shows up only at PassageFooter; you don't need to call it otherwise
 */
 <<widget "DisplayParagraphs">>
 <<silently>>
+	<<ScrollTo "ContinueBtn">>
 	<<set _paragraph to $paragraphs.shift()>>
 	<<set _overlay to $overlays.shift()>>
 <</silently>>

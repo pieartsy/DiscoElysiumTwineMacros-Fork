@@ -7,11 +7,17 @@ $(document).click(function(e) {
 	return false;
 });
 
+function scrolldown() {
+  const scrollingElement = (document.scrollingElement || document.body);
+  scrollingElement.scrollTop = scrollingElement.scrollHeight;
+}
+
 $(document).on("keyup", function (e) {
   //pressing space key clicks continue button
 
   if ((e.keyCode == 32) && ($("#ContinueBtn"))) {
     $("#ContinueBtn").click();
+    scrolldown();
   }
 
   //pressing number keys selects options
@@ -33,13 +39,6 @@ $(document).on("keyup", function (e) {
     if (document.getElementById("ui-dialog-close")) {
       const diaclose = document.getElementById("ui-dialog-close");
       diaclose.click();
-    }
-
-    //opens the overview if nothing is selected
-    if (diastyle == 'none') {
-      const menu = document.getElementById("menu-story");
-      console.log("test")
-      menu.children[0].getElementsByClassName("link-internal")[0].click();
     }
   }
 });
