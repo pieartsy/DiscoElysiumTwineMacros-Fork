@@ -1,0 +1,23 @@
+sugarcube-2:
+  macros:
+    para:
+      name: para
+      container: true
+    overlay:
+      name: overlay
+    nooverlay:
+      name: nooverlay
+    ScrollTo:
+      name: ScrollTo
+    skillpara:
+      name: skillpara
+      container: true
+    transition:
+      name: transition
+    xp:
+      name: xp
+    DisplayParagraphs:
+      name: DisplayParagraphs
+    dialog:
+      name: dialog
+      container: true

@@ -18,7 +18,7 @@ args[0] = the speaker of the paragraph (if any)
     then set the current speaker to nothing (so a name doesn't keep appearing over and over)
     */
     <<if _args[0]>>
-        <<set _currentspeaker = "@@.speaker;" + _args[0] + "@@ - ">>
+        <<set _currentspeaker = "@@.speaker;" + _args[0] + "@@ – ">>
         <<set _para += _currentspeaker + _contents>>
         <<set _currentspeaker = "">>
     /* otherwise, set _para to a paragraph with no speaker.*/

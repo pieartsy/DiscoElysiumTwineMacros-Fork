@@ -10,4 +10,5 @@
     <<set $psyche to ["AUTHORITY", "EMPATHY", "ESPRIT DE CORPS", "INLAND EMPIRE", "SUGGESTION", "VOLITION"]>>
     <<cacheaudio "successsound" "disco/meta/media/succcesssound.wav">>
     <<cacheaudio "failsound" "disco/meta/media/failsound.wav">>
+    <<set $subtitle to "//__Chapter 1__//<br>Harry starts antipsychotic medication.">>
 <</silently>>
