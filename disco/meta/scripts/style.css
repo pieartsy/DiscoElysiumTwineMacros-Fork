@@ -12,7 +12,7 @@
 
 html {
   height: 100%;
-  font-size: 25px;
+  font-size: 20px;
   color: var(--whitecheck);
 }
 
@@ -40,7 +40,12 @@ body, tw-story
   border-color: grey;
   border-style: dashed;
   position: relative;
+  background-image: [img[film-grain]];
+	background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-color: var(--film);
+
 }
 
 .passage {
@@ -95,6 +100,7 @@ h1 {
 .speaker {
   text-transform: uppercase;
   margin-left: -1.5em;
+  font-weight: bold;
 }
 
 /* for inserted paragraphs and past paragraphs */
