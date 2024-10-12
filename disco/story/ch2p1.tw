@@ -1,0 +1,170 @@
+:: Ch2P1 [nobr]
+<<skillpara "electrochemistry" "Medium" "failure">>So you don’t take your medicine.<</skillpara>>
+
+<<skillpara "VOLITION" "Medium" "Success">>Good.<</skillpara>>
+
+<<skillpara "PHYSICAL INSTRUMENT" "Medium" "Failure">>But it feels like shit. Utter shit.<</skillpara>>
+
+<<skillpara "PAIN THRESHOLD" "Heroic" "Failure">>The first week is the worst. Even after the nausea fades, the headaches are intense and vertigo haunts your every step.<</skillpara>>
+
+<<skillpara "ENDURANCE" "Impossible" "Failure">>And the crying. You cry everywhere.<</skillpara>>
+
+<<skillpara "AUTHORITY" "Medium" "Success">>Like the pitiful dog you are. Crawling back to us and complaining that it hurts. Of *course* it hurts. You tried to kill a part of yourself.<</skillpara>>
+
+<<para "You" >>I’m tired. I’m so tired.<</para>>
+
+<<skillpara "ENCYCLOPEDIA" "Challenging" "Success">>And you were only on mildisopine for a month. It would be worse if you had taken it longer.<</skillpara>>
+
+<<skillpara "ELECTROCHEMISTRY" "Challenging" "Success">>It would be better if you hadn’t gone off it at all. Now you hunger for something else to fill the hole inside of you.<</skillpara>>
+
+<<skillpara "VOLITION" "Medium" "Success">>If you start drinking again, I’ll kill you myself.<</skillpara>>
+
+<<skillpara "DRAMA" "Trivial" "Success">>Sire, why revisit an old haunt? Alcoholism is *out*. Perhaps you can find something trendy and new to mute our voices.<</skillpara>>
+
+<<skillpara "volition">>No, you won’t be muting *shit*. You almost got rid of us once. You wouldn’t dare try it again.<</skillpara>>
+
+<<para "You" >>I’m sorry. I really am.<</para>>
+
+<<skillpara "INLAND EMPIRE" "Medium" "Success">>The bomb has been stalled, but the world is still splintering. Wake up, Harry. Wake up, Harry. Wake up –<</skillpara>>
+
+<<para "You" >>You jerk upright, your head thudding into the wall behind you. Your ass is squeezed into a painful metal chair. As you peer around you with bleary eyes, you see that the walls are coated in peeling paint and medical posters: you’re in a waiting room.<</para>>
+
+<<para "Kim kitsuragi">>“Are you alright, detective?”<</para>>
+
+<<skillpara "EMPATHY" "Medium" "Success">>Concern mixes with calculation in his voice; he’s worried that you’re not okay, and he’s already thinking of ways to prop you up. You’re not going to ruin this case for him.<</skillpara>>
+
+<<para "You" >>“Uh…”<</para>>
+
+<<skillpara "SUGGESTION" "Medium" "Failure">>You’re on your own here.<</skillpara>>
+
+<<skillpara "DRAMA" "Medium" "Success">>Not entirely. *I’m* happy to be back in your service, my liege. Now lie like a dog!<</skillpara>>
+
+<<para "You" >>“I’m totally fine, Kim. Just tired. I’m really sorry for dozing off.” You pry yourself out of your seat. “I’m trying really hard to do a good job, and I know you have to put up with so much from me, and I apologize –”<</para>>
+
+<<para "Kim kitsuragi">>“It’s fine. Do you think you’ll be able to stay awake for the interview?”<</para>>
+
+<<skillpara "PHYSICAL INSTRUMENT" "Medium" "Failure">>Your limbs feel like lead weights. An interview is about the *only* thing you could manage right now, you worthless worm.<</skillpara>>
+
+<<para "You" >>“Uh, yes.”<</para>>
+
+<<para "Kim kitsuragi">>The lieutenant adjusts his glasses. “Good. Because here comes the witness.”<</para>>
+
+<<skillpara "PERCEPTION (SIGHT)" "Trivial" "Success">>Down the hospital hallway walks a woman in a dress.<</skillpara>>
+
+<<skillpara "INLAND EMPIRE" "Trivial" "Success">>Her hair is a sheaf of wheat. An unseen wind whips the dress around her, as white as the knuckles that grip her suitcase –<</skillpara>>
+
+<<skillpara "LOGIC" "Heroic" "Success">>It isn’t her. You should know that by now.<</skillpara>>
+
+<<para "Kim kitsuragi">>“Ms. Pastorak?”<</para>>
+
+<<para "APRIL PASTORAK">>“Yes, that’s me.”<</para>>
+
+<<skillpara "PERCEPTION (HEARING)" "Trivial" "Success">>Her voice is timid and quavers on the last word.<</skillpara>>
+
+<<skillpara "VISUAL CALCULUS" "Medium" "Success">>There is a bruise on her cheek. Her arm is in a sling. Both injuries are on the left side of her body, as if inflicted by a fall – or a right-handed individual.<</skillpara>>
+
+<<para "Kim kitsuragi">>The lieutenant flips open his blue notebook and clicks his pen.<</para>>
+
+<<skillpara "ESPRIT DE CORPS" "Trivial" "Success">>He has taken charge of this interview because he is unsure of your ability to do so.<</skillpara>>
+
+<<para "Kim kitsuragi">>“Madam, we received a call about a disturbance at your place of residence last night. There were reports of shouting and crashing. You checked yourself into this hospital shortly afterward, according to the records. Is that correct?”<</para>>
+
+<<para "APRIL PASTORAK">>“I wouldn’t know about the reports, officer.” She steps to one side, putting a table between her and the two of you.<</para>>
+
+<<para "Kim kitsuragi">>“You’re right, my apologies. But was there a disturbance at your residence?”<</para>>
+
+<<para "APRIL PASTORAK">>Her grey eyes dart to one side. “Not too much of a disturbance, officer.”<</para>>
+
+<<skillpara "EMPATHY" "Medium" "Success">>She’s covering for someone.<</skillpara>>
+
+<<para "You" >>You take a clumsy step forward, shoving the table aside with your hip. It makes a scraping sound on the tiled floor and the woman in front of you winces, as does Kim.<</para>>
+
+<<para "You" >>“How is crashing and shouting not a disturbance?”<</para>>
+
+<<para "APRIL PASTORAK">>“I was home. I don’t think there was too much shouting.”<</para>>
+
+<<skillpara "AUTHORITY" "Medium" "Success">>Her body language is submissive. Press your advantage. Prove you’re worth something here.<</skillpara>>
+
+<<para "You" >>“Then what the hell happened to your arm?”<</para>>
+
+<<para "Kim kitsuragi">>“Officer.” There is a warning tone in his voice.<</para>>
+
+<<para "APRIL PASTORAK">>“I fell down the stairs.”<</para>>
+
+<<skillpara "DRAMA" "Medium" "Success">>She is an abhorrent liar, my liege. Look at how her eyes flick to and fro.<</skillpara>>
+
+<<para "You" >>“You’re lying to me, Ms. Pastorak.”<</para>>
+
+<<para "Kim kitsuragi">>“Harry! I need to speak to you for a moment.”<</para>>
+
+<<para "Kim kitsuragi">>The lieutenant’s gloved hand closes like a vice over your arm as he hauls you across the waiting room.<</para>>
+
+<<skillpara "PERCEPTION (SIGHT)" "Easy" "Success">>Behind you, Ms. Pastorak stands abandoned. She reaches a shaking hand up to brush hair away from her brow.<</skillpara>>
+
+<<para "Kim kitsuragi">>“Why are you being so aggressive with her? Remember, she hasn’t committed any crime.”<</para>>
+
+<<skillpara "HALF LIGHT" "Trivial" "Success">>Not that you *know of*.<</skillpara>>
+
+<<para "You" >>“Not that we *know of*!”<</para>>
+
+<<para "Kim kitsuragi">>“You don’t need to badger her. This is a suspected abuse case. We’re supposed to be offering her *assistance*.”<</para>>
+
+<<skillpara "half light">>You’re a horrible person! You’re part of the cycle of abuse!<</skillpara>>
+
+<<para "You" >>“Fuck, I’m so sorry, Kim. I guess I’m used to having to be harsh with witnesses…you know, Human Can Opener stuff. It’s really the only thing that makes me worth keeping around.”<</para>>
+
+<<para "Kim kitsuragi">>“That’s not the only reason the RCM keeps you around.”<</para>>
+
+<<para "You" >>“Isn’t it? I’m walking garbage. I can’t do anything right.”<</para>>
+
+<<para "You" >>Much to your dismay, you start crying.<</para>>
+
+<<para "Kim kitsuragi">>The lieutenant grimaces. “Ah…let me handle the rest of this.”<</para>>
+
+<<para "Kim kitsuragi">>He gives you an awkward pat on the shoulder and walks back to Ms. Pastorak.<</para>>
+
+<<para "You" >>Meanwhile, you sink into another uncomfortable waiting room chair and put your head in your hands.<</para>>
+
+<<skillpara "PAIN THRESHOLD" "Heroic" "Failure">>Your intestines feel like they’re twisting themselves inside out.<</skillpara>>
+
+<<skillpara "HAND/EYE COORDINATION" "Trivial" "Failure">>You try to rub your hands down your face and poke yourself in the teary eye. You’re shaking so badly that you can’t even sob right.<</skillpara>>
+
+<<para "You" >>I’m doing my best. Kim understands that I’m doing my best.<</para>>
+
+<<skillpara "ESPRIT DE CORPS" "Trivial" "Success">>He asks the woman if her husband hurt her. She says no. He asks the woman if her husband has been behaving oddly. She says no. He asks what her job is. She says to help her husband.<</skillpara>>
+
+<<skillpara "VOLITION" "Trivial" "Success">>You should be helping Kim with this. Instead, you’re sobbing in a corner.<</skillpara>>
+
+<<skillpara "ELECTROCHEMISTRY" "Medium" "Failure">>Withdrawal sucks.<</skillpara>>
+
+<<skillpara "volition">>This isn’t the withdrawal. This is a *you* problem. A *pathetic* problem.<</skillpara>>
+
+<<para "You" >>You are still crying when Ms. Pastorak leaves the waiting room.<</para>>
+
+<<para "Kim kitsuragi">>The lieutenant sits next to you, not complaining about the discomfort of the chair, and reads you his notes on the interview.<</para>>
+
+<<skillpara "LOGIC" "Trivial" "Success">>It’s not much. The woman denied everything.<</skillpara>>
+
+<<para "You" >>“So there’s nothing we can do to help her?”<</para>>
+
+<<para "Kim kitsuragi">>“If she doesn’t want our help, no. But we still need to write this up in case she requests assistance in the future.”<</para>>
+
+<<para "You" >>“I’m sorry, Kim.”<</para>>
+
+<<para "Kim kitsuragi">>He shrugs. “That’s the job.”<</para>>
+
+<<para "You" >>“No, I mean *I’m* sorry. For fucking up again and getting in the way. I know you hoped it would be different by now, and I’m trying, I really am…”<</para>>
+
+<<para "Kim kitsuragi">>He sighs. “I know you’re trying, Harry. And I’m here to help.”<</para>>
+
+<<para "You" >>“I haven’t been…*more* of a fuckup than usual, right?”<</para>>
+
+<<para "Kim kitsuragi">>Unexpectedly, the lieutenant chuckles. “What an odd metric to go off of.”<</para>>
+
+<<skillpara "EMPATHY" "Formidable" "Success">>You *have* been a wreck for the past week, and he knows it. He just doesn’t know why.<</skillpara>>
+
+<<para "Kim kitsuragi">>“Let’s get back to the precinct. Maybe you’ll feel better then.”<</para>>
+
+<<para "Kim kitsuragi">>He helps you stand, and politely does not look as you scrub away tears on your way out of the hospital. <</para>>
+
+<<para>><<transition "Ch2P2">><</para>>

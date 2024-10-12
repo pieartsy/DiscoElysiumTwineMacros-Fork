@@ -1,0 +1,180 @@
+:: Ch3P1 [nobr]
+ PHYSICAL INSTRUMENT [Trivial: Success] – A heavy hand lands on your shoulder, jarring you into awareness.
+
+<<skillpara "SHIVERS" "Medium" "Success">>At once, the world comes rushing back: the cold of the bricks against your back, the cement firm beneath your feet. There is a faint mist in the air that brushes your cheek.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“Shitkid. Need you inside.”<</para>>
+
+<<para "YOU">>Your eyes drift downward to the unlit cigarette that dangles between your fingers. Then your gaze slips to your blazer pocket.<</para>>
+
+<<skillpara "INLAND EMPIRE" "Formidable" "Success">>Don’t think about it. Don’t go there. Not yet.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“Hey!”<</para>>
+
+<<skillpara "PHYSICAL INSTRUMENT" "Medium" "Success">>His fingers dig into your shoulder, creating little points of pain as he shakes you.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“Pay attention. Your petty abuse case just turned into a murder.”<</para>>
+
+<<skillpara "HALF LIGHT" "Trivial" "Success">>A shiver rattles down your spine as he turns and walks away from you, back into the precinct.<</skillpara>>
+
+<<skillpara "ENCYCLOPEDIA" "Trivial" "Success">>As many as 25% of unresolved abuse cases end in the death of one of the participants. Usually the abused spouse.<</skillpara>>
+
+<<para "YOU">>You take a deep gulp of the freezing air.<</para>>
+
+<<skillpara "VOLITION" "Medium" "Success">>Calm down. You can do this.<</skillpara>>
+
+<<para "YOU">>Even as you straighten your back and step away from the wall, the doubts creep in.<</para>>
+
+<<skillpara "COMPOSURE" "Heroic" "Failure">>*Can* you do this?!<</skillpara>>
+
+<<skillpara "SAVOIR FAIRE" "Formidable" "Failure">>You look like a week-old corpse. Who’s going to give you authority on a murder case?<</skillpara>>
+
+<<skillpara "PAIN THRESHOLD" "Challenging" "Failure">>The vice grip of withdrawal still hasn’t quite released you, although it’s been three weeks since you went off your medication. You’re sweaty and dizzy all the time. You find it difficult to focus, which has begun to affect your work.<</skillpara>>
+
+<<skillpara "ELECTROCHEMISTRY" "Medium" "Success">>Who needs work? Reach into that pocket of yours and you’ll find something *better* to do.<</skillpara>>
+
+<<para "YOU">>You drop your cigarette and go to stomp it out beneath your heel, but then realize there’s no need. It isn’t lit, after all.<</para>>
+
+<<skillpara "INLAND EMPIRE" "Trivial" "Success">>The single white cylinder peers up at you like a forlorn worm or detached digit.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“HARRY!”<</para>>
+
+<<para "YOU">>You close your eyes for a moment, trying to stabilize your heartbeat. Then you open them and follow him inside.<</para>>
+
+<<skillpara "PERCEPTION" "Trivial" "Success">>The precinct is a mess of officers and voices. The largest number of them - Jean included, as he pushes through the crowd to approach - cluster around the spot where your desk and Kim’s sit together. You even spot Trant Heidelstam, consultant for the RCM, leaning against a column nearby.<</skillpara>>
+
+<<para "KIM KITUSRAGI">>At the center of the maelstrom, Kim sits at his desk, calmly flipping through the pages of a case file. As you approach, he glances up.<</para>>
+
+<<para "KIM KITSURAGI">>“Ah, detective. Satellite-Officer Vicquemare told me he was going to fetch you. I take it you’ve heard about THE RELUCTANT HOUSEWIFE?”<</para>>
+
+<<para "YOU">>“That it’s a murder case now? Yeah, I heard.”<</para>>
+
+<<skillpara "PAIN THRESHOLD" "Medium" "Failure">>As you say it, a shudder wracks your body.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“We should check out the crime scene and interview the neighbors. One of them might know where the perpetrator would have gone to hide.”<</para>>
+
+<<para "YOU">>“Uh…Kim?”<</para>>
+
+<<para "KIM KITSURAGI">>“Yes?”<</para>>
+
+<<para "YOU">>“Who is the perpetrator?”<</para>>
+
+<<para "KIM KITSURAGI">>“April Pastorak. The wife.”<</para>>
+
+<<para "YOU">>“Oh.”<</para>>
+
+<<skillpara "COMPOSURE" "Heroic" "Failure">>It hits you like a train: the knowledge that you could have stopped this. Your spine buckles, you put both hands down on the desk in front of you, and your eyes begin to fill with tears.<</skillpara>>
+
+<<para "YOU">>“So…when we didn’t help her, we drove her to murder.”<</para>>
+
+<<para "JEAN VICQUEMARE">>“Oh, come the fuck on.”<</para>>
+
+<<para "YOU">>“We could have done something! Isn’t that our job? To *help* people?”<</para>>
+
+<<skillpara "RHETORIC" "Medium" "Success">>Dial it back, bleeding heart. You’re laying it on a little thick.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“She rejected our help, Harry. There’s nothing we can legally do to assist her if she tells us not to.”<</para>>
+
+<<skillpara "ELECTROCHEMISTRY" "Medium" "Success">>It feels like your right blazer pocket is blaring a siren directly into your brain. Open that flap and you can take all this pain away.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“Would it help your weeping morals if you thought of this as a separate case? Just another run-of-the-mill Jamrock murder for you to solve and stamp on your impressive record. You’d like that, wouldn’t you?”<</para>>
+
+<<para "YOU">>You scrub the back of your hand across your face, smearing tears and snot into your facial hair.<</para>>
+
+<<para "YOU">>“I’m sorry, I didn’t mean to get carried away. It just seems so *tragic*…but you’re right, and I’m sorry, and I’ll get my act together.”<</para>>
+
+<<para "JEAN VICQUEMARE">>“Fuck.” He turns to Kim. “He’s falling apart, Kitsuragi. You can’t take him with you.”<</para>>
+
+<<para "KIM KITSURAGI">>The lieutenant looks up at you and your wobbling lower lip, then over at Jean. He sighs.<</para>>
+
+<<skillpara "COMPOSURE" "Challenging" "Success">>His fingers drum the surface of his desk as he considers his next words. He doesn’t want another fight with Jean. <</skillpara>>
+
+<<skillpara "EMPATHY" "Formidable" "Success">>Kim doesn’t think Jean is a bad person, just that he’s wrong about you. Or rather, about how capable Kim is of dealing with you.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“He’ll be alright. I’ll take the lead on this one.”<</para>>
+
+<<para "JEAN VICQUEMARE">>“You’re going to end up taking the lead on *every* one. Eventually you’ll be working two jobs, all while trying to keep Harry out of the bottle. Is the holier-than-thou shtick worth it?”<</para>>
+
+<<skillpara "SUGGESTION" "Challenging" "Failure">>You try to speak but choke up.<</skillpara>>
+
+<<skillpara "ENDURANCE" "Medium" "Failure">>They’re talking about you as if you’re some kind of deficient! When you’re right here!<</skillpara>>
+
+<<para "KIM KITSURAGI">>“Satellite-Officer, this is not a judgment of you and your colleagues. I understand that you resent me, but I don’t resent you. I am simply presenting my assessment of the situation, which is that I can handle it.”<</para>>
+
+<<skillpara "SUGGESTION" "Heroic" "Success">>Say *something*, at least!<</skillpara>>
+
+<<para "YOU">>“Kim, I can…”<</para>>
+
+<<para "KIM KITSURAGI">>He cuts you off. “Yes, you can. *We* can. The case will be managed appropriately.”<</para>>
+
+<<para "JEAN VICQUEMARE">>Jean sighs and looks away.<</para>>
+
+<<para "YOU">>You exhale as well, but in relief. For a moment, it seems as though the tension will pass without further argument.<</para>>
+
+<<skillpara "PERCEPTION (HEARING)" "Trivial" "Success">>Then a new voice pipes up, accompanied by the tapping of shoes as its owner approaches the three of you.<</skillpara>>
+
+<<para "TRANT HEIDELSTAM">>“Listen, I may be just a consultant, but even I can see that this isn’t right.”<</para>>
+
+<<skillpara "LOGIC" "Heroic" "Failure">>Special Consultant Heidelstam?? The master of backpedaling??? Why is *he* getting involved?<</skillpara>>
+
+<<skillpara "EMPATHY" "Medium" "Success">>If he judges it worth stepping into the argument, he must be *very* upset.<</skillpara>>
+
+<<para "TRANT HEIDELSTAM">>“There are many models for workplace behavior, but none of them involve actively snubbing one’s coworkers when they try to make sure that the work is done properly.” Trant crosses his arms across his sweater-vested chest. “Not to mention that when one prioritizes one’s own accomplishment over a genuine concern about a coworker’s mental health and ability to function…” He lets the sentence trail off before finishing, “It’s not a good look.”<</para>>
+
+<<skillpara "EMPATHY">>You can practically see the wheels spinning in Kim and Jean’s heads as they work through the complexity of Trant’s statement. Kim gets to the meat of it first, as evidenced by the flash of hurt that crosses his face.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“I’m not prioritizing my *own accomplishment*.”<</para>>
+
+<<skillpara "RHETORIC" "Trivial" "Success">>If you want to help him, you’d better step in now – and don’t fuck it up this time.<</skillpara>>
+
+<<skillpara "SUGGESTION" "Trivial" "Success">>Deflection may be the best tactic. If he’s angry at *you*, he’ll stop taking it out on Kim.<</skillpara>>
+
+<<para "YOU">>“Trant, why are you so angry about this?”<</para>>
+
+<<para "TRANT HEIDELSTAM">>Indignation flashes in his eyes as he turns to you. “It may have been from a distance, but I saw what your decline did to the rest of the people here – my friends and coworkers. Now Lieutenant Kitsuragi, who has only recently joined the 41 st , wants to enable that behavior in you again! I don’t see why anyone is allowing this.”<</para>>
+
+<<skillpara "ESPRIT DE CORPS" "Trivial" "Success">>When Jean hauled your drunk lump of a body out of the station night after night, Trant watched with tired eyes.<</skillpara>>
+
+<<para "YOU">>You bite your lip. He has a point.<</para>>
+
+<<para "TRANT HEIDELSTAM">>“It’s not acceptable. Someone has to stand up for what’s right.” <</para>>
+
+<<skillpara "EMPATHY" "Trivial" "Success">>He is shocked that that person has to be him.<</skillpara>>
+
+<<para "KIM KITSURAGI">>The lieutenant glances back and forth between Trant and Jean for several seconds before he speaks again. When he does, his eyes blaze out of their sockets.<</para>>
+
+<<para "KIM KITSURAGI">>“This isn’t your decision. The lieutenant double-yefreitor here outranks all of us. If he wants to work the case, he can. And if he has trouble, I will take care of it. Unless you want to bring Captain Pryce back into this? Who, I remind you, has already cleared Detective Du Bois for duty?”<</para>>
+
+<<skillpara "EMPATHY" "Trivial" "Success">>He turns to regard you, and you can read the plea in his gaze: Say something sensible. Don’t fuck this up.<</skillpara>>
+
+<<skillpara "ENDURANCE" "Medium" "Success">>The unspoken request infuriates you for a moment. You shouldn’t have to keep defending yourself like this!<</skillpara>>
+
+<<para "YOU">>“I’m *fine*, Kim!” you snap. “How many times do I have to say it? I can do this!”<</para>>
+
+<<para "KIM KITSURAGI">>Something shutters in the lieutenant’s eyes, but he doesn’t reply. He just gives you a nod and turns to the others as if this is proof enough.<</para>>
+
+<<skillpara "PERCEPTION (SIGHT)" "Trivial" "Success">>Trant begins to open his mouth but closes it again when Jean shakes his head. The two of them straighten up and walk away without another word to you or Kim.<</skillpara>>
+
+<<para "KIM KITSURAGI">>The lieutenant lets the silence stretch out for a moment. You worry that he’s going to scold you for your anger, but instead, he just sighs.<</para>>
+
+<<skillpara "SUGGESTION" "Trivial" "Success">>If he isn’t going to mention it, neither should you. Address something that unites you instead: the hostile attitude from your coworkers.<</skillpara>>
+
+<<para "YOU">>“Wow,” you say. “That was…tough.”<</para>>
+
+<<para "KIM KITSURAGI">>The lieutenant shrugs. He seems deflated now that the confrontation is over.<</para>>
+
+<<para "KIM KITSURAGI">>“You were right when you said we were outsiders.”<</para>>
+
+<<para "YOU">>“Yeah, we are… but only because they *make* us outsiders. You have to remember that it’s not your fault, Kim.”<</para>>
+
+<<para "KIM KITSURAGI">>He nods, lost in thought.<</para>>
+
+<<para "YOU">>“Will you be okay?”<</para>>
+
+<<skillpara "SUGGESTION" "Easy" "Success">>You layer your voice with the implication that even if *they* don’t care, *you* do.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“I’ll grow accustomed to it.”<</para>>
+
+<<skillpara "EMPATHY" "Easy" "Success">>Just like he always does. <</skillpara>>
+
+<<para>><<transition "Ch3P2">><</para>>

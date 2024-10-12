@@ -1,0 +1,132 @@
+:: Ch3P3 [nobr]
+<<skillpara "HALF LIGHT" "Medium" "Success">>The small room is rank with the twin stenches of fear and blood.<</skillpara>>
+
+<<skillpara "VOLITION" "Challenging" "Success">>It takes effort just to enter. Your feet on the thin carpet are only centimeters away from the edge of the blood stain.<</skillpara>>
+
+<<skillpara "VISUAL CALCULUS" "Easy" "Success">>The man’s body lies half-sprawled on the bed. His legs dangle, as if he was in the process of getting up when death came upon him. The knife wounds that move from his side to his front echo this statement.<</skillpara>>
+
+<<skillpara "VISUAL CALCULUS">>You can see it in your mind: arcs of yellow-orange movement transcribe the room. The man lies sleeping when his wife slips in through the door. She leans over the bed and begins to stab. The knife enters the man’s back several times before he scrabbles his way sideways, feet leaving the bed – but she continues the lever-like motion of her arm, up and down, the knife making contact with ribs and then chest. The man never gets up.<</skillpara>>
+
+<<skillpara "PERCEPTION (HEARING)" "Trivial" "Success">>A quiet rustle beside you. Kim opens his ledger and flips to a new page.<</skillpara>>
+
+<<skillpara "ESPRIT DE CORPS" "Trivial" "Success">>Red, the color of field autopsies.<</skillpara>>
+
+<<skillpara "HALF LIGHT" "Trivial" "Success">>And blood.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“I don’t think we need to conduct a full autopsy now since there isn’t much doubt in the case, but let’s go over the wounds to make sure we don’t miss anything.”<</para>>
+
+<<para "YOU">>The next half hour takes root in your brain just like the knife entered Mr. Pastorak’s body: with a sharp and shocking pain. You realize that this is the first time in months, maybe years, that you have worked a case completely sober.<</para>>
+
+<<skillpara "ELECTROCHEMISTRY" "Trivial" "Success">>A condition you should remedy as soon as possible!<</skillpara>>
+
+<<para "YOU">>You categorize the dead man’s wounds, speaking medical jargon to Kim as you manipulate the body. Mr. Pastorak has puffy eyes and a sagging face. His skin is malleable, like grey putty. Most of his blood has run out of him onto the floor.<</para>>
+
+<<para "YOU">>“Death due to exsanguination,” you hypothesize. “It’s possible that his attacker hit a vital organ, but the quantity of blood seems to imply he lost consciousness and bled out.”<</para>>
+
+<<para "KIM KITSURAGI">>The lieutenant nods and notes this down.<</para>>
+
+<<skillpara "INLAND EMPIRE" "Challenging" "Success">>Yes, the dead man seems to agree. The bitch bled me out. Like a pig.<</skillpara>>
+
+<<para "YOU">>You try to ignore him and continue working, checking his legs for any injury.<</para>>
+
+<<para "ROGER PASTORAK">>It’s not fair. I loved her and provided for her. I did everything I could to make this shitty apartment a home for the two of us, and look what I got.<</para>>
+
+<<para "YOU">>“Shut up.”<</para>>
+
+<<para "KIM KITSURAGI">>“Detective?”<</para>>
+
+<<skillpara "COMPOSURE" "Medium" "Failure">>You look up and he is regarding you with worry. You fail to marshal your emotions; they are all right there on your face. A twisted snarl hovers between your messy mutton chops.<</skillpara>>
+
+<<skillpara "SUGGESTION" "Challenging" "Success">>Give him an excuse to leave. You’re about to lose control.<</skillpara>>
+
+<<para "YOU">>“I’m fine, Kim, just. The smell.” You sniff theatrically, then wince as the odor of decay does, in fact, enter your nostrils.<</para>>
+
+<<skillpara "DRAMA" "Trivial" "Success">>A good show, my liege.<</skillpara>>
+
+<<para "YOU">>“I’m gonna make some final checks, but I don’t think both of us need to stay in here while I do. Want to see if any of the neighbors are available for an interview?”<</para>>
+
+<<para "KIM KITSURAGI">>The lieutenant’s eyes dart between you and the corpse. He must decide it’s not too much of a risk to leave you here alone, because after a pause he nods and exits.<</para>>
+
+<<para "ROGER PASTORAK">>Just you and me now, bucko.<</para>>
+
+<<para "YOU">>You take a deep breath, trying to gather your thoughts, but they run through your fingers like sand. All you can focus on is the corpse before you and the bewildered look he wears. You didn’t notice it at first, but his features are not fixed in horror or fear: a faint confusion lingers on the limp clay face.<</para>>
+
+<<para "ROGER PASTORAK">>I shouldn’t have said she was a bitch. I let my temper get the better of me. But you understand, don’t you? I mean, she *killed* me.<</para>>
+
+<<skillpara "HALF LIGHT" "Easy" "Success">>As you settle back on your heels, the carpet crunches beneath you, full of the dead man’s blood.<</skillpara>>
+
+<<para "ROGER PASTORAK">>We had a life together. We *built* that life, one day at a time. Sure, she needed correcting every now and then, but who doesn’t? I never thought she could do something like *this*. I used to kiss her every night before bed, and now she’ll spend the rest of her days in a filthy prison, if she’s lucky and doesn’t end up on the wrong side of a firing squad. And I’m *dead*. How could it have gone so wrong?<</para>>
+
+<<para "YOU">>Your breath hisses in and out as you stare into the corpse’s eyes. His eyelids are only half closed, and you can see the black jelly of his pupils beneath.<</para>>
+
+<<para "ROGER PASTORAK">>Sometimes you love a person so much it doesn’t seem like they could be rotten. Maybe her little slip-ups were signs, I don’t know. She loved animals, but she’d forget to clean up after the cat. She’d leave sewing needles around where anyone could step on them. I figured it was absentmindedness - I tried to help her be better. I thought her flaws were just surface imperfections that could be removed.<</para>>
+
+<<para "YOU">>We filed this as a domestic abuse case. You hurt her, didn’t you?<</para>>
+
+<<para "ROGER PASTORAK">>No relationship is perfect. But everything I did was for her own benefit. I wanted to keep her away from people that would *truly* hurt her. She was better off with me. You know what I mean, right?<</para>>
+
+<<para "YOU">>What?<</para>>
+
+<<para "ROGER PASTORAK">>Us outsiders have to stick together. She and I were right for each other! A well-oiled team, me at work and her doing the finances, picking up odd nursing jobs on the side. I was a mess sometimes, but so was she, and we supported each other through thick and thin.<</para>>
+
+<<skillpara "PAIN THRESHOLD" "Medium" "Failure">>Your head throbs. The wheedling tone of the dead man’s voice, constructed by your own brainwaves, grates on your nerves.<</skillpara>>
+
+<<skillpara "ELECTROCHEMISTRY" "Medium" "Success">>Need something to dull the senses? I’ve got your back!<</skillpara>>
+
+<<para "YOU">>Your hand crawls into your pocket despite your efforts to resist. When it emerges, the contents glitter on your palm: a tiny bottle of pale-aged vodka. The kind you would find in a minibar, back when people could afford minibars.<</para>>
+
+<<skillpara "LOGIC" "Trivial" "Success">>You bought it this morning, bile brewing at the back of your throat as you stood in front of the cashier. She was a middle-aged woman with black hair and a Mesque accent. She couldn’t have cared less what you were buying. But as you pushed the coins across the counter and picked up the miniature vessel, you felt your chest tighten.<</skillpara>>
+
+<<para "YOU">>I’m not going to drink it. I just need to have it. Just in case.<</para>>
+
+<<skillpara "ELECTROCHEMISTRY" "Trivial" "Success">>Sure as *shit* you’re not gonna drink it. Not until something bad happens, anyway! And what else ever happens to you?<</skillpara>>
+
+<<para "YOU">>It makes me feel more…<</para>>
+
+<<skillpara "ELECTROCHEMISTRY">>Comfortable! Protected! A miniature suit of armor folded away in your pocket, ready to drape its numbness over you with one swallow.<</skillpara>>
+
+<<skillpara "ENDURANCE" "Medium" "Success">>It’s not enough to get you drunk. But it would be enough to get you started.<</skillpara>>
+
+<<para "ROGER PASTORAK">>Good choice. I knew we had a lot in common.<</para>>
+
+<<skillpara "PERCEPTION (SMELL)" "Formidable" "Success">>You can smell the vodka now. It makes you peer more closely at the bottle in your hand, worried that the liquor is staining you with its scent – but the cap is still sealed.<</skillpara>>
+
+<<para "YOU">>You stand up and glance around the room. Now that you’re not staring at the corpse, you’re able to spot the glitter of glass under a cabinet. A shattered bottle. When you open the cabinet itself, more bottles stand like soldiers in regimented lines.<</para>>
+
+<<para "ROGER PASTORAK">>I was a drunk. My wife was the only person who supported me. She was beautiful, the light of my life, my everything. She had the face and voice of an angel. She picked me up again and again.<</para>>
+
+<<para "YOU">>No, no no no...<</para>>
+
+<<para "ROGER PASTORAK">>Sure, we had fights. I lost my temper. But only because she didn’t understand that I was protecting her. Other men would have treated her like garbage, like some common whore. But I took care of her.<</para>>
+
+<<para "YOU">>You stagger backward. Your shoulder hits the door frame with a *thunk*. The tiny bottle of vodka falls from your hand and rolls across the blood-soaked carpet, coming to a rest just under the bed.<</para>>
+
+<<para "ROGER PASTORAK">>And after all that, she *betrayed* me. I don’t get it! I *love* her. Can’t you understand how I feel? How deeply it cuts? I swear it’s worse than the knife. I did everything I could for her, and in return she destroyed me. It doesn’t make any sense. <</para>>
+
+<<para "YOU">>Why are you telling me this?<</para>>
+
+<<para "ROGER PASTORAK">>I need someone to hear me. To *understand* that I didn’t deserve this. I didn’t do anything wrong! I’m like you, Harry, just trying to get by.<</para>>
+
+<<para "YOU">>Maybe I was like you once. Not anymore. I’ve changed.<</para>>
+
+<<skillpara "LOGIC" "Trivial" "Success">>But you’re exactly the same as you always have been. You’re a hair away from being drunk, having a breakdown at a crime scene, alone and listening to the voices in your head.<</skillpara>>
+
+<<skillpara "VOLITION" "Medium" "Success">>You have to strengthen your will. Or you’re going to walk the exact same path you did before Martinaise.<</skillpara>>
+
+<<skillpara "HALF LIGHT" "Trivial" "Success">>Who knows how it will end this time?<</skillpara>>
+
+<<para "YOU">>You retrieve your vodka from under the bed. On all fours on the bloody carpet, you gag from the smell. But you can’t leave the bottle here. Kim will know.<</para>>
+
+<<skillpara "EMPATHY" "Trivial" "Success">>And while Kim has been overlooking your many failures since the day you met him, you get the sense he won’t be able to ignore this one. Not again. Martinaise was bad enough.<</skillpara>>
+
+<<skillpara "HALF LIGHT" "Medium" "Success">>And then what? He betrays you?<</skillpara>>
+
+<<skillpara "PAIN THRESHOLD" "Medium" "Failure">>Your job lost, your coworkers lost, you will rot to death in an alcohol brine.<</skillpara>>
+
+<<para "YOU">>You stand again and regard the corpse a final time.<</para>>
+
+<<para "ROGER PASTORAK">>Come see me on the other side, Harry. Please. It’s so lonely without her.<</para>>
+
+<<para "YOU">>Shuddering, you shove the vodka back into your pocket and hustle out of the room. <</para>>
+
+<<para>><<transition "Ch4P1" "//__Chapter 4: The Pale, Part 2__//<br>Desperate to defend himself and Kim against the rest of the precinct, Harry finds himself going down a familiar road.">><</para>>

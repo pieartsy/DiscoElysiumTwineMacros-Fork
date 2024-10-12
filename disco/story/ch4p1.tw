@@ -1,0 +1,331 @@
+:: Ch4P1 [nobr]
+<<skillpara "PERCEPTION (SIGHT)" "Trivial" "Success">>Grey streets, grey sky, grey buildings. <</skillpara>>
+
+<<skillpara "CONCEPTUALIZATION" "Trivial" "Success">>At this point, you would give fucking *anything* to have the world be another color. Throw some yellow in there! A bright red! <</skillpara>>
+
+<<skillpara "INLAND EMPIRE" "Trivial" "Success">>But the pale wins all battles, and thus erodes the world.<</skillpara>>
+
+<<skillpara "PERCEPTION (HEARING)" "Trivial" "Success">>The Coupris Mark 42 makes growling sounds as it pulls up to the curb. Its wheels crunch over a spray of broken glass.<</skillpara>>
+
+<<skillpara "INTERFACING" "Medium" "Success">>Kim jerks one of the steering levers so that the wheels turn toward the curb. The vehicle responds slowly, ponderously. It is no darting dolphin, but a bloated whale.<</skillpara>>
+
+<<para "KIM KITSURAGI">>The lieutenant clambers out of the motor carriage, then glances back at where you sit.<</para>>
+
+<<para "KIM KITSURAGI">>“Were you going to come inside, detective?”<</para>>
+
+<<para "YOU">>The words rouse you from your leaden slump. Groaning, you clamber out of the motor carriage. At once the cold begins to leech up through your shoes.<</para>>
+
+<<skillpara "HALF LIGHT" "Formidable" "Failure">>The precinct looms before you, grey like the rest of the world. All at once, you can’t face it.<</skillpara>>
+
+<<para "KIM KITSURAGI">>The lieutenant walks ahead of you, jacketed in orange like a poisonous beetle shouting its warning colors. He fears nothing inside the precinct; if anyone tries to chew him up, they will be forced to spit him out. You, however…<</para>>
+
+<<para "YOU">>Your feet are locked to the ground.<</para>>
+
+<<skillpara "INLAND EMPIRE" "Medium" "Success">>Roger Pastorak still rattles around in your skull.<</skillpara>>
+
+<<skillpara "ELECTROCHEMISTRY" "Trivial" "Success">>Just like the vodka rattles in your pocket, begging to be consumed.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“Harry?”<</para>>
+
+<<para "YOU">>“No, I…I think I’ll wait.”<</para>>
+
+<<para "KIM KITSURAGI">>The lieutenant’s face clouds. “You’re not coming in?”<</para>>
+
+<<para "YOU">>“I need some time. Some space. To think.”<</para>>
+
+<<skillpara "COMPOSURE" "Medium" "Success">>Kim grits his teeth.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“Eventually you’re going to need to have your act together. You realize that? What happened this morning is going to keep happening unless you can prove that you’re ready to work again. *Truly* ready to work.”<</para>>
+
+<<skillpara "HALF LIGHT" "Medium" "Success">>There it is. He’s given up on you already.<</skillpara>>
+
+<<skillpara "COMPOSURE" "Formidable" "Failure">>You feel your face contort into a sudden scowl.<</skillpara>>
+
+<<para "YOU">>“I *am* ready to work! I’m just not ready to throw all my emotions in the garbage like *you* do! I need some time to unpack what I’ve seen.”<</para>>
+
+<<skillpara "REACTION SPEED" "Formidable" "Success">>His mouth twists to one side.<</skillpara>>
+
+<<skillpara "RHETORIC" "Challenging" "Failure">>So much for “us outsiders have to stick together”.<</skillpara>>
+
+<<para "YOU">>“Kim, wait, I’m sorry–”<</para>>
+
+<<para "KIM KITSURAGI">>“No, you’re perfectly right, Harry. Take all the time you need. In fact, don’t come back until tomorrow.” He turns and walks into the precinct. The doors close with a creak as the building swallows him whole.<</para>>
+
+<<para "YOU">>You stare up at the empty façade and murmur, “Shit.”<</para>>
+
+<<skillpara "INLAND EMPIRE" "Trivial" "Success">>You can almost hear it, faintly: Roger Pastorak’s voice. Saying “No, you’re in the right here. Let him have his little hissy fit. He’ll come to his senses eventually.”<</skillpara>>
+
+<<skillpara "PERCEPTION (HEARING)" "Heroic" "Success">>The sound isn’t all in your head. You can hear a real, human voice floating from an open window above you.<</skillpara>>
+
+<<para "YOU">>You move to a spot beneath the window in question. A detective again, on the case.<</para>>
+
+<<para "????? ??????????">>“…You know what I...”<</para>>
+
+<<skillpara "PERCEPTION (HEARING)" "Heroic" "Success">>A grunt in response. Two people talking, then.<</skillpara>>
+
+<<skillpara "LOGIC" "Trivial" "Success">>A conversation is *usually* two people talking, genius.<</skillpara>>
+
+<<para "????? ??????????">>“Just drives me up the wall. Doesn’t seem…should be allowing this kind of behavior.”<</para>>
+
+<<skillpara "PERCEPTION (HEARING)" "Legendary" "Success">>The voice slots into place in your mind. It’s Trant.<</skillpara>>
+
+<<skillpara "LOGIC" "Medium" "Success">>Which means the dour grunting you’ve heard is probably Jean.<</skillpara>>
+
+<<para "TRANT HEIDELSTAM">>“I know I don’t carry much bureaucratic weight around here…the point of inviting someone who’s going to mistreat…?”<</para>>
+
+<<para "JEAN VICQUEMARE">>“There’s nothing we can do about it.” Jean’s voice is heavier and cuts through the air. It reaches your ears readily.<</para>>
+
+<<para "TRANT HEIDELSTAM">>In response, Trant’s voice rises. “I just can’t bear to watch it. For a moment, I had hoped…Well, I thought it might get better.”<</para>>
+
+<<skillpara "PAIN THRESHOLD" "Trivial" "Success">>The familiar pain of betrayal shoots through your chest. Once again, you are the subject of complaint.<</skillpara>>
+
+<<para "TRANT HEIDELSTAM">>“But nothing has changed. He’s still here, snubbing all of us and choosing to hang out with *Harry*, whose vices he may as well be actively encouraging!”<</para>>
+
+<<skillpara "LOGIC" "Medium" "Success">>Wait, they’re…not talking about you.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“It’s his business.”<</para>>
+
+<<skillpara "LOGIC">>This is about Kim.<</skillpara>>
+
+<<para "TRANT HEIDELSTAM">>“He seemed highly capable in Martinaise, and I assumed managing to work with Harry was a sign of adaptability. Instead, it seems to have been an indicator of the formation of a codependent bond. Perhaps Harry’s unreliability bolsters his own sense of…” His voice trails out of earshot.<</para>>
+
+<<skillpara "RHETORIC" "Trivial" "Success">>There is no easier way to make someone disliked than to make sure your own reputation rubs off on them.<</skillpara>>
+
+<<para "YOU">>The feeling rises like bile in your throat. All at once you’re sick of the entire miasma that hangs around Precinct 41. Can’t someone tell these people that there are more important things to do than argue? There are citizens of Revachol *dying* out there.<</para>>
+
+<<skillpara "PAIN THRESHOLD" "Challenging" "Failure">>Roger Pastorak’s rotting body flashes before your mind’s eye.<</skillpara>>
+
+<<skillpara "VOLITION" "Trivial" "Success">>They don’t understand you and Kim. You have to *make* them understand.<</skillpara>>
+
+<<para "YOU">>You clench your fists. It’s time to make an entrance.<</para>>
+
+<<skillpara "DRAMA" "Medium" "Success">>The rickety metal door slams against the wall as you barge through, bringing all eyes immediately onto you. You are the center of attention. Now play the part.<</skillpara>>
+
+<<para "YOU">>“Keep your eyes on your work!” you snap, and are rewarded by the quick head-bowing of several junior officers. You stomp past them, headed for the staircase.<</para>>
+
+<<skillpara "PERCEPTION (SIGHT)" "Easy" "Success">>Out of the corner of your eye you see Kim rise from his desk, moving to follow you before he even pushes his chair in.<</skillpara>>
+
+<<skillpara "VOLITION" "Easy" "Success">>Fine, let him. This is for his benefit too.<</skillpara>>
+
+<<para "YOU">>Your snakeskin shoes clomp up the steps to the second floor. The stairwell is bereft of decoration. About fifteen steps below you, Kim follows.<</para>>
+
+<<skillpara "COMPOSURE" "Formidable" "Success">>You sling yourself onto the second floor with the same angry energy as you did downstairs. The door swings back at you rather than hitting the wall, but you manage not to flinch.<</skillpara>>
+
+<<skillpara "PERCEPTION (SIGHT)" "Trivial" "Success">>Trant and Jean occupy this pitiful excuse for a break area. Trant sits at the room’s single table while Jean leans against the counter behind him, a mug of coffee in one hand. Both of them glance up at your entry.<</skillpara>>
+
+<<skillpara "SUGGESTION" "Medium" "Success">>Be firm, not frightening. Show them you are in full control of your faculties, whatever they might believe to the contrary.<</skillpara>>
+
+<<skillpara "AUTHORITY" "Medium" "Success">>But let them know you mean business.<</skillpara>>
+
+<<para "YOU">>You march up to the table and come to a halt, folding your arms across your chest. “Trant. Jean.”<</para>>
+
+<<para "TRANT HEIDELSTAM">>“Hello, Harry.” His voice is reserved and a little hesitant.<</para>>
+
+<<skillpara "EMPATHY" "Medium" "Success">>He expects you to blow up at him.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“How was the investigation, shitkid?”<</para>>
+
+<<para "YOU">>“It was productive. A productive investigation performed by two competent officers.”<</para>>
+
+<<para "JEAN VICQUEMARE">>He grimaces and takes a sip of his coffee.<</para>>
+
+<<para "YOU">>“Tragically, when I got back, I heard some less-than-savory things being said about one of those competent officers.”<</para>>
+
+<<skillpara "REACTION SPEED" "Challenging" "Success">>Trant glances at the open window, through which a wintry wind blows.<</skillpara>>
+
+<<skillpara "PERCEPTION (HEARING)" "Easy" "Success">>Behind you, the door opens and closes again. Must be Kim.<</skillpara>>
+
+<<skillpara "VOLITION" "Trivial" "Success">>Good. He should hear this.<</skillpara>>
+
+<<para "YOU">>“I thought I’d come up here and let you know, with all professional courtesy, that I do not find sniping behind the backs of others appropriate and that it had better not happen again. Or, you know. I’ll have to report it.”<</para>>
+
+<<para "JEAN VICQUEMARE">>Jean snorts. “Report it? That’s rich, coming from you.”<</para>>
+
+<<skillpara "SUGGESTION" "Medium" "Success">>But you were firm and polite and professional! He should be kowtowing, not making fun.<</skillpara>>
+
+<<skillpara "AUTHORITY" "Medium" "Success">>Clearly you weren’t firm *enough*.<</skillpara>>
+
+<<skillpara "SAVOIR FAIRE" "Formidable" "Success">>Or you sounded too uptight. Cool and casual is the way to get people to agree with you.<</skillpara>>
+
+<<para "YOU">>“I uh...I mean it! I’m going to report you for being rude to Kim...man.”<</para>>
+
+<<para "JEAN VICQUEMARE">>“I didn’t say shit about Kitsuragi. And if you’re planning on reporting Trant, you’d better not.”<</para>>
+
+<<skillpara "EMPATHY" "Trivial" "Success">>A dark tone enters his voice.<</skillpara>>
+
+<<skillpara "ESPRIT DE CORPS" "Medium" "Success">>As a consultant, Trant’s connection with the RCM is tenuous at best. He has a vast wealth of knowledge, but one serious complaint and he could lose his job. Precinct 41 doesn’t have the funds to waste on a non-officer who foments discontent in the station.<</skillpara>>
+
+<<para "KIM KITSURAGI">>Kim steps forward into your view. “Excuse me, officers. I couldn’t help but notice that Harry seemed like he was about to...make a scene, so I-”<</para>>
+
+<<para "JEAN VICQUEMARE">>“We get it, you’re his new nursemaid. Or he’s yours. Whatever.”<</para>>
+
+<<para "YOU">>“Hey! This is exactly the kind of talk I mean.”<</para>>
+
+<<para "JEAN VICQUEMARE">>“We shit-talk each other every day here, or hadn’t you noticed? Comes with the fucking job.”<</para>>
+
+<<skillpara "AUTHORITY" "Formidable" "Success">>He’s getting the better of you! Quick, assume control of the situation!<</skillpara>>
+
+<<para "TRANT HEIDELSTAM">>Special Consultant Backpedal is getting out of his seat now, his hands up, gabbling some kind of excuse.<</para>>
+
+<<skillpara "AUTHORITY">>Petulant and whiny as always. The perfect opportunity for you to show some real strength.<</skillpara>>
+
+<<skillpara "PHYSICAL INSTRUMENT" "Medium" "Success">>You reach out and plant a heavy hand on Trant’s shoulder, pushing him back into his seat. One of his elbows hits the edge of the table, and he grunts in surprise and a little bit of pain.<</skillpara>>
+
+<<para "TRANT HEIDELSTAM">>“What was that for??”<</para>>
+
+<<para "KIM KITSURAGI">>You feel a hand grip your arm. Kim yanks you away from Trant, then interposes himself between the two of you.<</para>>
+
+<<para "KIM KITSURAGI">>“He’s upset - perhaps rightfully so. Please forgive his behavior.”<</para>>
+
+<<skillpara "EMPATHY" "Heroic" "Success">>Even from behind, you can see the set of his jaw. He is gritting out the words not because he believes them, but because he believes you need them.<</skillpara>>
+
+<<skillpara "ESPRIT DE CORPS" "Formidable" "Success">>It is a snowy day in Central Jamrock. A young man kneels on icy pavement, clutching his nose. On the knee of your slacks there is a single splotch of blood.<</skillpara>>
+
+<<skillpara "ESPRIT DE CORPS">>Another officer steps between you and the young man. “Excuse his roughness,” he says, his voice raspy. “He’s seen a lot of shit today. Including you.” The snowflakes melt on his pocked face.<</skillpara>>
+
+<<para "YOU">>Jean? Is this how I -<</para>>
+
+<<para "TRANT HEIDELSTAM">>“I don’t think I’m obligated to forgive this kind of behavior.”<</para>>
+
+<<para "KIM KITSURAGI">>“Yes, you are. He is your superior.”<</para>>
+
+<<para "JEAN VICQUEMARE">>“Fuck that. He’s barely keeping it together.”<</para>>
+
+<<skillpara "PAIN THRESHOLD" "Formidable" "Failure">>Jean’s voice strikes a chord within you, that portion of your mind that is still standing on a snowy street corner with blood on his slacks. You snap.<</skillpara>>
+
+<<para "YOU">>“I’m keeping it together just fine! *You’re* the one who can’t keep it together!”<</para>>
+
+<<skillpara "COMPOSURE" "Medium" "Failure">>The outburst sounds tinny and weak even to your own ears.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>Jean’s lip curls into a sneer of disdain. Beneath his gaze you feel like the tiniest of bugs, about to be crushed by a well-deserved boot.<</para>>
+
+<<skillpara "PAIN THRESHOLD" "Heroic" "Failure">>This is all going wrong. It’s just like before.<</skillpara>>
+
+<<skillpara "INLAND EMPIRE" "Medium" "Success">>The room seems to close in upon you as if crumpled by a massive hand.<</skillpara>>
+
+<<skillpara "PERCEPTION (HEARING)" "Trivial" "Success">>Trant, Jean, and Kim are all speaking now, their voices rising in a cacophony that threatens to drown you.<</skillpara>>
+
+<<para "YOU">>Clapping your hands over your ears, you stagger for the door.<</para>>
+
+<<skillpara "ENDURANCE" "Medium" "Failure">>Running away again like the pathetic dog you are.<</skillpara>>
+
+<<para "YOU">>The stairs twist around you as you descend. Even as you leave your coworkers’ voices behind, your own mind is still a noisy tangle.<</para>>
+
+<<skillpara "AUTHORITY" "Medium" "Success">>Go back in there and take control!<</skillpara>>
+
+<<skillpara "COMPOSURE" "Medium" "Success">>No, you’re sweating bullets. They won’t take you seriously now.<</skillpara>>
+
+<<para "YOU">>I need to get out of here. I need somewhere to hide.<</para>>
+
+<<skillpara "DRAMA" "Trivial" "Success">>Perhaps the lake, my liege? There is no better place to have a poetic breakdown than by a body of clear water.<</skillpara>>
+
+<<skillpara "ENCYCLOPEDIA" "Medium" "Success">>Lake Aigre is hardly clear. The runoff of Jamrock City’s streets pours into it, fouling its waters with coal and bathwater. The high drug levels of that runoff set Aigre at a toxic 4 on the pH scale and feed legions of coked-up geese that have been known to descend upon oblivious bystanders. But it is a body of water. Technically.<</skillpara>>
+
+<<skillpara "CONCEPTUALIZATION" "Medium" "Success">>If you keep thinking about the lake, it may distract you from the officers’ eyes on you as you stumble through the main room and out the door.<</skillpara>>
+
+<<skillpara "PAIN THRESHOLD" "Medium" "Failure">>It doesn’t. But you make it outside anyway.<</skillpara>>
+
+<<skillpara "DRAMA" "Easy" "Success">>The tragic hero fading from the scene of his defeat. Moving indeed!<</skillpara>>
+
+<<para "YOU">>You cross the street, allowing the old silk mill to fade from sight behind you. This time, instead of following the familiar route to the kebab stall, you turn down a side lane.<</para>>
+
+<<skillpara "SHIVERS" "Medium" "Success">>The twisting streets of Jamrock City spiderweb across your frontal lobe. The veins and aortas of Revachol’s heart. Some have collapsed, some have rotted, but they will always welcome you.<</skillpara>>
+
+<<skillpara "PAIN THRESHOLD" "Medium" "Success">>They are the only ones that will welcome you.<</skillpara>>
+
+<<skillpara "LOGIC" "Trivial" "Success">>Especially after your performance at the precinct.<</skillpara>>
+
+<<para "YOU">>You shake your head, but the voices refuse to subside - they grow louder and angrier with each step. Berating you for your choices and your mistakes. You will never be free of your past, even if you don’t remember it.<</para>>
+
+<<para "LAKE AIGRE">>And then it appears before you: a grey-green expanse of water, surrounded by scrub and twisted trees. There is no beach to speak of, only a brief descent from the rough pavement’s end to the liquid that laps irregularly at the shore. A meter of gravel is the lake’s only concession to riparian concerns.<</para>>
+
+<<para "YOU">>You stumble onto the shore and sit down. Immediately, dampness seeps through your trousers. You pick up a chunk of gravel with one hand and stare out at the lake.<</para>>
+
+<<skillpara "DRAMA" "Medium" "Success">>*Now* it is time for your poetic breakdown.<</skillpara>>
+
+<<skillpara "INLAND EMPIRE" "Medium" "Failure">>Roger Pastorak the vodka in your pocket the pills in your other pocket Kim hates you Jean hates Kim the end of the world a great sundering –<</skillpara>>
+
+<<para "YOU">>Stop!<</para>>
+
+<<skillpara "INLAND EMPIRE">>The pale descends to eat the world and then eats itself. A great ouroboros and you are already at the snake’s tail. What’s the point in living when it only hastens your descent?<</skillpara>>
+
+<<para "YOU">>You close your fingers around the rock you hold. The sensation grounds you for a moment.<</para>>
+
+<<skillpara "HALF LIGHT" "Medium" "Success">>The problem is not the end of the world. The problem is the end of *your* world. It’s all happening again, just like it did before, only this time you’ve dragged Kim into it.<</skillpara>>
+
+<<skillpara "ESPRIT DE CORPS" "Easy" "Success">>The lieutenant stalks out of the precinct, letting the door slam behind him. His hands shake with anger as he lights a cigarette.<</skillpara>>
+
+<<skillpara "SUGGESTION" "Easy" "Success">>Once again, you stirred the shit and left him to deal with the fallout.<</skillpara>>
+
+<<para "YOU">>I tried to help! I brought him here, into all this, so it’s my fault and my responsibility– <</para>>
+
+<<skillpara "VOLITION" "Medium" "Success">>The pity party is getting old. Stop worrying about what you’ve done and start deciding what you’re *going* to do about it.<</skillpara>>
+
+<<skillpara "ELECTROCHEMISTRY" "Medium" "Success">>Take the right fork and the world burns merrily. Take the left fork and descend into the water again – hope your breathing equipment doesn’t clog.<</skillpara>>
+
+<<para "YOU">>You scuff your feet in the gravel.<</para>>
+
+<<skillpara "EMPATHY" "Medium" "Failure">>Jean hates you. Kim will hate you soon. Judit and Trant and all the others, they’re sick of this act.<</skillpara>>
+
+<<para "YOU">>So what can I do?<</para>>
+
+<<skillpara "ELECTROCHEMISTRY" "Trivial" "Success">>Continue as you are. Return to your old friend, the bottle. Or –<</skillpara>>
+
+<<skillpara "VOLITION" "Medium" "Success">>Don’t.<</skillpara>>
+
+<<para "YOU">>It’s not that easy.<</para>>
+
+<<skillpara "VOLITION">>It should be. It is for other people.<</skillpara>>
+
+<<para "YOU">>You drop the rock you are holding. It clatters onto the ground with its siblings. Then you slide your hand into your pocket and pull out the bottle of vodka. It sparkles at you, winking like a friend in the grey light. It would be so easy.<</para>>
+
+<<skillpara "ELECTROCHEMISTRY" "Trivial" "Success">>Your stomach groans for it. That bitter acid, the tension at the back of your throat. A will-they-won’t-they dance between your stomach bile and the pavement. Come on! Let’s party again!<</skillpara>>
+
+<<para "YOU">>You look around. You don’t see anyone else.<</para>>
+
+<<para "LAKE AIGRE">>The water is quiet. It would not judge you.<</para>>
+
+<<skillpara "LOGIC" "Easy" "Success">>Once upon a time, you had your first drink. There had to have been a first, right? You didn’t come out of the womb soaked in whiskey.<</skillpara>>
+
+<<skillpara "ENDURANCE" "Easy" "Success">>This is like that. Crossing the line away from sober – it only takes one step.<</skillpara>>
+
+<<para "YOU">>You lift the bottle.<</para>>
+
+<<skillpara "HAND/EYE COORDINATION" "Medium" "Success">>And you throw it.<</skillpara>>
+
+<<skillpara "PERCEPTION (SIGHT)" "Challenging" "Failure">>You are unable to track the bottle for long as it flies. You think it skips a couple of times. Then it must sink, and you can no longer guess where it is.<</skillpara>>
+
+<<para "LAKE AIGRE">>I will keep it for you. Another treasure consigned to my depths.<</para>>
+
+<<skillpara "VOLITION" "Easy" "Success">>So you’ve chosen the hard route. Good. Just don’t lose your way this time.<</skillpara>>
+
+<<para "YOU">>Your hand dips into your left pocket and comes up with a second bottle.<</para>>
+
+<<skillpara "DRAMA" "Easy" "Success">>Ah, the other edge of the sword!<</skillpara>>
+
+<<skillpara "ELECTROCHEMISTRY" "Trivial" "Success">>No great bomb or oblivion awaits you here. Just a couple of pills that rattle out onto your palm as you tap the bottle.<</skillpara>>
+
+<<skillpara "VOLITION" "Formidable" "Failure">>No. We’ve been over this.<</skillpara>>
+
+<<para "YOU">>We have. We’ve been over the whole of it, from the beginning to the vomit-stained end. I can’t go through that again. I can’t put my friends through that again.<</para>>
+
+<<skillpara "VOLITION">>That was the fault of the alcohol. This is the fault of your own weak will.<</skillpara>>
+
+<<skillpara "INLAND EMPIRE" "Medium" "Failure">>Who do you think you will be without us?<</skillpara>>
+
+<<para "YOU">>Myself. Still myself.<</para>>
+
+<<skillpara "DRAMA" "Medium" "Success">>It has been a pleasure to serve you, sire.<</skillpara>>
+
+<<skillpara "ELECTROCHEMISTRY" "Medium" "Success">>The mildisopine rocket – its doors open for me!<</skillpara>>
+
+<<skillpara "COMPOSURE" "Medium" "Success">>No more bearing Atlas’s load upon my shoulders. Your shakes and sweats are your own to manage now.<</skillpara>>
+
+<<para "YOU">>You raise your hand to your mouth.<</para>>
+
+<<skillpara "VOLITION" "Impossible" "Failure">>Don’t take those pills!!!!!<</skillpara>>
+
+<<para "YOU">>And you swallow. <</para>>
+
+
+<<para>><<transition "Ch5P1" "//__Chapter 5: The Mind__//<br>Harry is adjusting to having only one voice in his head: his own. But who is he without the others?">><</para>>

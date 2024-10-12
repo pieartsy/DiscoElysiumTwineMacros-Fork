@@ -1,0 +1,102 @@
+:: Ch2P2 [nobr]
+<<para "YOU">>The afternoon becomes a haze. You sign papers. The nausea roils in your stomach again; you turn down an offer for lunch. Kim gives you another rundown of the case: you’re calling it THE RELUCTANT HOUSEWIFE, although you know it hardly merits a title, since it will be shelved and abandoned if Ms. Pastorak remains firm in her stance.<</para>>
+
+<<para "KIM KITSURAGI">>“Did you get that, detective?”<</para>>
+
+<<skillpara "CONCEPTUALIZATION" "Easy" "Failure">>You look down at your notes sheet. It is covered in meaningless scribbles. In one corner, you have written “GAVE UP” over and over again.<</skillpara>>
+
+<<skillpara "LOGIC" "Medium" "Failure">>It is unclear whether this text refers to you or Ms. Pastorak.<</skillpara>>
+
+<<skillpara "EMPATHY" "Trivial" "Success">>The lieutenant notices you staring at your paper. Perhaps he sees the tears brimming in your eyes as well, because when he speaks his voice is gentle.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“Don’t worry about it. I have my own notes.”<</para>>
+
+<<para "YOU">>You nod gratefully and apologize for the hundredth time today.<</para>>
+
+<<skillpara "ENDURANCE" "Trivial" "Failure">>Time crawls by, but you are frail, bröther, and cannot withstand its passage. Another handful of minutes and your head is on your desk.<</skillpara>>
+
+<<skillpara "PHYSICAL INSTRUMENT" "Medium" "Success">>Weakling.<</skillpara>>
+
+<<para "YOU">>I just need a minute to rest. It feels like the room is spinning.<</para>>
+
+<<skillpara "PERCEPTION (HEARING)" "Challenging" "Success">>Maybe having your head down makes your hearing sharper, or maybe everyone just assumes you are asleep. Either way, you pick up the strains of an argument happening a few desks away.<</skillpara>>
+
+<<skillpara "ESPRIT DE CORPS" "Medium" "Success">>Lieutenant Kim Kitsuragi folds his arms across his chest and taps a gloved finger. Satellite-Officer Jean Vicquemare leans over his desk, with one hand on its surface and the other pointing at the lieutenant. Tension crackles between them.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“It’s nothing personal, Kitsuragi. It’s about choosing the *right officers* for the job. And right now, I don’t think that’s you two.”<</para>>
+
+<<skillpara "RHETORIC" "Medium" "Success">>The rough bite of Jean’s voice has been known to scare many an officer into agreement. Kim, however, is made of sterner stuff than most officers.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“I see no reason for that assessment, Satellite-Officer.” Ice coats his words.<</para>>
+
+<<para "JEAN VICQUEMARE">>“Shit, you *know* this isn’t about you. Stop being all high-and-mighty.”<</para>>
+
+<<para "KIM KITSURAGI">>“You’re casting aspersions on my ability. I suspect that your opinion is biased.”<</para>>
+
+<<para "JEAN VICQUEMARE">>“I’m talking about the *shitkid*.”<</para>>
+
+<<skillpara "PERCEPTION (HEARING)" "Formidable" "Success">>His voice lowers slightly on the moniker, but not enough to prevent you from listening.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“It’s too soon for him to be going out on cases. Host in heaven, we don’t even know if he’s going to stay! He *just* got off of medical leave, for the love of fuck. And…”<</para>>
+
+<<skillpara "EMPATHY" "Medium" "Success">>He doesn’t say it, and neither does Kim. But both of them think of little white pills.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“Now isn’t the time. Look at him, he can’t even fucking stay awake! He shouldn’t be leaving this precinct until he can get his head screwed on straight.”<</para>>
+
+<<para "KIM KITSURAGI">>“He came with me to the hospital today.”<</para>>
+
+<<para "JEAN VICQUEMARE">>“And?”<</para>>
+
+<<para "KIM KITSURAGI">>A suppressed sigh. “Well, there were some issues. But that doesn’t mean –”<</para>>
+
+<<para "JEAN VICQUEMARE">>“This is exactly what I’m talking about. It’s just one big merry-go-round with him. He’s done all this shit before, and we’re still on the ride because of some misguided faith.” He snorts. “It’s not going to get better.”<</para>>
+
+<<skillpara "PAIN THRESHOLD" "Medium" "Failure">>You can hear it in his voice: all the broken promises you’ve made before, vomited out between alcohol-rotted teeth. Puked into the gutter and left there, until Jean came and picked you up. Again.<</skillpara>>
+
+<<skillpara "ESPRIT DE CORPS" "Medium" "Success">>The two cops stand at odds, with Jean’s right hand on his hip, Kim’s eyebrow creeping upwards.<</skillpara>>
+
+<<skillpara "RHETORIC" "Formidable" "Success">>Now the hammer blow.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“I can manage him. Just because you couldn’t do it in the past doesn’t mean it’s not possible.”<</para>>
+
+<<skillpara "ESPRIT DE CORPS" "Trivial" "Success">>Jean’s jaw falls open. The emotion in his eyes flickers from disbelief, to scorn, to fury.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“Just because I…”<</para>>
+
+<<skillpara "PERCEPTION (HEARING)" "Trivial" "Success">>There is a loud slam: the sound of Jean’s fist meeting wood.<</skillpara>>
+
+<<para "KIM KITSURAGI">>“There is no need for this to become unprofessional, Satellite-Officer.”<</para>>
+
+<<skillpara "COMPOSURE" "Trivial" "Success">>This is the kind of confrontation Kim Kitsuragi excels at. The brick wall versus flashing rage. Feet planted, a hint of scorn in the arc of his eyebrow, arms crossed: the picture of reservation. The man in the *right*. His very voice drips with self-possession.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>A bitter laugh tears from Jean’s chest. “Oh, it’s not unprofessional. Not yet. When you’re scraping the shitkid off the pavement for the thirtieth time, when he’s deep-throating his gun again, looking at you with those pity-me eyes – *then* it will be unprofessional. But by then it will be too fucking late, Kitsuragi. Too late to untangle yourself from the sheer fucking *trauma* of engaging with the spectacular human disaster that is Harrier Du Bois.”<</para>>
+
+<<skillpara "ESPRIT DE CORPS" "Medium" "Success">>He turns on his heel in what is sure to be a perfectly-timed storming-out. But at the last moment he wavers, turning his head back over his shoulder to regard Kim again.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“I’m not wishing this shit on you. I wouldn’t wish it on anyone. I just thought…”<</para>>
+
+<<skillpara "EMPATHY" "Challenging" "Success">>*I went through it so no one else would have to*, he doesn’t say.<</skillpara>>
+
+<<para "JEAN VICQUEMARE">>“Ah, fuck this shit.”<</para>>
+
+<<skillpara "ESPRIT DE CORPS" "Trivial" "Success">>The entire precinct holds its breath while he stomps out.<</skillpara>>
+
+<<skillpara "PAIN THRESHOLD" "Medium" "Success">>That was a good punch in the gut. Something you can really *savor* for a few months, maybe longer.<</skillpara>>
+
+<<skillpara "LOGIC" "Medium" "Success">>There is no way anyone believes you slept through that. By keeping your head down, you are succeeding only in looking pathetic.<</skillpara>>
+
+<<skillpara "VOLITION" "Easy" "Success">>Sit up and go back to work. It’s the one thing you’re good for.<</skillpara>>
+
+<<skillpara "ELECTROCHEMISTRY" "Medium" "Success">>Who needs work?! You should be *partying*. You’ve turned down mildisopine, so what?? There’s a wide world full of other drugs out there!<</skillpara>>
+
+<<skillpara "VOLITION">>For the love of god, could you shut up?!<</skillpara>>
+
+<<skillpara "ELECTROCHEMISTRY">>What do you have to offer? Paperwork?<</skillpara>>
+
+<<skillpara "VOLITION">>Paperwork that *has to be done*. Going on a bender will just confirm what the rest of the precinct thinks of him.<</skillpara>>
+
+<<para "YOU">>With a groan, you raise your head from your desk. The room tilts and the text on the pages swims before you, but you lift your pen and get back to work. After all, it’s what you’re good for.<</para>>
+
+<<skillpara "ENDURANCE" "Formidable" "Failure">>When you get home that night, you are asleep before your head hits the pillow. <</skillpara>>
+
+<<para>><<transition "Ch2P3">><</para>>
