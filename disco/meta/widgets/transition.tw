@@ -1,5 +1,9 @@
-:: Transition [widget]
+:: Transition [widget nobr]
 
 <<widget "transition">>
-    <<link "@@#ContinueBtn;.continue;CONTINUE ➤@@" _args[0]>><</link>>
+    <<link "@@#ContinueBtn;.continue;CONTINUE ➤@@" _args[0]>>
+        <<if $args[1]>>
+            <<set $subtitle to _args[1]>>
+        <</if>>
+    <</link>>
 <</widget>>
