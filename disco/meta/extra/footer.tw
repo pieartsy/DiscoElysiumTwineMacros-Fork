@@ -1,3 +1,5 @@
 :: PassageFooter
-<<run $overlays.shift()>>
-<<DisplayParagraphs>>
+<<if !tags().includes("normal")>>
+    <<run $overlays.shift()>>
+    <<DisplayParagraphs>>
+<</if>>
