@@ -20,15 +20,6 @@ $(document).on("keyup", function (e) {
     scrolldown();
   }
 
-  //pressing number keys selects options
-  if ((e.keyCode >= 49 && e.keyCode <= 57) && (document.getElementById("OptionList"))) {
-    const list = document.getElementById("OptionList");
-    const childIndex = e.keyCode - 49; // 0 for '1', 1 for '2', etc
-    if (list.children[childIndex]) {
-      list.children[childIndex].getElementsByClassName("link-internal")[0].click();
-    }
-  }
-
   //pressing esc key
   if ((e.keyCode == 27)) {
     const dia = document.getElementById("ui-dialog");

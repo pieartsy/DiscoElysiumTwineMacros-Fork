@@ -19,7 +19,7 @@ if it's a passive check:
 
         <<if $paraAppendMode is true>>
         <<for _text range $greentext>>
-            <<set _skillpara to (_skillpara + _skilltext + "<br /><br />")>>
+            <<set _skillpara to (_skillpara + _skilltext + "<br /><br/>")>>
         <</for>>
         <<set $greentext to []>>
         <<set $paraAppendMode to false>>
@@ -47,11 +47,11 @@ if it's a passive check:
     /* if the 2nd argument is Success, set the skill rating to the 2nd argument + Success, for ex:[Easy: Success], if Failure, show the 2nd argument + Failure, for ex: [Easy: Failure]*/
            /* if the 2nd argument is True, set the skill rating to the 2nd argument + Success, for ex:[Easy: Success], if False, show the 2nd argument + Failure, for ex: [Easy: Failure]*/
     <<if _args[2]>>
-        <<if _args[2] == "success">>
+        <<if _args[2].toLowerCase() == "success">>
             <<set _skillresult = " @@.dim;[" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Success]@@">>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>
             <<overlay _usedOverlay>>
-        <<elseif _args[2] == "failure">>
+        <<elseif _args[2].toLowerCase() == "failure">>
             <<set _skillresult = " @@.dim;[" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Failure]@@">>
             <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>
             <<nooverlay>>

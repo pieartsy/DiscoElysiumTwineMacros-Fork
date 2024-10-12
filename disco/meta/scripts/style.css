@@ -249,71 +249,6 @@ a.macro-linkreplace, .passage a.macro-link {
   color: white;
 }
 
-/* skills table on overview screen */
-.skills {
-  width: 100%;
-  border: 10px solid var(--whitecheck);
-  background-color: var(--film)
-}
-
-.skills table, th, td {
-  padding: .25em 0;
-  text-align: center;
-  }
-
-.num {
-  background-color: var(--whitecheck);
-  color: black;
-  padding: .35em;
-}
-
-.skills th.intellect {
-  background-color: var(--int);
-  color: black;
-}
-
-.skills th.psyche {
-  background-color: var(--psy);
-  color: black;
-}
-
-.skills th.fysique {
-  background-color: var(--fys);
-  color: black;
-}
-
-.skills th.motorics {
-  background-color: var(--mot);
-  color: black;
-}
-
-.skills th {
-  font-size: 1.15rem;
-}
-
-.skills button {
-  width: 100%;
-  height: inherit;
-  color: unset;
-  background-color: unset;
-  border: unset;
-  margin: unset;
-  padding: 2em, 0;
-}
-
-.skills button:hover, button:focus {
-  background-color: var(--whitecheck);
-  color: black;
-}
-
-/* skills description formatting */
-#skillDescs {
-  border: 10px solid var(--whitecheck);
-  padding: .75em;
-  font-size: .9em;
-  background-color: var(--film)
-}
-
 /* making dialog box "fullscreen" */
 #ui-dialog {
 	width: 95%;
@@ -339,4 +274,13 @@ a.macro-linkreplace, .passage a.macro-link {
 #ui-bar-toggle,
 #ui-bar-history [id|="history"] {
 	font-size: unset;
+}
+
+/* link formatting */
+a.macro-linkappend {
+  font-weight: bold;
+}
+
+a.macro-linkappend:hover {
+  text-decoration: underline;
 }
