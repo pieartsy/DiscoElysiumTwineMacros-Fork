@@ -95,6 +95,4 @@ You let go of the transmit button. There is silence again.<</para>>
 
 <<para>>The motor carriage’s driver-side door creaks as Kim climbs in. The street is long and mostly empty, with voices drifting out of a few open tenement windows.<br>
 <br>
-You straighten your shoulders and get into the vehicle.<</para>>
-
-<<para>><<transition "Ch5P2">><</para>>
+You straighten your shoulders and get into the vehicle.<<transition  "Ch5P2">><</para>>

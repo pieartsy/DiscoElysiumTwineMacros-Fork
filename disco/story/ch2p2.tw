@@ -97,6 +97,4 @@
 
 <<para "YOU">>With a groan, you raise your head from your desk. The room tilts and the text on the pages swims before you, but you lift your pen and get back to work. After all, it’s what you’re good for.<</para>>
 
-<<skillpara "ENDURANCE" "Formidable" "Failure">>When you get home that night, you are asleep before your head hits the pillow. <</skillpara>>
-
-<<para>><<transition "Ch2P3">><</para>>
+<<skillpara "ENDURANCE" "Formidable" "Failure">>When you get home that night, you are asleep before your head hits the pillow.<<transition  "Ch2P3">><</skillpara>>

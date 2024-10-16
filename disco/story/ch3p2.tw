@@ -63,10 +63,8 @@
 
 <<para "YOU">>You nod. Despite everything, he *is* here, and you’re grateful for that.<</para>>
 
-<<para "KIM KITSURAGI">>“I followed you to the 41 st . I’m not going to give up because the…crowd is a little tough.” He pauses, adjusts his glasses, and adds, “Now can we please go investigate the crime scene?”<</para>>
+<<para "KIM KITSURAGI">>“I followed you to the 41st . I’m not going to give up because the…crowd is a little tough.” He pauses, adjusts his glasses, and adds, “Now can we please go investigate the crime scene?”<</para>>
 
 <<skillpara "SUGGESTION" "Trivial" "Success">>Agree before you get on his nerves too much.<</skillpara>>
 
-<<para "YOU">>“Yeah. Let’s go investigate the *fuck* out of this murder.” <</para>>
-
-<<para>><<transition "Ch3P3">><</para>>
+<<para "YOU">>“Yeah. Let’s go investigate the *fuck* out of this murder.”<<transition "Ch3P3">><</para>>

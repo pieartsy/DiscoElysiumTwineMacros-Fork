@@ -32,10 +32,8 @@ You slide open your desk drawer and place the bottle delicately inside.<</para>>
 
 <<para "You">>You’ve been taking them for almost a week now. You’re almost used to the routine: pills in the morning and pills at night. Ironing out your own thoughts until they are meek and placid.<</para>>
 
-<<skillpara "Electrochemistry">>Not ironing - *separating*. You’re elevating your thoughts with that mildisopine rocket. Blasting them way up into the stratosphere, where they can’t get in the way of your own brain!<</skillpara>>
+<<skillpara "Electrochemistry">>Not ironing – *separating*. You’re elevating your thoughts with that mildisopine rocket. Blasting them way up into the stratosphere, where they can’t get in the way of your own brain!<</skillpara>>
 
 <<skillpara "volition" "medium" "success">>Not to intrude, but perhaps you’d like to go meet with Pryce?<</skillpara>>
 
-<<para "You">>Meeting. Work. Yes.<</para>>
-
-<<para>><<transition "Ch1P3">><</para>>
+<<para "You">>Meeting. Work. Yes.<<transition  "Ch1P3">><<</para>>

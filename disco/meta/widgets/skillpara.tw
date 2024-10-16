@@ -49,11 +49,11 @@ if it's a passive check:
     <<if _args[2]>>
         <<if _args[2].toLowerCase() == "success">>
             <<set _skillresult = " @@.dim;[" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Success]@@">>
-            <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>
+            <<set _skillpara += _currentspeaker + _skillresult + " – " + _contents>>
             <<overlay _usedOverlay>>
         <<elseif _args[2].toLowerCase() == "failure">>
             <<set _skillresult = " @@.dim;[" + _args[1].charAt(0).toUpperCase() + _args[1].slice(1).toLowerCase() + ": Failure]@@">>
-            <<set _skillpara += _currentspeaker + _skillresult + " - " + _contents>>
+            <<set _skillpara += _currentspeaker + _skillresult + " – " + _contents>>
             <<nooverlay>>
         <</if>>
 

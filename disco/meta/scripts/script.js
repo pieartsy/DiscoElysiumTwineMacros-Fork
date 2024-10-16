@@ -35,4 +35,4 @@ $(document).on("keyup", function (e) {
 });
 
 // gets rid of the history/undo ability
-// Config.history.controls = false;
+Config.history.controls = false;

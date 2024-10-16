@@ -1,5 +1,5 @@
 :: Ch3P1 [nobr]
- PHYSICAL INSTRUMENT [Trivial: Success] – A heavy hand lands on your shoulder, jarring you into awareness.
+<<skillpara "PHYSICAL INSTRUMENT" "Trivial" "success">>A heavy hand lands on your shoulder, jarring you into awareness.<</skillpara>>
 
 <<skillpara "SHIVERS" "Medium" "Success">>At once, the world comes rushing back: the cold of the bricks against your back, the cement firm beneath your feet. There is a faint mist in the air that brushes your cheek.<</skillpara>>
 
@@ -41,7 +41,7 @@
 
 <<para "YOU">>You close your eyes for a moment, trying to stabilize your heartbeat. Then you open them and follow him inside.<</para>>
 
-<<skillpara "PERCEPTION" "Trivial" "Success">>The precinct is a mess of officers and voices. The largest number of them - Jean included, as he pushes through the crowd to approach - cluster around the spot where your desk and Kim’s sit together. You even spot Trant Heidelstam, consultant for the RCM, leaning against a column nearby.<</skillpara>>
+<<skillpara "PERCEPTION" "Trivial" "Success">>The precinct is a mess of officers and voices. The largest number of them – Jean included, as he pushes through the crowd to approach – cluster around the spot where your desk and Kim’s sit together. You even spot Trant Heidelstam, consultant for the RCM, leaning against a column nearby.<</skillpara>>
 
 <<para "KIM KITUSRAGI">>At the center of the maelstrom, Kim sits at his desk, calmly flipping through the pages of a case file. As you approach, he glances up.<</para>>
 
@@ -131,7 +131,7 @@
 
 <<para "YOU">>“Trant, why are you so angry about this?”<</para>>
 
-<<para "TRANT HEIDELSTAM">>Indignation flashes in his eyes as he turns to you. “It may have been from a distance, but I saw what your decline did to the rest of the people here – my friends and coworkers. Now Lieutenant Kitsuragi, who has only recently joined the 41 st , wants to enable that behavior in you again! I don’t see why anyone is allowing this.”<</para>>
+<<para "TRANT HEIDELSTAM">>Indignation flashes in his eyes as he turns to you. “It may have been from a distance, but I saw what your decline did to the rest of the people here – my friends and coworkers. Now Lieutenant Kitsuragi, who has only recently joined the 41st , wants to enable that behavior in you again! I don’t see why anyone is allowing this.”<</para>>
 
 <<skillpara "ESPRIT DE CORPS" "Trivial" "Success">>When Jean hauled your drunk lump of a body out of the station night after night, Trant watched with tired eyes.<</skillpara>>
 
@@ -175,6 +175,4 @@
 
 <<para "KIM KITSURAGI">>“I’ll grow accustomed to it.”<</para>>
 
-<<skillpara "EMPATHY" "Easy" "Success">>Just like he always does. <</skillpara>>
-
-<<para>><<transition "Ch3P2">><</para>>
+<<skillpara "EMPATHY" "Easy" "Success">>Just like he always does.<<transition  "Ch3P2">><</skillpara>>

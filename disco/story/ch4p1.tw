@@ -155,7 +155,7 @@
 
 <<skillpara "ESPRIT DE CORPS" "Medium" "Success">>As a consultant, Trant’s connection with the RCM is tenuous at best. He has a vast wealth of knowledge, but one serious complaint and he could lose his job. Precinct 41 doesn’t have the funds to waste on a non-officer who foments discontent in the station.<</skillpara>>
 
-<<para "KIM KITSURAGI">>Kim steps forward into your view. “Excuse me, officers. I couldn’t help but notice that Harry seemed like he was about to...make a scene, so I-”<</para>>
+<<para "KIM KITSURAGI">>Kim steps forward into your view. “Excuse me, officers. I couldn’t help but notice that Harry seemed like he was about to...make a scene, so I–”<</para>>
 
 <<para "JEAN VICQUEMARE">>“We get it, you’re his new nursemaid. Or he’s yours. Whatever.”<</para>>
 
@@ -175,7 +175,7 @@
 
 <<para "KIM KITSURAGI">>You feel a hand grip your arm. Kim yanks you away from Trant, then interposes himself between the two of you.<</para>>
 
-<<para "KIM KITSURAGI">>“He’s upset - perhaps rightfully so. Please forgive his behavior.”<</para>>
+<<para "KIM KITSURAGI">>“He’s upset – perhaps rightfully so. Please forgive his behavior.”<</para>>
 
 <<skillpara "EMPATHY" "Heroic" "Success">>Even from behind, you can see the set of his jaw. He is gritting out the words not because he believes them, but because he believes you need them.<</skillpara>>
 
@@ -235,7 +235,7 @@
 
 <<skillpara "LOGIC" "Trivial" "Success">>Especially after your performance at the precinct.<</skillpara>>
 
-<<para "YOU">>You shake your head, but the voices refuse to subside - they grow louder and angrier with each step. Berating you for your choices and your mistakes. You will never be free of your past, even if you don’t remember it.<</para>>
+<<para "YOU">>You shake your head, but the voices refuse to subside – they grow louder and angrier with each step. Berating you for your choices and your mistakes. You will never be free of your past, even if you don’t remember it.<</para>>
 
 <<para "LAKE AIGRE">>And then it appears before you: a grey-green expanse of water, surrounded by scrub and twisted trees. There is no beach to speak of, only a brief descent from the rough pavement’s end to the liquid that laps irregularly at the shore. A meter of gravel is the lake’s only concession to riparian concerns.<</para>>
 
@@ -325,7 +325,4 @@
 
 <<skillpara "VOLITION" "Impossible" "Failure">>Don’t take those pills!!!!!<</skillpara>>
 
-<<para "YOU">>And you swallow. <</para>>
-
-
-<<para>><<transition "Ch5P1" "//__Chapter 5: The Mind__//<br>Harry is adjusting to having only one voice in his head: his own. But who is he without the others?">><</para>>
+<<para "YOU">>And you swallow.<<transition  "Ch5P1" "//__Chapter 5: The Mind__//<br>Harry is adjusting to having only one voice in his head: his own. But who is he without the others?">><</para>>

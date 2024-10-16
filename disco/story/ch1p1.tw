@@ -50,6 +50,4 @@ You scramble into your clothes and rush to the bathroom, where you snatch a smal
 
 <<skillpara "electrochemistry" "medium" "success">>Look at that. Drugs make you think better.<</skillpara>>
 
-<<para>>Enough. You have your pills and you’re dressed. Now out the door.<</para>>
-
-<<para>><<transition "Ch1P2">><</para>>
+<<para>>Enough. You have your pills and you’re dressed. Now out the door.<<transition "Ch1P2">><</para>>

@@ -13,7 +13,7 @@ Your head is very quiet. You probe the nooks and crannies, waiting for oppositio
 <br>
 You glance up at the clock and realize with some surprise that your shift has ended. You don’t imagine Kim would send you home, otherwise; he has sympathy for your condition, but he also values professionalism, and a professional doesn’t quit before the workday is over.<br>
 <br>
-You start to form a response, to tell him you can keep going, but you’ve been drawn out of the blank space in your head now and all at once, you *are* tired. So you nod and push your chair back. As you stand, something twinges in the back of your mind - the first sign of brain-company you’ve experienced in hours.<</para>>
+You start to form a response, to tell him you can keep going, but you’ve been drawn out of the blank space in your head now and all at once, you *are* tired. So you nod and push your chair back. As you stand, something twinges in the back of your mind – the first sign of brain-company you’ve experienced in hours.<</para>>
 
 <<skillpara "electrochemistry" "trivial" "success">>Time to take your meds! Get those chemicals in your body!<</skillpara>>
 
@@ -69,7 +69,7 @@ The room welcomes you with the cramped solitude of such spaces. The paint on the
 
 <<skillpara "electrochemistry">>It’s this or the bottle. Which would you rather relinquish: control, or his life?<</skillpara>>
 
-<<skillpara "inland empire" "medium" "success">>Which would you rather relinquish: the drugs, or his mind? He will lose the city, the world - do you expect him to bear that without breaking?<</skillpara>>
+<<skillpara "inland empire" "medium" "success">>Which would you rather relinquish: the drugs, or his mind? He will lose the city, the world – do you expect him to bear that without breaking?<</skillpara>>
 
 <<para "you">>I’m walking out of the field. I’m going back to the precinct. The mirror is calm and there is nothing unexpected in it.<</para>>
 
@@ -93,6 +93,6 @@ Outside your refuge, life continues. You hear the faint clickity-clack of typewr
 
 No one says anything as you walk out of the old silk mill. Your coworkers have learned to maintain a bubble around you, and they will keep those walls up until you can prove them wrong. The door closes behind you and in front of you is an endless procession of these days, on and on and on.<br><br>
 
-You go home. You set the pill bottle in your cupboard. You sleep without dreaming.<</para>>
+You go home. You set the pill bottle in your cupboard. You sleep without dreaming.
 
-<<para>><<transition "Ch2P1" "//__Chapter 2: Eaten Away__//<br>Harangued by his inner voices, Harry has stopped taking his medicine and withdrawal is hitting hard. Conflict springs up within the 41st.">><</para>>
+<<transition  "Ch2P1" "//__Chapter 2: Eaten Away__//<br>Harangued by his inner voices, Harry has stopped taking his medicine and withdrawal is hitting hard. Conflict springs up within the 41st.">><</para>>

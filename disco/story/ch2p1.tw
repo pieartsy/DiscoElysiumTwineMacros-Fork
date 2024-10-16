@@ -127,7 +127,7 @@
 
 <<skillpara "PAIN THRESHOLD" "Heroic" "Failure">>Your intestines feel like they’re twisting themselves inside out.<</skillpara>>
 
-<<skillpara "HAND/EYE COORDINATION" "Trivial" "Failure">>You try to rub your hands down your face and poke yourself in the teary eye. You’re shaking so badly that you can’t even sob right.<</skillpara>>
+<<skillpara "Hand/eye coordination" "Trivial" "Failure">>You try to rub your hands down your face and poke yourself in the teary eye. You’re shaking so badly that you can’t even sob right.<</skillpara>>
 
 <<para "You" >>I’m doing my best. Kim understands that I’m doing my best.<</para>>
 
@@ -165,6 +165,4 @@
 
 <<para "Kim kitsuragi">>“Let’s get back to the precinct. Maybe you’ll feel better then.”<</para>>
 
-<<para "Kim kitsuragi">>He helps you stand, and politely does not look as you scrub away tears on your way out of the hospital. <</para>>
-
-<<para>><<transition "Ch2P2">><</para>>
+<<para "Kim kitsuragi">>He helps you stand, and politely does not look as you scrub away tears on your way out of the hospital.<<transition  "Ch2P2">><</para>>

@@ -59,7 +59,7 @@
 
 <<para "YOU">>Your breath hisses in and out as you stare into the corpse’s eyes. His eyelids are only half closed, and you can see the black jelly of his pupils beneath.<</para>>
 
-<<para "ROGER PASTORAK">>Sometimes you love a person so much it doesn’t seem like they could be rotten. Maybe her little slip-ups were signs, I don’t know. She loved animals, but she’d forget to clean up after the cat. She’d leave sewing needles around where anyone could step on them. I figured it was absentmindedness - I tried to help her be better. I thought her flaws were just surface imperfections that could be removed.<</para>>
+<<para "ROGER PASTORAK">>Sometimes you love a person so much it doesn’t seem like they could be rotten. Maybe her little slip-ups were signs, I don’t know. She loved animals, but she’d forget to clean up after the cat. She’d leave sewing needles around where anyone could step on them. I figured it was absentmindedness – I tried to help her be better. I thought her flaws were just surface imperfections that could be removed.<</para>>
 
 <<para "YOU">>We filed this as a domestic abuse case. You hurt her, didn’t you?<</para>>
 
@@ -101,7 +101,7 @@
 
 <<para "YOU">>You stagger backward. Your shoulder hits the door frame with a *thunk*. The tiny bottle of vodka falls from your hand and rolls across the blood-soaked carpet, coming to a rest just under the bed.<</para>>
 
-<<para "ROGER PASTORAK">>And after all that, she *betrayed* me. I don’t get it! I *love* her. Can’t you understand how I feel? How deeply it cuts? I swear it’s worse than the knife. I did everything I could for her, and in return she destroyed me. It doesn’t make any sense. <</para>>
+<<para "ROGER PASTORAK">>And after all that, she *betrayed* me. I don’t get it! I *love* her. Can’t you understand how I feel? How deeply it cuts? I swear it’s worse than the knife. I did everything I could for her, and in return she destroyed me. It doesn’t make any sense.<</para>>
 
 <<para "YOU">>Why are you telling me this?<</para>>
 
@@ -127,6 +127,4 @@
 
 <<para "ROGER PASTORAK">>Come see me on the other side, Harry. Please. It’s so lonely without her.<</para>>
 
-<<para "YOU">>Shuddering, you shove the vodka back into your pocket and hustle out of the room. <</para>>
-
-<<para>><<transition "Ch4P1" "//__Chapter 4: The Pale, Part 2__//<br>Desperate to defend himself and Kim against the rest of the precinct, Harry finds himself going down a familiar road.">><</para>>
+<<para "YOU">>Shuddering, you shove the vodka back into your pocket and hustle out of the room.<<transition  "Ch4P1" "//__Chapter 4: The Pale, Part 2__//<br>Desperate to defend himself and Kim against the rest of the precinct, Harry finds himself going down a familiar road.">><</para>>

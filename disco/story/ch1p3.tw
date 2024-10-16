@@ -55,7 +55,7 @@ You shake your head. “Thanks, but that’s not what I meant. I’m asking how 
 <br>
 “The officers of the 41st are perfectly civil,” Kim says. It is hard to look reserved and professional while eating a kebab, but somehow, he manages to do it.<br>
 <br>
-*Civil*, you think. That’s the key word. He isn’t being treated *well* - he’s being treated *civilly*.<</para>>
+*Civil*, you think. That’s the key word. He isn’t being treated *well* – he’s being treated *civilly*.<</para>>
 
 <<skillpara "suggestion" "formidable" "success">>Hey, remember me? Your silver tongue? Allow me to step in for a moment.<</skillpara>>
 
@@ -87,6 +87,4 @@ You shrug, intentionally nonchalant. “Just saying he’s dealt with me in the 
 <br>
 The lieutenant nods. “We’ve got a lot of work to do,” he says, and you note the flatness of his voice.<</para>>
 
-<<para>>When the two of you reenter the precinct, you watch his gaze stray to where Jean stands in the corner, glaring in your direction.<</para>>
-
-<<para>><<transition "Ch1P4">><</para>>
+<<para>>When the two of you reenter the precinct, you watch his gaze stray to where Jean stands in the corner, glaring in your direction.<<transition  "Ch1P4">><</para>>

@@ -16,18 +16,30 @@ html {
   color: var(--whitecheck);
 }
 
-body, tw-story
+body
 {
   font-family: 'David Libre', serif;
   height: 100%;
   width: 90vw;
+  margin: auto;
 }
 
 /* affects how wide the "film" screen looks */
 @media screen and (max-width: 600px) {
-  body, tw-story
+  #passages, body
   {
     width: 100%;
+  }
+
+  #ui-bar.stowed ~ #story, #story {
+    margin-left: 2em;
+    margin-right: 0;
+  }
+  
+  .passage {
+    padding: 1em;
+    line-height: 1.25;
+    margin: 2em 1.5em 0em !important;
   }
 }
 
@@ -144,21 +156,21 @@ a.macro-linkreplace, .passage a.macro-link {
 
 .intoverlay  {
   background-image: [img[intoverlay]];
-  background-size: fill;
+  background-size: cover;
 }
 .psyoverlay  {
   background-image: [img[psyoverlay]];
-  background-size: fill;
+  background-size: cover;
 }
 
 .fysoverlay  {
   background-image: [img[fysoverlay]];
-  background-size: fill;
+  background-size: cover;
 }
 
 .motoverlay  {
   background-image: [img[motoverlay]];
-  background-size: fill;
+  background-size: cover;
 }
 
 /* greentext */
