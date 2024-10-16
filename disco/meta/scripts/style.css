@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Titillium+Web:wght@300&display=swap');
 
+@font-face {
+  font-family: "Sina Nova";
+  src:
+    local("SinaNova-Regular"),
+    url(../media/sinanova.otf) format("opentype"),
+}
+
 
 :root {
   --psy: #705cbb;
@@ -12,13 +19,14 @@
 
 html {
   height: 100%;
-  font-size: 20px;
+  font-size: 25px;
+  font-family: 'Sina Nova', serif;
   color: var(--whitecheck);
 }
 
 body
 {
-  font-family: 'David Libre', serif;
+
   height: 100%;
   width: 90vw;
   margin: auto;
