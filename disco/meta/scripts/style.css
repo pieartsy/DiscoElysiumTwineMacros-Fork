@@ -296,3 +296,11 @@ a.macro-linkappend {
 a.macro-linkappend:hover {
   text-decoration: underline;
 }
+
+
+/* turns off saves */
+
+#menu-item-saves
+{
+  display: none;
+}
