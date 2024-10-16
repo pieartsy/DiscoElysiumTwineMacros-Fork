@@ -4,7 +4,9 @@
   font-family: "Sina Nova";
   src:
     local("SinaNova-Regular"),
-    url(../media/sinanova.otf) format("opentype"),
+    url(media/SinaNovaReg.ttf) format("truetype");
+  font-style: regular;
+  font-weight: regular;
 }
 
 
